@@ -11,4 +11,4 @@ print(full_name)
 print("Hello, \n"+full_name.title()+"!")
 
 nome_2= "ana rodrigues "
-print(nome_2.rstrip()+"hello!")
+print(nome_2.rstrip()+" hello!")
