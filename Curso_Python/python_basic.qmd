@@ -64,7 +64,7 @@ flowchart LR
 ## Print
 Print é uma função que exibe uma string na tela.
 
-Exemplo: `print("sting")`
+Exemplo: `print("string")`
 
 \pagenumbering{arabic}
 \newpage
