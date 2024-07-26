@@ -1,0 +1,70 @@
+---
+title: "Básico de Python"
+author: "Sergio Pedro Rodrigues Oliveira"
+format:
+    html:
+        code-fold: true
+        number-sections: true
+    pdf:
+      toc: false
+      lof: false
+      lot: false
+      toc-depth: 2
+      number-sections: true
+      number-depth: 3
+      colorlinks: true
+      cite-method: biblatex
+    docx:
+      toc: true
+      number-sections: true
+      highlight-style: github
+jupyter: python3
+---
+
+\thispagestyle{empty}
+
+\newpage
+\pagenumbering{roman}
+
+```{=latex}
+\setcounter{tocdepth}{4}
+\renewcommand{\contentsname}{SUMÁRIO}
+\tableofcontents
+```
+
+\newpage
+
+```{=latex}
+\setcounter{tocdepth}{4}
+\renewcommand{\listfigurename}{LISTA DE FIGURAS}
+\listoffigures
+```
+\newpage
+
+```{=latex}
+\setcounter{tocdepth}{4}
+\renewcommand{\listtablename}{LISTA DE TABELAS}
+\listoftables
+```
+
+\newpage
+
+# Diagrama de estudo
+
+```{mermaid}
+flowchart LR
+  A[Básico] --> B(Projeto)
+  B --> C{Decision}
+  C --> D[Analise de dados]
+  C --> E[Mineração de dados]
+```
+
+# Variáveis e tipos de dados simples
+
+## Print
+Print é uma função que exibe uma string na tela.
+
+Exemplo: `print("sting")`
+
+\pagenumbering{arabic}
+\newpage

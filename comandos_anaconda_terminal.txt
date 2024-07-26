@@ -1,0 +1,4 @@
+Anaconda (python)
+	source ~/.bashrc [abrir anaconda no terminal]
+	spyder [abrir spyder pelo terminal]
+	jupyter notebook [abrir jupyter pelo terminal]
