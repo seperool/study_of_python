@@ -48,6 +48,9 @@ jupyter: python3
 ```
 
 ```{python}
+#| echo: false
+#| error: false
+#| warning: false
 from IPython.display import Markdown
 from tabulate import tabulate
 ```
@@ -151,7 +154,7 @@ ada lovelace
 
 Podemos inserir alguns caracteres especiais no texto para executar alguma ação, como pular alguma linha e etc.
 Alguns caracteres podem ser vistos na @tbl-CarcEsp.
-todos os caracteres especiais começam com barra(`\`) + complemento.
+Todos os caracteres especiais começam com barra(`\`) + complemento.
 
 ```{python}
 #| echo: false
