@@ -47,6 +47,11 @@ jupyter: python3
 \listoftables
 ```
 
+```{python}
+from IPython.display import Markdown
+from tabulate import tabulate
+```
+
 \newpage
 
 # Diagrama de estudo
@@ -61,10 +66,106 @@ flowchart LR
 
 # Variáveis e tipos de dados simples
 
-## Print
+## `print()`
 Print é uma função que exibe uma string na tela.
 
 Exemplo: `print("string")`
 
+## `print()` com variáveis
+
+Podemos usar a função `print()` para imprimir uma variável string.
+
+Exemplo:
+
+```
+message = "Hello world!"
+print(message)
+```
+
+## Regras de nomes de variáveis
+
+Regras ou diretrizes para usar variáveis em Python.
+
+* Nomes de variáveis  deve conter apenas letras, números e underscores. Podemos começar a variável com letra ou underscore, mas nunca com um número.
+* Espaços não são permitidos em nomes de variáveis, mas underscores podem ser usados para separar palavras.
+* Evite usar palavras reservadas e nome de funções em Python como nome de variáveis.
+* Nomes de variáveis devem ser concisos, porém descritivos.
+* Tome cuidado ao usar a letra l e a letra maiuscula O, pois podem ser confundidas com os números 1 e 0.
+
 \pagenumbering{arabic}
 \newpage
+
+## Concatenando strings
+
+Podemos usar o simbolo de (+) para combinar strings (concatenar).
+
+Exemplo:
+
+```
+>>> first_name = "ada"
+>>> last_name = "lovelace"
+>>> full_name = fist_name + " " + last_name
+>>> print("Hello, " + full_name.title() + "!")
+Hello, Ada Lovelace!
+```
+
+Os espaços em branco entre aspas servem para criar espaços na string.
+
+## Métodos auxiliares da função `print()`
+
+1. `.title()`
+   
+Coloca apenas as primeiras letras em maiúsculas de cada palavra e o resto em minúscula.
+
+Exemplo:
+```
+>>> print(full_name.title())`
+Ada Lovelace
+```
+
+
+2. `.upper()`
+
+Coloca todas as letras em maiúsculas.
+
+Exemplo:
+```
+>>> print(full_name.upper())`
+ADA LOVELACE
+```
+
+3. `.lower()`
+
+Coloca todas as letras em minusculas.
+O método `.lower()` é particularmente útil para armazenar dados. Converter os dados em minúscula antes de armazenar.
+
+Exemplo:
+```
+>>> print(full_name.lower())`
+ada lovelace
+```
+
+\newpage
+
+## Caracteres especiais de texto
+
+Podemos inserir alguns caracteres especiais no texto para executar alguma ação, como pular alguma linha e etc.
+Alguns caracteres podem ser vistos na @tbl-CarcEsp.
+todos os caracteres especiais começam com barra(`\`) + complemento.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-CarcEsp
+#| tbl-cap: Caracteres especiais
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [[" \ t","Gera tabulação."],
+         [" \ n","Gera quebra de linha."]]
+Markdown(tabulate(
+  table, 
+  headers=["Caracteres especiais","Descrição"]
+))
+```
