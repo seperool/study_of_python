@@ -150,25 +150,30 @@ ada lovelace
 
 \newpage
 
-## Caracteres especiais de texto
+## Caracteres de escape
 
-Podemos inserir alguns caracteres especiais no texto para executar alguma ação, como pular alguma linha e etc.
-Alguns caracteres podem ser vistos na @tbl-CarcEsp.
-Todos os caracteres especiais começam com barra(`\`) + complemento.
+Podemos inserir alguns caracteres de escape no texto para executar alguma ação, como pular linha, gerar tabulação e etc. Alguns caracteres podem ser vistos na @tbl-caresc.
+
+Todos os caracteres de escape começam com barra(`\`) + complemento.
 
 ```{python}
 #| echo: false
 #| error: false
 #| warning: false
-#| label: tbl-CarcEsp
-#| tbl-cap: Caracteres especiais
+#| label: tbl-caresc
+#| tbl-cap: Caracteres de escape
 
 from IPython.display import Markdown
 from tabulate import tabulate
-table = [[" \ t","Gera tabulação."],
-         [" \ n","Gera quebra de linha."]]
+table = [["`\\`t","Gera tabulação."],
+         ["`\\`n","Gera quebra de linha."]]
 Markdown(tabulate(
   table, 
-  headers=["Caracteres especiais","Descrição"]
+  headers=["Caracteres de escape","Descrição"]
 ))
+```
+
+Exemplo:
+```{python}
+print("Language:\nPython\nJava\nC\nJavaScript")
 ```
