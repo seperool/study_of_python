@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Sergio Pedro Rodrigues Oliveira">
 
 <title>Básico de Python</title>
 <style>
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -56,6 +91,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sergio Pedro Rodrigues Oliveira </p>
+          </div>
+  </div>
     
   
     
@@ -87,6 +128,114 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="variáveis-e-tipos-de-dados-simples" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Variáveis e tipos de dados simples</h1>
+<section id="print" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="print"><span class="header-section-number">2.1</span> <code>print()</code></h2>
+<p>Print é uma função que exibe uma string na tela.</p>
+<p>Exemplo: <code>print("string")</code></p>
+</section>
+<section id="print-com-variáveis" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="print-com-variáveis"><span class="header-section-number">2.2</span> <code>print()</code> com variáveis</h2>
+<p>Podemos usar a função <code>print()</code> para imprimir uma variável string.</p>
+<p>Exemplo:</p>
+<pre><code>message = "Hello world!"
+print(message)</code></pre>
+</section>
+<section id="regras-de-nomes-de-variáveis" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="regras-de-nomes-de-variáveis"><span class="header-section-number">2.3</span> Regras de nomes de variáveis</h2>
+<p>Regras ou diretrizes para usar variáveis em Python.</p>
+<ul>
+<li>Nomes de variáveis deve conter apenas letras, números e underscores. Podemos começar a variável com letra ou underscore, mas nunca com um número.</li>
+<li>Espaços não são permitidos em nomes de variáveis, mas underscores podem ser usados para separar palavras.</li>
+<li>Evite usar palavras reservadas e nome de funções em Python como nome de variáveis.</li>
+<li>Nomes de variáveis devem ser concisos, porém descritivos.</li>
+<li>Tome cuidado ao usar a letra l e a letra maiuscula O, pois podem ser confundidas com os números 1 e 0.</li>
+</ul>
+</section>
+<section id="concatenando-strings" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="concatenando-strings"><span class="header-section-number">2.4</span> Concatenando strings</h2>
+<p>Podemos usar o simbolo de (+) para combinar strings (concatenar).</p>
+<p>Exemplo:</p>
+<pre><code>&gt;&gt;&gt; first_name = "ada"
+&gt;&gt;&gt; last_name = "lovelace"
+&gt;&gt;&gt; full_name = fist_name + " " + last_name
+&gt;&gt;&gt; print("Hello, " + full_name.title() + "!")
+Hello, Ada Lovelace!</code></pre>
+<p>Os espaços em branco entre aspas servem para criar espaços na string.</p>
+</section>
+<section id="métodos-auxiliares-da-função-print" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="métodos-auxiliares-da-função-print"><span class="header-section-number">2.5</span> Métodos auxiliares da função <code>print()</code></h2>
+<ol type="1">
+<li><code>.title()</code></li>
+</ol>
+<p>Coloca apenas as primeiras letras em maiúsculas de cada palavra e o resto em minúscula.</p>
+<p>Exemplo:</p>
+<pre><code>&gt;&gt;&gt; print(full_name.title())`
+Ada Lovelace</code></pre>
+<ol start="2" type="1">
+<li><code>.upper()</code></li>
+</ol>
+<p>Coloca todas as letras em maiúsculas.</p>
+<p>Exemplo:</p>
+<pre><code>&gt;&gt;&gt; print(full_name.upper())`
+ADA LOVELACE</code></pre>
+<ol start="3" type="1">
+<li><code>.lower()</code></li>
+</ol>
+<p>Coloca todas as letras em minusculas. O método <code>.lower()</code> é particularmente útil para armazenar dados. Converter os dados em minúscula antes de armazenar.</p>
+<p>Exemplo:</p>
+<pre><code>&gt;&gt;&gt; print(full_name.lower())`
+ada lovelace</code></pre>
+</section>
+<section id="caracteres-de-escape" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="caracteres-de-escape"><span class="header-section-number">2.6</span> Caracteres de escape</h2>
+<p>Podemos inserir alguns caracteres de escape no texto para executar alguma ação, como pular linha, gerar tabulação e etc. Alguns caracteres podem ser vistos na <a href="#tbl-caresc" class="quarto-xref">Table&nbsp;1</a>.</p>
+<p>Todos os caracteres de escape começam com barra(<code>\</code>) + complemento.</p>
+<div class="cell" data-execution_count="2">
+<div id="tbl-caresc" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-caresc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Caracteres de escape
+</figcaption>
+<div aria-describedby="tbl-caresc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Caracteres de escape</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>\</code>t</td>
+<td style="text-align: left;">Gera tabulação.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>\</code>n</td>
+<td style="text-align: left;">Gera quebra de linha.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Exemplo:</p>
+<div id="09480aba" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Language:</span><span class="ch">\n</span><span class="st">Python</span><span class="ch">\n</span><span class="st">Java</span><span class="ch">\n</span><span class="st">C</span><span class="ch">\n</span><span class="st">JavaScript"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Language:
+Python
+Java
+C
+JavaScript</code></pre>
+</div>
+</div>
+</section>
 </section>
 
 </main>

@@ -165,7 +165,7 @@ Todos os caracteres de escape começam com barra(`\`) + complemento.
 
 from IPython.display import Markdown
 from tabulate import tabulate
-table = [["`\\`t","Gera tabulação."],
+table = [["`\\`t","Gera tabulação (tab)."],
          ["`\\`n","Gera quebra de linha."]]
 Markdown(tabulate(
   table, 
@@ -177,3 +177,48 @@ Exemplo:
 ```{python}
 print("Language:\nPython\nJava\nC\nJavaScript")
 ```
+
+\newpage
+
+## Removendo espaços em branco `print()`
+
+1. `.rstrip()`
+
+Remove espaço em branco do lado direito.
+
+Exemplo:
+```{python}
+favorite_linguage = 'python '
+favorite_linguage.rstrip()
+```
+
+2. `.lstrip()`
+
+Remove espaço em branco do lado esquerdo.
+
+Exemplo:
+```{python}
+favorite_linguage = ' python'
+favorite_linguage.lstrip()
+```
+
+3. `.strip()`
+
+Remove os espaços em branco dos dois lados ao mesmo tempo.
+
+Exemplo:
+```{python}
+favorite_linguage = ' python '
+favorite_linguage.strip()
+```
+
+* Os metodos usados não removem os espaços em branco em definitivo, para remover em definitivo é necessario armazenar o valor novo na variável.
+
+```{python}
+favorite_linguage = ' python '
+favorite_linguage = favorite_linguage.strip()
+favorite_linguage
+```
+
+\newpage
+
