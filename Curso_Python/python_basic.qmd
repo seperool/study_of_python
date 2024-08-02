@@ -222,3 +222,76 @@ favorite_linguage
 
 \newpage
 
+## Números
+
+A linguagem Python faz tipagem automática (dinâmica), tipa a variável de acordo com o uso. E o Python contém uma tipagem forte, não faz converção automática do tipo de uma variável para executar uma ação (operação).
+
+Em resumo, python tem é uma linguagem de tipagem dinâmica e forte.
+
+Os principais tipos de dados no Python são estão presentes na tabela @tbl-tiposdados.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-tiposdados
+#| tbl-cap: Principais tipos de dados
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["Inteiro","int","Números inteiros"],
+         ["Ponto flutuante","float","Números com ponto decimal"]]
+Markdown(tabulate(
+  table, 
+  headers=["Nome","Abreviação","Descrição"]
+))
+```
+
+## Funções de conversão de tipo
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-func_tipo
+#| tbl-cap: Funções de conversão de tipo
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["int","`int()`","Converte variável para tipo inteiro(int)"],
+         ["float","`float()`","Converte variável para tipo float"]]
+Markdown(tabulate(
+  table, 
+  headers=["Tipo para converter","Função","Descrição"]
+))
+```
+
+\newpage
+
+## Operações básicas
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-opbasicpy
+#| tbl-cap: Operações básicas
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["Soma","+","2+2=4"],
+         ["Subtração","-","3-2=1"],
+         ["Multiplicação","*","2*3=6"],
+         ["Divisão","/","3/2=1"],
+         ["Resto da divisão","%","10%8=2"],
+         ["Potência","**","3**2=9"],
+         ["Raiz","**","4**0.5=2"]]
+Markdown(tabulate(
+  table, 
+  headers=["Operação","Símbolo","Exemplo"]
+))
+```
+
+Podemos usar o pacote `math` para ampliar as funções matemáticas do Python.
+
+**inserir tabela com as principais funções matematicas do pacote math**
