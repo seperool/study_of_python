@@ -228,7 +228,7 @@ A linguagem Python faz tipagem automática (dinâmica), tipa a variável de acor
 
 Em resumo, python tem é uma linguagem de tipagem dinâmica e forte.
 
-Os principais tipos de dados no Python são estão presentes na tabela @tbl-tiposdados.
+Os principais tipos de dados no Python são estão presentes na @tbl-tiposdados.
 
 ```{python}
 #| echo: false
@@ -270,6 +270,8 @@ Markdown(tabulate(
 
 ## Operações básicas
 
+A @tbl-opbasicpy apresenta as principais operações básicas do python.
+
 ```{python}
 #| echo: false
 #| error: false
@@ -282,8 +284,9 @@ from tabulate import tabulate
 table = [["Soma","+","2+2=4"],
          ["Subtração","-","3-2=1"],
          ["Multiplicação","*","2*3=6"],
-         ["Divisão","/","3/2=1"],
-         ["Resto da divisão","%","10%8=2"],
+         ["Divisão","/","5/4=1.25"],
+         ["Divisão inteira","//","5//4=1"],
+         ["Resto da divisão (módulo)","%","10%8=2"],
          ["Potência","**","3**2=9"],
          ["Raiz","**","4**0.5=2"]]
 Markdown(tabulate(
@@ -292,9 +295,9 @@ Markdown(tabulate(
 ))
 ```
 
-Podemos usar o pacote `math` para ampliar as funções matemáticas do Python.
+Podemos usar o pacote `math` para ampliar as funções matemáticas do Python. A @tbl-opmathpy apresenta as principais funções básicas da biblioteca `math`.
 
-**inserir tabela com as principais funções matematicas do pacote math**
+**Modificar a tabela @tbl-opmathpy.**
 
 ```{python}
 #| echo: false
@@ -318,28 +321,110 @@ Markdown(tabulate(
 ))
 ```
 
-Inserir operações lógicas
+\newpage
+
+## Operações lógicas básicas
+
+A @tbl-opbasiclogpy apresenta as principais operações lógica básica do python. As operações lógicas retornam `True` ou `False`.
 
 ```{python}
 #| echo: false
 #| error: false
 #| warning: false
-#| label: tbl-oplogpy
+#| label: tbl-opbasiclogpy
 #| tbl-cap: Operações Lógicas
 
 from IPython.display import Markdown
 from tabulate import tabulate
-table = [["Soma","+","2+2=4"],
-         ["Subtração","-","3-2=1"],
-         ["Multiplicação","*","2*3=6"],
-         ["Divisão","/","3/2=1"],
-         ["Resto da divisão","%","10%8=2"],
-         ["Potência","**","3**2=9"],
-         ["Raiz","**","4**0.5=2"]]
+table = [["==","Igual a","Varifica se um valor é igual ao outro.","1==1 = True"],
+["!=","Diferente de","Varifica se um valor é diferente ao outro.","1!=2 = True"],
+[">","Maior que","Varifica se um valor é maior que outro.","5>1 = True"],
+[">=","Maior ou igual","Varifica se um valor é maior ou igual a outro.","5>=5 = True"],
+["<","Menor que","Varifica se um valor é menor que outro.","1<5 = True"],
+["<=","Menor ou igual","Varifica se um valor é menor ou igual a outro.","1<=4 = True"],
+["and","E","Retorna True se ambas as afirmações forem verdadeiras.","(1==1) and (4<5) = True"],
+["or","Ou","Retorna True se uma das afirmações for verdadeiras.","(1==1) or (2<1) = True"],
+["not","Negação","Retorna Falso se o resultado for verdadeiro, ou o contrario.","not (1==1) = False"]]
 Markdown(tabulate(
   table, 
-  headers=["Operação","Símbolo","Exemplo"]
+  headers=["Operação","Nome","Função","Exemplo"]
 ))
+```
+
+\newpage
+
+## Operadores de identidade
+
+Os operadores de identidade, @tbl-opid, são utilizados para comparar objetos, se os objetos testados referenciam o mesmo objeto.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-opid
+#| tbl-cap: Operadores identidade
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["is","Retorna `True` se ambas as variáveis são o mesmo objeto."],
+         ["is not","Retorna `True` se ambas as variáveis não são o mesmo objeto."]]
+Markdown(tabulate(
+  table, 
+  headers=["Operador","Definição"]
+))
+```
+
+Exemplo de operações de identidade:
+
+```{python}
+lista = [1,2,3]
+outra_lista = [1,2,3]
+recebe_lista = lista
+
+print(f"São o mesmo objeto: {lista is outra_lista}")
+```
+
+```{python}
+lista = [1,2,3]
+outra_lista = [1,2,3]
+recebe_lista = lista
+
+print(f"São o mesmo objeto: {lista is recebe_lista}")
+```
+
+\newpage
+
+## Operações de associação
+
+Os operadores de associação, @tbl-opassoc, servem para verificar se determinado objeto esta **associado** ou **pertence** a determinada estrutura de dados.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-opassoc
+#| tbl-cap: Operadores de associação
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["in","Retorna `True` caso valor seja encontrado na sequência."],
+         ["not in","Retorna `True` caso valor não seja encontrado na sequência."]]
+Markdown(tabulate(
+  table, 
+  headers=["Operação","Função"]
+))
+```
+
+Exemplos de operações de associação:
+
+```{python}
+lista = ["Python", 'Academy', "Operadores", 'Condições']
+print('Python' in lista)
+```
+
+```{python}
+lista = ["Python", 'Academy', "Operadores", 'Condições']
+print('SQL' not in lista)
 ```
 
 \newpage

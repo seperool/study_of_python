@@ -1,0 +1,14 @@
+ESCRITO EM 04/08/24
+---
+PARA 05/08/24
+---
+Subir github:
+
+Estudar:
+	- Operações lógicas
+	- Biblioteca math
+Afazeres:
+	- Variáveis e tipos de dados simples
+		- Tabelas
+			- Biblioteca math
+		- Evitando erros de tipo com a função str()
