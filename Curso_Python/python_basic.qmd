@@ -253,7 +253,7 @@ Markdown(tabulate(
 #| echo: false
 #| error: false
 #| warning: false
-#| label: tbl-func_tipo
+#| label: tbl-functipo
 #| tbl-cap: Funções de conversão de tipo
 
 from IPython.display import Markdown
@@ -295,3 +295,53 @@ Markdown(tabulate(
 Podemos usar o pacote `math` para ampliar as funções matemáticas do Python.
 
 **inserir tabela com as principais funções matematicas do pacote math**
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-opmathpy
+#| tbl-cap: Algumas operações da biblioteca `math`
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["Soma","+","2+2=4"],
+         ["Subtração","-","3-2=1"],
+         ["Multiplicação","*","2*3=6"],
+         ["Divisão","/","3/2=1"],
+         ["Resto da divisão","%","10%8=2"],
+         ["Potência","**","3**2=9"],
+         ["Raiz","**","4**0.5=2"]]
+Markdown(tabulate(
+  table, 
+  headers=["Operação","Símbolo","Exemplo"]
+))
+```
+
+Inserir operações lógicas
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-oplogpy
+#| tbl-cap: Operações Lógicas
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["Soma","+","2+2=4"],
+         ["Subtração","-","3-2=1"],
+         ["Multiplicação","*","2*3=6"],
+         ["Divisão","/","3/2=1"],
+         ["Resto da divisão","%","10%8=2"],
+         ["Potência","**","3**2=9"],
+         ["Raiz","**","4**0.5=2"]]
+Markdown(tabulate(
+  table, 
+  headers=["Operação","Símbolo","Exemplo"]
+))
+```
+
+\newpage
+
+## Evitando erros de tipo com a função `str()`
