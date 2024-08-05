@@ -72,7 +72,11 @@ flowchart LR
 ## `print()`
 Print é uma função que exibe uma string na tela.
 
-Exemplo: `print("string")`
+Exemplo: 
+
+```{python}
+print("string")
+```
 
 ## `print()` com variáveis
 
@@ -80,10 +84,13 @@ Podemos usar a função `print()` para imprimir uma variável string.
 
 Exemplo:
 
-```
+```{python}
 message = "Hello world!"
 print(message)
 ```
+
+\pagenumbering{arabic}
+\newpage
 
 ## Regras de nomes de variáveis
 
@@ -95,7 +102,6 @@ Regras ou diretrizes para usar variáveis em Python.
 * Nomes de variáveis devem ser concisos, porém descritivos.
 * Tome cuidado ao usar a letra l e a letra maiuscula O, pois podem ser confundidas com os números 1 e 0.
 
-\pagenumbering{arabic}
 \newpage
 
 ## Concatenando strings
@@ -104,12 +110,11 @@ Podemos usar o simbolo de (+) para combinar strings (concatenar).
 
 Exemplo:
 
-```
->>> first_name = "ada"
->>> last_name = "lovelace"
->>> full_name = fist_name + " " + last_name
->>> print("Hello, " + full_name.title() + "!")
-Hello, Ada Lovelace!
+```{python}
+first_name = "ada"
+last_name = "lovelace"
+full_name = first_name + " " + last_name
+print("Hello, " + full_name.title() + "!")
 ```
 
 Os espaços em branco entre aspas servem para criar espaços na string.
@@ -121,9 +126,10 @@ Os espaços em branco entre aspas servem para criar espaços na string.
 Coloca apenas as primeiras letras em maiúsculas de cada palavra e o resto em minúscula.
 
 Exemplo:
-```
->>> print(full_name.title())`
-Ada Lovelace
+
+```{python}
+full_name = "ada lovelace"
+print(full_name.title())
 ```
 
 
@@ -132,9 +138,10 @@ Ada Lovelace
 Coloca todas as letras em maiúsculas.
 
 Exemplo:
-```
->>> print(full_name.upper())`
-ADA LOVELACE
+
+```{python}
+full_name = "ada lovelace"
+print(full_name.upper())
 ```
 
 3. `.lower()`
@@ -143,9 +150,10 @@ Coloca todas as letras em minusculas.
 O método `.lower()` é particularmente útil para armazenar dados. Converter os dados em minúscula antes de armazenar.
 
 Exemplo:
-```
->>> print(full_name.lower())`
-ada lovelace
+
+```{python}
+full_name = "ada lovelace"
+print(full_name.lower())
 ```
 
 \newpage
@@ -249,6 +257,10 @@ Markdown(tabulate(
 
 ## Funções de conversão de tipo
 
+Podemos converte variáveis para determinado tipo especificado usando funções de conversão de tipo, como pode ser obeservado na @tbl-functipo.
+
+Converter uma variável não é permanente, a não ser que a ação seja armazenada na variável explicitamente.
+
 ```{python}
 #| echo: false
 #| error: false
@@ -258,13 +270,38 @@ Markdown(tabulate(
 
 from IPython.display import Markdown
 from tabulate import tabulate
-table = [["int","`int()`","Converte variável para tipo inteiro(int)"],
-         ["float","`float()`","Converte variável para tipo float"]]
+table = [["int","`int()`","Converte variável para o tipo inteiro(int)"],
+         ["float","`float()`","Converte variável para o tipo float"],
+         ["string","`str()`","Converte variável para o tipo string"]]
 Markdown(tabulate(
   table, 
   headers=["Tipo para converter","Função","Descrição"]
 ))
 ```
+
+A função `str()` é deveras importante, pois pode auxiliar na função `print()`. A função `print()` só imprime na tela veriáveis string, sendo assim, precisamos converter as variáveis de outros tipos para string (pelo menos, momentaneamente), para comprir essa condição.
+
+Exemplo:
+
+```{python}
+age = 23
+print("Happy " + str(age) + "rd Birthday!")
+```
+
+\newpage
+
+## Descobrindo o tipo da variável usando a função `type()`
+
+Podemos usar a função `type()` para descobrir o tipo de determinada variável.
+
+```{python}
+age = 23
+print (type(age))
+```
+
+É uma **boa pratica** usar a função `type()`, para conferir o tipo da variável, antes de manipular alguma variável. Assim o programador terá o controle sobre as variáveis que esta trabalhando. Essa boa prática evita erros.
+
+Também é uma **boa prática**, ao identificar/observar um erro, conferir os tipos das variáveis envolvidas. É um dos erros mais comuns: erro de tipagem.
 
 \newpage
 
@@ -295,9 +332,11 @@ Markdown(tabulate(
 ))
 ```
 
-Podemos usar o pacote `math` para ampliar as funções matemáticas do Python. A @tbl-opmathpy apresenta as principais funções básicas da biblioteca `math`.
+\newpage
 
-**Modificar a tabela @tbl-opmathpy.**
+## Biblioteca `math` para ampliar operações matematicas
+
+Podemos usar o pacote `math` para ampliar as funções matemáticas do Python (básicas, trigonométricas e estatísticas). A @tbl-opmathpy apresenta as principais funções básicas da biblioteca `math`.
 
 ```{python}
 #| echo: false
@@ -308,17 +347,38 @@ Podemos usar o pacote `math` para ampliar as funções matemáticas do Python. A
 
 from IPython.display import Markdown
 from tabulate import tabulate
-table = [["Soma","+","2+2=4"],
-         ["Subtração","-","3-2=1"],
-         ["Multiplicação","*","2*3=6"],
-         ["Divisão","/","3/2=1"],
-         ["Resto da divisão","%","10%8=2"],
-         ["Potência","**","3**2=9"],
-         ["Raiz","**","4**0.5=2"]]
+table = [["Soma","`math.add(x,y)`","`math.add(2,2) = (2+2)=4`"],
+        ["Subtração","`math.subtract(x,y)`","`math.subtract(2,2) = (2-2)=0`"],
+        ["Raiz quadrada","`math.sqrt()`","`math.sqrt(4)=2`"],
+        ["Potência","`math.pow(x,y)`","`math.pow(2,3) = (2**3)=8`"],
+        ["Seno","`math.sin()`","`math.sin()`, retorna um ângulo em radianos."],
+        ["Cosseno","`math.cos()`","`math.cos()`, retorna um ângulo em radianos."],
+        ["Tangente","`math.tan()`","`math.tan()`, retorna um ângulo em radianos."],
+        ["potencia de Euler","`math.exp(x)`","`math.exp(x) = math.pow(math.e**x)`"],
+        ["Logaritmo natural, ou log neperiano","`math.log(x)`","`math.log(2)=0.69`"],
+        ["Logaritmo","`math.log(x[,base])`","`math.log(2,10)=0.3`"]]
 Markdown(tabulate(
   table, 
   headers=["Operação","Símbolo","Exemplo"]
 ))
+```
+
+Para converter o ângulo para radianos podemos usar a função `math.radians()`.
+
+```{python}
+import math
+#Seno do ângulo de 45°
+#Resultado em Radianos
+print(str(math.sin(math.radians(45))))
+```
+
+Para converter de radiano para grau podemos usar a função `math.degrees()`.
+
+```{python}
+import math
+#Seno do ângulo de 45°
+#Resultado em ângulo
+print(str(math.degrees(math.sin(math.radians(45)))))
 ```
 
 \newpage
@@ -429,4 +489,5 @@ print('SQL' not in lista)
 
 \newpage
 
-## Evitando erros de tipo com a função `str()`
+## Comentários
+
