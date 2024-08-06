@@ -1,12 +1,14 @@
-ESCRITO EM 05/08/24
+ESCRITO EM 06/08/24
 ---
-PARA 06/08/24
+PARA 07/08/24
 ---
 Subir github:
 
 Estudar:
-	- Operações lógicas
-	- Biblioteca math
+
 Afazeres:
-	- Variáveis e tipos de dados simples
-		- Comentários
+	- Listas
+		- Listas
+		- Acessando Listas
+		- Usando valores individuais de uma Listas
+		- Alterando, acrescentando e removendo elementos
