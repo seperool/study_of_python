@@ -531,6 +531,40 @@ apenas uma - maneira óbvia de fazer algo.
 
 ## Lista
 
-Uma lista é uma coleção de itens em uma ordem em particular. [@2023curso]
+Uma lista é uma coleção de itens em uma ordem em particular. Os colchetes([]) indicam uma lista e os elementos individuais de uma lista são separados por vírgula.
+
+Exemplo:
+
+```{python}
+bicycles = ['trek','cannondale','redline','specialized']
+print(bicycles)
+```
+
+## Acessando elementos de uma lista
+
+Podemos acessar a qualquer item de uma lista informando a posição, ou índice. As posições de uma lista começam no 0, e não no 1.
+
+Para acessar um elemento de uma lista, informamos o nome nome da lista seguido do índice do item entre colchetes.
+
+Exemplo:
+
+```{python}
+#Acessando o primeiro item da lista
+bicycles = ['trek','cannondale','redline','specialized']
+print(bicycles[0].title())
+```
+
+Para acessar a lista de trás pra frente podemos usar a posição invertida seguida do símbolo de menos na frente. Sendo assim, a posição do último item é -1, do penúltimo -2 e assim sucessivamente.
+
+Exemplo:
+
+```{python}
+#Acessando o último item da lista
+bicycles = ['trek','cannondale','redline','specialized']
+print(bicycles[-1].title())
+```
 
 \newpage
+
+## Alterando, acrescentando e removendo elementos
+
