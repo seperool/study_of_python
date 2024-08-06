@@ -491,3 +491,40 @@ print('SQL' not in lista)
 
 ## Comentários
 
+Um comentário permite escrever notas em seus programas em liguagem natural. Em Python, o caractere sustenido (#) indica um comentário. Tudo que vier depois de um caractere sustenido en seu código será ignorado pelo interpretador Python.
+
+**Boas práticas** em comentários:
+
+1. Explicar o que o código deve fazer.
+
+2. Como faz para funcionar.
+
+\newpage
+
+## Zen Python
+
+É um guia de **boas práticas**.
+
+```{python}
+import this
+```
+
+Principais pontos:
+
+1. Bonito é melhor do que feio.
+   
+2. Simples é melhor que complexo.
+
+3. Complexo é melhor que complicado.
+
+4. Legibilidade conta.
+
+5. Deve haver uma - e, de preferência, 
+apenas uma - maneira óbvia de fazer algo.
+
+6. Agora é melhor que nunca.
+
+\newpage
+
+# Listas
+
