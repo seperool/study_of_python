@@ -8,7 +8,10 @@ Estudar:
 
 Afazeres:
 	- Listas
-		- Listas
-		- Acessando Listas
-		- Usando valores individuais de uma Listas
 		- Alterando, acrescentando e removendo elementos
+			- Removendo elementos de uma lista
+				- Instrução del
+				- Método .pop()
+				- Método .remove()
+
+		- Organizando listas
