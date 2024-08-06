@@ -19,7 +19,8 @@ format:
       number-sections: true
       highlight-style: github
 jupyter: python3
-bibliography: python_bibliografia.bib
+bibliography: Quarto/pythonbibliografia.bib
+csl: Quarto/abnt.csl
 ---
 
 \thispagestyle{empty}
@@ -531,7 +532,7 @@ apenas uma - maneira óbvia de fazer algo.
 
 ## Lista
 
-Uma lista é uma coleção de itens em uma ordem em particular. Os colchetes([]) indicam uma lista e os elementos individuais de uma lista são separados por vírgula.
+Uma lista é uma coleção de itens em uma ordem em particular. Os colchetes([]) indicam uma lista e os elementos individuais de uma lista são separados por vírgula. [ver @2023curso, pp. 71]
 
 Exemplo:
 
@@ -568,3 +569,59 @@ print(bicycles[-1].title())
 
 ## Alterando, acrescentando e removendo elementos
 
+Dado que a lista é um elemento dinâmico (pode, e provavelmente ocorrerá, de sofrer modificações com o uso), este tópico comentará os principais formas de modificação de listas.
+
+### Modificando elementos de uma lista
+
+Para alterar um elemento que você quer modificar, use o nome da lista seguido do índice do elemento que quer modificar, e então forneça um novo valor.
+
+```{python}
+#Alterando o item 1 da lista (índice 0)
+motorcycles = ['honda','yamaha','suzuki']
+motorcycles[0] = 'ducati'
+print(motorcycles)
+```
+
+### Acrescentando elementos em uma lista
+
+Existem diversas formas de adicionar elementos a uma lista:
+
+1. Concatenando elementos no final de uma lista
+
+Adiciona um novo elemento no final da lista usando o método `.append()`.
+
+Exemplo:
+
+```{python}
+#Adicionando elemento ao final da lista
+motorcycles = ['honda','yamaha','suzuki']
+motorcycles.append('ducati')
+print(motorcycles)
+```
+
+2. Inserindo elementos em uma lista
+
+Este método insere um elemento em determinada posição da lista, usando o método `.insert(índice,elemento)`.
+
+Exemplo:
+
+```{python}
+#Adicionando um item na segunda posição da lista (índice 1)
+motorcycles = ['honda','yamaha','suzuki']
+motorcycles.insert(1,'ducati')
+print(motorcycles)
+```
+
+### Removendo elementos de uma lista
+
+1. Instrução `del`
+2. Método `.pop()`
+3. Método `.remove()`
+
+\newpage
+
+## Organizando uma lista
+
+\newpage
+
+# Referências
