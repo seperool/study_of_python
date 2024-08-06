@@ -19,6 +19,7 @@ format:
       number-sections: true
       highlight-style: github
 jupyter: python3
+bibliography: python_bibliografia.bib
 ---
 
 \thispagestyle{empty}
@@ -528,3 +529,8 @@ apenas uma - maneira óbvia de fazer algo.
 
 # Listas
 
+## Lista
+
+Uma lista é uma coleção de itens em uma ordem em particular. [@2023curso]
+
+\newpage
