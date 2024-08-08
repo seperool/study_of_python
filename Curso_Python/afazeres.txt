@@ -1,6 +1,6 @@
-ESCRITO EM 07/08/24
+ESCRITO EM 08/08/24
 ---
-PARA 08/08/24
+PARA 09/08/24
 ---
 Subir github:
 
@@ -10,7 +10,6 @@ Afazeres:
 	- Listas
 		- Alterando, acrescentando e removendo elementos
 			- Removendo elementos de uma lista
-				- Instrução del
 				- Método .pop()
 				- Método .remove()
 
