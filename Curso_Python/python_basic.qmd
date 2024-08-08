@@ -614,8 +614,25 @@ print(motorcycles)
 
 ### Removendo elementos de uma lista
 
+Os métodos para remover um item, ou um conjunto de itens, de uma lista.
+
 1. Instrução `del`
+
+Se a posição do item que você quer remover de uma lista for conhecida, a instrução `del` remove (deleta) um item em qualquer determinada posição. Depois de removido (deletado) não podemos mais acessar o valor, quando usado a instrução `del`.
+
+```{python}
+# Remover (deletar) primeiro item da lista, indíce 0
+motorcycles = ['honda','yamaha','suzuki']
+print(motorcycles)
+
+del motorcycles[0]
+print(motorcycles)
+```
+
 2. Método `.pop()`
+
+
+
 3. Método `.remove()`
 
 \newpage
