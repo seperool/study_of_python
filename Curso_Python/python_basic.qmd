@@ -9,9 +9,9 @@ format:
       toc: false
       lof: false
       lot: false
-      toc-depth: 2
+      toc-depth: 5
       number-sections: true
-      number-depth: 3
+      number-depth: 5
       colorlinks: true
       cite-method: biblatex
     docx:
@@ -582,11 +582,13 @@ motorcycles[0] = 'ducati'
 print(motorcycles)
 ```
 
+\newpage
+
 ### Acrescentando elementos em uma lista
 
 Existem diversas formas de adicionar elementos a uma lista:
 
-1. Concatenando elementos no final de uma lista
+#### Concatenando elementos no final de uma lista, método `.append()`
 
 Adiciona um novo elemento no final da lista usando o método `.append()`.
 
@@ -599,7 +601,7 @@ motorcycles.append('ducati')
 print(motorcycles)
 ```
 
-2. Inserindo elementos em uma lista
+#### Inserindo elementos em uma lista, método `.insert(índice,elemento)`
 
 Este método insere um elemento em determinada posição da lista, usando o método `.insert(índice,elemento)`.
 
@@ -612,11 +614,13 @@ motorcycles.insert(1,'ducati')
 print(motorcycles)
 ```
 
+\newpage
+
 ### Removendo elementos de uma lista
 
 Os métodos para remover um item, ou um conjunto de itens, de uma lista.
 
-1. Instrução `del`
+#### Instrução `del`
 
 Se a posição do item que você quer remover de uma lista for conhecida, a instrução `del` remove (deleta) um item em qualquer determinada posição. Depois de removido (deletado) não podemos mais acessar o valor, quando usado a instrução `del`.
 
@@ -629,11 +633,66 @@ del motorcycles[0]
 print(motorcycles)
 ```
 
-2. Método `.pop()`
+#### Método `.pop()`
 
+Existem duas formas de usar o método `.pop()`:
 
+1. `.pop()`
 
-3. Método `.remove()`
+As vezes há necessidade de usar o valor de um item depois de removê-lo de uma lista. O método `.pop()` remove o **último** item de uma lista, mas permite que você trabalhe com esse item depois da remoção.
+
+Remove o primeiro item de uma pilha, ou seja, o último item de uma lista.
+
+Para usarmos o item removido é necessário, salva-lo numa variável.
+
+Exemplo:
+```{python}
+# Uso do método .pop()
+# Removendo último item da lista e
+# Trabalhando com o item removido.
+motorcycles = ['honda','yamaha','suzuki']
+print(motorcycles)
+
+pop_motorcycle = motorcycles.pop()
+print(motorcycles)
+print(pop_motorcycle)
+```
+
+2. `.pop(índice)`
+
+Podemos usar o `.pop()` para remover um item em qualquer posição em uma lista, se incluirmos o índice do item que você deseja remove entre parênteses.
+
+Exemplo:
+```{python}
+# Uso do método .pop()
+# Removendo o segundo item da lista e
+# Trabalhando com o item removido.
+motorcycles = ['honda','yamaha','suzuki']
+print(motorcycles)
+
+pop_motorcycle = motorcycles.pop(1)
+print(motorcycles)
+print(pop_motorcycle)
+```
+
+#### Método `.remove()`
+
+Remove um item de acordo com o valor. É usado quando sabemos o valor do item, mas não a posição.
+
+O método `.remove()` apaga apenas a primeira ocorrência do valor especificado. Para apagar mais de uma ocorrência será necessario o uso de um laço, para cada ocorrência.
+
+Exemplo:
+
+```{python}
+# Uso do método .remove()
+# Removendo um item da lista pelo valor
+motorcycles = ['honda','yamaha','ducati']
+print(motorcycles)
+
+too_expensive = 'ducati'
+motorcycles.remove(too_expensive)
+print(motorcycles)
+```
 
 \newpage
 
