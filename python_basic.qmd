@@ -601,7 +601,7 @@ motorcycles.append('ducati')
 print(motorcycles)
 ```
 
-#### Inserindo elementos em uma lista, método `.insert(índice,elemento)`
+#### Inserindo elementos em uma lista, método `.insert()`
 
 Este método insere um elemento em determinada posição da lista, usando o método `.insert(índice,elemento)`.
 
