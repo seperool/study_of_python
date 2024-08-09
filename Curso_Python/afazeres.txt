@@ -1,6 +1,6 @@
-ESCRITO EM 08/08/24
+ESCRITO EM 09/08/24
 ---
-PARA 09/08/24
+PARA 10/08/24
 ---
 Subir github:
 
@@ -8,9 +8,10 @@ Estudar:
 
 Afazeres:
 	- Listas
-		- Alterando, acrescentando e removendo elementos
-			- Removendo elementos de uma lista
-				- Método .pop()
-				- Método .remove()
-
 		- Organizando listas
+	-Script:
+		- Exercicios de Lista
+			- 4
+			- 5
+			- 6
+			- 7
