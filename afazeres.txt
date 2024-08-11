@@ -1,6 +1,6 @@
-ESCRITO EM 09/08/24
+ESCRITO EM 11/08/24
 ---
-PARA 10/08/24
+PARA 12/08/24
 ---
 Subir github:
 
@@ -9,6 +9,6 @@ Estudar:
 Afazeres:
 	- Listas
 		- Organizando listas
+		- Descobrindo o tamanho de uma lista
 	-Script:
 		- Exercicios de Lista
-			- 7
