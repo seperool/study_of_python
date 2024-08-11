@@ -698,6 +698,11 @@ print(motorcycles)
 
 ## Organizando uma lista
 
+
+\newpage
+
+## Descobrindo o tamanho de uma lista `len()`
+
 \newpage
 
 # Bibliografia
