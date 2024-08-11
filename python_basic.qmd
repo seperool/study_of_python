@@ -701,7 +701,7 @@ print(motorcycles)
 
 \newpage
 
-## Descobrindo o tamanho de uma lista `len()`
+## Descobrindo o tamanho de uma lista - `len()`
 
 \newpage
 
