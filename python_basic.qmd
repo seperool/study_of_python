@@ -776,4 +776,48 @@ len(cars)
 
 \newpage
 
+# Trabalhando com listas
+
+## Percorrendo uma lista inteira com um laço
+
+Podemos usar um laço `for` para percorrer toda uma lista, podendo assim entre outras coisas, efetuar tarefas em cada item da lista.
+
+A estutura básica do `for` é:
+
+```
+for variável_nova in lista :
+  tarefas
+```
+
+O laço diz para a cada iteração pegar um elemento da lista e armazenar na nova variável, e executar uma tarefa a cada iteração. Toda tarefa indentada depois dos dois pontos é considerada dentro do laço.
+
+No Python o `for`, usa indentação para determinar o que esta dentro do laço.
+
+Qual quer linha após o laço que não for indentada é considerada fora do laço.
+
+Exemplo:
+
+```{python}
+#Executando um laço com base numa lista
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+  print(magician)
+```
+
+## Erros comuns de indentação
+
+- Esquecer de indentar.
+- Esquecer de indentar linhas adicionais do laço.
+- Indentação desnecessaria.
+- Indentando desnecessariamente após o laço.
+- Esquecer os dois-pontos do laço `for`.
+
+\newpage
+
+## Listas numéricas
+
+
+
+\newpage
+
 # Bibliografia
