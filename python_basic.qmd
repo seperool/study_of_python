@@ -698,10 +698,81 @@ print(motorcycles)
 
 ## Organizando uma lista
 
+Dado que com frequência, as listas são organizadas numa ordem imprevisível, se torna necessario organizar as informações em uma ordem particular. O Python tem mecanismos para organizar listas. São eles:
+
+### Método `.sort()`
+
+Ordena uma lista em ordem alfabética, ou alfabetica inversa.
+
+Para ordenar uma lista em ordem alfabética inversa, basta passar o argumento `reverse = True` para o método `.sort()`.
+
+Uma vez ordenada pelo método `.sort()` a lista não retorna a ordem original (ordenação permanente).
+
+Exemplo:
+
+```{python}
+# Ordenando a lista cars usando o método .sort()
+cars = ['bmw','audi','toyota','subaru']
+print(cars)
+cars.sort()
+print(cars)
+cars.sort(reverse=True)
+print(cars)
+```
+
+\newpage
+
+### A função `sorted()`
+
+A função `sorted()` ordena uma lista de forma temporaria, não altera a lista original, em ordem alfabetica. Ou seja, a lista volta a forma orginal ao final do uso da função.
+
+Assim como no médodo `.sort()`, podemos ordenar a lista em ordem alfabética inversa adicionando o argumento `reverse=True`.
+
+Exemplo:
+
+```{python}
+# Ordenando temporariamente a lista cars usando a função sorted()
+cars = ['bmw','audi','toyota','subaru']
+print(cars)
+print(sorted(cars))
+print(sorted(cars,reverse=True))
+print(cars)
+```
+
+\newpage
+
+### Método `.reverse()` 
+
+Para inverter a ordem original de uma lista, podemos usar o método `.reverse()`.
+
+O método `.reverse()` não organiza a lista em ordem alfabética inversa, o método inverte a lista original.
+
+O método `.reverse()` ordena de forma permanente a lista, porém se usarmos o método novamente, teremos a lista original. Logo, é fácil reverter o uso do método `.reverse()`.
+
+Exemplo:
+
+```{python}
+# Método .reverse() para inverte, de modo permanete, a ordem da lista.
+cars = ['bmw','audi','toyota','subaru']
+print(cars)
+cars.reverse()
+print(cars)
+cars.reverse()
+print(cars)
+```
 
 \newpage
 
 ## Descobrindo o tamanho de uma lista - `len()`
+
+Podemos descobrir o tamanho de uma lista usando a função `len()`.
+
+Exemplo:
+
+```{python}
+cars = ['bmw','audi','toyota','subaru']
+len(cars)
+```
 
 \newpage
 
