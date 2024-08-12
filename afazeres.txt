@@ -1,14 +1,14 @@
-ESCRITO EM 11/08/24
+ESCRITO EM 12/08/24
 ---
-PARA 12/08/24
+PARA 13/08/24
 ---
 Subir github:
 
 Estudar:
 
 Afazeres:
-	- Listas
-		- Organizando listas
-		- Descobrindo o tamanho de uma lista
-	-Script:
-		- Exercicios de Lista
+	- Cap4. Trabalhando com listas
+	- Scripts:
+		- Exercicios Cap3.:
+			- 9
+			- 10
