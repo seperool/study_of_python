@@ -8,7 +8,11 @@ Estudar:
 
 Afazeres:
 	- Cap4. Trabalhando com listas
+		- Listas númericas
 	- Scripts:
-		- Exercicios Cap3.:
+		- Exercicios Cap.3:
 			- 9
 			- 10
+		- Exercicios Cap.4:
+			- 1
+			- 2
