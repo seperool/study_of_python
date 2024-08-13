@@ -7,6 +7,7 @@ Created on Sat Mar 30 23:07:22 2024
 
 import os #comandos OS
 import math #Amplia as funções matematicas (básicas, trigonométricas, estatísticas)
+import statistics
 import numpy as np
 import pandas as pd
 
