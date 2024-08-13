@@ -1,0 +1,7 @@
+Principais comandos úteis de python
+
+Lista de bibliotecas instaladas no pip:
+python -m pip list
+
+Exportar lista de bibliotecas instaladas no pip em formato texto:
+pip freeze > requirements.txt
