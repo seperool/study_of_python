@@ -55,6 +55,8 @@ csl: Quarto/abnt.csl
 #| warning: false
 from IPython.display import Markdown
 from tabulate import tabulate
+import math
+import statistics
 ```
 
 \newpage
@@ -816,7 +818,69 @@ for magician in magicians:
 
 ## Listas numéricas
 
+### Gerando série de números com a função `range()`
 
+A função `range()` é usada para gerar uma série de números, de uma determinada sequência numérica.
+
+A função `range()` faz o Python começar a contar no primeiro valor definido (limite inferior) e parar quando atingir o segundo valor definido (limite superior). Como o for para no segundo valor, a saída não conterá o valor final. Também podemos definir um intervalo, pulando alguns valores.
+
+Estrutura da função `range()`:
+
+`range(limite_inferior, limite_superior, intervalo)`
+
+Exemplo:
+
+```{python}
+for value in range(1,5):
+  print(value)
+```
+
+### Usando `range()` para gerar uma lista - `list()`
+
+Podemos usar para criar uma lista de números, combinando a função `range()`, que gera uma série númerica, com a função `list()`, que cria um lista.
+
+Exemplo:
+
+```{python}
+numbers = list(range(1,6))
+print(numbers)
+```
+
+Exemplo 2:
+
+```{python}
+numbers = list(range(2,11,2))
+print(numbers)
+```
+
+\newpage
+
+### Estatística simples com lista de números
+
+As principais funções estatísticas estão contidas na @tbl-estsimp.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-estsimp
+#| tbl-cap: Estatística simples
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["`min()`","Retorna o valor mínimo"],
+         ["`max()`","Retorna o valor máximo"]]
+Markdown(tabulate(
+  table, 
+  headers=["Funções","Descrição"]
+))
+```
+
+As principais bibliotecas auxiliares de funções estatísticas são:
+
+1. `math`
+
+2. `statistics`
 
 \newpage
 
