@@ -868,8 +868,9 @@ As principais funções estatísticas estão contidas na @tbl-estsimp.
 
 from IPython.display import Markdown
 from tabulate import tabulate
-table = [["`min()`","Retorna o valor mínimo"],
-         ["`max()`","Retorna o valor máximo"]]
+table = [["`min()`","Retorna o valor mínimo."],
+         ["`max()`","Retorna o valor máximo."],
+         ["`sum()`","Somatório."]]
 Markdown(tabulate(
   table, 
   headers=["Funções","Descrição"]
@@ -881,6 +882,25 @@ As principais bibliotecas auxiliares de funções estatísticas são:
 1. `math`
 
 2. `statistics`
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-pacstatis
+#| tbl-cap: Pacote statistics
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["`Statistic.mean()`","Média aritmética"],
+         ["`Statistic.median()`","Mediana"],
+         ["`Statistic.mode()`","Moda"],
+         ["`Statistic.quantiles()`","Quartil"]]
+Markdown(tabulate(
+  table, 
+  headers=["Funções","Descrição"]
+))
+```
 
 \newpage
 
