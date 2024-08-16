@@ -880,22 +880,49 @@ Markdown(tabulate(
 As principais bibliotecas auxiliares de funções estatísticas são:
 
 1. `math`
+   
+2. `numpy` as np
 
-2. `statistics`
+3. `statistics`
+
+Medidas de posição utilizando bibliotecas python, @tbl-pacstatismedposition.
 
 ```{python}
 #| echo: false
 #| error: false
 #| warning: false
-#| label: tbl-pacstatis
-#| tbl-cap: Pacote statistics
+#| label: tbl-pacstatismedposition
+#| tbl-cap: Medidas de posição, bibliotecas python
 
 from IPython.display import Markdown
 from tabulate import tabulate
-table = [["`Statistic.mean()`","Média aritmética"],
-         ["`Statistic.median()`","Mediana"],
-         ["`Statistic.mode()`","Moda"],
-         ["`Statistic.quantiles()`","Quartil"]]
+table = [["`np.mean()`","Média aritmética"],
+         ["`statistics.median()`","Mediana"],
+         ["`statistics.mode()`","Moda"],
+         ["`np.quantiles(array, 0.5)`","Quartil"],
+         ["`np.percentile(array, 50)`","Percentil"]]
+Markdown(tabulate(
+  table, 
+  headers=["Funções","Descrição"]
+))
+```
+
+Medidas de dispersão utilizando bibliotecas python, @tbl-pacstatismeddisp.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-pacstatismeddisp
+#| tbl-cap: Medidas de dispersão, bibliotecas python
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["`np.mean()`","Média aritmética"],
+         ["`statistics.median()`","Mediana"],
+         ["`statistics.mode()`","Moda"],
+         ["`np.quantiles(array, 0.5)`","Quartil"],
+         ["`np.percentile(array, 50)`","Percentil"]]
 Markdown(tabulate(
   table, 
   headers=["Funções","Descrição"]
