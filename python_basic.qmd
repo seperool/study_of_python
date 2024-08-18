@@ -954,6 +954,8 @@ A Estatística de uma maneira geral compreende aos métodos científicos para CO
 
 - O fluxograma da estatística descritiva pode ser espresso da seguinte forma:
 
+![Estatística descritiva.](Quarto/Imagens/Estatisica/fluxograma_estatistica_descritiva.png){}
+
 - A representação tabular (Tabelas de Distribuição de Frequências) deve conter:
   - Cabeçalho
   
@@ -978,6 +980,8 @@ A Estatística de uma maneira geral compreende aos métodos científicos para CO
 
 - Tipos de variáveis
   
+  ![Tipos de variáveis.](Quarto/Imagens/Estatisica/tipos_de_variaveis_estatistica.png){height=5cm}
+
   - *Qualitativo nominal*
   
   Não possuem uma ordem natural de ocorrência.
@@ -1003,11 +1007,47 @@ A Estatística de uma maneira geral compreende aos métodos científicos para CO
 É a quantidade de vezes que um valor é observado dentro de um conjunto de dado.
 
 - Distribuição em frequências
-  - A distribuição tabular é denominada: "Tabela de Distribuição de requências".
+  - A distribuição tabular é denominada: "Tabela de Distribuição de Frequências".
   - Podemos separar em 3 modelos de distribuição tabular:
     - Variável Quantitativa Discreta.
     - Variável Quantitativa Contínua.
     - Variáveis Qualitativas.
+
+\newpage
+
+##### Variável Quantitativa Discreta
+
+- Passos da preparação dos dados:
+  - 1º Passo - **DADOS BRUTOS**:   
+  Obter os dados da maneira que foram coletados.
+  
+  - 2º Passo - **ROL**:   
+  Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).
+  
+  - 3º Passo - **CONSTRUÇÃO TABELA**:  
+  Na primeira coluna são colocados os valores da variável, e nas demais as respectivas frequências.
+  
+  - Frequência absoluta simples.  
+  Nº de vezes que cada valor da variável se repete.
+
+- Principais campos da **distribuição tabular de variaveis quantitativas discreta**:
+  - $n$ é o número total de elementos da amostra.
+  - $x_{i}$ é o número de valores distintos que a variavel assume.
+  - $F_{i}$ é a Frequência Absoluta Simples.
+  - $f_{i}$ é a Frequência Relativa Simples.
+  - $f_{i} \%$ é a Frequência Relativa Simples Percentual. $f_{i}\% = f_{i} \cdot 100\%$.
+  - $F_{a}$ é a Frequência Absoluta Acumulada.
+
+![Distribuição tabular quantitativa discreta.](Quarto/Imagens/Estatisica/Distribuicao_tabular_quantitativo_discreta.png){height=5cm}
+
+Observação:  
+As setas simbolizam ordem crescente ou decrescente.
+
+\newpage
+
+##### Variável Quantitativa Contínua
+
+
 
 \newpage
 
