@@ -1,6 +1,6 @@
-ESCRITO EM 16/08/24
+ESCRITO EM 17/08/24
 ---
-PARA 17/08/24
+PARA 18/08/24
 ---
 Subir github:
 
@@ -9,10 +9,10 @@ Estudar:
 Afazeres:
 	- Cap4. Trabalhando com listas
 		- Listas númericas
-			- Estatísticas simples com lista de números
-			- Estatística básica
+			- Estatísticas simples com lista de números <-- trabalhando
+			- Estatística básica <-- trabalhando
 				- Preparação dos dados para aplicação de estatística
-					- Teoria
+					- Teoria <-- trabalhando
 				- Medidas de posição
 					- Teoria
 					- Funções
