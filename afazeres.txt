@@ -1,6 +1,6 @@
-ESCRITO EM 18/08/24
+ESCRITO EM 19/08/24
 ---
-PARA 19/08/24
+PARA 20/08/24
 ---
 Subir github:
 
@@ -12,7 +12,8 @@ Afazeres:
 			- Estatísticas simples com lista de números <-- trabalhando
 			- Estatística básica <-- trabalhando
 				- Preparação dos dados para aplicação de estatística
-					- Teoria <-- trabalhando
+					- Teoria 
+						- Variável Quantitativa Contínua <-- Revisar
 				- Medidas de posição
 					- Teoria
 					- Funções
