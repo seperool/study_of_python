@@ -57,6 +57,8 @@ from IPython.display import Markdown
 from tabulate import tabulate
 import math
 import statistics
+import numpy as np
+import pandas as pd
 ```
 
 \newpage
@@ -65,10 +67,10 @@ import statistics
 
 ```{mermaid}
 flowchart LR
-  A[Básico] --> B(Projeto)
-  B --> C{Decision}
-  C --> D[Analise de dados]
-  C --> E[Mineração de dados]
+  A[Python básico] --> B(Projeto)
+  B --> C{Estatística}
+  C --> E[Analise de dados]
+  C --> F[Mineração de dados]
 ```
 
 # Variáveis e tipos de dados simples
@@ -127,9 +129,9 @@ Os espaços em branco entre aspas servem para criar espaços na string.
 
 1. `.title()`
    
-Coloca apenas as primeiras letras em maiúsculas de cada palavra e o resto em minúscula.
+  Coloca apenas as primeiras letras em maiúsculas de cada palavra e o resto em minúscula.
 
-Exemplo:
+  Exemplo:
 
 ```{python}
 full_name = "ada lovelace"
@@ -139,9 +141,9 @@ print(full_name.title())
 
 2. `.upper()`
 
-Coloca todas as letras em maiúsculas.
+  Coloca todas as letras em maiúsculas.
 
-Exemplo:
+  Exemplo:
 
 ```{python}
 full_name = "ada lovelace"
@@ -150,10 +152,10 @@ print(full_name.upper())
 
 3. `.lower()`
 
-Coloca todas as letras em minusculas.
-O método `.lower()` é particularmente útil para armazenar dados. Converter os dados em minúscula antes de armazenar.
+  Coloca todas as letras em minusculas.
+  O método `.lower()` é particularmente útil para armazenar dados. Converter os dados em minúscula antes de armazenar.
 
-Exemplo:
+  Exemplo:
 
 ```{python}
 full_name = "ada lovelace"
@@ -196,9 +198,9 @@ print("Language:\nPython\nJava\nC\nJavaScript")
 
 1. `.rstrip()`
 
-Remove espaço em branco do lado direito.
+  Remove espaço em branco do lado direito.
 
-Exemplo:
+  Exemplo:
 ```{python}
 favorite_linguage = 'python '
 favorite_linguage.rstrip()
@@ -206,9 +208,9 @@ favorite_linguage.rstrip()
 
 2. `.lstrip()`
 
-Remove espaço em branco do lado esquerdo.
+  Remove espaço em branco do lado esquerdo.
 
-Exemplo:
+  Exemplo:
 ```{python}
 favorite_linguage = ' python'
 favorite_linguage.lstrip()
@@ -216,15 +218,15 @@ favorite_linguage.lstrip()
 
 3. `.strip()`
 
-Remove os espaços em branco dos dois lados ao mesmo tempo.
+  Remove os espaços em branco dos dois lados ao mesmo tempo.
 
-Exemplo:
+  Exemplo:
 ```{python}
 favorite_linguage = ' python '
 favorite_linguage.strip()
 ```
 
-* Os metodos usados não removem os espaços em branco em definitivo, para remover em definitivo é necessario armazenar o valor novo na variável.
+   * Os metodos usados não removem os espaços em branco em definitivo, para remover em definitivo é necessario armazenar o valor novo na variável.
 
 ```{python}
 favorite_linguage = ' python '
@@ -933,78 +935,103 @@ Markdown(tabulate(
 
 \newpage
 
-### Estatística básica
+## list comprehensions
 
-#### Teoria
+List comprehensions é uma forma de criar listas já acoplando o laço for nelas, deixando o código mais enxuto.
+
+Sintaxe:
+
+`nome_lista = [expressão_calculada_do_for for variável in range()]`
+
+Exemplo:
+
+```{python}
+squares = [value ** 2 for value in range(1,11)]
+print(squares)
+```
+
+\newpage
+
+## Trabalhando com parte de uma lista
+
+
+
+## Tuplas
+
+\newpage
+
+# Estatística básica
+
+## Teoria
 
 - Definição de Estatística:
   
-A Estatística de uma maneira geral compreende aos métodos científicos para COLETA, ORGANIZAÇÃO, RESUMO, APRESENTAÇÃO e ANÁLISE de Dados de Observação (Estudos ou Experimentos), obtidos em qualquer área de conhecimento. A finalidade é a de obter conclusões válidas para tomada de decisões.
+  A Estatística de uma maneira geral compreende aos métodos científicos para COLETA, ORGANIZAÇÃO, RESUMO, APRESENTAÇÃO e ANÁLISE de Dados de Observação (Estudos ou Experimentos), obtidos em qualquer área de conhecimento. A finalidade é a de obter conclusões válidas para tomada de decisões.
 
   - Estatística Descritiva
-  Parte responsável basicamente pela COLETA e SÍNTESE (Descrição) dos Dados em questão.
+    Parte responsável basicamente pela COLETA e SÍNTESE (Descrição) dos Dados em questão.
   
-  Disponibiliza de técnicas para o alcance desses objetivos. Tais Dados podem ser provenientes de uma AMOSTRA ou POPULAÇÃO.
+    Disponibiliza de técnicas para o alcance desses objetivos. Tais Dados podem ser provenientes de uma AMOSTRA ou POPULAÇÃO.
 
   - Estatística Inferencial
   
-  É utilizada para tomada de decisões a respeito de uma população, em geral fazendo uso de dados de amostrais.
+    É utilizada para tomada de decisões a respeito de uma população, em geral fazendo uso de dados de amostrais.
 
-  Essas decisões são tomadas sob condições de INCERTEZA, por isso faz-se necessário o uso da TEORIA DA PROBABILIDADE.
+    Essas decisões são tomadas sob condições de INCERTEZA, por isso faz-se necessário o uso da TEORIA DA PROBABILIDADE.
 
 - O fluxograma da estatística descritiva pode ser espresso da seguinte forma:
 
-![Estatística descritiva.](Quarto/Imagens/Estatisica/fluxograma_estatistica_descritiva.png){}
+  ![Estatística descritiva.](Quarto/Imagens/Estatisica/fluxograma_estatistica_descritiva.png){}
 
 - A representação tabular (Tabelas de Distribuição de Frequências) deve conter:
   - Cabeçalho
   
-  Deve conter o suficiente para que as seguintes perguntas sejam respondidas "**o que?**" (Relativo ao fato), "**onde?**" (Relativo ao lugar) e "**quando?**" (Correspondente à época).
+    Deve conter o suficiente para que as seguintes perguntas sejam respondidas "**o que?**" (Relativo ao fato), "**onde?**" (Relativo ao lugar) e "**quando?**" (Correspondente à época).
 
   - Corpo
   
-  É o lugar da Tabela onde os dados serão registrados. Apresenta colunas e sub colunas.
+    É o lugar da Tabela onde os dados serão registrados. Apresenta colunas e sub colunas.
 
   - Rodapé
   
-  Local destinado à outras informações pertinentes, por exemplo a Fonte dos Dados.
+    Local destinado à outras informações pertinentes, por exemplo a Fonte dos Dados.
 
 - População e Amostras
   - População
   
-  É o conjunto de todos os itens, objetos ou pessoas sob consideração, os quais possuem pelo menos uma característica (Variável) em comum. Os elementos pertencentes à uma População são denominados "Unidades Amostrais".
+    É o conjunto de todos os itens, objetos ou pessoas sob consideração, os quais possuem pelo menos uma característica (Variável) em comum. Os elementos pertencentes à uma População são denominados "Unidades Amostrais".
 
   - Amostras
   
-  É qualquer subconjunto (não vazio) da População. É extraída conforme regras pré-estabelecidas, com a finalidade de obter "estimativa" de alguma característica da População.
+    É qualquer subconjunto (não vazio) da População. É extraída conforme regras pré-estabelecidas, com a finalidade de obter "estimativa" de alguma característica da População.
 
 - Tipos de variáveis
   
-  ![Tipos de variáveis.](Quarto/Imagens/Estatisica/tipos_de_variaveis_estatistica.png){height=5cm}
+    ![Tipos de variáveis.](Quarto/Imagens/Estatisica/tipos_de_variaveis_estatistica.png){height=5cm}
 
   - *Qualitativo nominal*
   
-  Não possuem uma ordem natural de ocorrência.
+    Não possuem uma ordem natural de ocorrência.
   
   - *Qualitativo ordinal*
   
-  Possuem uma ordem natural de ocorrência.
+    Possuem uma ordem natural de ocorrência.
   
   - *Quantitativo descreta*
   
-  Só podem assumir valores inteiros, pertencentes a um conjunto finito ou enumerável.
+    Só podem assumir valores inteiros, pertencentes a um conjunto finito ou enumerável.
   
   - *Quantitativo continua*
   
-  Podem assumir qualquer valor em um determinado intervalo da reta dos números reais.
+    Podem assumir qualquer valor em um determinado intervalo da reta dos números reais.
 
 \newpage
 
-#### Preparação dos dados (sumariazar dados coletados)
+## Preparação dos dados (sumariazar dados coletados)
 
 - Frequência (conceito)
 
-É a quantidade de vezes que um valor é observado dentro de um conjunto de dado.
+  É a quantidade de vezes que um valor é observado dentro de um conjunto de dado.
 
 - Distribuição em frequências
   - A distribuição tabular é denominada: "Tabela de Distribuição de Frequências".
@@ -1015,20 +1042,20 @@ A Estatística de uma maneira geral compreende aos métodos científicos para CO
 
 \newpage
 
-##### Variável Quantitativa Discreta
+### Variável Quantitativa Discreta
 
 - Passos da preparação dos dados:
   - 1º Passo - **DADOS BRUTOS**:   
-  Obter os dados da maneira que foram coletados.
+    Obter os dados da maneira que foram coletados.
   
   - 2º Passo - **ROL**:   
-  Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).
+    Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).
   
   - 3º Passo - **CONSTRUÇÃO TABELA**:  
-  Na primeira coluna são colocados os valores da variável, e nas demais as respectivas frequências.
+    Na primeira coluna são colocados os valores da variável, e nas demais as respectivas frequências.
   
   - Frequência absoluta simples.  
-  Nº de vezes que cada valor da variável se repete.
+    Nº de vezes que cada valor da variável se repete.
 
 - Principais campos da **distribuição tabular de variaveis quantitativas discreta**:
   - $n$ é o número total de elementos da amostra.
@@ -1038,14 +1065,14 @@ A Estatística de uma maneira geral compreende aos métodos científicos para CO
   - $f_{i} \%$ é a Frequência Relativa Simples Percentual. $f_{i}\% = f_{i} \cdot 100\%$.
   - $F_{a}$ é a Frequência Absoluta Acumulada.
 
-![Distribuição tabular quantitativa discreta.](Quarto/Imagens/Estatisica/Distribuicao_tabular_quantitativo_discreta.png){height=5cm}
+  ![Distribuição tabular quantitativa discreta.](Quarto/Imagens/Estatisica/Distribuicao_tabular_quantitativo_discreta.png){height=5cm}
 
-Observação:  
-As setas simbolizam ordem crescente ou decrescente.
+  Observação:  
+  As setas simbolizam ordem crescente ou decrescente.
 
 \newpage
 
-##### Variável Quantitativa Contínua
+### Variável Quantitativa Contínua
 
 - Teoria:
   - A construção da representação tabular é realizada de maneira análoga ao caso das variáveis discretas.  
@@ -1075,6 +1102,8 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
   $$k \cong \sqrt{n}$$  
   Onde $n$ é o número de elementos amostrais.  
 
+\newpage
+
 2. Como calcular a **Amplitude Total** ($AT_{x}$):  
   - Diferença entre o maior e o menor valor observado.  
   - Intervalo de variação dos valores observados.  
@@ -1083,41 +1112,43 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
   
   - Cálculo:  
   
-  $$AT_{x} = Máx(X_{i}) - Mín(X_{i})$$
+    $$AT_{x} = Máx(X_{i}) - Mín(X_{i})$$
   
-  Onde,
+    Onde,
   
-  $AT_{x}$ é a Amplitude Total.
+    $AT_{x}$ é a Amplitude Total.
   
-  $Máx(X_{i})$ é o *valor máximo das amostras*.
+    $Máx(X_{i})$ é o *valor máximo das amostras*.
   
-  $Min(X_{i})$ é o *valor mínimo das amostras*.
+    $Min(X_{i})$ é o *valor mínimo das amostras*.
 
   - Exemplo:
   
-  Se $k = 5$,
+    Se $k = 5$,
   
-  $AT_{x} = 28$
+    $AT_{x} = 28$
   
-  Logo, arredondando $AT_{x} = 30$, para aproximar o valor $AT_{x}$ de um múltiplo de $k$.
+    Logo, arredondando $AT_{x} = 30$, para aproximar o valor $AT_{x}$ de um múltiplo de $k$.
 
-1. Como cálcular a **Amplitude das classes da frequência** ($h$):
+\newpage
+
+3. Como cálcular a **Amplitude das classes da frequência** ($h$):
   
   - As classes terão amplitudes iguais.
   
   - Cálculo:
   
-  $$ h = h_{i} = \frac{AT_{x}}{k}$$
+    $$ h = h_{i} = \frac{AT_{x}}{k}$$
   
-  Onde, $k$ é o **número de classes** e $AT_{x}$ é a **Amplitude Total**.
+    Onde, $k$ é o **número de classes** e $AT_{x}$ é a **Amplitude Total**.
 
-1. Como determinar o ponto médio das classes, representatividade da classe ($p_{i}$):
+4. Como determinar o ponto médio das classes, representatividade da classe ($p_{i}$):  
+  $$p_{i} = \frac{(LS_{i} - LI_{i})}{2} $$
+  Onde,  
+  $LS_{i}$ é o limite superior da classe.  
+  $LI_{i}$ é o limite inferior da classe.  
 
-$$p_{i} = \frac{(LS_{i} - LI_{i})}{2} $$
-
-Onde,  
-$LS_{i}$ é o limite superior da classe.  
-$LI_{i}$ é o limite inferior da classe.  
+\newpage
 
 5. Passos da preparação dos dados:
   - 1º Passo - **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.
@@ -1126,21 +1157,37 @@ $LI_{i}$ é o limite inferior da classe.
   
   - Exemplo:
   
-  ![Tabela de_distribuição de frequência quantitativa continua.](Quarto/Imagens/Estatisica/tabela_de_dist_freq_quant_conti.png){height=5cm}
+    ![Tabela de_distribuição de frequência quantitativa continua.](Quarto/Imagens/Estatisica/tabela_de_dist_freq_quant_conti.png){height=5cm}
   
-  $X_{i}$ são as classes.  
-  $F_{i}$ é a Frequência Absoluta Simples.  
-  $f_{i}$ é a Frequência Relativa Simples.  
-  $f_{i} \%$ é a Fequência Relativa Simples Percentual.  
-  $F_{a}$ é a Frequência Absoluta Acumulada.  
-  $f_{a}$ é a Fequência Absoluta Acumulada Simples.  
-  $f_{a} \%$ é a Fequência Absoluta Acumulada Simples Percentual.  
-  $p_{i}$ é a Representatividade da classe (ponto médio das classes).  
+    $X_{i}$ são as classes.  
+    $F_{i}$ é a Frequência Absoluta Simples.  
+    $f_{i}$ é a Frequência Relativa Simples.  
+    $f_{i} \%$ é a Fequência Relativa Simples Percentual.  
+    $F_{a}$ é a Frequência Absoluta Acumulada.  
+    $f_{a}$ é a Fequência Absoluta Acumulada Simples.  
+    $f_{a} \%$ é a Fequência Absoluta Acumulada Simples Percentual.  
+    $p_{i}$ é a Representatividade da classe (ponto médio das classes).  
 
 \newpage
 
-##### Variáveis Qualitativas
+### Variáveis Qualitativas
 
+- Passos da preparação dos dados:
+  - Análogo ao procedimento para dados discretos.
+  - 1º Passo - **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.
+  - 2º Passo - **ROL**: Nesse caso é feita organização dos DADOS BRUTOS em ordem (Crescente ou Decrescente) de importância.
+  - 3º Passo - **CONSTRUÇÃO TABELA** (Com duas ou mais colunas).
+
+- Distribuição de Frequencia:
+  - $x_{i}$ é o número de valores distintos que a variavel assume.
+  - $F_{i}$ é a Frequência Absoluta Simples.
+  - $f_{i}$ é a Frequência Relativa Simples.
+  - $f_{i} \%$ é a Fequência Relativa Simples Percentual.
+  - Inserir comentário sobre os dados.
+
+\newpage
+
+## Medidas de posição
 
 \newpage
 
