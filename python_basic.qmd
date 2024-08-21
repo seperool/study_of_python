@@ -954,7 +954,13 @@ print(squares)
 
 ## Trabalhando com parte de uma lista
 
+Neste tópico vamos trabalhar com um grupo de itens de uma lista, no Python é chamado de *fatia* (de uma lista).
 
+### Fatiando uma lista
+
+### Percorrendo uma fatia com um laço - `for`
+
+### Copiando uma lista
 
 ## Tuplas
 
