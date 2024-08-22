@@ -958,11 +958,129 @@ Neste tópico vamos trabalhar com um grupo de itens de uma lista, no Python é c
 
 ### Fatiando uma lista
 
+1. Fatia simples
+
+  Para criar uma fatia, especifique o índice do primeiro e o último elemento com os quais você deseja trabalhar.
+
+  O Python para em um item antes do segundo índice (índice final) especificado.
+
+  Exemplo:
+
+```{python}
+#Exibindo os 3 primeiros elementos de uma lista.
+players = ["charles","martina","michael","florence","eli"]
+print(players[0:3])
+#Serão exibidos os itens na posição 0, 1 e 2.
+```
+
+2. Delimitando ínicio e fim da fatia.
+
+  Podemos começar de qualquer índice.
+
+  Exemplo:
+
+```{python}
+#Exibindo do segundo ao quarto item.
+players = ["charles","martina","michael","florence","eli"]
+print(players[1:4])
+```
+
+\newpage
+
+3. Omitindo índices
+
+  Se omitirmos o primeiro índice, o Python começará do índice 0 (ínicio). De maneira analóga, se omitirmos o segundo índice (índice final), o Python terminará no último item.
+
+  Exemplo:
+
+```{python}
+#Exibindo os 2 primeiros elementos de uma lista.
+players = ["charles","martina","michael","florence","eli"]
+print(players[:2])
+```
+
+4. índice negativo
+
+  O índice negativo devolve um elemento a determina distância do final da lista. Assim podemos exibir qualquer fatia a partir do final da lista.
+
+  Exemplo:
+
+```{python}
+#Exibindo os 3 últimos elementos de uma lista.
+players = ["charles","martina","michael","florence","eli"]
+print(players[-3:])
+```
+
+
+\newpage
+
 ### Percorrendo uma fatia com um laço - `for`
+
+Podemos usar uma fatia em um laço `for` se quisermos percorrer um subconjunto de elementos de uma lista.
+
+Exemplo:
+
+```{python}
+players = ["charles","martina","michael","florence","eli"]
+print("Here are the first three players on my team:")
+for player in players[:3]:
+  print(player.title())
+```
+
+\newpage
 
 ### Copiando uma lista
 
+Vamos explorar o modo de copiar uma lista e analisar uma situação em que copiar uma lista é útil.
+
+1. Copiando uma lista inteira, usando *fatia*.
+
+  Podemos criar uma fatia que inclua a lista inteira, omitindo o primeiro e segundo índices.
+
+  Exemplo:
+
+```{python}
+#Usamos o metódo de fatia para copiar listas.
+my_foods = ["pizza","falafel","carrot cake"]
+friend_foods = my_foods[:]
+
+print("My favorite food are:")
+print(my_foods)
+
+print("\nMy friend's favorite food are:")
+print(friend_foods)
+```
+
+  Ambas as listas `my_foods` e `friend_fooods`, contém os mesmos elementos, porém são listas diferentes.
+  Ao modificarmos uma delas a outra não é modificada automáticamente, por serem listas diferentes.
+
+2. Variáveis que apontam para mesma lista.
+
+  Se ao invés de copiarmos uma fatia de uma lista para a outra, mesmo que seja a lista inteira, definirmos que uma variável é igual a outra, nesse caso criamos duas variáveis que apontam para a mesma lista. Ou seja, se modificarmos qualquer uma das listas, a outra é automaticamente modificada, pois ambas são a mesma lista.
+
+  Exemplo:
+
+```{python}
+#Ambas variáveis apontam para a mesma lista.
+my_foods = ["pizza","falafel","carrot cake"]
+friend_foods = my_foods
+
+friend_foods.append("ice cream")
+
+print("My favorite food are:")
+print(my_foods)
+
+print("\nMy friend's favorite food are:")
+print(friend_foods)
+```
+
+\newpage
+
 ## Tuplas
+
+### Definindo uma tupla
+
+### Percorrendo todos os valores de uma tupla com um laço
 
 \newpage
 
