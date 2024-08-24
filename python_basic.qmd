@@ -1078,9 +1078,64 @@ print(friend_foods)
 
 ## Tuplas
 
+Tuplas são listas em que os itens não são criadas para mudar (listas imutáveis).
+
 ### Definindo uma tupla
 
+Uma tupla se parece com uma lista, exceto por usar parênteses no lugar de colchetes.
+
+Sintaxe:
+
+`tuplas = (valor_1,valor_2,valor_3,...)`
+
+Exibimos cada elemento de uma tupla com a mesma sintaxe que usamos para acessar elementos de uma lista.
+
+Exemplo:
+```{python}
+dimensions = (200,50)
+print(dimensions[0])
+```
+
+Se tentarmos alterar algum elemento de uma tupla, será retornado um erro de tipo.
+
 ### Percorrendo todos os valores de uma tupla com um laço
+
+Podemos percorrer uma tupla usando um laço `for`, da mesma forma que uma lista.
+
+Exemplo:
+
+```{python}
+dimensions = (200,50)
+for dimension in dimensions:
+  print(dimension)
+```
+
+\newpage
+
+### Sobrescrevendo uma tupla
+
+Não é possível modificar os elementos de uma tupla. Retornaria um erro de tipo.
+
+Esse tipo de operação não funcionaria:
+
+`tupla[0] = valor_novo`
+
+Porém é possível subrescrever a tupla, imputando novos valores a variável.
+
+Exemplo:
+
+```{python}
+#Sobrescrevendo uma tupla
+dimensions = (200,50)
+print("Original dimensions:")
+for dimension in dimensions:
+  print(dimension)
+
+dimensions = (400,100)
+print("\nModified dimensions:")
+for dimension in dimensions:
+  print(dimension)
+```
 
 \newpage
 
@@ -1312,6 +1367,10 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
 \newpage
 
 ## Medidas de posição
+
+\newpage
+
+# Instruções IF
 
 \newpage
 
