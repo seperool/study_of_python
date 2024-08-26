@@ -1556,9 +1556,328 @@ $$AI = Q_3 - Q_1$$
 
 ## Medidas de dispersão
 
+- Medem o grau de **variabilidade** (dispersão) dos valores observados em torno da **Média Aritmética**.
+
+- Caracterizam a **representatividade da média** e o nivel de **homogeneidade** ou **heterogeneidade** dentro de cada grupo analizado.
+
+![Exemplo de dispersão com heterogeneidade e homogeneidade.](Quarto/Imagens/Estatisica/medidas_de_dispersao.png){height=5cm}
+
+### Amplitude Total ($A_T$)
+
+- Diferença entre o maior e o menor dos valores da série.
+
+- Não considera a dispersão dos valores internos, apenas os extremos.
+
+- Utilização limitada enquanto medida de dispersão, oferece pouca informação.
+
+- Cálculo:
+$$A_T = X_{Máx} - X_{Mín}$$
+
+Onde,
+
+$X_{Máx}$ é o valor máximo da série;
+
+$X_{Mín}$ é o valor mínimo da série.
+
+\newpage
+
+### Desvio
+
+#### Desvio Absoluto ($D$)
+
+- Para dados não agrupados:
+  
+  - Os **Desvios Absolutos** ($D$) são a diferença absoluta entre um valor observado e a média aritmética:
+  $$D = |x_i - \bar{X}|$$
+  
+  Onde,
+  
+  $x_i$ é o **valor de cada elemento**;
+  
+  $\bar{x}$ é a **Média Aritmética**.
+  
+  - Os **Desvios Absolutos** ($D$) são um conjunto de elementos como resposta final.
+
+- Para dados agrupados, sem intervalo de classe:
+  
+  - Cálculo:
+  $$d_i = |x_i - \bar{X}|$$
+  
+  Onde,
+  
+  $x_i$ é o valor da variável discreta;
+  
+  $\bar{X}$ é a **Média Aritmética**.
+
+- Para dados agrupados, com intervalo de classe:
+  
+  - Cálculo:
+  $$d_i = |p_i - \bar{x}|$$
+  
+  Onde,
+  
+  $p_i$ é a **Representatividade da classe** (ponto médio da classe);
+  
+  $\bar{x}$ é a **Média Aritmética** cálculada para *dados agrupados continuos*:
+  $$\bar{x} = \frac{\sum_{i=1}^{N} p_i \cdot f_i}{\sum f_i}$$
+  
+\newpage
+
+#### Desvio Absoluto Médio ($dm$)
+
+- É a **Média** dos **Desvios**.
+
+- Para dados não agrupados:
+  
+  - Cálculo:
+  $$dm(x) = \frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}$$
+  
+  Onde,
+  
+  $x_i$ é o **valor de cada elemento**;
+  
+  $\bar{x}$ é a **Média Aritmética**;
+  
+  $n$ é o **número total de elementos** (frequencia total).
+
+- Para dados agrupados, sem intervalo de classe:
+  
+  - Cálculo:
+  $$D_M = \frac{\sum |d_i| \cdot f_i}{n}$$
+  
+  Onde,
+  
+  $d_i$ é o **Desvio Absoluto** para dados agrupados, sem intervalo de classe;
+  
+  $f_i$ é a **Frequência** de cada variável discreta;
+  
+  $n$ é o número total de elementos (ou somatório das frequências).
+
+- Para dados agrupados, com intervalo de classe:
+  
+  - Cálculo:
+  $$D_M = \frac{\sum |d_i| \cdot f_i}{\sum f_i}$$
+  
+  Onde,
+  
+  $d_i$ é o **Desvio Absoluto** para dados agrupados, com intervalo de classe;
+  
+  $f_i$ é a **frequência** de cada intervalo de classe.
+
+\newpage
+
+### Variância ($\sigma^2$ ou $S^2$)
+
+- Leva em consideração os valores extremos e também os valores intermediários.
+
+- Relaciona os desvios em torno da média (destancias dos valores ate a média).
+
+- Média Aritmética dos quadrados dos desvios.
+
+- O símbolo para **Variância Populacional** é o sigma ao quadrado ($\sigma^2$), já o símbolo para **Variância Amostral** é o "S" maiusculo ao quadrado ($S^2$).
+
+- Cálculo para dados não agrupados:
+  
+  - População
+  
+  $$\sigma^2 = \sum_{i=1}^{N} \frac{(x_i 
+  - \bar{x})^2}{N}$$
+  
+  Onde,
+  
+  $x_{i}$ é o valor de **cada elemento da série**;
+  
+  $\bar{x}$ é o valor da **Média Aritmética Simples**;
+  
+  $N$ é o **número total da população**.
+  
+  - Amostra
+  
+  $$S^2 = \sum_{i=1}^{n} \frac{(x_i - \bar{x})^2}{n - 1}$$
+  
+  Onde,
+  
+  $x_{i}$ é o valor de **cada elemento da série**;
+  
+  $\bar{x}$ é o valor da **Média Aritmética Simples**;
+  
+  $n$ é o **número de elementos da Amostra**;
+  
+  $(n -1)$ é por ser uma estimativa no caso da Amostra, trabalhando assim com um grau a menos de liberdade.
+  
+- Cálculo dados agrupados:
+  
+  - Para dados agrupados, sem intervalo de classe (**Variáveis Discretas**):
+    
+    - População
+    $$\sigma^2 = \frac{\sum (x_i - \bar{X})^2 \cdot f_i}{\sum f_i}$$
+    
+    Onde,
+    
+    $x_{i}$ é o valor de **cada elemento da série**;
+    
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
+    
+    $f_i$ é a **Frequência** da variável;
+    
+    $\sum f_i$ é o somatório das **Frequências**.
+    
+    - Amostra
+    $$S^2 = \frac{\sum (x_i - \bar{X})^2 \cdot f_i}{n - 1}$$
+    
+    Onde,
+    
+    $x_{i}$ é o valor de **cada elemento da série**;
+    
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
+    
+    $f_i$ é a **Frequência** da variável;
+    
+    $n - 1$ ou $\sum f_i - 1$ é o somatório das **Frequências** da Amostra menos 1.
+  
+  - Para dados agrupados, com intervalo de classe (**Variáveis Contínuas**):
+    
+    - População
+    $$\sigma^2 = \frac{\sum (p_i - \bar{X})^2 \cdot f_i}{\sum f_i}$$
+    
+    Onde,
+    
+    $p_{i}$ é a **Representatividade das Classe** (**Ponto Médio das Classes**);
+    
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
+    
+    $f_i$ é a **Frequência** da variável;
+    
+    $\sum f_i$ é o somatório das **Frequências**.
+    
+    - Amostra
+    $$S^2 = \frac{\sum (p_i - \bar{X})^2 \cdot f_i}{n - 1}$$
+    
+    Onde,
+    
+    $p_{i}$ é a **Representatividade das Classe** (**Ponto Médio das Classes**);
+    
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
+    
+    $f_i$ é a **Frequência** da variável;
+    
+    $n - 1$ ou $\sum f_i - 1$ é o somatório das **Frequências** da Amostra menos 1.
+
+\newpage
+
+### Desvio-padrão ($\sigma$ ou $S$)
+
+#### Variância x Desvio-padrão
+
+- **Variância**:
+
+  - Número em unidade "quadrada".
+
+  - Maior dificuldade de compreensão e menor utilidade na estatística descritiva.
+
+  - Extremamente relevante na inferência estatística e em combinações de amostras.
+
+- **Desvio-padrão**:
+
+  - Mais usado na comparação de diferenças entre conjuntos de dados.
+
+  - Determina a dispersão dos valores em relação a **Média**.
+
+  - Volta-se com os dados para a unidade original.
+
+#### Desvio-padrão (Populacional e Amostral)
+
+- Determina a dispersão dos valores em relação a **Média**.
+
+- População
+
+$$\sigma = \sqrt{\sigma^2}$$
+
+Onde,
+
+$\sigma^2$ é a **Variância Populacional**;
+
+$\sigma$ é o **Desvio-padrão Populacional**.
+
+- Amostra
+
+$$S = \sqrt{S^2}$$
+
+Onde,
+
+$S^2$ é a **Variância Amostral**;
+
+$S$ é o **Desvio-padrão Amostral**.
+
+\newpage
+
+### Coeficiente de Variação ($CV$)
+
+#### Teoria
+
+- Medida relativa de dispersão.
+
+- Útil para comparação em termos relativos do grau de concentração.
+
+- O **Coeficiente de Variação** ($CV$) é expresso em porcentagens.
+
+- Diz-se que uma distribuição:
+  
+  - $CV \leq 15\%$  tem **Baixa Dispersão**.
+  
+  - $15\% < CV < 30\%$  tem **Média Dispersão**.
+  
+  - $CV \geq 30\%$  tem **Alta Dispersão**.
+  
+#### Cálculo do Coeficiente de Variação
+
+- População:
+
+$$CV = \frac{\sigma}{\bar{X}} \times 100$$
+
+Onde,
+
+$\sigma$ é o **Desvio-padrão Populacional**;
+
+$\bar{X}$ é a **Média Populacional**.
+
+- Amostra:
+
+$$CV = \frac{S}{\bar{x}} \times 100$$
+
+Onde,
+
+$S$ é o **Desvio-padrão Amostral**;
+
+$\bar{x}$ é a **Média Amostral**.
+
+\newpage
+
+# Análise Estatística
+
+- Para fazer uma Análise Estatística eficiente de dados, necessitamos:
+  
+  - Limpar os dados
+  
+  Remover os *OUTLIER* (valores atipicos, inconsistentes).
+  
+  - Aplicar Estatística Descritiva aos dados
+  
+  As medidas de posição (**Média**, **Mediana** e **moda**) e dispersão (**Amplitude Total**, **Desvio**, **Desvio Médio**, **Variância**, **Desvio-padrão** e **Coeficiente de Variação**) são maneiras de descrever os dados.
+  
+  - Comparar as medidas dos dados
+  
+  Principalmente medidas de dispersão, me especial **Coeficiente de Variação**, são ótimas para comparar dados.
+  
+  - Previsão de dados
+  
+  A principal técnica é de **Regressão**, porém para aplicar, necessita que os dados estejam limpos e com pouca dispersão (quanto menor, melhor).
+
 \newpage
 
 # Instruções IF
+
+
 
 \newpage
 
