@@ -1,6 +1,6 @@
-ESCRITO EM 24/08/24
+ESCRITO EM 25/08/24
 ---
-PARA 25/08/24
+PARA 26/08/24
 ---
 Subir github:
 
@@ -10,12 +10,9 @@ Afazeres:
 	- Cap4. Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-		- Estatística básica 
-			- Medidas de posição <-- Trabalhando
-				- Teoria
-				- Funções
-				- Exemplos
-			- Medidas de dispersão
+		- Estatística básica
+			- Medidas de posição (Revisão)
+			- Medidas de dispersão <-- Trabalhando
 				- Teoria
 				- Funções
 				- Exemplos
