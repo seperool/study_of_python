@@ -1,6 +1,6 @@
-ESCRITO EM 26/08/24
+ESCRITO EM 27/08/24
 ---
-PARA 27/08/24
+PARA 28/08/24
 ---
 Subir github:
 
@@ -10,6 +10,9 @@ Afazeres:
 	- Cap4. Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
+	- Estatística Básica 
+		- Medidas de posição <-- Revisão
+		- Medidas de dispersão <-- Revisão
 	- Cap5. Instruções IF
 	- Scripts:
 		- Exercicios Cap.3:
