@@ -1148,9 +1148,10 @@ for dimension in dimensions:
   A Estatística de uma maneira geral compreende aos métodos científicos para COLETA, ORGANIZAÇÃO, RESUMO, APRESENTAÇÃO e ANÁLISE de Dados de Observação (Estudos ou Experimentos), obtidos em qualquer área de conhecimento. A finalidade é a de obter conclusões válidas para tomada de decisões.
 
   - Estatística Descritiva
+    
     Parte responsável basicamente pela COLETA e SÍNTESE (Descrição) dos Dados em questão.
   
-    Disponibiliza de técnicas para o alcance desses objetivos. Tais Dados podem ser provenientes de uma AMOSTRA ou POPULAÇÃO.
+    Disponibiliza técnicas para o alcance desses objetivos. Tais Dados podem ser provenientes de uma AMOSTRA ou POPULAÇÃO.
 
   - Estatística Inferencial
   
@@ -1160,9 +1161,11 @@ for dimension in dimensions:
 
 - O fluxograma da estatística descritiva pode ser espresso da seguinte forma:
 
-  ![Estatística descritiva.](Quarto/Imagens/Estatisica/fluxograma_estatistica_descritiva.png){}
+  ![Fluxograma da estatística descritiva.](Quarto/Imagens/Estatisica/fluxograma_estatistica_descritiva.png){}
 
-- A representação tabular (Tabelas de Distribuição de Frequências) deve conter:
+\newpage
+
+- A representação tabular (**Tabelas de Distribuição de Frequências**) deve conter:
   - Cabeçalho
   
     Deve conter o suficiente para que as seguintes perguntas sejam respondidas "**o que?**" (Relativo ao fato), "**onde?**" (Relativo ao lugar) e "**quando?**" (Correspondente à época).
@@ -1175,14 +1178,16 @@ for dimension in dimensions:
   
     Local destinado à outras informações pertinentes, por exemplo a Fonte dos Dados.
 
-- População e Amostras
+- População e Amostras:
   - População
   
-    É o conjunto de todos os itens, objetos ou pessoas sob consideração, os quais possuem pelo menos uma característica (Variável) em comum. Os elementos pertencentes à uma População são denominados "Unidades Amostrais".
+    É o conjunto de todos os itens, objetos ou pessoas sob consideração, os quais possuem pelo menos uma característica (variável) em comum. Os elementos pertencentes à uma População são denominados "Unidades Amostrais".
 
   - Amostras
   
     É qualquer subconjunto (não vazio) da População. É extraída conforme regras pré-estabelecidas, com a finalidade de obter "estimativa" de alguma característica da População.
+
+\newpage
 
 - Tipos de variáveis
   
@@ -1203,8 +1208,6 @@ for dimension in dimensions:
   - *Quantitativo continua*
   
     Podem assumir qualquer valor em um determinado intervalo da reta dos números reais.
-
-\newpage
 
 ## Preparação dos dados (sumariazar dados coletados)
 
@@ -1276,10 +1279,13 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
   - Normalmente varia de 5 a 20 classes.  
   - Critério fórmula de Sturges:  
   $$k \cong 1 + 3,3 \cdot \log (n)$$
+  Onde $n$ é o número de elementos amostrais.  
+  Arredondar $k$ para número inteiro.
 
   - Critério da Raiz quadrada:  
   $$k \cong \sqrt{n}$$  
   Onde $n$ é o número de elementos amostrais.  
+  Arredondar $k$ para número inteiro.
 
 \newpage
 
@@ -1290,36 +1296,27 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
   - Garantir inclusão dos valores mínimo e máximo.  
   
   - Cálculo:  
-  
     $$AT_{x} = Máx(X_{i}) - Mín(X_{i})$$
-  
-    Onde,
-  
-    $AT_{x}$ é a Amplitude Total.
-  
-    $Máx(X_{i})$ é o *valor máximo das amostras*.
-  
-    $Min(X_{i})$ é o *valor mínimo das amostras*.
+    Onde,  
+    $AT_{x}$ é a Amplitude Total;  
+    $Máx(X_{i})$ é o *valor máximo das amostras*;  
+    $Min(X_{i})$ é o *valor mínimo das amostras*.  
 
   - Exemplo:
-  
-    Se $k = 5$,
-  
-    $AT_{x} = 28$
-  
-    Logo, arredondando $AT_{x} = 30$, para aproximar o valor $AT_{x}$ de um múltiplo de $k$.
+    Se $k = 5$,  
+    $AT_{x} = 28$  
+    Logo, arredondando $AT_{x} = 30$, para aproximar o valor $AT_{x}$ de um múltiplo de $k$.  
 
 \newpage
 
 3. Como cálcular a **Amplitude das classes da frequência** ($h$):
   
   - As classes terão amplitudes iguais.
-  
   - Cálculo:
-  
     $$ h = h_{i} = \frac{AT_{x}}{k}$$
-  
-    Onde, $k$ é o **número de classes** e $AT_{x}$ é a **Amplitude Total**.
+    Onde,  
+    $k$ é o **número de classes** e $AT_{x}$ é a **Amplitude Total**.  
+    $h$ deve ser arredondado para cima, num número inteiro.
 
 4. Como determinar o ponto médio das classes, representatividade da classe ($p_{i}$):  
   $$p_{i} = \frac{(LS_{i} - LI_{i})}{2} $$
@@ -1330,9 +1327,14 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
 \newpage
 
 5. Passos da preparação dos dados:
-  - 1º Passo - **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.
-  - 2º Passo - **ROL**: Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).
-  - 3º Passo - **CONSTRUÇÃO TABELA**: Na primeira coluna são colocados as classes, e nas demais as respectivas frequências.
+  - 1º Passo - **DADOS BRUTOS**:  
+  Obter os dados da maneira que foram coletados.
+  
+  - 2º Passo - **ROL**:  
+  Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).
+  
+  - 3º Passo - **CONSTRUÇÃO TABELA**:  
+  Na primeira coluna são colocados as classes, e nas demais as respectivas frequências.
   
   - Exemplo:
   
@@ -1353,12 +1355,14 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
 
 - Passos da preparação dos dados:
   - Análogo ao procedimento para dados discretos.
-  - 1º Passo - **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.
-  - 2º Passo - **ROL**: Nesse caso é feita organização dos DADOS BRUTOS em ordem (Crescente ou Decrescente) de importância.
+  - 1º Passo - **DADOS BRUTOS**:  
+  Obter os dados da maneira que foram coletados.
+  - 2º Passo - **ROL**:  
+  Nesse caso é feita organização dos DADOS BRUTOS em ordem (Crescente ou Decrescente) de importância.
   - 3º Passo - **CONSTRUÇÃO TABELA** (Com duas ou mais colunas).
 
 - Distribuição de Frequencia:
-  - $x_{i}$ é o número de valores distintos que a variavel assume.
+  - $x_{i}$ é o número de valores distintos que a variável assume.
   - $F_{i}$ é a Frequência Absoluta Simples.
   - $f_{i}$ é a Frequência Relativa Simples.
   - $f_{i} \%$ é a Fequência Relativa Simples Percentual.
@@ -1393,9 +1397,7 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
   - É o *Ponto Médio das Classes* ($p_{i}$), multiplicado por suas respectivas *Frequência Absoluta Simples* ($F_{i}$), somadas. Dividido pelo *Número Total de Elementos da Amostra* ($n$).
   - Cálculo:
   $$\overline{x} = \frac{\sum_{i=1}^{n} p_{i} \cdot F_{i}}{n_{Total}}$$
-  
   ou,
-  
   $$\overline{x} = \frac{(p_{1} \cdot F_{1}) + (p_{2} \cdot F_{2})+(p_{3} \cdot F_{3}) + ...}{n_{Total}}$$
 
 \newpage
@@ -1407,37 +1409,29 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
 - No caso de número de elementos impar, a mediana ($md(x)$) é o elemento central.
 - No caso de número de elementos par, a mediana ($md(x)$) é a média aritmética simples dos valores centrais:
 $$md(x) = \frac{x_{\frac{n}{2}} + x_{\frac{n+1}{2}}}{2}$$
-
-Onde,
-
-$x$ é a posição do elemento;
-
+Onde,  
+$x$ é a posição do elemento;  
 $n$ é o número total de elementos.
 
 #### Mediana Contínua
 - Mediana ($md$) em distribuição de frenquência em variável contínua (dados agrupados em classes):
   1. Fazer a coluna da **Frequência Absoluta Acumulada**, que é o somatório das frequências ao logo das classes.
+   
   2. Definindo o **Intervalo da Mediana**.
     - Obter o número total de elementos $n$ (somatório das frenquências de classes),
     $$n = \sum f_i$$
     - Determinar a posição do elemento do meio do somatório das frequencias:
     $$x = \frac{\sum f_i}{2}$$
     - A classe que contém essa posição $x$ na **Frequência Absoluta Acumulada** é a classe do *intervalo da mediana*.
+  
   3. Cálculo da Mediana:
   $$md = Li + (\frac{\frac{\sum fi}{2}-Fa_{anterior}}{f_{intervalo}} \cdot h)$$
-  
-  Onde,
-  
-  $Li$ é o limite inferior do *intervalo da mediana*;
-  
-  $\sum fi$ é o somatório das frequências (**frequência total** ($n$));
-  
-  $Fa_{anterior}$ é a **Frequência Absoluta Acumulada** da classe anterior (linha anterior ao *intervalo da mediana*);
-  
-  $f_{intervalo}$ é a **Frequência Absoluta Simples** do *intervalo da mediana*;
-  
-  $h$ é a Amplitudade da classe do *intervalo da mediana*.
-  
+  Onde,  
+  $Li$ é o limite inferior do *intervalo da mediana*;  
+  $\sum fi$ é o somatório das frequências (**frequência total** ($n$));  
+  $Fa_{anterior}$ é a **Frequência Absoluta Acumulada** da classe anterior (linha anterior ao *intervalo da mediana*);  
+  $f_{intervalo}$ é a **Frequência Absoluta Simples** do *intervalo da mediana*;  
+  $h$ é a Amplitudade da classe do *intervalo da mediana*.  
   $$h = Ls - Li$$
 
 \newpage
