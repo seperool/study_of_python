@@ -1498,16 +1498,11 @@ $n$ é o número total de elementos.
 - **Separatrizes** são valores da distribuição que a dividem em partes quaisquer.
 - A **mediana**, apesar de ser uma medida de tendência central, é também uma **separatriz** de ordem $1/2$, ou seja, divide a distribuição em duas partes iguais.
 - As **separatrizes** mais comumente usadas são:
-  - **Quartis**
-  
+  - **Quartis**  
   Dividem a distribuição em quatro partes iguais, de ordem $1/4$.
-  
-  - **Decis**
-  
+  - **Decis**  
   Dividem a distribuição em 10 partes iguais, de ordem $1/10$.
-  
-  - **Centis**
-  
+  - **Centis**  
   Dividem a distribuição em 100 partes iguais, de ordem $1/100$.
 
 - Fórmula das Separatrizes:
@@ -1517,33 +1512,24 @@ $n$ é o número total de elementos.
   - Fazer a coluna de **Frequencia Absoluta Acumulada** ($F_a$).
   - É o somatório das frequencias (total das frequencias), multiplicado pela fração da separatriz procurada ($k$). O resultado é a posição da frequencia na coluna **Frequencia Absoluta Acumulada** ($F_a$).
   $$P_k = k \cdot \sum f_i$$
-  
   A classe na qual a posição pertence é o **Intervalo da separatriz**.
 
 2. Cálculo da separatriz:
 $$Sp = L_{i} + (\frac{k \cdot\sum f_i - Fa_{anterior}}{f_{Intervalo}} * h)$$
-
-Onde,
-
-$L_i$ é o limite inferior do **Intervalo da separatriz**;
-
-$k$ é a fração (porcentagem) da separatriz procurada;
-
-$\sum f_i$ é o somatório das frequências;
-
-$Fa_{anterior}$ é a **Frequência Absoluta Acumulada** da classe anterior ao **intervalo da separatriz**;
-
-$f_{Intervalo}$ é a **Frequência Absoluta Simples** do **intervalo da separatriz**;
-
+Onde,  
+$L_i$ é o limite inferior do **Intervalo da separatriz**;  
+$k$ é a fração (porcentagem) da separatriz procurada;  
+$\sum f_i$ é o somatório das frequências;  
+$Fa_{anterior}$ é a **Frequência Absoluta Acumulada** da classe anterior ao **intervalo da separatriz**;  
+$f_{Intervalo}$ é a **Frequência Absoluta Simples** do **intervalo da separatriz**;  
 $h$ é a **Amplitude** da classe (limite superior - limite inferior da classe).
 $$h = Ls - Li$$
 
+\newpage
+
 3. Cálculo de **Amplitude Interquartil** ($AI$):
-
 - É a diferença entre 3º quartil e o 1º quartil.
-
 $$AI = Q_3 - Q_1$$
-
 - Para descobrir os valores dos Quartis ($Q_1$ e $Q_3$) basta usar o *cálculo das separatrizes*.
 
 \newpage
@@ -1566,11 +1552,8 @@ $$AI = Q_3 - Q_1$$
 
 - Cálculo:
 $$A_T = X_{Máx} - X_{Mín}$$
-
-Onde,
-
-$X_{Máx}$ é o valor máximo da série;
-
+Onde,  
+$X_{Máx}$ é o valor máximo da série;  
 $X_{Mín}$ é o valor mínimo da série.
 
 \newpage
@@ -1583,37 +1566,28 @@ $X_{Mín}$ é o valor mínimo da série.
   
   - Os **Desvios Absolutos** ($D$) são a diferença absoluta entre um valor observado e a média aritmética:
   $$D = |x_i - \bar{X}|$$
-  
-  Onde,
-  
-  $x_i$ é o **valor de cada elemento**;
-  
-  $\bar{x}$ é a **Média Aritmética**.
-  
-  - Os **Desvios Absolutos** ($D$) são um conjunto de elementos como resposta final.
+  Onde,  
+  $x_i$ é o **valor de cada elemento**;  
+  $\bar{x}$ é a **Média Aritmética**.  
+  Os **Desvios Absolutos** ($D$) são um conjunto de elementos como resposta final.
 
 - Para dados agrupados, sem intervalo de classe:
   
   - Cálculo:
   $$d_i = |x_i - \bar{X}|$$
-  
-  Onde,
-  
-  $x_i$ é o valor da variável discreta;
-  
+  Onde,  
+  $x_i$ é o valor da variável discreta;  
   $\bar{X}$ é a **Média Aritmética**.
 
 - Para dados agrupados, com intervalo de classe:
   
   - Cálculo:
   $$d_i = |p_i - \bar{x}|$$
-  
-  Onde,
-  
-  $p_i$ é a **Representatividade da classe** (ponto médio da classe);
-  
-  $\bar{x}$ é a **Média Aritmética** cálculada para *dados agrupados continuos*:
+  Onde,  
+  $p_i$ é a **Representatividade da classe** (ponto médio da classe);  
+  $\bar{x}$ é a **Média Aritmética Ponderada** cálculada para *dados agrupados continuos*:
   $$\bar{x} = \frac{\sum_{i=1}^{N} p_i \cdot f_i}{\sum f_i}$$
+  É o *Ponto Médio das Classes* ($p_{i}$), multiplicado por suas respectivas *Frequência Absoluta Simples* ($F_{i}$), somadas. Dividido pelo *Número Total de Elementos da Amostra* ($n$).
   
 \newpage
 
@@ -1625,37 +1599,26 @@ $X_{Mín}$ é o valor mínimo da série.
   
   - Cálculo:
   $$dm(x) = \frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}$$
-  
-  Onde,
-  
-  $x_i$ é o **valor de cada elemento**;
-  
-  $\bar{x}$ é a **Média Aritmética**;
-  
+  Onde,  
+  $x_i$ é o **valor de cada elemento**;  
+  $\bar{x}$ é a **Média Aritmética**;  
   $n$ é o **número total de elementos** (frequencia total).
 
 - Para dados agrupados, sem intervalo de classe:
   
   - Cálculo:
   $$D_M = \frac{\sum |d_i| \cdot f_i}{n}$$
-  
-  Onde,
-  
-  $d_i$ é o **Desvio Absoluto** para dados agrupados, sem intervalo de classe;
-  
-  $f_i$ é a **Frequência** de cada variável discreta;
-  
+  Onde,  
+  $d_i$ é o **Desvio Absoluto** para dados agrupados, sem intervalo de classe;  
+  $f_i$ é a **Frequência** de cada variável discreta;  
   $n$ é o número total de elementos (ou somatório das frequências).
 
 - Para dados agrupados, com intervalo de classe:
   
   - Cálculo:
   $$D_M = \frac{\sum |d_i| \cdot f_i}{\sum f_i}$$
-  
-  Onde,
-  
-  $d_i$ é o **Desvio Absoluto** para dados agrupados, com intervalo de classe;
-  
+  Onde,  
+  $d_i$ é o **Desvio Absoluto** para dados agrupados, com intervalo de classe;  
   $f_i$ é a **frequência** de cada intervalo de classe.
 
 \newpage
@@ -1664,7 +1627,7 @@ $X_{Mín}$ é o valor mínimo da série.
 
 - Leva em consideração os valores extremos e também os valores intermediários.
 
-- Relaciona os desvios em torno da média (destancias dos valores ate a média).
+- Relaciona os desvios em torno da média (distancias dos valores ate a média).
 
 - Média Aritmética dos quadrados dos desvios.
 
@@ -1673,30 +1636,18 @@ $X_{Mín}$ é o valor mínimo da série.
 - Cálculo para dados não agrupados:
   
   - População
-  
-  $$\sigma^2 = \sum_{i=1}^{N} \frac{(x_i 
-  - \bar{x})^2}{N}$$
-  
-  Onde,
-  
-  $x_{i}$ é o valor de **cada elemento da série**;
-  
-  $\bar{x}$ é o valor da **Média Aritmética Simples**;
-  
+  $$\sigma^2 = \sum_{i=1}^{N} \frac{(x_i - \bar{x})^2}{N}$$
+  Onde,  
+  $x_{i}$ é o valor de **cada elemento da série**;  
+  $\bar{x}$ é o valor da **Média Aritmética Simples**;  
   $N$ é o **número total da população**.
   
   - Amostra
-  
   $$S^2 = \sum_{i=1}^{n} \frac{(x_i - \bar{x})^2}{n - 1}$$
-  
-  Onde,
-  
-  $x_{i}$ é o valor de **cada elemento da série**;
-  
-  $\bar{x}$ é o valor da **Média Aritmética Simples**;
-  
-  $n$ é o **número de elementos da Amostra**;
-  
+  Onde,  
+  $x_{i}$ é o valor de **cada elemento da série**;  
+  $\bar{x}$ é o valor da **Média Aritmética Simples**;  
+  $n$ é o **número de elementos da Amostra**;  
   $(n -1)$ é por ser uma estimativa no caso da Amostra, trabalhando assim com um grau a menos de liberdade.
   
 - Cálculo dados agrupados:
@@ -1705,56 +1656,36 @@ $X_{Mín}$ é o valor mínimo da série.
     
     - População
     $$\sigma^2 = \frac{\sum (x_i - \bar{X})^2 \cdot f_i}{\sum f_i}$$
-    
-    Onde,
-    
-    $x_{i}$ é o valor de **cada elemento da série**;
-    
-    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
-    
-    $f_i$ é a **Frequência** da variável;
-    
+    Onde,  
+    $x_{i}$ é o valor de **cada elemento da série**;  
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;  
+    $f_i$ é a **Frequência** da variável;  
     $\sum f_i$ é o somatório das **Frequências**.
     
     - Amostra
     $$S^2 = \frac{\sum (x_i - \bar{X})^2 \cdot f_i}{n - 1}$$
-    
-    Onde,
-    
-    $x_{i}$ é o valor de **cada elemento da série**;
-    
-    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
-    
-    $f_i$ é a **Frequência** da variável;
-    
+    Onde,  
+    $x_{i}$ é o valor de **cada elemento da série**;  
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;  
+    $f_i$ é a **Frequência** da variável;  
     $n - 1$ ou $\sum f_i - 1$ é o somatório das **Frequências** da Amostra menos 1.
   
   - Para dados agrupados, com intervalo de classe (**Variáveis Contínuas**):
     
     - População
     $$\sigma^2 = \frac{\sum (p_i - \bar{X})^2 \cdot f_i}{\sum f_i}$$
-    
-    Onde,
-    
-    $p_{i}$ é a **Representatividade das Classe** (**Ponto Médio das Classes**);
-    
-    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
-    
-    $f_i$ é a **Frequência** da variável;
-    
+    Onde,  
+    $p_{i}$ é a **Representatividade das Classe** (**Ponto Médio das Classes**);  
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;  
+    $f_i$ é a **Frequência** da variável;  
     $\sum f_i$ é o somatório das **Frequências**.
     
     - Amostra
     $$S^2 = \frac{\sum (p_i - \bar{X})^2 \cdot f_i}{n - 1}$$
-    
-    Onde,
-    
-    $p_{i}$ é a **Representatividade das Classe** (**Ponto Médio das Classes**);
-    
-    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;
-    
-    $f_i$ é a **Frequência** da variável;
-    
+    Onde,  
+    $p_{i}$ é a **Representatividade das Classe** (**Ponto Médio das Classes**);  
+    $\bar{X}$ é o valor da **Média Aritmética Ponderada**;  
+    $f_i$ é a **Frequência** da variável;  
     $n - 1$ ou $\sum f_i - 1$ é o somatório das **Frequências** da Amostra menos 1.
 
 \newpage
@@ -1784,23 +1715,15 @@ $X_{Mín}$ é o valor mínimo da série.
 - Determina a dispersão dos valores em relação a **Média**.
 
 - População
-
 $$\sigma = \sqrt{\sigma^2}$$
-
-Onde,
-
-$\sigma^2$ é a **Variância Populacional**;
-
+Onde,  
+$\sigma^2$ é a **Variância Populacional**;  
 $\sigma$ é o **Desvio-padrão Populacional**.
 
 - Amostra
-
 $$S = \sqrt{S^2}$$
-
-Onde,
-
-$S^2$ é a **Variância Amostral**;
-
+Onde,  
+$S^2$ é a **Variância Amostral**;  
 $S$ é o **Desvio-padrão Amostral**.
 
 \newpage
@@ -1826,23 +1749,15 @@ $S$ é o **Desvio-padrão Amostral**.
 #### Cálculo do Coeficiente de Variação
 
 - População:
-
 $$CV = \frac{\sigma}{\bar{X}} \times 100$$
-
-Onde,
-
-$\sigma$ é o **Desvio-padrão Populacional**;
-
+Onde,  
+$\sigma$ é o **Desvio-padrão Populacional**;  
 $\bar{X}$ é a **Média Populacional**.
 
 - Amostra:
-
 $$CV = \frac{S}{\bar{x}} \times 100$$
-
-Onde,
-
-$S$ é o **Desvio-padrão Amostral**;
-
+Onde,  
+$S$ é o **Desvio-padrão Amostral**;  
 $\bar{x}$ é a **Média Amostral**.
 
 \newpage
@@ -1851,20 +1766,16 @@ $\bar{x}$ é a **Média Amostral**.
 
 - Para fazer uma Análise Estatística eficiente de dados, necessitamos:
   
-  - Limpar os dados
-  
+  - Limpar os dados  
   Remover os *OUTLIER* (valores atipicos, inconsistentes).
   
-  - Aplicar Estatística Descritiva aos dados
-  
+  - Aplicar Estatística Descritiva aos dados  
   As medidas de posição (**Média**, **Mediana** e **moda**) e dispersão (**Amplitude Total**, **Desvio**, **Desvio Médio**, **Variância**, **Desvio-padrão** e **Coeficiente de Variação**) são maneiras de descrever os dados.
   
-  - Comparar as medidas dos dados
-  
+  - Comparar as medidas dos dados  
   Principalmente medidas de dispersão, me especial **Coeficiente de Variação**, são ótimas para comparar dados.
   
-  - Previsão de dados
-  
+  - Previsão de dados  
   A principal técnica é de **Regressão**, porém para aplicar, necessita que os dados estejam limpos e com pouca dispersão (quanto menor, melhor).
 
 \newpage
