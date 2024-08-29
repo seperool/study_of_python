@@ -398,7 +398,7 @@ A @tbl-opbasiclogpy apresenta as principais operações lógica básica do pytho
 #| error: false
 #| warning: false
 #| label: tbl-opbasiclogpy
-#| tbl-cap: Operações Lógicas
+#| tbl-cap: Operações Lógicas Básicas
 
 from IPython.display import Markdown
 from tabulate import tabulate
@@ -1780,8 +1780,167 @@ $\bar{x}$ é a **Média Amostral**.
 
 \newpage
 
-# Instruções IF
+# Instruções `IF`
 
+Instruções `IF` são testes condicionais.
+
+## Testes condicionais
+
+O serne da instrução `IF` esta uma expressão que deve ser avaliada como `True` ou `False`, chamado teste condicional. Esse teste decide se a instrução deve ser executada.
+
+Teste condicional com resultado `True`, o código dentro do `IF` será executado.
+
+Teste condicional com resultado `False`, o código dentro do `IF` não será executado.
+
+## Operações lógicas
+
+A @tbl-oplogpy apresenta as principais operações lógica do python. As operações lógicas retornam `True` ou `False`. A @tbl-oplogexpy mostra exemplos das operações lógicas.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-oplogpy
+#| tbl-cap: Operações Lógicas
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["==","Igual a","Varifica se um valor é igual ao outro."],
+["!=","Diferente de","Varifica se um valor é diferente ao outro."],
+[">","Maior que","Varifica se um valor é maior que outro."],
+[">=","Maior ou igual","Varifica se um valor é maior ou igual a outro."],
+["<","Menor que","Varifica se um valor é menor que outro."],
+["<=","Menor ou igual","Varifica se um valor é menor ou igual a outro."],
+["and","E","Retorna True se ambas as afirmações forem verdadeiras."],
+["or","Ou","Retorna True se uma das afirmações for verdadeiras."],
+["not","Negação","Retorna Falso se o resultado for verdadeiro, ou o contrario."]]
+Markdown(tabulate(
+  table, 
+  headers=["Operação","Nome","Função"]
+))
+```
+
+\newpage
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-oplogexpy
+#| tbl-cap: Operações Lógicas Exemplos
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["==","1==1 = True"],
+["!=","1!=2 = True"],
+[">","5>1 = True"],
+[">=","5>=5 = True"],
+["<","1<5 = True"],
+["<=","1<=4 = True"],
+["and","(1==1) and (4<5) = True"],
+["or","(1==1) or (2<1) = True"],
+["not","not (1==1) = False"]]
+Markdown(tabulate(
+  table, 
+  headers=["Operação","Exemplo"]
+))
+```
+
+Observações:  
+ - Não confundir `=` com `==`. O sinal de `=` simples é uma atribuição de valor, enquanto que o sinal `==` duplo representa "igual a", sendo um operador lógico.  
+ - Os operadores lógicos de igualdade (`==` e `!=`) fazem distinção entre letras maiúsculas e minúsculas.
+
+\newpage
+
+## Testando várias condições
+
+Podemos testar duas (ou mais) condições ao mesmo tempo. Para isso as palavras reservadas `and` e `or` ajudam nesse tipo de situação.
+
+### Testando várias condições lógicas - `AND`
+
+O operador lógico `and` nada mais é do que o `E` da lógica, então podemos comparar duas operações lógicas e compara-las seguindo a ideia da tabela verdade do operador `E`.
+
+![Tabela verdade do operador `AND`.](Quarto/Imagens/Instrucoes_if/AND.jpg){width=30%}
+
+Exemplo:
+
+```{python}
+age_0 = 22
+age_1 = 18
+print(age_0 >= 21 and age_1 >= 21)
+age_1 = 22
+print(age_0 >= 21 and age_1 >= 21)
+```
+
+### Testando várias condições lógicas - `OR`
+
+O operador lógico `or` nada mais é do que o `OU` da lógica, então podemos comparar duas operações lógicas e compara-las seguindo a ideia da tabela verdade do operador `OU`.
+
+![Tabela verdade do operador `OR`.](Quarto/Imagens/Instrucoes_if/OR.jpg){width=30%}
+
+Exemplo:
+
+```{python}
+age_0 = 22
+age_1 = 18
+print(age_0 >= 21 or age_1 >= 21)
+age_0 = 18
+print(age_0 >= 21 or age_1 >= 21)
+```
+
+\newpage
+
+## Verificando se um valor está em uma lista - `IN`
+
+Para descobrir se um valor em particular já esta em uma lista, utilizamos a palavra reservada `in`.
+
+Exemplo:
+
+```{python}
+requested_toppings = ['mushrooms','onions','pineapple']
+print('mushrooms' in requested_toppings)
+print('pepperoni' in requested_toppings)
+```
+
+## Verificando se um valor não está em uma lista - `NOT IN`
+
+Para descobrir se um valor em particular não esta em uma lista, utilizamos a palavra reservada `not in`.
+
+Exemplo:
+
+```{python}
+banned_users = ['andrew','carolina','david']
+user = 'marie'
+
+if user not in banned_users:
+  print(user.title() + ", you can post a response if you wish.")
+```
+
+\newpage
+
+## Expressões booleanas
+
+Um valor booleano é `True` ou `False`, exatamente como o valor de uma expressão condicional após ter sido avaliada.  
+Valores booleanos muitas vezes são usados para manter o controle de terminada condição.
+
+```{python}
+game_active = True
+can_edit = True
+```
+
+## Instruções `IF`
+
+### Instruções `if` simples
+
+### Instruções `if-else`
+
+### Sintaxe `if-elif-else`
+
+### Usando vários blocos `elif`
+
+### Omitindo o bloco `else`
+
+### Testando várias condições
 
 
 \newpage
