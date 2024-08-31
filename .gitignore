@@ -4,3 +4,4 @@ __pycache__/
 *.log
 requirements.txt
 teste_estatistica.py
+py_env/
