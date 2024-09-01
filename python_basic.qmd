@@ -1934,8 +1934,7 @@ Os próximos subtópicos são as possibilidades de instruções `if`.
 
 ### Instruções `if` simples
 
-A instrução `if` mais simples contém um teste e uma ação.
-
+A instrução `if` mais simples contém um teste e uma ação.  
 Sintaxe:
 ```
 if teste_condicional:
@@ -1955,14 +1954,158 @@ if age >= 18:
 
 ### Instruções `if-else`
 
+Um bloco `if-else` é semelhante a uma instrução `if` simples, porém a instrução `else` permite definir ação ou um conjunto de ações executado quando o teste condicional falhar.  
+Sintaxe:
+```
+if teste_condicional:
+  Ação_True
+else:
+  Ação_False
+```
+
+Exemplo:
+```{python}
+age = 17
+if age >= 18:
+  print("You are old enough to vote!")
+else:
+  print("Sorry, you are too young to vote.")
+```
+
 ### Sintaxe `if-elif-else`
+
+Muitas vezes se precisará testar mais de duas situações possíveis, para isso é usado a sintaxe `if-elif-else`. O Python executará apenas um bloco em uma cadeia `if-elif-else`. Cada bloco é executado em sequência, ate que algum deles passe. Quando um teste passar, o código após esse teste será executado e o Python ignorará o restante dos testes.  
+Sintaxe:
+```
+if teste_condicional_1:
+  Ação_teste_1
+elif teste_condicional_2:
+  Ação_teste_2
+else:
+  Ação_3
+```
+
+\newpage
+
+Exemplo:
+```{python}
+age = 12
+if age < 4:
+  print("You admission cost is $0.")
+elif age < 18:
+  print("You admission cost is $5.")
+else:
+  print("You admission cost is $10.")
+```
 
 ### Usando vários blocos `elif`
 
+Podemos usar quantos blocos `elif` quisermos em nosso código.  
+Sintaxe:
+```
+if teste_condicional_1:
+  Ação_teste_1
+elif teste_condicional_2:
+  Ação_teste_2
+elif teste_condicional_3:
+  Ação_teste_3
+elif teste_condicional_4:
+  Ação_teste_4
+else:
+  Ação_5
+```
+
+Exemplo:
+```{python}
+age = 12
+if age < 4:
+  price = 0
+elif age < 18:
+  price = 5
+elif age >= 65:
+  price = 5
+else:
+  price = 10
+print("Your admission cost is $" + str(price) + ".")
+```
+
+\newpage
+
 ### Omitindo o bloco `else`
+
+Python não exige um bloco `else` no final de uma cadeia `if-elif`. As vezes um bloco `else` é útil, outras vezes, é mais claro usar uma instrução `elif` adicional que capture a condição específica de interesse.
+`else` é uma função que captura tudo. Ela corresponde a qualquer condição não atendida por teste `if` ou `elif` específicos e isso, ás vezes, pode incluir dados inválidos ou maliciosos.
+É uma boa prática considerar usar um último bloco `elif` e omitir o bloco `else`.  
+Sintaxe:
+```
+if teste_condicional_1:
+  Ação_teste_1
+elif teste_condicional_2:
+  Ação_teste_2
+elif teste_condicional_3:
+  Ação_teste_3
+elif teste_condicional_4:
+  Ação_teste_4
+```
+
+Exemplo:
+```{python}
+age = 12
+if age < 4:
+  price = 0
+elif age < 18:
+  price = 5
+elif age >= 65:
+  price = 5
+elif age < 65:
+  price = 10
+
+print("Your admission cost is $" + str(price) + ".")
+```
+
+\newpage
 
 ### Testando várias condições
 
+A cadeia `if-elif-else` é eficaz, mas é apropriada somente quando você quiser que apenas um teste passe. assim que encontrar um teste que passe, o interpretador Python ignorará o restante dos testes.  
+As vezes, porém, é importante verificar todas as condições de interesse. Nesse caso, podemos usar um série de instruções `if` simples, sem blocos `elif` ou `else`.  
+Em suma, se quiser que apenas um bloco de código seja executado, utilize uma cadeia `if-elif-else`. Se mais de um bloco de código deve ser executado, utilize uma série de instruções `if` independentes.  
+Sintaxe:
+```
+if teste_condicional_1:
+  Ação_teste_1
+if teste_condicional_2:
+  Ação_teste_2
+if teste_condicional_3:
+  Ação_teste_3
+if teste_condicional_4:
+  Ação_teste_4
+```
+
+Exemplo:
+```{python}
+#Pizzaria
+requested_toppings = ['mushrooms','extra cheese']
+
+if 'mushrooms' in requested_toppings:
+  print("Adding mushrooms.")
+if 'pepperoni' in requested_toppings:
+  print("Adding pepperoni.")
+if 'extra cheese' in requested_toppings:
+  print("Adding extra cheese.")
+
+print("\nFinished making your pizza!")
+```
+
+\newpage
+
+## Usando instruções `if` com listas
+
+## Verificando itens especiais
+
+## Varificando se uma lista não esta vazia
+
+## Usando várias listas
 
 \newpage
 
