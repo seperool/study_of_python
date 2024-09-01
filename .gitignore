@@ -5,3 +5,8 @@ __pycache__/
 requirements.txt
 teste_estatistica.py
 py_env/
+*.lof
+*.bcf
+*.lot
+*.xml
+*.toc
