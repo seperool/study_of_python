@@ -1,6 +1,6 @@
-ESCRITO EM 30/08/24
+ESCRITO EM 31/08/24
 ---
-PARA 31/08/24
+PARA 01/08/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap5. Instruções IF
 		- Instruções `IF`
-			- Instruções `if` simples
 			- Instruções `if-else`
 			- Sintaxe `if-elif-else`
 			- Usando vários blocos `elif`
@@ -22,5 +21,3 @@ Afazeres:
 		- Exercicios Cap.3:
 			- 9
 			- 10
-		- Exercicios Cap.5:
-			- 2
