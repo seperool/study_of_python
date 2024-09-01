@@ -1302,7 +1302,7 @@ Passos para contruir a **Tabela Distribuição de Frequências Contínua**:
     $Máx(X_{i})$ é o *valor máximo das amostras*;  
     $Min(X_{i})$ é o *valor mínimo das amostras*.  
 
-  - Exemplo:
+  - Exemplo:  
     Se $k = 5$,  
     $AT_{x} = 28$  
     Logo, arredondando $AT_{x} = 30$, para aproximar o valor $AT_{x}$ de um múltiplo de $k$.  
@@ -1916,8 +1916,6 @@ if user not in banned_users:
   print(user.title() + ", you can post a response if you wish.")
 ```
 
-\newpage
-
 ## Expressões booleanas
 
 Um valor booleano é `True` ou `False`, exatamente como o valor de uma expressão condicional após ter sido avaliada.  
@@ -1930,7 +1928,30 @@ can_edit = True
 
 ## Instruções `IF`
 
+Testes condicionais fazem parte das instruções `if`. Há vários tipos de instruções `if`, a escolha depende de quantas condições precisam ser testadas.
+
+Os próximos subtópicos são as possibilidades de instruções `if`.
+
 ### Instruções `if` simples
+
+A instrução `if` mais simples contém um teste e uma ação.
+
+Sintaxe:
+```
+if teste_condicional:
+  ação
+```
+
+Ao avaliar o teste condicional e o resultado for `True`, as ações contidas dentro do `if` são executadas, caso contrario a ações contidas dentro da instrução `if` não são executadas.
+
+Exemplo:
+```{python}
+age = 19
+if age >= 18:
+  print("You are old enough to vote!")
+```
+
+\newpage
 
 ### Instruções `if-else`
 
