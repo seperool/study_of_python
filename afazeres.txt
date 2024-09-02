@@ -1,6 +1,6 @@
-ESCRITO EM 01/08/24
+ESCRITO EM 02/08/24
 ---
-PARA 02/08/24
+PARA 03/08/24
 ---
 Subir github:
 
@@ -12,16 +12,14 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap5. Instruções IF
 		- Usando instruções `if` com listas
-		- Verificando itens especiais
-		- Varificando se uma lista não esta vazia
-		- Usando várias listas
+			- Varificando se uma lista não esta vazia
+			- Usando várias listas
 	- Scripts:
 		- Exercicios Cap.3:
 			- 9
 			- 10
 		- Exercicios Cap.5:
-			- 3
-			- 4
-			- 5
-			- 6
-			- 7
+			- 8
+			- 9
+			- 10
+			- 11
