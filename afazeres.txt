@@ -1,6 +1,6 @@
-ESCRITO EM 03/08/24
+ESCRITO EM 04/08/24
 ---
-PARA 04/08/24
+PARA 05/08/24
 ---
 Subir github:
 
@@ -10,10 +10,6 @@ Afazeres:
 	- Cap4. Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-	- Cap5. Instruções IF
-		- Usando instruções `if` com listas
-			- Varificando se uma lista não esta vazia
-			- Usando várias listas
 	- Scripts:
 		- Exercicios Cap.3:
 			- 9
@@ -23,3 +19,5 @@ Afazeres:
 			- 9
 			- 10
 			- 11
+			- 12
+			- 13
