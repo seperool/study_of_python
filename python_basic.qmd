@@ -2158,4 +2158,8 @@ print("\nFinished making your pizza!")
 
 \newpage
 
+# Dicionários
+
+\newpage
+
 # Bibliografia
