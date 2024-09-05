@@ -1,6 +1,6 @@
-ESCRITO EM 04/08/24
+ESCRITO EM 05/08/24
 ---
-PARA 05/08/24
+PARA 06/08/24
 ---
 Subir github:
 
@@ -10,14 +10,8 @@ Afazeres:
 	- Cap4. Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
+	- Cap6. Dicionários
 	- Scripts:
 		- Exercicios Cap.3:
 			- 9
 			- 10
-		- Exercicios Cap.5:
-			- 8
-			- 9
-			- 10
-			- 11
-			- 12
-			- 13
