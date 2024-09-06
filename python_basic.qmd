@@ -2160,6 +2160,26 @@ print("\nFinished making your pizza!")
 
 # Dicionários
 
+## Dicionário simples
+## Trabalhando com dicionários
+## Acessando valores em um dicionário
+## Adicionando novos pares `chave-valor`
+## Dicionário vazio
+## Modificando valores em um dicionário
+## Removendo pares `chave-valor`
+## Dicionário de objetos semelhantes
+
+\newpage
+
+## Percorrendo um dicionário com um laço
+
+\newpage
+
+## Informações aninhadas
+### Uma lista de dicionários
+### Uma lista em um dicionário
+### Um dicionário em um dicionário
+
 \newpage
 
 # Bibliografia
