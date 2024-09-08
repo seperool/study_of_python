@@ -2186,18 +2186,130 @@ Exemplo:
 alien_0 = {'color':'green','points': 5}
 ```
 
+Um par `chave-valor` é um conjunto de valores associados um ao outro. Quando fornecemos uma `chave`, Python devolve o `valor` associado a essa `chave`. Toda `chave` é associada a seu `valor` por meio de dois-pontos, e pares `chave-valor` individuais são separados por vírgula.  
+Podemos armazenar quantos pares `chave-valor` quisermos em um dicionário.
 
+\newpage
 
 ## Acessando valores em um dicionário
+
+Para obter o `valor` associado a uma `chave`, especifique o nome do dicionário e coloque a chave entre colchetes, como a seguir:
+```{python}
+alien_0 = {'color':'green'}
+print(alien_0['color'])
+```
+
+Essa instrução devolve o `valor` associado a `chave` 'color' do dicionário `alien_0`.
+
+Como podemos ter um número ilimitado de de pares de `chave-valor` em um dicionário, para acessar o valor de interesse basta colocar o nome da `chave` cujo o `valor` queremos acessar.
+
+Exemplo:
+```{python}
+alien_0 = {'color':'green','points': 5}
+new_points = alien_0['points']
+
+print("You just earned " + str(new_points) + " points!")
+```
+
+Lembrando que números para serem plotados em tela precisam ser tranformados em strings, através da função `str()`.
+
+\newpage
+
 ## Adicionando novos pares `chave-valor`
+
+Dicionários são estruturas dinâmicas, e você pode adicionar novos pares `chave-valor` em um dicionário a qualquer momento. Por exemplo, para acrescentar um novo par `chave-valor`, especifique o nome do dicionário, seguido da nova chave entre colchetes, justamente com o novo valor.  
+Exemplo:
+```{python}
+alien_0 = {'color':'green','points': 5}
+print(alien_0)
+
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
+```
+
+A versão final do dicionário contém quatro pares `chave-valor`. Dois pares originais especificam a cor e o valor da pontuação, enquanto os dois pares adicionais especificam a posição do alienígena.  
+Oberserve que a ordem dos pares `chave-valor` não coincidem com a ordem em que foram adicionados. O Python não se importa com a ordem em que armazenamos cada par `chave-valor`, ele só se importa com a conexão entre cada `chave` e seu `valor`.
+
+\newpage
+
 ## Dicionário vazio
+
+As vezes, é conveniente ou até mesmo necessário começar com um dicionário vazio e então acrescentar novos itens a ele. Para começar a preencher um dicionário vazio, defina-o com um conjunto de `chaves` vazio e depois acrescentar cada para par `chave-valor` em sua própria linha.  
+Exemplo:
+```{python}
+alien_0 = {}
+
+alien_0['color'] = 'green'
+alien_0['points'] = 5
+
+print(alien_0)
+```
+
+Nesse caso, definimos um dicionário `alien_0` vazio e, em seguida, adicionamos valores para cor e pontuação.
+
+Geralmente usamos dicionários vazios quando armazenamos dados fornecidos pelo usuário em um dicionário, ou quando escrevemos um código que gere um grande número de pares `chave-valor` automaticamente.
+
 ## Modificando valores em um dicionário
+
+Para modificar um `valor` em um dicionário, especifique o nome do dicionário com a `chave` entre conchetes e o novo `valor` que você quer associar a essa `chave`.  
+Exemplo:
+```{python}
+alien_0 = {'color':'green'}
+print("The alien is " + alien_0['color'] + ".")
+
+alien_0['color'] = 'yellow'
+print("The alien is now " + alien_0['color'] + ".")
+```
+
+Inicialmente, definimos um dicionário para `alien_0` que contém apenas a cor do alienigena. Em seguida, modificamos o `valor` associado a `chave` 'color' para 'yellow'.
+
+\newpage
+
 ## Removendo pares `chave-valor`
+
+Quando não houver mais necessidade de uma informação armazenada em um dicionário, podemos usar a instrução `del` para remover totalmente um par `chave-valor`.  
+Tudo que `del` precisa é do nome do dicionário e da `chave` que você deseja remover.  
+Exemplo:
+```{python}
+alien_0 = {'color':'green','points':5}
+print(alien_0)
+
+del alien_0['points']
+print(alien_0)
+```
+
+A instrução `del` diz ao Python para apagar a `chave` 'points' do dicionário `alien_0` e remover o `valor` associado a essa `chave` também. A saída mostra que a `chave` 'points' e seu `valor` igual a 5 foram apagados, porém o restante do dicionário não foi afetado.
+
+\newpage
+
 ## Dicionário de objetos semelhantes
+
+O exemplo anterior envolveu a armazenagem de diferentes tipos de informação sobre o mesmo objeto: um alienigena em um jogo. Também podemos usar um dicionário para armazenar um tipo de informação sobre vários objetos.  
+Por exemplo, suponha que você queira fazer uma enquete com várias pessoas e perguntar-lhes qual é a sua linguagem de programação favorita.  
+Exemplo:
+```{python}
+favorite_languages = {
+  'jen':'python',
+  'sarah':'c',
+  'edward':'ruby',
+  'phil':'python'
+  }
+
+print("Sarah's favorite language is "+
+    favorite_languages['sarah'].title()+
+    ".")
+```
+
+Esse exemplo também mostra como podemos dividir uma instrução longa em várias linhas, indentando as linhas e usando algum operador como parâmetro para finalizar uma linha. No caso do `print` o operador de concatenação (+), no caso do dicionário a vírgula.
 
 \newpage
 
 ## Percorrendo um dicionário com um laço
+### Percorrendo todos os pares `chave-valor` com um laço
+### Percorrendo todas as `chaves` de um dicionário com um laço
+### Percorrendo todas as `chaves` de um dicionário em ordem usando um laço
+### Percorrendo todos os `valores` de um dicionário com um laço
 
 \newpage
 
