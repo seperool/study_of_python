@@ -1,6 +1,6 @@
-ESCRITO EM 06/09/24
+ESCRITO EM 07/09/24
 ---
-PARA 07/09/24
+PARA 08/09/24
 ---
 Subir github:
 
@@ -11,6 +11,18 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap6. Dicionários
+		- Trabalhando com dicionários
+		- Acessando valores em um dicionário
+		- Adicionando novos pares `chave-valor`
+		- Dicionário vazio
+		- Modificando valores em um dicionário
+		- Removendo pares `chave-valor`
+		- Dicionário de objetos semelhantes
+		- Percorrendo um dicionário com um laço
+		- Informações aninhadas
+			- Uma lista de dicionários
+			- Uma lista em um dicionário
+			- Um dicionário em um dicionário
 	- Scripts:
 		- Exercicios Cap.3:
 			- 9
