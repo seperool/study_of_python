@@ -2161,7 +2161,33 @@ print("\nFinished making your pizza!")
 # Dicionários
 
 ## Dicionário simples
+
+Os Dicionários permitem conectar informações relacionadas.  
+Sintaxe:
+```
+nome_dicionario = {'chave_1': 'valor_1', 'chave_2':'valor_2', ...}
+```
+
+Exemplo:
+```{python}
+alien_0 = {'color':'green','points': 5}
+
+print(alien_0['color'])
+print(alien_0['points'])
+```
+
 ## Trabalhando com dicionários
+
+Um dicionário em Python é uma coleção de `chave-valor`. Cada `chave` é conectada a um `valor`, e podemos usar a `chave` para acessar o `valor` associado a ela.  
+O `valor` pode ser um número, uma string, uma lista, ou até outro dicionário.  
+Em Python o dicionário é apresentado entre chaves {}, com uma série de pares `chave-valor` entre elas.  
+Exemplo:
+```
+alien_0 = {'color':'green','points': 5}
+```
+
+
+
 ## Acessando valores em um dicionário
 ## Adicionando novos pares `chave-valor`
 ## Dicionário vazio
