@@ -2306,10 +2306,131 @@ Esse exemplo também mostra como podemos dividir uma instrução longa em vária
 \newpage
 
 ## Percorrendo um dicionário com um laço
+
+Como um dicionário pode conter uma grande quantidade de dados, Python permite percorrer um dicionário com um laço. Dicionários podem ser usados para armazenar informações de várias maneiras. Assim, há diversos modos diferentes de percorrê-los com um laço. Podemos percorrer todos os pares `chave-valor` de um dicionário usando suas `chaves` ou seus `valores`. 
+
 ### Percorrendo todos os pares `chave-valor` com um laço
+
+Se quisermos ver tudo que está armazenado no dicionário, podemos percorrer o dicionário com um laço `for`.  
+Exemplo:
+```{python}
+user_0 = {
+  'username':'efermi',
+  'first':'erico',
+  'last':'fermi'
+}
+for key, value in user_0.items():
+  print("\nKey: " + key)
+  print("Value: " + value)
+```
+
+Para escrever um laço `for` paraum dicionário, devemos criar nomes para as duas variáveis que armazenarão a `chave` e o `valor` de cada par `chave-valor`. Podemos escolher qualquer nome que quisermos para essas duas variáveis.  
+A instrução `for` inclui o nome do dicionário, seguido do método `items()`, que devolve uma lista de pares `chave-valor`. O laço `for` então armazena cada um desses pares nas duas variáveis especificadas.  
+Observe que os pares `chave-valor` não são devolvidos na ordem em que foram armazenados, mesmo quando percorremos o dicionário com um laço. O Python não se importa com a ordem em que os pares `chave-valor` são armazenados. Ele só registra as conexões entre cada `chave` individual e seu `valor`.
+
+\newpage
+
 ### Percorrendo todas as `chaves` de um dicionário com um laço
+
+O método `key()` é conveniente quando não precisamos trabalhar com todos os valores de um dicionário.  
+Exemplo:
+```{python}
+favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python'
+}
+
+for name in favorite_languages.keys():
+  print(name.title())
+```
+
+Extrai todas as `chaves` do dicionário `favorite_languages` e armazena, uma de cada vez, na variável `name`.
+
+Percorrer as `chaves`, na verdade é o comportamento padrão quando percorremos um dicionário com um laço, portanto este código poderia ser escrito:
+```
+for name in favorite_languages:
+```
+em vez de:
+```
+for name in favorite_languages.keys():
+```
+Por boa prática optamos pelo método `keys()` pois torna o código mais explicito e de fácil leitura.
+
+\newpage
+
+O médoto `keys()` não serve apenas para laços, ele devolve uma lista de todas as `chaves`.  
+Exemplo:
+```{python}
+favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python'
+}
+
+if 'erin' not in favorite_languages.keys():
+  print('Erin, please take our poll!')
+```
+
+\newpage
+
 ### Percorrendo todas as `chaves` de um dicionário em ordem usando um laço
+
+Um dicionário sempre mantém uma conexão clara entre cada `chave` e seu `valor` associado, mas você não obterá os itens de um dicionário em uma ordem previsível. Isso não é um problema, pois, geralmente, queremos apenas obter o `valor` correto associado a cada `chave`.  
+Uma maneira de fazer os itens serem devolvidos em determinada sequência é ordenadar as `chaves` à medida que são devolvidas no laço `for`. Podemos usar a função `sorted()` para obter uma cópia ordenada das chaves.  
+Exemplo:
+```{python}
+favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python'
+}
+
+for name in sorted(favorite_languages.keys()):
+  print(name.title() +
+  ", thank you taking the poll.")
+```
+
+Essa instrução `for` é como as outras instruções `for`, exeto que a função `sorted()` está em torno do método `dictionary.keys()`. Isso diz a Python para listar todas as `chaves` do dicionário e ordernar essa lista antes de percorrê-la com um laço.
+
+\newpage
+
 ### Percorrendo todos os `valores` de um dicionário com um laço
+
+Se você tiver mais interessado nos `valores` contidos em um dicionário, o método `values()` pode ser usado para devolver uma lista de `valores` sem as `chaves`.  
+Exemplo:
+```{python}
+favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python'
+}
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+  print(language.title())
+```
+
+A instrução `for`, nesse caso, extrai cada `valor` do dicionário e o armazena na variável `language`.  
+Essa abordagem extrai todos os `valores` do dicionário, sem verificar se há repetições. Isso pode funcionar bem com uma quantidade pequena de `valores`, mas em uma enquete com um número grande de entrevistados, o resultado seria uma lista com muitas repetições. Para ver cada linguagem escolhida sem repetições podemos usar um *conjunto* (`set()`). Um conjunto é semelhante a uma lista exceto que cada item de um conjunto deve ser único.  
+Exemplo:
+```{python}
+favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python'
+}
+print("The following languages have been mentioned:")
+for language in set(favorite_languages.values()):
+  print(language.title())
+```
+
+Quando colocamos `set()` em torno de uma lista que contenha itens duplicados, Python identifica os itens únicos na lista e cria um conjunto a partir desses itens. Usamos `set()` para extrair as linguagens únicas em `favorite_languagens.values()`.  
+O resultado é uma lista de linguagens mencionadaspelas pessoas que participaram da enquete, sem repetições.
 
 \newpage
 
