@@ -1,6 +1,6 @@
-ESCRITO EM 09/09/24
+ESCRITO EM 10/09/24
 ---
-PARA 10/09/24
+PARA 11/09/24
 ---
 Subir github:
 
@@ -19,7 +19,3 @@ Afazeres:
 		- Exercicios Cap.3:
 			- 9
 			- 10
-		- Exercicios Cap.6:
-			- 4
-			- 5
-			- 6
