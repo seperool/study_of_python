@@ -2435,9 +2435,16 @@ O resultado é uma lista de linguagens mencionadaspelas pessoas que participaram
 \newpage
 
 ## Informações aninhadas
+
+
+
 ### Uma lista de dicionários
 ### Uma lista em um dicionário
 ### Um dicionário em um dicionário
+
+\newpage
+
+# Entrada de usuário e laços `while`
 
 \newpage
 
