@@ -1,6 +1,6 @@
-ESCRITO EM 10/09/24
+ESCRITO EM 12/09/24
 ---
-PARA 11/09/24
+PARA 13/09/24
 ---
 Subir github:
 
@@ -10,12 +10,14 @@ Afazeres:
 	- Cap4. Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-	- Cap6. Dicionários
-		- Informações aninhadas
-			- Uma lista de dicionários
-			- Uma lista em um dicionário
-			- Um dicionário em um dicionário
 	- Scripts:
 		- Exercicios Cap.3:
 			- 9
 			- 10
+		- Exercicios Cap.6:
+			- 7 
+			- 8
+			- 9
+			- 10
+			- 11
+			- 12
