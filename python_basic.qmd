@@ -2536,6 +2536,8 @@ Observe que a estrutura do dicionário de cada usuário é idêntica. Embora o P
 
 # Entrada de usuário e laços `while`
 
+
+
 \newpage
 
 # Bibliografia
