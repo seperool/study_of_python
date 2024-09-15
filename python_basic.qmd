@@ -2536,7 +2536,81 @@ Observe que a estrutura do dicionário de cada usuário é idêntica. Embora o P
 
 # Entrada de usuário e laços `while`
 
+A maioria dos programas é escrita para resolver o problema de um usuário final. Para isso, geralmente precisamos obter algumas informações do usuário.   Aprenderemos a aceitar dados de entrada do usuário para que o programa possa então trabalhar com eles. Para tal fim, usaremos a função `input()`.  
+O laço `while` do Python mantém o programa executando enquanto determinadas condições permanecem verdadeiras.
 
+## Entrada de usuário - `input()`
+
+### Como a função `input()` trabalha
+
+A função `input()` faz uma pausa em seu programa e espera o usuário fornecer um **texto** (*string*). Depois que o Python recebe a entrada do usuário, esse dado é armazenado em uma variável para que possa ser trabalhado pelo programa, de forma conveniente.  
+Exemplo:
+```
+message = input("Tell me soomething, and I will repeat it back to you: ")
+print(message)
+```
+
+A função `input()` aceita um argumento: O `prompt` - ou as instruções - que queremos que exiba ao usuário para que eles saibam o que devem fazer. Nesse exemplo, quando Python executar a primeira linha, o usuário verá o `prompt` "*Tell me soomething, and I will repeat it back to you: *". O programa espera enquanto o usuário fornece sua resposta e continua depois que ele teclar **ENTER**. A resposta é armazenada na variável `message`.
+
+O programa **Sublime Text** não executa programas que pedem uma entrada ao usuário. Você pode usar o **Sublime Text** para escrever programas que solicitem uma entrada, mas será necessário executar esses programas a partir de um terminal.  
+Exemplo de comando para executar um programa a partir de um terminal:
+```
+python3 parrot.py
+```
+
+\newpage
+
+### Escrevendo `prompts` claros
+
+Sempre que usar a função `input()`, inclua um `prompt` claro, fácil de compreender, que informe o usuário exatamente que tipo de informação ele deve passar. Qualquer frase que diga aos usuários o que eles devem fornecer será apropriada.  
+Exemplo:
+```
+name = input("Please enter your name: ")
+print("Hello, " + name.title() + "!")
+```
+
+Acrescente um espaço no final de seus `prompts` (depois dos dois-pontos) para separar o `prompt` da resposta do usuário e deixar claro em que lugar o usuário deve fornecer seu texto.  
+Ás vezes, você vai querer um `prompt` que seja maior que uma linha. Por exemplo, talvez você queira explicar ao usuário por que está pedindo determinada entrada. Você pode armazenar seu `prompt` em uma variável e passá-la para a função `input()`. Isso permite criar seu `prompt` com várias linhas e escrever uma instrução `input()` clara.  
+Exemplo:
+```
+prompt = "If you tell us who you are, we can personalize the messages you see."
+prompt += "\nWhat is your name? "
+name = input(prompt)
+print("Hello, "+name.title()+"!")
+```
+
+Esse exemplo mostra uma maneira de criar uma *string* multilinha. A primeira linha armazena a parte inicial da mensagem na variável `prompt`. Na segunda linha, o operador `+=` acrescenta a nova *string* no final da *string* que estava armazenada em `prompt`.
+
+\newpage
+
+### Usando `int()` para aceitar entradas numéricas
+
+Se usarmos a função `input()`, o Python interpretará tudo que o usuário fornecer como uma *string*.  
+Exemplo:
+```
+age = input("How old are you? ")
+age
+```
+
+Sabemos que o Python interpretou a entrada como uma string porque o número agora está entre aspas, se tentar usar a entrada como um número, obterá um erro.
+
+Podemos resolver esse problema usando a função `int()`, que diz ao Python para tratar a entrada como um valor numérico. A função `int()` converte a representação em *string* de um número em uma representação numérica.
+```
+age = input("How old are you? ")
+age = int(age)
+age
+```
+
+Quando usar uma entrada numérica para fazer cálculos e comparações, lembre-se de converter o valor da entrada em uma representação numérica antes.
+
+### Aceitando entradas em Python 2.7
+
+Se você usa Python 2.7, utilize a função `raw_input()` quando pedir uma entrada ao usuário. Essa função interpreta todas as entradas como uma *string*, como faz `input()` em Python 3.  
+Python 2.7 também tem uma função `input()`, mas essa função interpreta a entrada do usuário como código Python e tenta executá-la. No melhor caso, você verá um erro informando que Python não é capaz de compreender a entrada; no pior caso, executará um código que não pretendia executar. Se tiver usando Python 2.7, utilize `raw_input()` no lugar de `input()`.
+
+\newpage
+
+## Laço `while`
 
 \newpage
 
