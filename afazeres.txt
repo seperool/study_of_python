@@ -1,6 +1,6 @@
-ESCRITO EM 14/09/24
+ESCRITO EM 15/09/24
 ---
-PARA 15/09/24
+PARA 16/09/24
 ---
 Subir github:
 
@@ -10,7 +10,15 @@ Afazeres:
 	- Cap4. Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
+	- Cap7. Entrada de usuário e laços while
+		- Laço while
 	- Scripts:
-		- Exercicios Cap.3:
-			- 9
-			- 10
+		- Cap.3:
+			- Exercicios Cap.3:
+				- 9
+				- 10
+		- Cap.7:
+			- Exercicios Cap.7:
+				- 1
+				- 2
+				- 3
