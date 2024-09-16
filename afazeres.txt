@@ -1,6 +1,6 @@
-ESCRITO EM 15/09/24
+ESCRITO EM 16/09/24
 ---
-PARA 16/09/24
+PARA 17/09/24
 ---
 Subir github:
 
@@ -12,6 +12,12 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap7. Entrada de usuário e laços while
 		- Laço while
+			- Deixando usuário decidir quando quer sair
+			- Usando uma flag
+			- Usando break para sair de um laço
+			- Usando continue em um laço
+			- Evitando loops infinitos
+		- Usando um laço while com listas e dicionários
 	- Scripts:
 		- Cap.3:
 			- Exercicios Cap.3:
@@ -19,6 +25,6 @@ Afazeres:
 				- 10
 		- Cap.7:
 			- Exercicios Cap.7:
-				- 1
-				- 2
-				- 3
+				- 5
+				- 6
+				- 7
