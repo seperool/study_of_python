@@ -2612,6 +2612,40 @@ Python 2.7 também tem uma função `input()`, mas essa função interpreta a en
 
 ## Laço `while`
 
+O laço `for` toma uma coleção de itens e executa um bloco de código uma vez para cada item da coleção. Em comparação, o laço `while` executa durante o tempo em que, ou enquanto, uma determinada condição for verdadeira.
+
+### Laço `while` em ação
+
+Podemos usar um laço `while` para contar uma série de números.
+Exemplo:
+```{python}
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number += 1
+```
+
+O laço `while` é configurado para continuar executando enquanto o valor de `current_number` for menor ou igual a 5. O código no laço exibe o valor `current_number` e então é somado 1 a esse valor com `current_number += 1`. (O operador `+=` é um atalho para `current_number = current_number + 1`)  
+O Python repete o laço enquanto a condição `current_number <= 5` for verdadeira.
+
+Os programas que você usa no dia a dia provavelmente contêm laços `while`. Por exemplo, um jogo precisa de um laço `while` para continuar executando enquanto você quiser jogar, e pode parar de executar assim que você pedir para sair.
+
+### Deixando usuário decidir quando quer sair
+
+
+
+### Usando uma flag
+### Usando `break` para sair de um laço
+### Usando `continue` em um laço
+### Evitando loops infinitos
+
+\newpage
+
+## Usando um laço `while` com listas e dicionários
+### Transferindo itens de uma lista para outra
+### Removendo todas as instâncias de valores específicos de uma lista
+### Preenchendo um dicionário com dados de entrada do usuário
+
 \newpage
 
 # Bibliografia
