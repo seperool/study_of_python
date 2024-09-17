@@ -6,6 +6,8 @@ Created on Tue Sep 17 03:11:37 2024
 @author: sergio
 """
 
+#Exemplo while break
+
 prompt = "\nPlease enter the name of a city you have visited:"
 prompt += "\n(Enter 'quit' when you are finished.)"
 prompt += "\n"

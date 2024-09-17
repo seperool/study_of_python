@@ -6,6 +6,8 @@ Created on Sun Sep 15 00:59:24 2024
 @author: sergio
 """
 
+#Exemplo while flag
+
 prompt = "\nTell me soomething, and I will repeat it back to you:"
 prompt += "\n(Enter 'quit' to end the program.)"
 prompt += "\n"
