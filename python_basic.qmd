@@ -2630,14 +2630,115 @@ O Python repete o laço enquanto a condição `current_number <= 5` for verdadei
 
 Os programas que você usa no dia a dia provavelmente contêm laços `while`. Por exemplo, um jogo precisa de um laço `while` para continuar executando enquanto você quiser jogar, e pode parar de executar assim que você pedir para sair.
 
+\newpage
+
 ### Deixando usuário decidir quando quer sair
 
+Definimos um valor de saída e então deixamos o programa executando enquanto o usuário não tiver fornecido o valor de saída.  
+Exemplo:
+```
+prompt = "\nTell me soomething, and I will repeat it back to you:"
+prompt += "\n(Enter 'quit' to end the program.)"
+prompt += "\n"
 
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    if message != 'quit': #Não repete o 'quit'
+        print(message)
+```
+
+Primeiro definimos um `prompt` que informa quais são as duas opções ao usuário: fornecer uma mensagem ou o valor de saída (nesse caso, é 'quit'). Em seguida, preparamos uma variável `message` para armazenar o valor que o usuário forneceu. Definimos `message` como uma string vazia, "", de modo que o Python tenha algo para conferir na primeira vez quealcançar a linha com `while`. Na primeira vez que o programa executar e o Python alcançar a instrução `while`, ele deverá comparar o valor de `message` com 'quit', mas o usuário não forneceu nenhuma entrada.  
+Se o Python não tiver nada para comparar, ele não será capaz de continar executando o programa. Para resolver esse problema, garantimos que `message` receba algum valor inicial. Embora seja apenas uma *string* vazia, ela fará sentido para o Python e permitirá que a comparação que faz o laço `while` funcionar seja feita. Esse laço `while` executa enquanto o valor de `message` não for 'quit'.  
+Desde que o usuário não tenha fornecido a palavra 'quit', o `prompt` será exibido novamente e o Python esperará mais entradas. Quando o usuário finalmente digitar 'quit', o Python para de executar o laço `while` e o programa termina.
+
+\newpage
 
 ### Usando uma flag
+
+No exemplo anterior, tinhamos um programa que executava determinada tarefa enquanto uma dada condição era verdadeira. E como ficaria em programas mais complicados emque muitos eventos diferentes poderiam fazer o programa parar de executar?  
+Se muitos eventos possíveis puderem ocorrer para o programa terminar, tentar testar todas essas condições em uma única instrução `while` torna-se complicado e difícil.  
+Para um programa que deva executar somente enquanto muitas condições forem verdadeiras, podemos definir uma variável que determina se o programa como um todo deve estar ativo. Essa variável, chamada `flag`, atua como um sinal para o programa. Podemos escrever nossos programas de modo que executem enquanto a `flag` estiver definida como `True` e parem de executar quando qualquer um dos vários eventos definir o valor da `flag` como `False`. Como resultado, nossa instrução `while` geral precisa verificar apenas uma condição: se a `flag`, no momento, é `True`. Então todos nossos demais testes (para ver se um evento que deve definir a `flag` como `False` ocorreu) podem estar bem organizados no restante do programa.  
+Exemplo:
+```
+prompt = "\nTell me soomething, and I will repeat it back to you:"
+prompt += "\n(Enter 'quit' to end the program.)"
+prompt += "\n"
+
+active = True
+
+message = ""
+while active:
+    message = input(prompt)
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+```
+
+Definimos a variável `active` como `True` para que o programa comece em um estado ativo. Fazer isso simplifica a instrução `while`, pois nenhuma comparação é feita nessa instrução; a lógica é tratada em outras partes do programa. Enquanto a variável `active` permanecer `True`, o laço continuará a executar.  
+Se o usuário fornecer 'quit', definimos `active` como `False` e o laço `while` é encerrado. Se o usuário fornecer outro dado que não seja 'quit', exibimos essa entrada como uma mensagem.  
+Esse programa gera a mesma saída do exemplo anterior, em que havíamos colocado o teste condicional diretamente na instrução `while`. Porém, agora que temos uma `flag` para inidicar se o programa como um todo está em um estado ativo, será mais fácil acrescentar outros testes (por exemplo, instruções `elif`) para eventos que devam fazer `active` se tornar `False`. Isso é útil em programas complicados, como jogos, em que pode haver muitos eventos, e qualquer um deles poderia fazer o programa parar de executar. Quando um desses eventos fizer a `flag` `active` se tornar `False`, o laço principal do jogo terminará, uma mensagem de *Game Over* poderia ser exibida e o jogador poderia ter a opção de jogar novamente.
+
 ### Usando `break` para sair de um laço
+
+Para sair de uma laço `while` de imediato, sem executar qualquer código restante no laço, independente do resultado de qualquer teste condicional, utilize a instrução `break`.  
+Exemplo:
+```
+prompt = "\nPlease enter the name of a city you have visited:"
+prompt += "\n(Enter 'quit' when you are finished.)"
+prompt += "\n"
+
+while True:
+    city = input(prompt)
+    
+    if city == 'quit':
+        break
+    else:
+        print("I'd love to go to " + 
+              city.title() + "!")
+```
+
+Um laço que comece com `while` `True` executará indefinidamente, a menos que alcance uma instrução `break`. O laço desse programa continuará pedindo aos usuários para que entrem com os nomes das cidades em que eles estiveram até que 'quit' seja fornecido. Quando 'quit' for digitado, a instrução `break` é executada, fazendo o Python sair do laço.
+
+Você pode usar a instrução `break` em qualquer laço do Python. Por exemplo, `break` pode ser usado para sair de um laço `for` que esteja percorrendo uma lista ou um dicionário.
+
+\newpage
+
 ### Usando `continue` em um laço
+
+Em vez de sair totalmente de um laço sem executar o restante de seu código podemos usar a instrução `continue` para retornar ao início, com base no resultado de um teste condicional.
+Exemplo:
+```{python}
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if (current_number % 2) == 0: #Se for par
+        continue
+    print(current_number)
+```
+
+No laço conta de 1 a 10, mas apresenta apenas os números impares desse intervalo.  
+Se o módulo for 0 (o que significa que current_number é divisível por 2), a instrução `continue` diz ao Python para ignorar o restante do laço e voltar ao início. Se o número atual não for divisível por 2, o restante do laço será executado e o Python exibirá o número atual.
+
 ### Evitando loops infinitos
+
+Todo laço `while` precisa de uma maneira de interromper a execução para que não continue executando indefinidademente.  
+Exemplo:
+```
+x = 1
+while x <= 5 :
+    print(x)
+    #x += 1
+```
+
+Se for omitida a linha `x += 1` por acidente, o laço executará para sempre.  
+Agora o valor de x começará em 1, mas jamais será modificado. Como resultado, o teste condicional `x <= 5` será sempre avaliado como `True` e o laço `while` executará indefinidamente, exibindo uma série de 1s.
+
+Todo programador escreve ocasionalmente um loop infinito (ou laço infinito) com `while` por acidente, em especial quando os laços do programa tiverem condições de saída sutis. Se o programa ficar preso em um loop infinito, tecle `CTRL-C` ou simplesmente feche a janela do terminal que está exibindo a saída de seu programa.  
+Para evitar escrever loops infinitos, teste todos os laços `while` e certifique-se de que eles serão encerrados conforme esperado. Se quiser que seu programa termine quando o usuário fornecer determinado valor de entrada, analise cuidadosamente o modo como seu tratará o valor que deveria fazer o laço parar. Garanta que pelo menos uma parte do programa possa fazer a condição do laço ser `False` ou fazer uma instrução `break` ser alcançada.
+
+Alguns editores, como o Sublime Text, tem uma janela de saída incluida. Isso pode dificultar a interrupção de um loop infinito, e talvez seja necessário fechar o editor para encerrar o laço.
 
 \newpage
 
