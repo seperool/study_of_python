@@ -1,6 +1,6 @@
-ESCRITO EM 18/09/24
+ESCRITO EM 19/09/24
 ---
-PARA 19/09/24
+PARA 20/09/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap7. Entrada de usuário e laços while
 		- Usando um laço while com listas e dicionários
-			- Transferindo itens de uma lista para outra
 			- Removendo todas as instâncias de valores específicos de uma lista
 			- Preenchendo um dicionário com dados de entrada do usuário
 	- Scripts:
