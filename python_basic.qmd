@@ -2743,8 +2743,36 @@ Alguns editores, como o Sublime Text, tem uma janela de saída incluida. Isso po
 \newpage
 
 ## Usando um laço `while` com listas e dicionários
+
+Para controlar muitos usuários e informações, precisamos usar listas e dicionários com os laço `while`.  
+Um laço `for` é eficiente para percorrer uma lista, mas você não deve modificiar uma lista em um laço `for`, pois o Python terá problemas para manter o controle dos itens da lista. Para modificar uma lista enquanto trabalha com ela, utilize um laço `while`. Usar laços `while` com listas e dicionários permite coletar, armazenar e organizar muitas entradas a fim de analisá-las e apresentá-las posteriormente.
+
 ### Transferindo itens de uma lista para outra
+
+Uma maneira de transferir itens de uma lista para outra lista seria usar um laço `while`, a medida que os dados são trabalhados são transferidos de uma lista para outra.  
+Exemplo:
+```{python}
+#Transferindo itens de uma lista para outra, usando while
+
+unconfirmed_users = ["alice","brian","candace"]
+confirmed_users = []
+
+while unconfirmed_users: #O laço continuar enquanto a lista não for vazia
+    current_user = unconfirmed_users.pop() #pesca o ultimo item da lista
+    
+    print("Verifying user: " + current_user.title())
+    confirmed_users.append(current_user) #Adiciona o item na lista
+print("\nThe following users have been confirmed:")
+for confirmed in confirmed_users:
+    print(confirmed.title())
+```
+
+O laço `while` é executado enquanto a lista `unconfirmed_users` não tiver vazia. Nesse laço, o método `.pop()` remove os usuários não verificados, um de cada vez, do final de `unconfirmed_users`. Nesse caso, como Candace é o último elemento da lista `unconfirmed_users`, seu nome será o primeiro a ser removido, armazenado em `current_user` e adicionado a lista `confirmed_users`. O próximo é Brian e, depois, Alice.
+
 ### Removendo todas as instâncias de valores específicos de uma lista
+
+
+
 ### Preenchendo um dicionário com dados de entrada do usuário
 
 \newpage
