@@ -1,25 +1,18 @@
-ESCRITO EM 19/09/24
+ESCRITO EM 20/09/24
 ---
-PARA 20/09/24
+PARA 21/09/24
 ---
 Subir github:
 
 Estudar:
 
 Afazeres:
-	- Cap4. Trabalhando com listas
+	- Cap. 4 - Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-	- Cap7. Entrada de usuário e laços while
-		- Usando um laço while com listas e dicionários
-			- Removendo todas as instâncias de valores específicos de uma lista
-			- Preenchendo um dicionário com dados de entrada do usuário
+	- Cap. 8 - Funções
 	- Scripts:
-		- Cap.3:
-			- Exercicios Cap.3:
+		- Cap. 3:
+			- Exercicios Cap. 3:
 				- 9
 				- 10
-		- Cap.7:
-			- 8
-			- 9
-			- 10
