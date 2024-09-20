@@ -2771,9 +2771,64 @@ O laço `while` é executado enquanto a lista `unconfirmed_users` não tiver vaz
 
 ### Removendo todas as instâncias de valores específicos de uma lista
 
+Usamos `remove()` para remover umvalor específico de uma lista. A função `remove()` era apropriada porque o valor em que estávamos interessados aparecia apenas uma vez na lista. Porém, e se quiséssemos remover da lista todas as instâncias de um valor?  
+Suponha que tenhamos uma lista de animais de estimação com o valor 'cat' repetido várias vezes, e desejamos remover todos os 'cat'.  
+Exemplo:
+```{python}
+#Removendo todas as instâncias de valores especificos de uma lista
 
+pets = ["dog","cat","dog","goldfish","cat","rabbit","cat"] #Lista
+print(pets)
+
+while 'cat' in pets: #Enquanto 'cat' contido na lista pets faça:
+    pets.remove('cat') #Remove o primeiro 'cat' que aparecer, a cada iteração
+
+print(pets) #Nova lista
+```
+
+Começamos com uma lista contendo várias instâncias de 'cat'. Após exibir a lista, o Python entra no laço `while`, pois encontra o valor 'cat' na lista pelo menos uma vez. Depois que entrar no laço, o Python remove a primeira instância de 'cat', retorna para a linha `while` e então entra novamente no laço quando descobre que 'cat' ainda existe na lista. Cada instância de 'cat' é removida até que o valor não esteja mais na lista; nesse momento, o Python sai do laço e exibe a lista novamente.
+
+\newpage
 
 ### Preenchendo um dicionário com dados de entrada do usuário
+
+Podemos pedir a quantidade de entrada que for necessária a cada passagem por um laço `while`. Armazenamos os dados coletados em um dicionário.  
+Exemplo:
+```
+#Preenchendo um dicionário com dados de entrada e saída
+
+#Inicializando um dicionário vazio
+responses = {}
+
+#Flag
+polling_active = True
+
+while polling_active:
+    #Pede o nome da pessoa e a resposta
+    name = input("\nWhat's your name? ")
+    response = input("Which mountain would you to climb someday? ")
+    
+    #Armazenando resposta no dicionári,o name como chave e response como valor.
+    responses[name] = response
+    
+    #Criterio de saída do laço, ou nova enquete
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat == 'no':
+        polling_active = False
+
+#Percorrendo o dicionário
+#Enquete concluída, mostra o resultado
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(name.title() + " would like to climb " + response + ".")
+```
+
+O programa inicialmente define um dicionário vazio (`responses`) e cria uma `flag` (`polling_active`) para indicar que a enquete esta ativa. Enquanto `polling_active` for `True`, o Python executará o código que está no laço `while`.  
+Nesse laço é solicitado ao usuário que entre com seu nome e montanha que gostaria de escalar. Essa informação é armazenada no dicionário `responses` (nome é a `chave` e resposta é `valor` relacionado a `chave`), e uma pergunta é feita ao usuário para saber se ele quer que a enquete continue. Se o usuário responder 'yes', o programa entrará no laço `while` novamente. Se responder 'no', a `flag` `polling_active` será definida como `False`, o laço `while` para de executar e o último bloco de código exibe o resultado da enquete.
+
+\newpage
+
+# Funções
 
 \newpage
 
