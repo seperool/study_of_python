@@ -6,12 +6,12 @@ Created on Thu Sep 19 16:27:05 2024
 @author: sergio
 """
 
-#Removendo todas as instancias de valores especificos de uma lista
+#Removendo todas as instâncias de valores especificos de uma lista
 
-pets = ["dog","cat","dog","goldfish","cat","rabbit","cat"]
+pets = ["dog","cat","dog","goldfish","cat","rabbit","cat"] #Lista
 print(pets)
 
 while 'cat' in pets: #Enquanto 'cat' contido na lista pets faça:
-    pets.remove('cat')
+    pets.remove('cat') #Remove o primeiro 'cat' que aparecer, a cada iteração
 
-print(pets)
+print(pets) #Nova lista
