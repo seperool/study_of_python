@@ -1,6 +1,6 @@
-ESCRITO EM 20/09/24
+ESCRITO EM 21/09/24
 ---
-PARA 21/09/24
+PARA 22/09/24
 ---
 Subir github:
 
@@ -11,6 +11,22 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
+		- Definindo uma função
+			- Passando informação para uma função
+			- Argumentos e parâmetros
+		- Passando argumentos
+			- Argumentos pasicionais
+			- Várias chamadas de função
+			- A ordem é importante em argumentos posicionais
+			- Argumentos nomeados
+			- Valores default
+			- Chamadas de função equivalente
+			- Evitando erros em argumentos
+		- Valores de retorno
+		- Passando uma lista para uma função
+		- Passando um número arbitrário de argumentos
+		- Armazenando suas funções em módulos
+		- Estilizando funções
 	- Scripts:
 		- Cap. 3:
 			- Exercicios Cap. 3:
