@@ -2830,9 +2830,53 @@ Nesse laço é solicitado ao usuário que entre com seu nome e montanha que gost
 
 # Funções
 
+Funções, que são blocos de código nomeados, concebidos para realizar uma tarefa específica. Quando queremos executar uma tarefa em particular, definida em um função, chamamos o nome da função responsável por ela. Se precisar executar essa tarefa várias vezes durante seu programa, não será necessário digitar todo o código para a mesma tarefa repetidamente, basta chamar a função dedicada ao tratamento dessa tarefa e a chamada dirá ao Python para executar o código da função.  
+sobre as maneiras de passar informações as funções, escrevemos determinadas funções cuja tarefa principal seja exibir informações e outras funções que visam a processar dados e devolver um valor ou um conjunto de valores. Veremos como armazenar funções em arquivos separados, chamados de *módulos*, para ajudar a organizar os arquivos principais de seu programa.
+
 ## Definindo uma função
+
+Sintaxe:
+```
+def nome_funcao (parâmetro_1,...):
+    """docstrig"""
+    bloco de programação
+
+nome_funcao(argumento_1,...)
+```
+
+Exemplo:
+```{python}
+def greet_user(): #Define o nome e parâmetros da função
+    """Exibe um saudação simples.""" #Docstring
+    print("Hello world!") #Bloco de programação
+
+greet_user() #Chama a função
+```
+
+Esse exemplo mostra a estrutura mais simples possível para uma função. A primeira linha utiliza a palavra `def` para informar ao Python que estamos definindo uma função. Essa é a definição da função, que informa o nome da função ao Python e, se for aplicável, quais os tipos de informação necessários a função para que ela faça sua tarefa (parâmetros). Os parênteses contêm essa informação. Nesse caso, o nome da função é `greet_user()`, e ela não precisa de nenhuma informação para executar sua tarefa, portanto os parênteses estão vazios. (Mesmo assim, eles são obrigatórios.) Por fim, a definição termina com dois-pontos.  
+Qualquer linha indentada após `def greet_user():` faz parte do corpo da função. O texto na segunda linha é um comentário chamado `docstring`, que descreve o que a função faz. As `docstring` são colocadas entre aspas triplas, que o Python procura quando gera a documentação das funções de seus programas.  
+Quando quiser usar essa função, você deve chamá-la. Uma chamada de função diz ao Python para executar o código da função. Para chamar a função, escreva o nome dela, seguido de qualquer informação necessária entre parênteses (argumentos, se for o caso).
+
 ### Passando informação para uma função
+
+Muitas vezes para que a função faça algo é necessário que especifique um parâmetro, entre os parênteses, da definição da função em `def greet_users()`.  
+Ao definir um parâmetro, permitimos que a função aceite qualquer valor que você especificar como parâmetro. A função agora espera que um valor seja fornecido para variável parametro sempre que ela for chamada. Ao chamar `greet_user()`, você poderá lhe passar um nome, por exemplo, 'jesse', entre parênteses.  
+Exemplo:
+```{python}
+def greet_user(username): #Define o nome e parâmetros da função
+    """Exibe um saudação simples.""" #Docstring
+    print("Hello " + username.title() + "!") #Bloco de programação
+
+greet_user('jesse') #Chama a função e passa um argumento
+```
+
 ### Argumentos e parâmetros
+
+A variável `username` na definição da função `greet_user()` (exemplo anterior) é um exemplo de *parâmetro*, uma informação de que a função precisa para executar sua tarefa. O valor 'jesse' em `greet_user('jesse')` é um exemplo de *argumento*. Um argumento é uma informação passada para uma função em sua chamada. Quando chamamos a função, colocamos entre parênteses o valor com que queremos que a função trabalhe. Nesse caso, o argumento 'jesse' foi passado para a função `greet_user()` e o valor foi armazenado no parâmetro `username`.  
+As vezes, as pessoas falam de argumentos e parâmetros de modo indistinto. Não fique surpreso se vir as variáveis de uma definição de função serem referenciadas como argumentos, ou as variáveis de uma chamada de função serem chamadas de parâmetros.
+
+\newpage
+
 ## Passando argumentos
 ### Argumentos pasicionais
 ### Várias chamadas de função
