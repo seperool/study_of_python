@@ -1,6 +1,6 @@
-ESCRITO EM 24/09/24
+ESCRITO EM 25/09/24
 ---
-PARA 25/09/24
+PARA 26/09/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
 		- Passando argumentos
-			- Argumentos pasicionais
 			- Várias chamadas de função
 			- A ordem é importante em argumentos posicionais
 			- Argumentos nomeados
