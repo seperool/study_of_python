@@ -2883,7 +2883,20 @@ Pelo fato de ser possível que uma definição de função tenha vários parâme
 
 ### Argumentos posicionais
 
+Quando chamamos uma função, o Python precisa fazer a correspondência entre cada argumento da chamada da função e um parâmetro da definição. A maneira mais simples de fazer isso é contar com a ordem dos argumentos fornecidos. Valores cuja correspondência seja feita dessa maneira são chamados de *argumentos posicionais*.  
+Exemplo:
+```{python}
+def describe_pet(animal_type, pet_name):
+    """Exibe informações sobre um animal de estimação."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+    
+describe_pet('hamster', "harry") #Argumento posicional
+```
 
+A definição mostra que essa função precisa de um tipo de animal e de seu nome. Quando chamamos `describe_pet()`, devemos fornecer o tipo de animal e um nome, nessa ordem. Por exemplo, na chamada da função, o argumento 'hamster' é armazenada no parâmetro `animal_type` e o argumento 'harry' é armazenado no parâmetro `pet_name`.
+
+\newpage
 
 ### Várias chamadas de função
 ### A ordem é importante em argumentos posicionais
