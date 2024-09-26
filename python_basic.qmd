@@ -2899,7 +2899,29 @@ A definição mostra que essa função precisa de um tipo de animal e de seu nom
 \newpage
 
 ### Várias chamadas de função
+
+Podemos chamar uma função quantas vezes forem necessárias.  
+Exemplo:
+```{python}
+def describe_pet(animal_type, pet_name):
+    """Exibe informações sobre um animal de estimação."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+    
+describe_pet('hamster', "harry") #Argumento posicional
+describe_pet('dog', "willie") #Várias chamadas de função
+```
+
+Nessa segunda chamada da função, passamos os argumentos 'dog' e 'willie' a `describe_pet()`. Assim como no conjunto anterior de argumentos que usamos, o Python faz a correspondência entre 'dog' e o parâmetro `animal_type` e entre 'willie' e o parâmetro `pet_name`. Como antes, a função faz sua tarefa, porém, dessa vez, exibe valores para um cachorro chamado Willie. Agora temos um hamster chamado Herry e um cachorro chamado Willie.  
+Chamar uma função várias vezes é uma maneira eficiente de trabalhar. O código que descreve um animal de estimação é escrito uma só vez na função. Então, sempre que quiser descrever um novo animal de estimação, podemos chamar a função com as informações sobre o animal. Mesmo que o código para descrever um animal de estimação fosse expandido atingindo dez linhas, poderíamos ainda descrever um novo animal de estimação chamando a função novamente com apenas uma linha.  
+Podemos usar tantos argumentos pasicionais quantos forem necessários nas funções. O Python trabalha com os argumentos fornecidos na chamada da função e faz a correspondência de cada um com o parâmetro associado na definição da função.
+
+\newpage
+
 ### A ordem é importante em argumentos posicionais
+
+
+
 ### Argumentos nomeados
 ### Valores default
 ### Chamadas de função equivalente
