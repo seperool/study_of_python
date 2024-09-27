@@ -2920,10 +2920,56 @@ Podemos usar tantos argumentos pasicionais quantos forem necessários nas funç�
 
 ### A ordem é importante em argumentos posicionais
 
+Podemos obter resultados inesperados se confundirmos a ordem dos argumentos em uma chamada de função quando argumentos posicionais forem usados.  
+Exemplo:
+```{python}
+def describe_pet(animal_type, pet_name):
+    """Exibe informações sobre um animal de estimação."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+    
+describe_pet('harry', 'hamster') #Argumento posicional errado
+```
 
+Se obtivermos resutados engraçados, verifique se a ordem dos argumentos em sua chamada de função corresponde à ordem dos parâmetros na definição da função.
 
 ### Argumentos nomeados
+
+Um *argumento nomeado* (keyword argument) é um par nome-valor passado para uma função. Associamos diretamente o nome e o valor no próprio argumento para que não haja confusão quando ele for passado para a função. Argumentos nomeados fazem com que você não precise se preocupar com a ordem correta de seus argumentos na chamada da função e deixam claro o papel de cada valor na chamada.  
+Exemplo:
+```{python}
+def describe_pet(animal_type, pet_name):
+    """Exibe informações sobre um animal de estimação."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet(animal_type="hamster", pet_name="harry") #Argumentos nomeados
+```
+
+Quando chamamos a função, dizemos explicitamente ao Python a qual parâmetro cada argumento deve corresponder. Quando o Python lê a chamada da função, ele sabe que deve armazenar o argumento 'hamster' no parâmetro `animal_type` e o argumento 'harry' em `pet_name`.  
+A ordem dos argumentos nomeados não importa, pois o Python sabe o que é cada valor.  
+
+Quando usar argumentos nomeados, lembre-se de usar os nomes exatos dos parâmetros usados na definição da função.
+
 ### Valores default
+
+Ao escrever uma função, podemos definir um valor *default* para cada parâmetro. Se um argumento para um parâmetro for especificado na chamada da função, o Python usará o valor desse argumento. Se não for, o valor *default* do parâmetro será utilizado. Portanto, se um valor *default* for definido para um parâmetro, você poderá excluir o argumento correspondente, que normalmente seria especificado na chamada da função. Usar valores *default* pode simplificar suas chamadas de função e deixar mais claro o modo como suas funções normalmente são utilizadas.  
+Exemplo:
+```{python}
+def describe_pet(pet_name,animal_type='dog'): #Definindo default
+    """Exibe informações sobre um animal de estimação."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet(pet_name="willie")
+```
+
+Mudamos a definição de `describe_pet()` para incluir um valor default igual a 'dog' para `animal_type`. A partir de agora, quando a função for chamada sem um `animal_type` especificado, o Python saberá que deve usar o valor 'dog' para esse parâmetro.  
+Observe que a ordem dos parâmetros na definição da função precisou ser alterada. Como o uso do valor default faz com que não seja necessário especificar o tipo de animal como argumento, o único argumento restante na chamada da função é o nome do animal de estimação. O Python continua interpretando esse valor como um argumento posicional, portanto, se a função for chamda somente com o nome do animal de estimação, esse argumento corresponderá ao primeiro parâmetro listado na definição da função. Esse é o motivo pelo qual o primeiro parâmetro deve ser `pet_name`.  
+Quando um argumento explicito para `animal_type` for especificado, o Python ignorará o valor default do parâmetro.
+
+Ao usar valores default, qualquer parâmetro com um valor desse tipo deverá ser listado após todos os parâmetros que não tenham valores default. Isso permite que o Python continue a interpretar os argumentos posicionais corretamente.
+
 ### Chamadas de função equivalente
 ### Evitando erros em argumentos
 ## Valores de retorno
