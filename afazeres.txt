@@ -1,6 +1,6 @@
-ESCRITO EM 27/09/24
+ESCRITO EM 28/09/24
 ---
-PARA 28/09/24
+PARA 29/09/24
 ---
 Subir github:
 
@@ -11,10 +11,11 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
-		- Passando argumentos
-			- Chamadas de função equivalente
-			- Evitando erros em argumentos
 		- Valores de retorno
+			- Devolvendo um valor simples
+			- Deixando um argumento opcional
+			- Devolvendo um dicionário
+			- Usando uma função com um laço `while`
 		- Passando uma lista para uma função
 		- Passando um número arbitrário de argumentos
 		- Armazenando suas funções em módulos
