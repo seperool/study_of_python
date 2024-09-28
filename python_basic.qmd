@@ -2971,8 +2971,42 @@ Quando um argumento explicito para `animal_type` for especificado, o Python igno
 Ao usar valores default, qualquer parâmetro com um valor desse tipo deverá ser listado após todos os parâmetros que não tenham valores default. Isso permite que o Python continue a interpretar os argumentos posicionais corretamente.
 
 ### Chamadas de função equivalente
+
+Como os argumentos posicionais, os argumentos nomeados e os valores default podem ser usados em conjunto, e com frequência você terá várias maneiras equivalentes de chamar uma função.  
+```
+def describe_pet(pet_name,animal_type='dog'):
+```
+Com essa definição, um argumento sempre deverá ser fornecido para `pet_name` e esse valor pode ser especificado por meio do formato posicional ou nomeado.  
+Todas as chamadas a seguir serão adequadas a essa função:  
+```
+#Um cachorro chamado willie
+describe_pet('willie')
+describe_pet(pet_name='willie')
+
+#Um hamster chamado harry
+describe_pet('harry','hamster')
+describe_pet(pet_name='harry',animal_type='hamster')
+describe_pet(animal_type='hamster',pet_name='harry')
+```
+Cada uma dessas chamadas de função produzirá a mesma saída.
+
+O estilo de chamada que você usar relamente não importa. Desde que suas chamadas de função gerem a saída desejada, basta usar o estilo que achar mais fácil de entender.
+
 ### Evitando erros em argumentos
+
+Quando começar a usar funções, não se surpreenda se você se deparar com erros sobre argumentos sem correspondência. Argumentos sem correspondência ocorrem quando fornecemos menos ou mais argumentos necessários à função para que ela realize sua tarefa.
+
+\newpage
+
 ## Valores de retorno
+
+### Devolvendo um valor simples
+### Deixando um argumento opcional
+### Devolvendo um dicionário
+### Usando uma função com um laço `while`
+
+\newpage
+
 ## Passando uma lista para uma função
 ## Passando um número arbitrário de argumentos
 ## Armazenando suas funções em módulos
