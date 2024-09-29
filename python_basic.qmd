@@ -3000,6 +3000,8 @@ Quando começar a usar funções, não se surpreenda se você se deparar com err
 
 ## Valores de retorno
 
+
+
 ### Devolvendo um valor simples
 ### Deixando um argumento opcional
 ### Devolvendo um dicionário
