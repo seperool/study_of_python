@@ -1,6 +1,6 @@
-ESCRITO EM 28/09/24
+ESCRITO EM 29/09/24
 ---
-PARA 29/09/24
+PARA 30/09/24
 ---
 Subir github:
 
@@ -15,7 +15,7 @@ Afazeres:
 			- Devolvendo um valor simples
 			- Deixando um argumento opcional
 			- Devolvendo um dicionário
-			- Usando uma função com um laço `while`
+			- Usando uma função com um laço while
 		- Passando uma lista para uma função
 		- Passando um número arbitrário de argumentos
 		- Armazenando suas funções em módulos
@@ -27,6 +27,6 @@ Afazeres:
 				- 10
 		- Cap. 8:
 			- Exercicios Cap. 8:
-				- 3
-				- 4
-				- 5
+				- 6
+				- 7
+				- 8
