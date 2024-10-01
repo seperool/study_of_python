@@ -1,6 +1,6 @@
-ESCRITO EM 29/09/24
+ESCRITO EM 30/09/24
 ---
-PARA 30/09/24
+PARA 01/10/24
 ---
 Subir github:
 
@@ -12,8 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
 		- Valores de retorno
-			- Devolvendo um valor simples
-			- Deixando um argumento opcional
 			- Devolvendo um dicionário
 			- Usando uma função com um laço while
 		- Passando uma lista para uma função
