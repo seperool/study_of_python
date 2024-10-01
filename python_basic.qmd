@@ -3000,10 +3000,50 @@ Quando começar a usar funções, não se surpreenda se você se deparar com err
 
 ## Valores de retorno
 
-
+Uma função nem sempre precisa exibir sua saída diretamente. Em vez disso, ela pode processar alguns dados e então devolver um valor ou um conjunto de valores. O valor devolvido pela função é chamado de *valor de retorno*. A instrução `return` toma um valor que esta em uma função e o envia de volta a linha que a chamou. Valores de retorno permitem passar boa parte do trabalho pesado de um programa para funções, o que pode simplificar o corpo do programa.
 
 ### Devolvendo um valor simples
+
+Exemplo:
+```{python}
+def get_formatted_name(first_name,last_name):
+    """Devolve um nome completo formatado de modo elegante."""
+    full_name = first_name + " " + last_name
+    return full_name.title() #Retorna valor da função
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+```
+
+A definição `get_formatted_name()` aceita um primeiro nome e um sobrenome como parâmetros. A função combina esses dois nomes, acrescenta um espaço entre eles e armazena o resultado na variável `full_name`. O valor `full_name` é convertido para que tenha letras iniciais maiúsculas e é devolvido para a linha que fez a chamada.  
+Quando chamamos uma função que devolve um valor, precisamos fornecer uma variável em que o valor de retorno possa ser armazenada. Nesse caso, o valor devolvido é armazenado na variável `musician`.
+
+\newpage
+
 ### Deixando um argumento opcional
+
+As vezes faz sentido criar um argumento opcional para que as pessoas que usarem a função possam optar por fornecer informações extras somente se quiserem. Valores default podem ser usados para deixar um argumento opcional.  
+Exemplo:
+```{python}
+def get_formatted_name(first_name,last_name,middle_name=''): #add parâmetro opcional
+    """Devolve um nome completo formatado de modo elegante."""
+    if middle_name: #middle_name vazio é false (else), e com algo é true (if)
+        full_name = first_name + " " + middle_name + " " + last_name
+    else:
+        full_name = first_name + " " + last_name
+    return full_name.title() #Retorna valor da função
+
+musician = get_formatted_name('john', 'hooker','lee')
+print(musician)
+```
+
+Os nomes do meio nem sempre são necessários. Para deixar o nome do meio opcional, podemos associar um valor default vazio ao argumento `middle_name` e ignorá-lo, a menos que o usuário forneça um valor. Para que `get_formatted_name()` funcione sem um nome do meio, definimos o valor default de `middle_name` como uma string vazia e o passamos para o final da lista de parâmetros.  
+Nesse exemplo, o nome é criado a partir de três partes possíveis. Como o primeiro nome e o sobrenome sempre existem, esses parâmetros são listados antes na definição da função. O nome do meio é opcional, portanto é listado por último na definição, e o seu valor default é uma string vazia.  
+No corpo da função verificamos se o nome do meio foi especificado. O Python interpreta strings não vazias como `True`, portanto `if middle_name` será avaliado como `True` se o argumento para o nome do meio estiver na chamada da função. Se um nome do meio for especificado, o primeiro nome, o nome do meio, e o sobrenome serão combinados para compor um nome completo. Esse nome é então alterado para que as iniciais sejam maiúsculas e é devolvido para linha que chamou a função: ele será armazenado em uma variável `musician` e exibido. Se o nome do meio não for especificado, a string vazia falhará no teste `if` e o bloco `else` será executado. O nome completo será composto apenas do primeiro nome e o sobrenome, e o nome formatado é devolvido para a linha que fez a chamada: ele será armazenado em `musician` e exibido.  
+Valores opcionais permitem que as funções tratem uma grande variedade de casos de uso, ao mesmo tempo que simplifica ao maxímo as chamadas de função.
+
+\newpage
+
 ### Devolvendo um dicionário
 ### Usando uma função com um laço `while`
 
