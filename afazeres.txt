@@ -1,6 +1,6 @@
-ESCRITO EM 30/09/24
+ESCRITO EM 01/10/24
 ---
-PARA 01/10/24
+PARA 02/10/24
 ---
 Subir github:
 
@@ -11,10 +11,9 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
-		- Valores de retorno
-			- Devolvendo um dicionário
-			- Usando uma função com um laço while
 		- Passando uma lista para uma função
+			- Modificando uma lista em uma função
+			- Evitando que uma função modifique uma lista
 		- Passando um número arbitrário de argumentos
 		- Armazenando suas funções em módulos
 		- Estilizando funções
