@@ -3045,11 +3045,59 @@ Valores opcionais permitem que as funções tratem uma grande variedade de casos
 \newpage
 
 ### Devolvendo um dicionário
+
+Uma função pode devolver qualquer tipo de valor necessário, incluindo estruturas de dados mais complexas como listas e dicionários.  
+Exemplo:
+```{python}
+def build_person(first_name,last_name,age=''):
+    """Devolve um dicionário com informações sobre uma pessoa."""
+    person = {'first':first_name,'last':last_name}
+    if age: #Se age não vazio, então True, logo adiciona ao dicionário
+        person['age']=age
+    return person
+
+musician = build_person('jimi', 'hendrix',age=27)
+print(musician)
+```
+
+A função `build_person()` aceita um primeiro nome e um sobrenome e então reúne esses valores num dicionário. O valor `first_name` é armazenado com a chave `first` e o valor de `last_name` é armazenado com a chave `last`. O valor de retorno com duas informações textuais originais agora armazenadas em um dicionário.  
+Essa função aceita informações textuais simples e as coloca em uma estrutura de dados mais significativa, que permite trabalhar com as informações além de simplesmente exibi-las.  
+É adicionado um novo parâmetro opcional `age` a definição de função e atribuido um valor default vazio ao parâmetro. Se a chamada da função incluir um valor para esse parâmetro, ele será armazenado no dicionário. Essa função sempre armazena o nome de uma pessoa, mas também pode ser modificada para guardar outras informações que você quiser sobre ela.
+
+\newpage
+
 ### Usando uma função com um laço `while`
+
+Podemos usar funções com todas as estruturas Python que conhecemos até agora. Por exemplo, vamos usar a funçao `get_formatted_name()` com um laço `while` para saudar os usuários de modo mais formal.  
+```
+def get_formatted_name(first_name,last_name):
+    """Devolve um nome completo formatado de modo elegante."""
+    full_name = first_name + " " + last_name
+    return full_name.title()
+
+while True:
+    print("\nPlaese tell me your name? ")
+    print("(Enter 'q' at any time to quit)")
+    f_name = input("First name: ")
+    if f_name == "q":
+        break
+    l_name = input("Last name: ")
+    if l_name == "q":
+        break
+    formatted_name = get_formatted_name(f_name, l_name)
+    print("\nHello, " + formatted_name + "!")
+```
+
+Adicionamos uma mensagem que informa como o usuário pode sair e então encerramos o laço se o usuário fornecer o valor de saída em qualquer um dos `prompts`. Agora o programa continuará saudando as pessoas até que alguém forneça 'q' em algum dos nomes.
 
 \newpage
 
 ## Passando uma lista para uma função
+### Modificando uma lista em uma função
+### Evitando que uma função modifique uma lista
+
+\newpage
+
 ## Passando um número arbitrário de argumentos
 ## Armazenando suas funções em módulos
 ## Estilizando funções
