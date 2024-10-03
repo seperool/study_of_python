@@ -3093,7 +3093,25 @@ Adicionamos uma mensagem que informa como o usuário pode sair e então encerram
 \newpage
 
 ## Passando uma lista para uma função
+
+Com frequência, você achará útil passar uma lista para uma função, seja uma lista de nomes, de números ou de objetos mais complexos, como dicionários. Se passarmos uma lista a uma função, ela terá acesso direto ao conteúdo dessa lista.  
+Exemplo:
+```{python}
+def greet_users(names):
+    """Exibe uma saudação simples a cada usuário da lista."""
+    for name in names:
+        print("Hello, " + name.title() + "!")
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+```
+
+Definimos `greet_users()` para que espere uma lista de nomes, que é armazenada no parâmetro `names`. A função percorre a lista recebida com um laço e exibe uma saudação para cada usuário. Definimos uma lista de usuários e então passamos a lista `usernames` para `greet_users()` em nossa chamada de função.
+
 ### Modificando uma lista em uma função
+
+
+
 ### Evitando que uma função modifique uma lista
 
 \newpage
