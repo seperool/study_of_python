@@ -3110,7 +3110,96 @@ Definimos `greet_users()` para que espere uma lista de nomes, que é armazenada 
 
 ### Modificando uma lista em uma função
 
+Quando passamos uma lista a uma função, ela pode ser modificada. Qualquer alteração feita na lista no corpo da função é permanente, permitindo trabalhar de modo eficiente, mesmo quando lidamos com grandes quantidades de dados.(Ver **escopo de variável**, sub-tópico).
 
+\newpage
+
+Exemplo de programa sem funções, trabalhando com listas:
+```{python}
+#Sem função, trabalhando com listas
+
+#Começa com alguns designs que devem ser impressos.
+unprinted_designs = ['iphone case','robot pendant','dodecahedron']
+completed_models = []
+
+#Simula a impressão de cada design, até que não haja mais nenhum
+#Transfere cada design para completed_models após a impressão
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    
+    #Simula a criação de uma impressão 3D a partir do design
+    print("Printing model: " + current_design)
+    completed_models.append(current_design)
+    
+#Exibe todos os modelos finalizados
+print("\nThe following models have been printed:")
+for complet_model in completed_models:
+    print(complet_model)
+```
+
+\newpage
+
+Exemplo de funções trabalhando com listas:
+```{python}
+def print_models(unprinted_designs, completed_models):
+    """
+    Simula a impressão de cada design, até que não haja mais nenhum.
+    transfere cada design para completed_models após a impressão.
+    """
+    while unprinted_designs: #Enquanto a lista não for vazia o loop continua
+        current_design = unprinted_designs.pop()
+        
+        #Simula a criação de uma impressão 3D a partir do design
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+    """Exibe todos os modelos finalizados"""
+    print("\nThe following models have been printed:")
+    for complet_model in completed_models: #Percorre a lista
+        print(complet_model)
+    
+#Alguns designs que devem ser impressos.
+unprinted_designs = ['iphone case','robot pendant','dodecahedron']
+completed_models = []
+
+print_models(unprinted_designs, completed_models)
+show_completed_models(completed_models)
+```
+
+Definimos a função `print_models()` com dois parâmetros: uma lista de designs a serem impressos e uma lista de modelos concluídos. Dadas essas duas listas, a função simula a impressão de cada design esvaziando a lista de designs não impressos e preenchendo a lista de designs completos. Também definimos a função `show_completed_models()` com um parâmetro: a lista de modelos finalizados. Dada essa lista, `show_completed_models()` exibe o nome de cada modelo impresso.
+
+Esse exemplo também mostra a ideia de que toda função deve ter uma tarefa específica. A primeira função imprime cada design, enquanto a segunda mostra os modelos concluídos. Isso é mais vantajoso que usar uma única função para executar as duas tarefas. Se você estiver escrevendo uma função e perceber que ela esta fazendo muitas tarefas diferentes, experimente dividir o código em duas funções. Lembre-se de que você sempre pode chamar uma função a partir de outras funções, o que pode ser conveniente quando dividimos uma tarefa complexa em uma série de passos.
+
+#### Variável
+
+Uma variável é um rótulo ou um nome dado a um determinado local na memória. Esse local contém o valor que você deseja que o programa memorize, para uso posterior. O que é ótimo em Python é que você não precisa declarar explicitamente qual é o tipo de variável que deseja definir.
+
+O Python tem algumas regras que você deve seguir ao criar uma variável:
+
+  1. Ele só pode conter letras (maiúsculas ou minúsculas), números ou o caractere de sublinhado "_".
+  2. Ele pode não começar com um número.
+  3. Pode não ser uma palavra-chave (você aprenderá sobre elas mais adiante).
+
+#### Escopo de variável
+
+É o limite das variáveis em um programa - seu "escopo". Os quatro escopos diferentes são: **local**, **envolvente**, **global** e **incorporado**.  
+  
+  1. Local:  
+   Sempre que você definir uma variável em uma função, seu escopo estará somente dentro da função. Ele pode ser acessado do ponto em que é definido até o final da função e existe enquanto a função estiver sendo executada. Isso significa que seu valor não pode ser alterado ou mesmo acessado de fora da função.
+  
+  2. Global:  
+   Esse talvez seja o escopo mais fácil de entender. Sempre que uma variável é definida fora de qualquer função, ela se torna uma variável global, e seu escopo é qualquer lugar dentro do programa. Isso significa que ele pode ser usado por qualquer função.
+
+Também podemos associar na variável um parâmetro que muda a propriedade da variável.  
+  
+  1. `global` - torna a variável global:  
+   `global nome_variável`
+
+  2. `local` - torna a variável local:  
+   `local nome_variável`
+
+\newpage
 
 ### Evitando que uma função modifique uma lista
 
