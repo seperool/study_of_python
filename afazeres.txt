@@ -1,6 +1,6 @@
-ESCRITO EM 03/10/24
+ESCRITO EM 04/10/24
 ---
-PARA 04/10/24
+PARA 05/10/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
 		- Passando uma lista para uma função
-			- Modificando uma lista em uma função
 			- Evitando que uma função modifique uma lista
 		- Passando um número arbitrário de argumentos
 		- Armazenando suas funções em módulos
