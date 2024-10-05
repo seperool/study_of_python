@@ -1,6 +1,6 @@
-ESCRITO EM 04/10/24
+ESCRITO EM 05/10/24
 ---
-PARA 05/10/24
+PARA 06/10/24
 ---
 Subir github:
 
@@ -11,9 +11,9 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
-		- Passando uma lista para uma função
-			- Evitando que uma função modifique uma lista
 		- Passando um número arbitrário de argumentos
+			- Misturando argumentos posicionais e arbitrários
+			- Usando argumentos nomeados arbitrários
 		- Armazenando suas funções em módulos
 		- Estilizando funções
 	- Scripts:
@@ -23,6 +23,6 @@ Afazeres:
 				- 10
 		- Cap. 8:
 			- Exercicios Cap. 8:
-				- 9
-				- 10
-				- 11
+				- 12
+				- 13
+				- 14
