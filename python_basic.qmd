@@ -3203,9 +3203,48 @@ Também podemos associar na variável um parâmetro que muda a propriedade da va
 
 ### Evitando que uma função modifique uma lista
 
+As vezes você vai querer evitar que uma função modifique uma lista. 
+Por exemplo, suponha que você comece com uma lista de designer não impressos e 
+escreva uma função que transfira esses designs para uma lista de modelos terminados,
+como no exemplo anterior. Talvez você decida que, apesar de ter imprimido todos os designs, 
+vai querer manter a lista original de designs não impressos em seus registros. 
+Porém, como você transferiu todos os nomes de designs de `unprinted_designs`, 
+a lista agora esta vazia, e essa é a única versão da lista que você tem; a lista original se perdeu. 
+Nesse caso, podemos tratar esse problema passando uma cópia da lista para a função, 
+e não a lista original. Qualquer alteração que a função fizer na lista 
+afetará apenas a cópia, deixando a lista original intacta.  
+
+Enviando uma cópia de uma lista para uma função:  
+`nome_da_função(nome_lista[:])` 
+
+A notação de fatia [:] cria uma cópia da lista para ser enviada à função.  
+`print_models(unprinted_designs[:], completed_models)`
+
+A função `printed_models()` pode fazer seu trabalho, pois ela continua recebendo 
+os nomes de todos os designs não impressos. Porém, dessa vez, ela usa uma cópia 
+da lista original de designs não impressos, e não a lista `unprinted_designs` propriamente 
+dita. A lista `completed_models` será preenchida com os nomes dos modelos impressos, 
+como antes, mas a lista original de designs não impressos não será afetada pela 
+função.  
+Apesa de poder preservar o conteúdo de uma lista passando uma cópia dela para suas 
+funções, você deve passar a lista original para as funções, a menos que 
+tenha um motivo específico para passar uma cópia. Para uma função, 
+é mais eficiente trabalhar com uma lista existente a fim de evitar o uso de **tempo** 
+e de **memória** necessários para criar uma cópia separada, em especíal quando trabalhamos 
+com listas grandes.
+
 \newpage
 
 ## Passando um número arbitrário de argumentos
+
+
+
+### Misturando argumentos posicionais e arbitrários
+
+### Usando argumentos nomeados arbitrários
+
+\newpage
+
 ## Armazenando suas funções em módulos
 ## Estilizando funções
 
