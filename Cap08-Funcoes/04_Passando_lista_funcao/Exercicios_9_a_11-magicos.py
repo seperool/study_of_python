@@ -14,10 +14,10 @@ def show_magicians(lista_magicos):
         print(magico.title())
 
 def make_great(lista):
-    count = 0
-    while count < len(lista):
+    count = 0 #Contador
+    while count < len(lista): #Enquanto contador menor que tanhanho da lista
         lista[count] = "Grande " + lista[count]
-        count += 1
+        count += 1 #Acrescentando +1 ao contador
     return lista
 
 lista_magicos = ['david cooperfild', 'cris angel', 'mister m']
