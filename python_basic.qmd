@@ -3237,7 +3237,34 @@ com listas grandes.
 
 ## Passando um número arbitrário de argumentos
 
+As vezes não saberá com antecedência quantos argumentos uma função deve aceitar. Felizmente, 
+o Python permite que uma função receba um número arbitrário de argumentos da instrução de chamada.  
+Exemplo:
+```{python}
+def make_pizza(*toppings): #Cria uma tupla para receber número aleatório de argumentos
+    """Apresenta a pizza que estamos prestes a preparar."""
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print(topping)
 
+make_pizza('peperoni')
+make_pizza('mushrooms','green peppers','extra cheese')
+```
+
+No exemplo tem um parâmetro `*toppings`, mas esse parâmetro agrupa tantos argumentos quantos forem fornecidos na linha de chamada.  
+O asterisco no nome do parâmetro `*toppings` diz ao Python para criar uma **tupla vazia** chamada `toppings` e reunir os valores recebidos nessa tupla. A instrução `print` no corpo da função gera uma saída que mostra que o Python é capaz de tratar uma chamada de função com um valor e outra chamada com três valores. As chamadas são tratadas de modo semelhante. Observe que o Python agrupa os argumentos em uma tupla, mesmo que a função receba apenas um valor.
+
+Essa sintaxe funciona, não importa quantos argumentos a função receba.
+
+Tuplas:  
+Tuplas são listas em que os itens não são criadas para mudar (listas imutáveis).  
+Uma tupla se parece com uma lista, exceto por usar parênteses no lugar de colchetes.  
+Sintaxe:
+```
+tuplas = (valor_1,valor_2,valor_3,...)
+```
+
+\newpage
 
 ### Misturando argumentos posicionais e arbitrários
 
