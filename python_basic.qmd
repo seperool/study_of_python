@@ -3268,6 +3268,26 @@ tuplas = (valor_1,valor_2,valor_3,...)
 
 ### Misturando argumentos posicionais e arbitrários
 
+Se quiser que uma função aceite vários tipos de argumentos, o parâmetro que aceita um número arbitrário de argumentos deve ser colocado por último na definição da função. O Python faz a correspondência de argumentos posicionais e nomeados antes, e depois agrupa qualquer argumento remanescente no último parâmetro.  
+Exemplo:
+```{python}
+def make_pizza(size,*toppings): #Um argumento posicional e um arbitrário
+    #Argumento arbritrário sempre no final
+    """Apresenta a pizza que estamos prestes a preparar."""
+    print("\nMaking a " + str(size) +
+    "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(topping)
+
+make_pizza(16,'peperoni') #Chamada com 1 argumento
+make_pizza(12,'mushrooms','green peppers','extra cheese') 
+#Chamada 1 argumento posicional e 3 argumentos arbitrários
+```
+
+Na definição da função, o Python armazena o primeiro valor recebido no parâmetro `size`. Todos os demais valores que vierem depois são armazenados na tupla `toppings`.
+
+\newpage
+
 ### Usando argumentos nomeados arbitrários
 
 \newpage
