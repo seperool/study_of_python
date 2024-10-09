@@ -3290,6 +3290,29 @@ Na definição da função, o Python armazena o primeiro valor recebido no parâ
 
 ### Usando argumentos nomeados arbitrários
 
+As vezes você vai querer aceitar um número arbitrário de argumentos, mas não saberá com antecedência qual tipo de informação será passada para a função. Nesse caso, podemos escrever funções que aceitam tantos para `chave-valor` quantos forem fornecidos pela instrução que faz a chamada. Agora ao invés de trabalharmos com **listas** em argumentos arbitrários (argumentos posicionais e arbitrários), trabalhamos com **dicionários** (argumentos nomeados e arbitrários).  
+Um exemplo envolve criar perfis de usuários: você sabe que obterá informações sobre um usuário, mas não tem certeza quanto ao tipo de informação que receberá. a função `build_profile()` no próximo exemplo sempre aceita um primeiro nome e um sobrenome, mas aceita também um número **arbitrário de argumentos nomeados**.  
+Exemplo:
+```{python}
+def build_profile(first,last,**user_info):
+    """Constrói um dicionário contendo tudo que sabemos sobre o usuário."""
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items(): #percorre o dicionário parâmetro
+        profile[key] = value #Add keys e value do parâmetro no dicionário criado da função
+    return profile #Retorna o dicionário criado
+
+user_profile = build_profile('albert', 'einstein', 
+                             location = 'princeton',
+                             field = 'physics')
+print(user_profile)
+```
+
+A definição de `build_profile()` espera um primeiro nome e um sobrenome e permite que o usuário passe tantos pares `nome-valor` quanto ele quiser. Os asteriscos duplos (**) antes do parâmetro `**user_info` fazem o Python criar um dicionário vazio chamado `user_info` e colocar quaisquer `nome-valor` recebidos nesse dicionário. Nessa função, podemos acessar os pares `nome-valor` em `user_info` como fariamos com qualquer dicionário.  
+No corpo de `build_profile()`, criamos um dicionário vazio chamado `profile` para armazenar o perfil do usuário. Primeiro adicionamos o primeiro nome e o sobre nome nesse dicionário porque sempre receberemos essas duas informações do usuário. Em seguida, percorremos os pares `chave-valor` adicionais do dicionário `user_info` e adicionamos cada par ao dicionário `profile`. Por fim, devolvemos o dicionário `profile` a linha que chamou a função.  
+O dicionário devolvido contém o primeiro nome e o sobrenome do usuário e, nesse caso, a localidade e o campo de estudo também. A função será apropriada, não importa quantos pares `chave-valor` adicionais sejam fornecidos na chamada da função.
+
 \newpage
 
 ## Armazenando suas funções em módulos
