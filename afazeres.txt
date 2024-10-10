@@ -1,6 +1,6 @@
-ESCRITO EM 09/10/24
+ESCRITO EM 10/10/24
 ---
-PARA 10/10/24
+PARA 11/10/24
 ---
 Subir github:
 
@@ -20,6 +20,6 @@ Afazeres:
 				- 10
 		- Cap. 8:
 			- Exercicios Cap. 8:
-				- 12
-				- 13
-				- 14
+				- 15
+				- 16
+				- 17
