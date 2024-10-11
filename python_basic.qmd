@@ -3316,6 +3316,15 @@ O dicionário devolvido contém o primeiro nome e o sobrenome do usuário e, nes
 \newpage
 
 ## Armazenando suas funções em módulos
+
+### Importando um módulo completo
+### Importando funções específicas
+### Usando a palavra reservada `as` para atribuir um alias a uma função
+### Usando a palavra reservada `as` para atribuir um alias a uma módulo
+### Importando todas as funções de um módulo
+
+\newpage
+
 ## Estilizando funções
 
 \newpage
