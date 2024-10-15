@@ -3321,7 +3321,66 @@ Uma vantagem das funções é a maneira como elas separam blocos de código de s
 Armazenar suas funções em um arquivo separado permite ocultar os detalhes do código de seu programa e se concentrar na lógica de nível mais alto. Também permite reutilizar funções em muitos programas diferentes. Quando armazenamos funções em arquivos separados, podemos compartilhar esses arquivos com outros programadores sem a necessidade de compartilhar o programa todo. Saber como importar funções também possibilita usar bibliotecas de funções que outros programadores escreveram.
 
 ### Importando um módulo completo
+
+Para começar a importar funções, inicialmente precisamos criar um módulo. Um módulo é um arquivo terminado em `.py` que contém o código que queremos importar para o nosso programa.  
+Exemplo:
+```
+#Criando módulo = um função para importação
+def make_pizza(size,*toppings): #parâmetros, um posicional e um arbitrario (tupla)
+    """Apresenta a pizza que estamos prestes a preparar."""
+    print("\nMaking a " + str(size) +
+          "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
+```
+
+Agora criamos um arquivo separado chamado `making_pizza.py` no mesmo diretório em que esta `pizza.py`. Este arquivo importa o módulo que acabamos de criar e, em seguida, faz duas chamadas para a função `make_pizza()`.
+```
+#Importando módulo
+import pizza
+
+#Usando função do módulo
+#Módulo.função()
+pizza.make_pizza(16, 'pepperoni')
+pizza.make_pizza(12, 'mushrooms','green peppers','extra cheese')
+```
+
+Quando o Python lê esse arquivo, a linha `import pizza` lhe diz para abrir o arquivo `pizza.py` e copiar todas as funções dele para esse programa. Você não vê realmente o código sendo copiado entre os arquivos porque o Python faz isso internamente, a medida que o programa executa. Tudo que você precisa saber é que qualquer função definida em `pizza.py` (arquivo do módulo) agora estará disponível em `making_pizza.py` (arquivo que importa o módulo).  
+Para chamar uma função que está em um módulo importado, forneça o nome do módulo, que é `pizza` nesse caso, seguido do nome da função, `make_pizza()`, separados por um ponto. Esse código gera a mesma saída que o programa original, que não importava um módulo.
+
+Essa primeira abordagem à importação, em que simplesmente escrevemos `import` seguido do nome do módulo, deixa todas as funções do módulo disponíveis ao seu programa. Se você usar esse tipo de instrução `import` para importar um módulo completo chamado `nome_do_módulo.py`, todas as funções do módulo estarão disponíveis por meio dessa sintaxe a seguir:  
+```
+nome_do_módulo.nome_da_função()
+```
+
+\newpage
+
 ### Importando funções específicas
+
+Podemos também importar uma função específica de um módulo. Eis a sintaxe geral para essa abordagem:  
+```
+from nome_do_módulo import nome_da_função
+```
+
+Você pode importar quantas funções quiser de um módulo separando o nome de cada função com uma virgula:  
+```
+from nome_do_módulo import função_0, função_1, função_2
+```
+
+Com essa sintaxe não precisamos usar a notação de ponto ao chamar uma função do módulo. Por exemplo, quando importamos explicitamente a função make_pizza() na instrução `import`, podemos chamá-la pelo nome quando ela for utilizada.  
+```
+#Importando função do módulo explicitamente
+from pizza import make_pizza
+
+#Usando função do módulo
+#Quando importamos o módulo e explicitamos a função, podemos chamar a função diretamente
+#Sem usar: nome_modulo.nome_função()
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms','green peppers','extra cheese')
+```
+
+\newpage
+
 ### Usando a palavra reservada `as` para atribuir um alias a uma função
 ### Usando a palavra reservada `as` para atribuir um alias a uma módulo
 ### Importando todas as funções de um módulo
