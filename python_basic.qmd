@@ -3429,9 +3429,32 @@ A sintaxe geral para essa abordagem é:
 
 ### Importando todas as funções de um módulo
 
+Podemos dizer ao Python para importar todas as funções de um módulo usando o operador asterisco (*).  
+Exemplo:
+```
+#Importando todas as funções de um módulo
+from pizza import *
+
+#Quando importamos o módulo e explicitamos todas as função, 
+#podemos chamar a função diretamente
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms','green peppers','extra cheese')
+```
+
+O asterisco na instrução `import` diz ao Python para copiar todas as funções do módulo `pizza` para esse arquivo do programa. Como todas as funções são importadas, podemos chamar qualquer função pelo nome, ser usar a notação ponto. No entanto, é melhor não usar essa abordagem quando trabalhar com módulos maiores, que não foram escritos por você: se o módulo tiver um nome de função que seja igual a um nome existente em seu projeto, você poderá ter alguns resultados inesperados. O Python poderá ver várias funções ou variáveis com o mesmo nome e, em vez de importar todasas funções separadamente, ele as sobrescreverá.  
+A melhor abordagem é importar a função ou as funções que você quiser ou importar o módulo todo e usar a notação de ponto. Isso resulta em um código claro, mais fácil de ler e de entender. Incluí esta seção para que você possa reconhecer instruções `import` como esta quando as vir no código de outras pessoas.
+
+Sintaxe:  
+`from nome_do_módulo import *`
+
 \newpage
 
-## Estilizando funções
+# Classes
+
+\newpage
+
+# Arquivos e exceções
+# Testando o código
 
 \newpage
 
