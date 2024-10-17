@@ -1,6 +1,6 @@
-ESCRITO EM 15/10/24
+ESCRITO EM 16/10/24
 ---
-PARA 16/10/24
+PARA 17/10/24
 ---
 Subir github:
 
@@ -12,8 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 8 - Funções
 		- Armazenando suas funções em módulos
-			- Usando a palavra reservada as para atribuir um alias a uma função
-			- Usando a palavra reservada as para atribuir um alias a uma módulo
 			- Importando todas as funções de um módulo
 		- Estilizando funções
 	- Scripts:
