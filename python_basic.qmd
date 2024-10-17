@@ -3382,7 +3382,51 @@ make_pizza(12, 'mushrooms','green peppers','extra cheese')
 \newpage
 
 ### Usando a palavra reservada `as` para atribuir um alias a uma função
+
+Se o nome de uma função que você importar entrar em conflito com um nome existente em seu programa ou se o nome da função for longo, podemos usar um *alias* único e conciso, que é um nome alternativo, semelhante a um apelido para a função. Dê esse apelido especial a função quando importá-la.  
+Vamos atribuir um alias `mp()` para a função `make_pizza()` importando `make_pizza as mp`. A palavra reservada `as` renomeia uma função usando o alias que você fornecer.  
+Exemplo:
+```
+#Importando função do módulo explicitamente
+#Dando um alias que substitui o nome da função
+from pizza import make_pizza as mp
+
+#Usando função do módulo
+#Quando importamos o módulo e explicitamos a função, podemos chamar a função diretamente
+#Sem explicitar: nome_modulo.nome_função()
+mp(16, 'pepperoni')
+mp(12, 'mushrooms','green peppers','extra cheese')
+```
+
+A instrução `import` no exemplo renomeia a função `make_pizza()` para `mp()` nesse programa. Sempre que quiser chamar `make_pizza()`, você pode simplesmente escrever `mp()` em seu lugar, e o Python executará o código de `make_pizza()`, ao mesmo tempo que evitará confusão com outra função `make_pizza()` que você possa ter escrito nesse arquivo de programa.
+
+A sintaxe geral que fornece um alias é:  
+`from nome_do_módulo import nome_da_função as nf`
+
+\newpage
+
 ### Usando a palavra reservada `as` para atribuir um alias a uma módulo
+
+Também podemos fornecer um alias para um nome de módulo. Dar um alias conciso a um módulo, por exemplo, `p` para `pizza`, permite chamar mais rapidamente as funções do módulo. Chamar `p.make_pizza()` é mais compacto que chamar `pizza.make_pizza()`.  
+Exemplo:
+```
+#Importando um módulo
+#Dando um alias que substitui o nome do módulo
+import pizza as p
+
+#Usando alias do modulo e uma função do módulo
+#Usando a módulo: alias_do_modulo.nome_função()
+p.make_pizza(16, 'pepperoni')
+p.make_pizza(12, 'mushrooms','green peppers','extra cheese')
+```
+
+O módulo `pizza` recebe o alias `p` na instrução `import`, mas todas as funções do módulo preservam seus nomes originais. Chamar as funções escrevendo `p.make_pizza()` não só é mais compacto que escrever `pizza.make_pizza()` como também desvia sua atenção do nome do módulo e permite dar enfoque aos nomes descritivos de suas funções. Esses nomes de função, que claramente informam o que cada função faz, são mais importantes para a legibilidade de seu código que usar o nome completo do módulo.
+
+A sintaxe geral para essa abordagem é:  
+`import nome_do_módulo as nm`
+
+\newpage
+
 ### Importando todas as funções de um módulo
 
 \newpage
