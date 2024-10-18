@@ -1,6 +1,6 @@
-ESCRITO EM 17/10/24
+ESCRITO EM 18/10/24
 ---
-PARA 18/10/24
+PARA 19/10/24
 ---
 Subir github:
 
@@ -11,6 +11,14 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
+		- Criando e usando classes
+			- Criando uma classe
+			- Criando uma instância a partir de uma classe
+		- Trabalhando com classes e instâncias
+		- Herança
+		- Importando classes
+		- Biblioteca-padrão do Python
+		- Estilizando classes
 	- Cap. 10 - Arquivos e exceções
 	- Cap. 11 - Testando código
 	- Scripts:
