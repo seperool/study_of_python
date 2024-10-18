@@ -3451,6 +3451,21 @@ Sintaxe:
 
 # Classes
 
+## Criando e usando classes
+### Criando uma classe
+### Criando uma instância a partir de uma classe
+#### Acessando atributos
+#### Chamando métodos
+#### Criando várias instâncias
+
+\newpage
+
+## Trabalhando com classes e instâncias
+## Herança
+## Importando classes
+## Biblioteca-padrão do Python
+## Estilizando classes
+
 \newpage
 
 # Arquivos e exceções
