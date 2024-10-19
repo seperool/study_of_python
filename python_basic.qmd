@@ -3451,9 +3451,77 @@ Sintaxe:
 
 # Classes
 
+Na programação orientada a objetos, escrevemos *classes* que representam entidades e situações do mundo real, e criamos *objetos* com base nessas classes. Quando escrevemos uma classe, definimos o comportamento geral que toda uma categoria de objetos pode ter.  
+Quando criamos objetos individuais a partir da classe, cada objeto será automaticamente equipado com o comportamento geral. Então você poderá dar a cada objeto as características únicas que desejar.  
+Criar um objeto a partir de uma classe é uma operação conhecida como *instanciação*, e trabalhamos com instâncias de uma classe. Escrevemos classes e criamos instâncias dessas classes. Especificamos o tipo de informação que pode ser armazenada nas instâncias e definimos ações que podem ser executadas nessas instâncias. Também escreveremos classes que estendem a funcionalidade de classes existentes, de modo que classes semelhantes possam compartilhar códigos de forma eficiente. Armazenaremos nossas classes em módulos e importaremos classes escritas por outros programadores para nosso próprios arquivos de programa.
+
 ## Criando e usando classes
+
+Podemos modelar de tudo usando classes. Vamos começar escrevendo o exemplo de uma classe simples, `Dog`, que representa um cachorro - não um cachorro em particular, mas qualquer cachorro. O que sabemos sobre a maioria dos cachorros de estimação? Todos eles tem um nome e uma idade. Também sabemos que a maioria deles senta e rola. Essas duas informações (nome e idade) e esses dois comportamentos (senta e rola) farão parte da nossa classe `Dog`, pois são comuns a maioria dos cachorros.  
+Essa classe dirá ao Python como criar um objeto que represente um cachorro. Depois que nossa classe estiver escrita, ela será usada para criar instâncias individuais, em que cada uma representará um cachorro específico.
+
+\newpage
+
 ### Criando uma classe
+
+Cada instância criada a partir da classe `Dog` armazenará um nome (`name`) e uma idade (`age`), e daremos a cada cachorro a capacidade de sentar (`sit()`) e de rolar (`roll_over()`).  
+Exemplo:
+```
+#Cria a classe Dog
+#Nome da classe em maiusculo por ser uma classe
+class Dog():
+    """Uma tentativa simples de modelar um cachorro."""
+    
+    #Atributos
+    def __init__(self, name, age):
+        """Inicializando os atributos name e age."""
+        self.name = name
+        self.age = age
+    
+    #Metodos
+    def sit(self):
+        """Simula um cachorro sentando em resposta a um comando."""
+        print(self.name.title() + " is now sitting.")
+        
+    def roll_over(self):
+        """Simula um cachorro rolando em resposta a um comando."""
+        print(self.name.title() + " rolled over!")
+```
+
+Definimos uma classe chamada `Dog`. Por convenção, nomes com a primeira letra maiúscula referem-se a classes em Python. Os parênteses na definição da classe estão vazios porque estamos criando essa classe do zero. Também escrevemos um *docstring* que descreve o que essa classe faz.
+
+- Método `__init__()`
+  
+  Uma função que faz parte de uma classe é um método. Tudo que aprendemos sobre funções também se aplica aos métodos. A única diferença prática, por enquanto, é o modo como chamamos os métodos. O método `__init__()` é um método especial que no Python executa automaticamente sempre que criamos uma nova instância baseada na classe.  
+  Esse método tem dois *underscores* no início e dois no final - uma convenção que ajuda a evitar que os nomes default de métodos Python entrem em conflito com nomes de métodos criados por você.
+
+  No exemplo definimos o método `__init__()` para que tenha três parâmetros: `self`, `name` e `age`. O parâmetro `self` é obrigatório na definição do método e deve estar antes dos demais parâmetros. Deve estar incluído na definição, pois, quando o Python chama esse método `__init__()` depois (para criar uma instância de `Dog`), a chamada do método passará o argumento `self` automaticamente. Toda chamada de método associada a uma classe passa `self`, que é uma referência a própria instância, de modo automático. O parâmetro `self` dá acesso aos atributos e métodos da classe a instância individual. Quando criamos uma instância de `Dog`, o Python chamará o método `__init__()` da classe `Dog`. Passaremos um nome e uma idade como argumentos para `Dog()`, `self` é passado automaticamente, portanto não é preciso especificá-lo. Sempre que quisermos criar uma instância da classe `Dog` forneceremos valores apenas para os dois últimos parâmetros, que são `name` e `age`.
+
+  As duas variáveis definidas tem o prefixo `self`. Qualquer variável prefixada com `self` esta disponível a todos os métodos da classe; além disso, podemos acessar essa variável por meio de qualquer instância criada a partir da classe. `self.name = name` usa o valor armazenado no parâmetro `name` e o armazena na variável `name`, que é então associada a instância criada. O mesmo processo ocorre com `self.age = age`. Variáveis como essas, acessíveis por meio de instâncias, são chamadas de *atributos*.
+
+  A classe `Dog` tem dois outros dois métodos definidos: `sit()` e `roll_over()`. Como esses dois métodos não precisam de informações adicionais como um nome ou uma idade, simplesmente os definimos com um parâmetro `self`. As instâncias que criarmos posteiormente terão acesso a esses dois métodos. Em outras palavras, elas terão a capacidade de sentar e rolar. Por enquanto, `sit()` e `roll_over()` não fazem muito. Apenas exibem uma mensagem dizendo que o cachorro esta sentando ou rolando. No entanto, o conceito pode ser estendido para situações realistas se essa classe fizesse parte de um jogo de computador de verdade, esse método conteria código para fazer a animação de um cachorro sentando e rolando. Se essa classe tivesse sido escrita para controlar um robô, esses métodos derecionariam os movimentos para fazer um cachorro-robô sentar e rolar.
+
+- Criando classe no Python 2.7
+  
+  Quando criar uma classe no Python 2.7, será necessário fazer uma pequena mudança. Inclua o termo `object` entre parênteses quando criá-la:
+  ```
+  class nomeClasse(object):
+  ```  
+  Exemplo:
+  ```
+  class Dog(object):
+  ```
+
+Observação:  
+Instanciar um objeto, em Python, significa criar uma instância de uma classe. Quando você cria uma instância de uma classe, você instancia o objeto. No Python, o processo de instanciar objetos envolve criar e inicializar objetos.  
+Para instanciar uma classe Python, você precisa usar o método construtor, que é o método `__init__()`. O método construtor inicializa os atributos ou propriedades de um objeto.
+
+\newpage
+
 ### Criando uma instância a partir de uma classe
+
+
+
 #### Acessando atributos
 #### Chamando métodos
 #### Criando várias instâncias
