@@ -25,3 +25,23 @@ class Dog():
     def roll_over(self):
         """Simula um cachorro rolando em resposta a um comando."""
         print(self.name.title() + " rolled over!")
+
+#Criando instâncias a partir da classe
+my_dog = Dog('willie',6)
+your_dog = Dog('lucy', 3)
+
+#Acessando atributos
+print("My dog's name is " + my_dog.name.title() + ".")
+print("My dog is " + str(my_dog.age) + " years old.")
+
+#Chamando métodos
+my_dog.sit()
+my_dog.roll_over()
+
+#Acessando atributos
+print("\nMy dog's name is " + your_dog.name.title() + ".")
+print("My dog is " + str(your_dog.age) + " years old.")
+
+#Chamando métodos
+your_dog.sit()
+your_dog.roll_over()
