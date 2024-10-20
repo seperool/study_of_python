@@ -3520,11 +3520,132 @@ Para instanciar uma classe Python, você precisa usar o método construtor, que 
 
 ### Criando uma instância a partir de uma classe
 
+Pense em uma classe como um conjunto de instruções para criar uma instância.  
+Exemplo:
+```{python}
+#Cria a classe Dog
+#Nome da classe em maiusculo por ser uma classe
+class Dog():
+    """Uma tentativa simples de modelar um cachorro."""
+    
+    #Atributos
+    def __init__(self, name, age):
+        """Inicializando os atributos name e age."""
+        self.name = name
+        self.age = age
+    
+    #Metodos
+    def sit(self):
+        """Simula um cachorro sentando em resposta a um comando."""
+        print(self.name.title() + " is now sitting.")
+        
+    def roll_over(self):
+        """Simula um cachorro rolando em resposta a um comando."""
+        print(self.name.title() + " rolled over!")
 
+my_dog = Dog('willie',6) #Criando uma instância a partir de uma classe
+
+#Acessando atributos
+print("My dog's name is " + my_dog.name.title() + ".")
+print("My dog is " + str(my_dog.age) + " years old.")
+```
+
+A classe `Dog` é um conjunto de instruções que diz ao Python como criar instâncias individuais que representam cachorros específicos.
+
+Dizemos ao Python para criar um cachorro de nome 'willie' e idade igual a 6. Quando o Python lê essa linha, ele chama o método `__init__()` de `Dog` com os argumentos 'willie' e 6. O método `__init__()` cria uma instância que representa esse cachorro em particular e define os atributos `name` e `age` com os valores que fornecemos. Esse método não tem uma instrução `return` explicita, mas o Python devolve automaticamente uma instância que representa esse cachorro. Armazenamos essa instância na variável `my_dog`. A convenção de nomenclatura é útil nesse caso: em geral, podemos supor que um nome com a primeira letra maiúscula como `Dog` refere-se a uma classe, enquanto um nome com letra minúsculas como `my_dog` refere-se a uma única instância criada a partir de uma classe.
 
 #### Acessando atributos
+
+Para acessar os atributos de uma instância utilize a notação de ponto. Acessamos o valor do atributo `name` de `my_dog` escrevendo:  
+```my_dog.name```
+
+A notação de ponto é usada com frequência em Python. Essa sintaxe mostra como o Python encontra o valor de um tributo. Nesse caso, o interpretador olha para a instância `my_dog` e encontra o atributo `name` associado a ela. É o mesmo atributo refenciado como `self.name` na classe `Dog`. Usamos a mesma arbordagem para trabalhar com o atributo `age`. Em nossa primeira instrução `print`, `my_dog.name.title()` faz com que 'willie' - o valor do atributo `name` de `my_dog` - comece com uma letra maiúscula. Na segunda instrução `print`, `str(my_dog.age)` converta 6 - o valor do atributo `age` de `my_dog` - em uma string.
+
+\newpage
+
 #### Chamando métodos
+
+Depois que criamos uma instância da classe `Dog`, podemos usar a notação de ponto para chamar qualquer método definido nessa classe.  
+```{python}
+#Cria a classe Dog
+#Nome da classe em maiusculo por ser uma classe
+class Dog():
+    """Uma tentativa simples de modelar um cachorro."""
+    
+    #Atributos
+    def __init__(self, name, age):
+        """Inicializando os atributos name e age."""
+        self.name = name
+        self.age = age
+    
+    #Metodos
+    def sit(self):
+        """Simula um cachorro sentando em resposta a um comando."""
+        print(self.name.title() + " is now sitting.")
+        
+    def roll_over(self):
+        """Simula um cachorro rolando em resposta a um comando."""
+        print(self.name.title() + " rolled over!")
+
+my_dog = Dog('willie',6) #Criando uma instância a partir de uma classe
+
+#Chamando métodos
+my_dog.sit()
+my_dog.roll_over()
+```
+
+Para chamar um método, específique o nome da instância (nesse caso, `my_dog`) e o método que você que chamar, separados por um ponto. Quando o Python lê `my_dog.sit()`, ele procura o método `sit()` na classe `Dog` e executa esse código. A linha `my_dog.roll_over()` é interpretada do mesmo modo. 
+
+\newpage
+
 #### Criando várias instâncias
+
+Você pode criar tantas instâncias de uma classe quantas forem necessárias.  
+```{python}
+#Cria a classe Dog
+#Nome da classe em maiusculo por ser uma classe
+class Dog():
+    """Uma tentativa simples de modelar um cachorro."""
+    
+    #Atributos
+    def __init__(self, name, age):
+        """Inicializando os atributos name e age."""
+        self.name = name
+        self.age = age
+    
+    #Metodos
+    def sit(self):
+        """Simula um cachorro sentando em resposta a um comando."""
+        print(self.name.title() + " is now sitting.")
+        
+    def roll_over(self):
+        """Simula um cachorro rolando em resposta a um comando."""
+        print(self.name.title() + " rolled over!")
+
+#Criando instâncias a partir da classe
+my_dog = Dog('willie',6)
+your_dog = Dog('lucy', 3)
+
+#Acessando atributos
+print("My dog's name is " + my_dog.name.title() + ".")
+print("My dog is " + str(my_dog.age) + " years old.")
+
+#Chamando métodos
+my_dog.sit()
+my_dog.roll_over()
+
+#Acessando atributos
+print("\nMy dog's name is " + your_dog.name.title() + ".")
+print("My dog is " + str(your_dog.age) + " years old.")
+
+#Chamando métodos
+your_dog.sit()
+your_dog.roll_over()
+```
+
+Nesse exemplo, criamos um cachorro chamado 'willie' e uma cadela de nome 'lucy'. Cada cachorro é uma instância separada, com seu próprio conjunto de atributos, capaz de realizar o mesmo conjunto de ações.
+
+Mesmo que usássemos o mesmo nome e a mesma idade para o segundo cachorro, o Python criaria uma instância separada da classe `Dog`. Você pode criar tantas instâncias de uma classe quantas forem necessárias, desde que dê a cada instância um nome de variável único ou que ela ocupe uma única posição em uma lista ou dicionário.
 
 \newpage
 
