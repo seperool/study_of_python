@@ -1,6 +1,6 @@
-ESCRITO EM 19/10/24
+ESCRITO EM 20/10/24
 ---
-PARA 20/10/24
+PARA 21/10/24
 ---
 Subir github:
 
@@ -11,11 +11,6 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
-		- Criando e usando classes
-			- Criando uma instância a partir de uma classe
-				- Acessando atributos
-				- Chamando métodos
-				- Criando várias instâncias
 		- Trabalhando com classes e instâncias
 		- Herança
 		- Importando classes
