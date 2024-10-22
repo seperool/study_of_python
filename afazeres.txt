@@ -1,6 +1,6 @@
-ESCRITO EM 21/10/24
+ESCRITO EM 22/10/24
 ---
-PARA 22/10/24
+PARA 23/10/24
 ---
 Subir github:
 
@@ -12,6 +12,10 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
 		- Trabalhando com classes e instâncias
+			- Modificando valores de atributos
+				- Modificando o valor de um atributo diretamente
+				- Modificando o valor de um atributo com um método
+				- Incrementando o valor de um atributo com um método
 		- Herança
 		- Importando classes
 		- Biblioteca-padrão do Python
