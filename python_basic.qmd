@@ -3650,6 +3650,92 @@ Mesmo que usássemos o mesmo nome e a mesma idade para o segundo cachorro, o Pyt
 \newpage
 
 ## Trabalhando com classes e instâncias
+
+Podemos usar classes para representar muitas situações do mundo real. Depois que escrever uma classe, você gastará a maior parte do seu tempo trabalhando com instâncias dessa classe. Uma das primeiras tarefas que você vai querer fazer é modificar os atributos associados a uma instância em particular. Podemos modificar os atributos de uma instância diretamente, ou escrever métodos que atualizem os atributos de formas especificas.  
+Exemplo da classe que iremos trabalhar nesse tópico:
+```{python}
+#Cria a classe
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+    
+    #Métodos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+
+#Cria uma instância
+new_car = Car('audi', 'a4', 2016)
+
+#Descreve a instância/objeto atraves do método, chama o método
+print(new_car.get_descriptive())
+```
+
+\newpage
+
+### Definindo um valor default para um atributo
+
+Todo atributo de uma classe precisa de um valor inicial, mesmo que esse valor seja 0 ou uma string vazia. Em alguns casos, por exemplo, quando definimos um valor default, faz sentido específicar esse valor inicial no corpo do método `__init__()`; se isso for feito para um atributo, você não precisará incluir um parâmetro para ele.
+
+Vamos acrescentar um atributo chamado `odometer_reading` que sempre começa com o valor 0. Também adicionamos um método `read_odometer()` que nos ajudará a ler o hodômetro de cada carro.  
+```{python}
+#Cria a classe
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        #Não precisa ser inicializado no parâmetro
+        self.odometer_reading = 0 #Atributo com valor default
+    
+    #Métodos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+    
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+
+#Cria uma instância
+new_car = Car('audi', 'a4', 2016)
+
+
+
+#Descreve a instância/objeto atraves do método, chama o método
+print(new_car.get_descriptive())
+new_car.read_odometer() #Método que imprime atributo default
+```
+
+Dessa vez, quando o Python chama o método `__init__()` para criar uma nova instância, os valores para o fabricante, o modelo e o ano são armazenados como atributos. Em seguida, o Python cria um novo atributo chamado `odometer_reading` e define seu valor inicial com 0. Também temos um novo método de nome `read_odometer()` que facilita a leitura da milhagem de um carro.
+
+\newpage
+
+### Modificando valores de atributos
+#### Modificando o valor de um atributo diretamente
+#### Modificando o valor de um atributo com um método
+#### Incrementando o valor de um atributo com um método
+
+\newpage
+
 ## Herança
 ## Importando classes
 ## Biblioteca-padrão do Python
