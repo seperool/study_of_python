@@ -1,12 +1,15 @@
-ESCRITO EM 22/10/24
+ESCRITO EM 23/10/24
 ---
-PARA 23/10/24
+PARA 24/10/24
 ---
 Subir github:
 
 Estudar:
 
 Afazeres:
+	- cap. 1 - Variáveis e tipos de dados simples
+		- .format()
+			- Tabela de formatações
 	- Cap. 4 - Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
