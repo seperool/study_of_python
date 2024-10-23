@@ -75,7 +75,9 @@ flowchart LR
 
 # Variáveis e tipos de dados simples
 
-## `print()`
+## print
+
+### `print()`
 Print é uma função que exibe uma string na tela.
 
 Exemplo: 
@@ -84,7 +86,7 @@ Exemplo:
 print("string")
 ```
 
-## `print()` com variáveis
+### `print()` com variáveis
 
 Podemos usar a função `print()` para imprimir uma variável string.
 
@@ -96,6 +98,93 @@ print(message)
 ```
 
 \pagenumbering{arabic}
+\newpage
+
+### `.format()`
+
+
+
+### f-string - *formatted string literals*
+
+Em um programa Python, as f-strings são iniciadas com a letra f ou F, contendo expressões envolvidas por um par de chaves `{...}`, modificadas dentro da string a ser formatada. As f-strings consideram tudo que está fora do par de chaves como sendo texto literal e, portanto, na saída, o texto será replicado sem nenhuma alteração.  
+A maneira mais simples de formatar uma string é informando os valores que a irão compor.  
+Exemplo:
+```{python}
+#Importando biblioteca e função
+from datetime import datetime
+
+#Variáveis
+ano_atual = datetime.now().year
+clube = "CRF"
+campeonato_mundial = 1
+ano_fundacao = 1895
+
+#f-string
+print(f"{clube} possui {campeonato_mundial:02d} título mundial.")
+print(f"São {ano_atual - ano_fundacao:.2f} anos de existência.")
+``` 
+
+São atribuidos valores as variáveis `clube`, `campeonato_mundial`, `ano_atual` e `ano_fundacao`, respectivamente. As posições em que se encontram as expressões serão substituidas pelos seus respectivos valores. A expressão `{ano_atual - ano_fundacao:.2f}` será calculada.
+
+Podemos concatenar linhas adicionando *f* na frente da *string*.  
+Exemplo:
+```{python}
+#Importando biblioteca e função
+from datetime import datetime
+
+#Variáveis
+ano_atual = datetime.now().year
+clube = "CRF"
+campeonato_mundial = 1
+ano_fundacao = 1895
+
+#f-string
+print(f"O {clube} foi fundado em 17 de novembro de {ano_fundacao}. "
+f"\nEm seus {ano_atual - ano_fundacao:.2f} anos de história, "
+f"obteve {campeonato_mundial:02d} título mundial.")
+```
+
+A expressão `:02d` e `:.2f` dentro das chaves formatam os valores para respectivamente: um número inteiro com 2 digitos, se ele possuir menos de 2 digitos, preencha com zeros a esquerda; e que deseja trabalhar com ponto flutuante e a quantidade de casas decimais.
+
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-fstring
+#| tbl-cap: Tipos de formatações f-string.
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [[":<","Alinha o resultado à esquerda (dentro do espaço disponível)."],
+         [":>","Alinha o resultado à direita (dentro do espaço disponível)."],
+         [":^","Alinha o resultado centralizado (dentro do espaço disponível)."],
+         [":=","Coloca o sinal na posição mais à esquerda."],
+         [":+","Usa um sinal de mais para indicar se o resultado é positivo ou negativo."],
+         [":-","Usa um sinal de menos apenas para valores negativos."],
+         [": ","Usa um espaço para inserir um espaço extra antes dos números positivos \n(e um sinal de menos antes dos números negativos)."],
+         [":,","Usa uma vírgula como separador de milhar."],
+         [":_","Usa um underscore como separador de milhar."],
+         [":b","Formato binário."],
+         [":c","Converte o valor no caractere Unicode correspondente."],
+         [":d","Formato decimal."],
+         [":e","Formato científico, com e minúsculo."],
+         [":E","Formato científico, com E maiúsculo."],
+         [":f","Converte para formato de ponto flutuante."],
+         [":F","Converte para formato de ponto flutuante, em formato maiúsculo \n(mostrar inf e nan como INF e NAN)."],
+         [":g","Formato geral."],
+         [":G","Formato geral (usando E maiúsculo para notações científicas)."],
+         [":o","Formato de octal."],
+         [":x","Formato hexadecimal, letras minúsculas."],
+         [":X","Formato hexadecimal, letras maiúsculas."],
+         [":n","Formato de número."],
+         [":%","Formato de porcentagem."]]
+Markdown(tabulate(
+  table, 
+  headers=["Símbolo","Formatação"],
+  colalign=("center","center")
+))
+```
+
 \newpage
 
 ## Regras de nomes de variáveis
@@ -3730,6 +3819,9 @@ Dessa vez, quando o Python chama o método `__init__()` para criar uma nova inst
 \newpage
 
 ### Modificando valores de atributos
+
+Você pode alterar o valor de um atributo de três maneiras: podemos modificar o valor diretamente por meio de uma instância, definir o valor com um método ou incrementá-lo (somar um determinado valor a ele). Vamos analisar cada uma dessas abordagens. 
+
 #### Modificando o valor de um atributo diretamente
 #### Modificando o valor de um atributo com um método
 #### Incrementando o valor de um atributo com um método
