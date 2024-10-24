@@ -102,6 +102,18 @@ print(message)
 
 ### `.format()`
 
+O método `.format()` se associa a função `print`, para ajudar na formatação. 
+Inserimos chaves `{}` na string e dentro do `.format()` inserimos as variáveis conforme as chaves aparecem no texto.  
+Exemplo:
+```{python}
+print("My name is {fname}, I'm {age}".format(fname = "John", age = 36))
+```
+
+Também dentro das chaves podemos inserir os elementos de formação, como podem ser observados na @tbl-tiposformatacao.  
+Exemplo:
+```{python}
+print("My name is {fname}, I'm {age:.2f}".format(fname = "John", age = 36))
+```
 
 
 ### f-string - *formatted string literals*
@@ -144,14 +156,18 @@ f"\nEm seus {ano_atual - ano_fundacao:.2f} anos de história, "
 f"obteve {campeonato_mundial:02d} título mundial.")
 ```
 
-A expressão `:02d` e `:.2f` dentro das chaves formatam os valores para respectivamente: um número inteiro com 2 digitos, se ele possuir menos de 2 digitos, preencha com zeros a esquerda; e que deseja trabalhar com ponto flutuante e a quantidade de casas decimais.
+A expressão `:02d` e `:.2f` dentro das chaves formatam os valores para respectivamente: um número inteiro com 2 digitos, se ele possuir menos de 2 digitos, preencha com zeros a esquerda; 
+e que deseja trabalhar com ponto flutuante e a quantidade de casas decimais.
+Os tipos de formatação podem ser obsevados na @tbl-tiposformatacao.
+
+\newpage
 
 ```{python}
 #| echo: false
 #| error: false
 #| warning: false
-#| label: tbl-fstring
-#| tbl-cap: Tipos de formatações f-string.
+#| label: tbl-tiposformatacao
+#| tbl-cap: Formatações
 
 from IPython.display import Markdown
 from tabulate import tabulate
