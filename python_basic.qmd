@@ -115,7 +115,6 @@ Exemplo:
 print("My name is {fname}, I'm {age:.2f}".format(fname = "John", age = 36))
 ```
 
-
 ### f-string - *formatted string literals*
 
 Em um programa Python, as f-strings são iniciadas com a letra f ou F, contendo expressões envolvidas por um par de chaves `{...}`, modificadas dentro da string a ser formatada. As f-strings consideram tudo que está fora do par de chaves como sendo texto literal e, portanto, na saída, o texto será replicado sem nenhuma alteração.  
@@ -3839,6 +3838,58 @@ Dessa vez, quando o Python chama o método `__init__()` para criar uma nova inst
 Você pode alterar o valor de um atributo de três maneiras: podemos modificar o valor diretamente por meio de uma instância, definir o valor com um método ou incrementá-lo (somar um determinado valor a ele). Vamos analisar cada uma dessas abordagens. 
 
 #### Modificando o valor de um atributo diretamente
+
+A maneira mais simples de modificar o valor de um atributo é acessá-lo diretamente por meio de uma instância.  
+Exemplo:
+```{python}
+#Cria a classe
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        #Não precisa ser inicializado no parâmetro
+        self.odometer_reading = 0 #Atributo com valor default
+    
+    #Métodos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+    
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+
+#Cria uma instância
+new_car = Car('audi', 'a4', 2016)
+
+#Descreve a instância/objeto atraves do método, chama o método
+print(new_car.get_descriptive())
+new_car.read_odometer() #Método que imprime atributo default
+
+#Modificando o valor de um atributo diretamente
+new_car.odometer_reading = 23
+new_car.read_odometer()
+```
+
+Usamos a notação de ponto para acessar o atributo `odometer_reading` do carro e definir seu valor diretamente. Essa linha diz ao Python para usar a instância `new_car`, encontrar o atributo `odometer_reading` associado a ela e definir o valor atributo com 23.
+
+```
+#Modificando o valor de um atributo diretamente
+new_car.odometer_reading = 23
+```
+
+\newpage
+
 #### Modificando o valor de um atributo com um método
 #### Incrementando o valor de um atributo com um método
 
