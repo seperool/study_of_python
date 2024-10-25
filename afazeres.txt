@@ -1,6 +1,6 @@
-ESCRITO EM 24/10/24
+ESCRITO EM 25/10/24
 ---
-PARA 25/10/24
+PARA 26/10/24
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Cap. 9 - Classes
 		- Trabalhando com classes e instâncias
 			- Modificando valores de atributos
-				- Modificando o valor de um atributo diretamente
 				- Modificando o valor de um atributo com um método
 				- Incrementando o valor de um atributo com um método
 		- Herança
