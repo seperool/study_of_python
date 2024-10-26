@@ -3891,11 +3891,145 @@ new_car.odometer_reading = 23
 \newpage
 
 #### Modificando o valor de um atributo com um método
+
+Pode ser conveniente ter métodos que atualizem determinados atributos para você. Em vez de acessar o atributo de modo direto, passe o novo valor para um método que trate a atualização internamente.  
+Exemplo:
+```{python}
+#Cria a classe
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        #Não precisa ser inicializado no parâmetro
+        self.odometer_reading = 0 #Atributo com valor default
+    
+    #Métodos
+    ##Descreve o carro atraves dos atributos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+    
+    ##Imprime odometer na tela
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+    
+    ##Método para modificar atributo
+    def update_odometer(self,mileage):
+        """
+        Define o valor de leitura do hodômetro com o valor especificado.
+        Rejeita aalteração se for tentativa de definir um valor menor 
+        para o hodômetro.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+        
+#Cria uma instância
+new_car = Car('audi', 'a4', 2016)
+
+#Modifica atributo por meio de um método
+new_car.update_odometer(23)
+new_car.read_odometer()
+```
+
+A única modificação em `Car` foi o acréscimo de `update_odometer()`. Esse novo método aceita um valor de milhagem e o armazena em `self.odometer_reading`. Chamamos `update_odometer()` e lhe passamos o valor 23 como argumento (correspondendo ao parâmetro `mileage` na definição do método). Esse método define o valor de leitura do hodômetro com 23 e `read_odometer()` exibe sua leitura.
+
+`update_odometer()` verifica se o novo valor do hodômetro faz sentido antes de modifcar o atributo. Se a nova milhagem, `mileage`, for maior ou igual a milhagem existente, `self.odometer_reading`, você poderá atualizar o valor de leitura do hodômetro com a nova milhagem. Se a nova milhagem for menor que a existente, você receberá um aviso informando que não pode diminuir o valor lido no hodômetro.
+
+\newpage
+
 #### Incrementando o valor de um atributo com um método
+
+As vezes, você vai querer incrementar o valor de um atributo de determinada quantidade, em vez de definir um valor totalmente novo.  
+Exemplo:
+```{python}
+#Cria a classe
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        #Não precisa ser inicializado no parâmetro
+        self.odometer_reading = 0 #Atributo com valor default
+    
+    #Métodos
+    ##Descreve o carro atraves dos atributos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+    
+    ##Imprime odometer na tela
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+    
+    ##Método para modificar atributo
+    def update_odometer(self,mileage):
+        """
+        Define o valor de leitura do hodômetro com o valor especificado.
+        Rejeita aalteração se for tentativa de definir um valor menor para o hodômetro.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    ##Método para incrementar atributo
+    def increment_odometer(self, miles):
+        """Soma a quantidade especificada ao valor de leitura do hodômetro."""
+        if miles >= 0:
+            self.odometer_reading += miles
+        else:
+            print("You can't roll back an odometer!")
+        
+#Cria uma instância
+used_car = Car('subaru', 'outback', 2013)
+
+#Modifica atributo por meio de um método
+used_car.update_odometer(23500)
+used_car.read_odometer()
+
+#Método incrementa o valor de um atributo
+used_car.increment_odometer(100)
+used_car.read_odometer()
+```
+
+O novo método `increment_odometer()` aceita uma quantidade de milhas e soma esse valor a `self.odometer_reading`. Criamos um carro usado, `used_car`. Definimos seu hodômetro com o valor 23.500 chamando `update_odometer()` e passando-lhe o valor 23500. Chamamos `increment_odometer()` e passamos o valor 100 para somar as cem milhas que dirigimos entre comprar o carro e registrá-lo.
 
 \newpage
 
 ## Herança
+
+### Método `__init__()` de uma classe-filha
+### Herança em Python 2.7
+### Definindo atributos e métodos de classe-filha
+### Sobrescrevendo métodos da classe-pai
+### Instâncias como atributos
+### Modelando objetos do mundo real
+
+\newpage
+
 ## Importando classes
 ## Biblioteca-padrão do Python
 ## Estilizando classes
