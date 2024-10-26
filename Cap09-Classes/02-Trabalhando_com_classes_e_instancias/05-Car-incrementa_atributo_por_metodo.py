@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Oct 26 16:12:44 2024
+Created on Sat Oct 26 15:45:33 2024
 
 @author: sergio
 """
@@ -53,3 +53,14 @@ class Car():
             self.odometer_reading += miles
         else:
             print("You can't roll back an odometer!")
+        
+#Cria uma instância
+used_car = Car('subaru', 'outback', 2013)
+
+#Modifica atributo por meio de um método
+used_car.update_odometer(23500)
+used_car.read_odometer()
+
+#Método incrementa o valor de um atributo
+used_car.increment_odometer(100)
+used_car.read_odometer()

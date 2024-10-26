@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Oct 26 16:12:44 2024
+Created on Sat Oct 26 15:16:12 2024
 
 @author: sergio
 """
@@ -45,11 +45,10 @@ class Car():
             self.odometer_reading = mileage
         else:
             print("You can't roll back an odometer!")
-    
-    ##Método para incrementar atributo
-    def increment_odometer(self, miles):
-        """Soma a quantidade especificada ao valor de leitura do hodômetro."""
-        if miles >= 0:
-            self.odometer_reading += miles
-        else:
-            print("You can't roll back an odometer!")
+        
+#Cria uma instância
+new_car = Car('audi', 'a4', 2016)
+
+#Modifica atributo por meio de um método
+new_car.update_odometer(23)
+new_car.read_odometer()
