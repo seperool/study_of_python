@@ -1,6 +1,6 @@
-ESCRITO EM 27/10/24
+ESCRITO EM 28/10/24
 ---
-PARA 28/10/24
+PARA 29/10/24
 ---
 Subir github:
 
@@ -12,8 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
 		- Herança
-			- Método `__init__()` de uma classe-filha
-			- Herança em Python 2.7
 			- Definindo atributos e métodos de classe-filha
 			- Sobrescrevendo métodos da classe-pai
 			- Instâncias como atributos
