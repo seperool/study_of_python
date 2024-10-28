@@ -4021,8 +4021,159 @@ O novo método `increment_odometer()` aceita uma quantidade de milhas e soma ess
 
 ## Herança
 
+Nem sempre você precisará começar do zero para escrever uma classe. Se a classe que você estiver escrevendo for uma versão especializada de outra classe já criada, a *herança* poderá ser usada. Quando uma classe herda de outra, ela assumirá automaticamente todos os atributos e métodos da primeira classe. A classe original se chama *classe-pai* e a nova classe é a *classe-filha*. A classe-filha herda todos os atributos e métodos da sua classe-pai, mas também é livre para definir novos atributos e métodos próprios.
+
 ### Método `__init__()` de uma classe-filha
+
+A primeira tarefa do Python ao criar uma instância de uma classe-filha é atribuir valores a todos os atributos da classe-pai. Para isso, o método `__init__()` de uma classe-filha precisa de ajuda de sua classe-pai.  
+Exemplo:
+```{python}
+#Herança
+
+#classe-pai
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        #Não precisa ser inicializado no parâmetro
+        self.odometer_reading = 0 #Atributo com valor default
+    
+    #Métodos
+    ##Descreve o carro atraves dos atributos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+    
+    ##Imprime odometer na tela
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+    
+    ##Método para modificar atributo
+    def update_odometer(self,mileage):
+        """
+        Define o valor de leitura do hodômetro com o valor especificado.
+        Rejeita aalteração se for tentativa de definir um valor menor para o hodômetro.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    ##Método para incrementar atributo
+    def increment_odometer(self, miles):
+        """Soma a quantidade especificada ao valor de leitura do hodômetro."""
+        if miles >= 0:
+            self.odometer_reading += miles
+        else:
+            print("You can't roll back an odometer!")
+
+#Classe-filha
+class ElectricCar(Car): #herança da classe-pai 'Car'
+    """Representa aspectos de um carro especificos de veiculos elétricos."""
+    
+    #Atributos herdados
+    def __init__(self, make, model, year):
+        """Inicializa os atributos da classe-pai."""
+        super().__init__(make, model, year) #herda atributos da classe-pai
+
+#Instância
+my_tesla = ElectricCar("tesla", "model s", "2016")
+print(my_tesla.get_descriptive())
+```
+
+\newpage
+
+O exemplo modela um carro elétrico. Um carro elétrico é apenas um tipo específico de carro, portanto podemos basear nossa nova classe `ElectricCar` na classe `Car` que escrevemos anteriormente. Então só precisaremos escrever o código para os atributos e os comportamentos específicos de carros elétricos.
+
+Começamos com `Car`. Quando criamos uma classe-filha, a classe-pai deve fazer parte do arquivo atual e deve aparecer antes da classe-filha no arquivo. Definimos a classe-filha, que é `ElectricCar`. O nome da classe-pai deve ser incluído entre parênteses na definição da classe-filha. O método `__init__()` aceita as informações necessárias para criar uma instância de `Car`.  
+A função `super().` é uma função especial que ajuda o Python a criar conexões entre a classe-pai e a classe-filha. Essa linha diz ao Python para chamar o método `__init__()` da classe-pai de `ElectricCar`, que confere todos os atributos da classe-pai a `ElectricCar`. O nome super é derivado de uma conveção segundo a qual a classe-pai se chama *superclasse* e a classe-filha é a *subclasse*.  
+Ao criar uma instância da classe-filha, `my_tesla`, a linha chama o método `__init__()` definido em `ElectricCar` que, por sua vez, diz ao Python para chamar o método `__init__()` definido na classe-pai `Car`.
+
+\newpage
+
 ### Herança em Python 2.7
+
+Em Python 2.7, a herança pe um pouco diferente. A classe `ElectricCar` teria o seguinte aspecto:
+```{python}
+#Herança
+
+#classe-pai
+class Car(object):
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        #Não precisa ser inicializado no parâmetro
+        self.odometer_reading = 0 #Atributo com valor default
+    
+    #Métodos
+    ##Descreve o carro atraves dos atributos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+    
+    ##Imprime odometer na tela
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+    
+    ##Método para modificar atributo
+    def update_odometer(self,mileage):
+        """
+        Define o valor de leitura do hodômetro com o valor especificado.
+        Rejeita aalteração se for tentativa de definir um valor menor para o hodômetro.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    ##Método para incrementar atributo
+    def increment_odometer(self, miles):
+        """Soma a quantidade especificada ao valor de leitura do hodômetro."""
+        if miles >= 0:
+            self.odometer_reading += miles
+        else:
+            print("You can't roll back an odometer!")
+
+#Classe-filha
+class ElectricCar(Car):
+    """Representa aspectos de um carro especificos de veiculos elétricos."""
+    
+    #Atributos herdados
+    def __init__(self, make, model, year):
+        """Inicializa os atributos da classe-pai."""
+        super(ElectricCar,self).__init__(make, model, year)
+
+#Instância
+my_tesla = ElectricCar("tesla", "model s", "2016")
+print(my_tesla.get_descriptive())
+```
+
+A função `super()` precisa de dois argumentos: uma referência a classe-filha e o objeto `self`. Esses argumentos são necessários para ajudar o Python a fazer as conexões apropriadas entre as classes pai e filha. Quando usar herança em o Python 2.7, lembre-se de definir a classe-pai usando a sintaxe `object` também.
+
+\newpage
+
 ### Definindo atributos e métodos de classe-filha
 ### Sobrescrevendo métodos da classe-pai
 ### Instâncias como atributos
