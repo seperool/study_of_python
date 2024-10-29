@@ -1,6 +1,6 @@
-ESCRITO EM 28/10/24
+ESCRITO EM 29/10/24
 ---
-PARA 29/10/24
+PARA 30/10/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
 		- Herança
-			- Definindo atributos e métodos de classe-filha
 			- Sobrescrevendo métodos da classe-pai
 			- Instâncias como atributos
 			- Modelando objetos do mundo real
