@@ -4174,8 +4174,94 @@ A função `super()` precisa de dois argumentos: uma referência a classe-filha 
 
 \newpage
 
-### Definindo atributos e métodos de classe-filha
+### Definindo atributos e métodos da classe-filha
+
+Depois que tiver uma classe-filha que herde de uma classe-pai, você pode adicionar qualquer atributo ou método novo necessários para diferenciar a classe-filha da classe-pai.  
+Exemplo:
+```{python}
+#Herança
+
+#classe-pai
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    
+    #Inicializa atributos
+    def __init__(self, make, model, year):
+        """Inicializa os atributos que descrevem um carro."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        #Não precisa ser inicializado no parâmetro
+        self.odometer_reading = 0 #Atributo com valor default
+    
+    #Métodos
+    ##Descreve o carro atraves dos atributos
+    def get_descriptive(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        long_name = str(self.year) + " "
+        long_name += self.make + " "
+        long_name += self.model
+        return long_name.title()
+    
+    ##Imprime odometer na tela
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+    
+    ##Método para modificar atributo
+    def update_odometer(self,mileage):
+        """
+        Define o valor de leitura do hodômetro com o valor especificado.
+        Rejeita aalteração se for tentativa de definir um valor menor para o hodômetro.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    ##Método para incrementar atributo
+    def increment_odometer(self, miles):
+        """Soma a quantidade especificada ao valor de leitura do hodômetro."""
+        if miles >= 0:
+            self.odometer_reading += miles
+        else:
+            print("You can't roll back an odometer!")
+
+#Classe-filha
+class ElectricCar(Car): #herança da classe-pai 'Car'
+    """Representa aspectos de um carro especificos de veiculos elétricos."""
+    
+    #Atributos herdados
+    def __init__(self, make, model, year):
+        """
+        Inicializa os atributos da classe-pai.
+        Em seguida, inicializa os atributos especificos deum carro elétrico.
+        """
+        super().__init__(make, model, year) #herda atributos da classe-pai
+        self.battery_size = 70 #definindo atrabuto da específico da classe-filha
+        
+    def describe_battery(self):
+        """Exibe uma frase que descreve a capacidade da bateria."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+#Instância
+my_tesla = ElectricCar("tesla", "model s", "2016")
+print(my_tesla.get_descriptive())
+my_tesla.describe_battery() #Chama atributo específico da classe-filha
+```
+
+Adicionamos um novo atributo `self.battery_size` e definimos seu valor inicial, por exemplo, com 70. Esse atributo será associado a todas as instâncias criadas a partir da classe `ElectricCar`, mas não será associado a nenhuma instânciade `Car`. Também adicionamos um método chamado `describe_battery()`, que exibe informações sobre a bateria. 
+
+\newpage
+
 ### Sobrescrevendo métodos da classe-pai
+
+
+
+\newpage
+
 ### Instâncias como atributos
 ### Modelando objetos do mundo real
 
