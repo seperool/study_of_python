@@ -1,8 +1,13 @@
-ESCRITO EM 29/10/24
+ESCRITO EM 31/10/24
 ---
-PARA 30/10/24
+PARA 01/11/24
 ---
 Subir github:
+	- Cap. 9 - Classes
+		- Herança
+			- Sobrescrevendo métodos da classe-pai
+	- Exemplo
+		- Sobrescrevendo métodos da classe-pai
 
 Estudar:
 
@@ -12,7 +17,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
 		- Herança
-			- Sobrescrevendo métodos da classe-pai
 			- Instâncias como atributos
 			- Modelando objetos do mundo real
 		- Importando classes
