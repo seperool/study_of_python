@@ -1,13 +1,8 @@
-ESCRITO EM 31/10/24
+ESCRITO EM 01/11/24
 ---
-PARA 01/11/24
+PARA 02/11/24
 ---
 Subir github:
-	- Cap. 9 - Classes
-		- Herança
-			- Sobrescrevendo métodos da classe-pai
-	- Exemplo
-		- Sobrescrevendo métodos da classe-pai
 
 Estudar:
 
