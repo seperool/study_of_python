@@ -1,6 +1,6 @@
-ESCRITO EM 02/11/24
+ESCRITO EM 03/11/24
 ---
-PARA 03/11/24
+PARA 04/11/24
 ---
 Subir github:
 
@@ -12,6 +12,13 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
 		- Importando classes
+			- Importando uma única classe
+			- Armazenando várias classes em um módulo
+			- Importando várias classes de um módulo
+			- Importando um módulo completo
+			- Importando todas as classes de um módulo
+			- Importando um módulo de um módulo
+			- Definindo o seu próprio fluxo de trabalho
 		- Biblioteca-padrão do Python
 		- Estilizando classes
 	- Cap. 10 - Arquivos e exceções
@@ -23,7 +30,6 @@ Afazeres:
 				- 10
 		- Cap. 9:
 			- Exercicios Cap. 9:
-				- 6
-				- 7
-				- 8
-				- 9
+				- 10
+				- 11
+				- 12
