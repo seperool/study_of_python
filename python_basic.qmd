@@ -4508,6 +4508,17 @@ O novo método `get_range()` efetua uma análise simples. Se a capacidade da bat
 \newpage
 
 ## Importando classes
+
+### Importando uma única classe
+### Armazenando várias classes em um módulo
+### Importando várias classes de um módulo
+### Importando um módulo completo
+### Importando todas as classes de um módulo
+### Importando um módulo de um módulo
+### Definindo o seu próprio fluxo de trabalho
+
+\newpage
+
 ## Biblioteca-padrão do Python
 ## Estilizando classes
 
