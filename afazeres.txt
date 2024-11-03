@@ -1,6 +1,6 @@
-ESCRITO EM 01/11/24
+ESCRITO EM 02/11/24
 ---
-PARA 02/11/24
+PARA 03/11/24
 ---
 Subir github:
 
@@ -11,9 +11,6 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
-		- Herança
-			- Instâncias como atributos
-			- Modelando objetos do mundo real
 		- Importando classes
 		- Biblioteca-padrão do Python
 		- Estilizando classes
