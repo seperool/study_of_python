@@ -4509,13 +4509,18 @@ O novo método `get_range()` efetua uma análise simples. Se a capacidade da bat
 
 ## Importando classes
 
+A medida que acrescentar mais funcionalidades as classes, seus arquivos ficarão maiores, mesmo quando usar herança de forma apropriada. Para estar de acordo com a filosofia geral do Python, quanto menos entulhados estiverem seus arquivos, melhor será. Para ajudar, o Python permite armazenar classes em módulos e então importar as classes necessárias em seu programa principal.
+
 ### Importando uma única classe
 ### Armazenando várias classes em um módulo
 ### Importando várias classes de um módulo
 ### Importando um módulo completo
 ### Importando todas as classes de um módulo
 ### Importando um módulo de um módulo
+
 ### Definindo o seu próprio fluxo de trabalho
+
+Quando estiver começando a programar, mantenha a estrutura de seu código simples. Procure fazer tudo em um só arquivo e transfira suas classes para módulos separados depois que tudo estiver funcionando. Se gostar do modo como os módulos e arquivos interagem, experimente armazenar suas classes em módulos quando iniciar um projeto. Encontre uma abordagem que permita escrever um código que funcione, e comece a partir daí.
 
 \newpage
 
