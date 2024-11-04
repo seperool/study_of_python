@@ -1,6 +1,6 @@
-ESCRITO EM 03/11/24
+ESCRITO EM 04/11/24
 ---
-PARA 04/11/24
+PARA 05/11/24
 ---
 Subir github:
 
@@ -18,7 +18,6 @@ Afazeres:
 			- Importando um módulo completo
 			- Importando todas as classes de um módulo
 			- Importando um módulo de um módulo
-			- Definindo o seu próprio fluxo de trabalho
 		- Biblioteca-padrão do Python
 		- Estilizando classes
 	- Cap. 10 - Arquivos e exceções
