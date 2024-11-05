@@ -4512,6 +4512,89 @@ O novo método `get_range()` efetua uma análise simples. Se a capacidade da bat
 A medida que acrescentar mais funcionalidades as classes, seus arquivos ficarão maiores, mesmo quando usar herança de forma apropriada. Para estar de acordo com a filosofia geral do Python, quanto menos entulhados estiverem seus arquivos, melhor será. Para ajudar, o Python permite armazenar classes em módulos e então importar as classes necessárias em seu programa principal.
 
 ### Importando uma única classe
+
+O arquivo `car.py` somente com o código da classe `Car`:
+
+```
+"""Uma classe que pode ser usada para representar um carro."""
+
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    def __init__(self,make,model,year):
+        """Inicializa os atributos que descrevem um carro."""
+        #Atributo
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        self.odometer_reading = 0
+    
+    #Métodos
+    def get_descriptive_name(self):
+        """
+        Devolve um nome descritivo formatado de modo elegante.
+        """
+        long_name = str(self.year) + " " + self.make
+        long_name += " " + self.model
+        return long_name.title()
+    
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print(f"This car has {self.odometer_reading} miles on it.")
+    
+    def update_odometer(self,mileage):
+        """
+        Define o valor de leitura do hodômetro com o valor especificado.
+        Rejeita alteração se for tentativa de definir um valor menor
+        para o hodômetro.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    def increment_odometer(self,miles):
+        """
+        Soma a quantidade especificada ao valor de leitura do hodômetro.
+        """
+        self.odometer_reading += miles
+```
+
+Incluímos uma `docstring` no nível de módulo que descreve rapidamente o conteúdo desse módulo. 
+Escreva uma `docstring` para cada módulo que criar.
+
+Agora criamos um arquivo separado chamado `my_car.py`. Esse arquivo importará
+ a classe `Car` e então criará uma instância dessa classe:
+
+```
+from car import Car
+
+#Chamadas
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()
+```
+
+A instrução `import` diz ao Python para abrir o módulo `car.py` e importar a classe `Car`. 
+Agora podemos usar a classe `Car` como se ela estivesse definida nesse arquivo.
+
+Importar classes é uma maneira eficiente de programar. Imagine o tamanho 
+que esse programa teria se a classe `Car` inteira estivesse incluída. 
+Quando transferimos a classe para um módulo e o importamos, continuamos usufruindo da 
+mesma funcionalidade, porém o arquivo com o programa principal permanece limpo e fácil de ler. 
+Também armazenamos a maior parte da lógica em arquivos separados; 
+depois que suas classes estiverem funcionando conforme esperado, você poderá deixar de lado 
+esses arquivos e se concentrar na lógica de mais alto nível de seu programa principal.
+
+Sintaxe de importanção de uma única classe:  
+`from nome_módulo import nome_classe`  
+No nome do módulo, não colocamos para importar a extensão do arquivo (`.py`).
+
+\newpage
+
 ### Armazenando várias classes em um módulo
 ### Importando várias classes de um módulo
 ### Importando um módulo completo
