@@ -4596,6 +4596,9 @@ No nome do módulo, não colocamos para importar a extensão do arquivo (`.py`).
 \newpage
 
 ### Armazenando várias classes em um módulo
+
+
+
 ### Importando várias classes de um módulo
 ### Importando um módulo completo
 ### Importando todas as classes de um módulo
