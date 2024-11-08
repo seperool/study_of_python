@@ -1,6 +1,6 @@
-ESCRITO EM 07/11/24
+ESCRITO EM 08/11/24
 ---
-PARA 08/11/24
+PARA 09/11/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
 		- Importando classes
-			- Armazenando várias classes em um módulo
 			- Importando várias classes de um módulo
 			- Importando um módulo completo
 			- Importando todas as classes de um módulo
