@@ -4700,6 +4700,27 @@ Esse código gera a mesma saída que vimos antes, embora a maior parte da lógic
 \newpage
 
 ### Importando várias classes de um módulo
+
+Podemos importar quantas classes forem necessárias em um arquivo de programa.  
+Se quisermos criar um carro comum e um carro elétrico no mesmo arquivo, precisamos importar tanto a classe `Car` quanto a classe `ElectricCar`:
+```
+#Importando classes de um módulo
+from car import Car, ElectricCar
+#from nome_módulo import nome_classe_1, nome_classe_2, ...
+
+#Instâncias
+my_beetle = Car('volkswagem', 'beetle', 2016)
+my_tesla = ElectricCar('tesla', 'roadster', 2016)
+
+#Chamadas
+print(my_beetle.get_descriptive_name())
+print(my_tesla.get_descriptive_name())
+```
+
+Importe várias classes de um módulo separando cada classe com uma vírgula. Depois que importar as classes de que precisará, você poderá criar quantas instâncias de cada classe quantas forem necessárias.
+
+\newpage
+
 ### Importando um módulo completo
 ### Importando todas as classes de um módulo
 ### Importando um módulo de um módulo
