@@ -4722,7 +4722,36 @@ Importe várias classes de um módulo separando cada classe com uma vírgula. De
 \newpage
 
 ### Importando um módulo completo
+
+Também podemos importar um módulo completo e então acessar as classes necessárias usando a notação de ponto. Essa abordagem é simples e resulta em um código fácil de ler. Como toda chamada que cria uma instância de uma classe inclui o nome do módulo, você não terá conflito de nomes com qualquer nome usado no arquivo atual.
+
+Eis a aparência do código para importar o módulo `car` inteiro e então criar um carro comum e um carro elétrico:
+```
+#Importando um módulo completo
+##Importa tudas as classes do módulo
+import car
+#from nome_módulo
+
+#Instâncias
+my_beetle = car.Car('volkswagem', 'beetle', 2016)
+my_tesla = car.ElectricCar('tesla', 'roadster', 2016)
+
+#Chamadas
+print(my_beetle.get_descriptive_name())
+print(my_tesla.get_descriptive_name())
+```
+
+Importamos o módulo `car` inteiro. Então acessamos as classes necessárias por meio da sintaxe:  
+`nome_módulo.nome_da_classe`
+
+\newpage
+
 ### Importando todas as classes de um módulo
+
+
+
+\newpage
+
 ### Importando um módulo de um módulo
 
 ### Definindo o seu próprio fluxo de trabalho
