@@ -4748,11 +4748,33 @@ Importamos o módulo `car` inteiro. Então acessamos as classes necessárias por
 
 ### Importando todas as classes de um módulo
 
+Você pode importar todas as classes de um módulo usando a sintaxe:  
+`from nome_do_modulo import *`
 
+Esse método não é recomendado por dois motivos. Em primeiro lugar, 
+é conveniente ser capaz de ler as instruções `import` no início de um arquivo 
+e ter uma noção clara de quais classes um programa utiliza. 
+Com essa abordagem, não fica claro quais são as classes do módulo que você esta usando. 
+Essa abordagem também pode resultar em confusão com nomes presentes no arquivo. 
+Se você acidentalmente importar uma classe com o mesmo nome que outro item em seu arquivo 
+de programa, poderá gerar erros dificeis de serem diagnoticados. 
+Estou mostrando essa opção aqui porque, embora não seja uma abordagem recomendada, 
+é provável que você vá vê-la no código de outras pessoas.
+
+Se precisar importar muitas classes de um módulo, é melhor importar o módulo todo 
+e usar a sintaxe `nome_do_modulo.nome_da_classe`. 
+Você não verá todas as classes usadas no início do arquivo, mas verá claramente em que lugares 
+o módulo é utilizado no programa. 
+Possiveis conflitos de nomes que possam ocorrer ao importar todas as classes de um módulo também 
+serão evitados.
 
 \newpage
 
 ### Importando um módulo de um módulo
+
+
+
+\newpage
 
 ### Definindo o seu próprio fluxo de trabalho
 
