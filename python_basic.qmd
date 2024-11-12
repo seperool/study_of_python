@@ -1,6 +1,8 @@
 ---
 title: "Básico de Python"
 author: "Sergio Pedro Rodrigues Oliveira"
+date: last-modified
+date-format: DD MMMM YYYY
 format:
     html:
         code-fold: true
@@ -4770,9 +4772,138 @@ serão evitados.
 
 \newpage
 
-### Importando um módulo de um módulo
+### Importando um módulo em um módulo
+
+As vezes, você vai querer espalhar suas classes em vários módulos para impedir que 
+um arquivo cresça demais e evitar a armazenagem de classes não relacionadas 
+no mesmo módulo. Ao armazenar suas classes em vários módulos, você poderá 
+descobrir que uma classe em um módulo depende de uma classe que está em outro 
+módulo. Se isso acontecer, importe a classe necessária no primeiro módulo.
+
+Por exemplo, vamos armazenar a classe `Car` em um módulo e as classes 
+`ElectricCar` e `Battery` em um módulo separado. Criaremos um novo módulo chamado 
+`electric_car.py` - substituindo o arquivo `electric_car.py` que criamos antes - e 
+copiaremos apenas as classes `Battery` e `ElectricCar` para esse arquivo.
+```
+"""
+Um conjunto de classes que pode ser usado para representar carros elétricos.
+"""
+
+#Importando classe-pai
+from car import Car
+
+#Classes-filhas
+class Battery():
+    """Uma tentativa simples de modelar uma bateria para um carro elétrico."""
+    
+    #Atributos
+    def __init__(self,battery_size=70):
+        """Inicializa atributos da bateria."""
+        self.battery_size = battery_size
+    
+    #Métodos
+    def describe_battery(self):
+        """Exibe uma fraseque descreve a capacidade da bateria."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+    
+    def get_range(self):
+        """
+        Exibe frase sobre a distância que o carro pode percorrer 
+        com essa bateria.
+        """
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+        
+        message = "This car can go approximately " + str(range)
+        message += " miles on a full charge."
+        print(message)
+
+class ElectricCar(Car):
+    
+    #Atributos
+    def __init__(self,make,model,year):
+        """
+        Inicializa os atributos da classe-pai.
+        Em seguida, inicializa os atributos específicos de um carro elétrico.
+        """
+        super().__init__(make,model,year)
+        self.battery = Battery()
+```
+
+A classe `ElectricCar` precisa ter acesso a sua classe-pai `Car`, portanto importamos 
+`Car` diretamente para o módulo. Se esquecermos de colocar essa linha, o Python 
+gerará um erro quando tentarmos criar uma instância de `ElectricCar`. Também 
+precisamos atualizar o módulo `Car` para que ele contenha apenas a classe `Car`.
+```
+"""
+Uma classe que pode ser usada para representar um carro.
+"""
+
+#Classes
+class Car():
+    """Uma tentativa simples de representar um carro."""
+    def __init__(self,make,model,year):
+        """Inicializa os atributos que descrevem um carro."""
+        #Atributo
+        self.make = make
+        self.model = model
+        self.year = year
+        
+        #Atributo default
+        self.odometer_reading = 0
+    
+    #Métodos
+    def get_descriptive_name(self):
+        """
+        Devolve um nome descritivo formatado de modo elegante.
+        """
+        long_name = str(self.year) + " " + self.make
+        long_name += " " + self.model
+        return long_name.title()
+    
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print(f"This car has {self.odometer_reading} miles on it.")
+    
+    def update_odometer(self,mileage):
+        """
+        Define o valor de leitura do hodômetro com o valor especificado.
+        Rejeita alteração se for tentativa de definir um valor menor
+        para o hodômetro.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    def increment_odometer(self,miles):
+        """
+        Soma a quantidade especificada ao valor de leitura do hodômetro.
+        """
+        self.odometer_reading += miles
+```
 
 
+Agora podemos fazer a importação de cada módulo separadamente e criar o tipo 
+de carro que for necessário.
+```
+#Importando classes dos módulos
+from car import Car
+from electric_car import ElectricCar, Battery
+
+#Criando instâncias e chamadas de descrição da instância
+my_beetle = Car("volkswagem", "beetle", 2016)
+print(my_beetle.get_descriptive_name())
+
+my_tesla = ElectricCar('tesla','roadster', 2016)
+print(my_tesla.get_descriptive_name())
+```
+
+Importamos `Car` de seu módulo e `ElectricCar` de seu módulo. Em seguida, 
+criamos um carro comum e um carro elétrico. Os dois tipos de carro são 
+criados corretamente.
 
 \newpage
 
