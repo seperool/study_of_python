@@ -4914,6 +4914,13 @@ Quando estiver começando a programar, mantenha a estrutura de seu código simpl
 \newpage
 
 ## Biblioteca-padrão do Python
+
+A biblioteca-padrão de Python é um conjunto de módulos incluído em todas as instalações de Python. agora que temos uma compreensão básica de como as classes funcionam, podemos começar a usar módulos como esses, escritos por outros programadores. Podemos usar qualquer função ou classe da biblioteca-padrão incluindo uma instrução `import` simples no início do arquivo. Vamos analisar a classe `OrderedDict` do módulo `collections`.
+
+
+
+\newpage
+
 ## Estilizando classes
 
 \newpage
