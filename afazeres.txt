@@ -1,6 +1,6 @@
-ESCRITO EM 14/11/24
+ESCRITO EM 15/11/24
 ---
-PARA 15/11/24
+PARA 16/11/24
 ---
 Subir github:
 
@@ -11,7 +11,6 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 9 - Classes
-		- Biblioteca-padrão do Python
 		- Estilizando classes
 	- Cap. 10 - Arquivos e exceções
 	- Cap. 11 - Testando código
