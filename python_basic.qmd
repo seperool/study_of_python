@@ -4917,7 +4917,35 @@ Quando estiver começando a programar, mantenha a estrutura de seu código simpl
 
 A biblioteca-padrão de Python é um conjunto de módulos incluído em todas as instalações de Python. agora que temos uma compreensão básica de como as classes funcionam, podemos começar a usar módulos como esses, escritos por outros programadores. Podemos usar qualquer função ou classe da biblioteca-padrão incluindo uma instrução `import` simples no início do arquivo. Vamos analisar a classe `OrderedDict` do módulo `collections`.
 
+Os dicionários permitem associar informações, mas eles não mantém um controle de ordem em que os pares `chave-valor` são acrescentados. Se você estiver criando um dicionário e quiser manter o controle da ordem em que os pares `chave-valor` são adicionados, a classe `OrderedDict` do módulo `collections` poderá ser usada. Instâncias da classe `OrderedDict` se comportam quase do mesmo modo que os dicionários, exceto que mantêm o controle da ordem em que os pares `chave-valor` são adicionados.
 
+A classe `OrderedDict`, do módulo `collections`, é um dicionário que mantém a ordem dos pares `chave-valor`.
+
+Vamos retornar o exemplo `favorite_languages.py`. Dessa vez, vamos manter o controle da ordem em que as pessoas responderam a enquete:
+```{python}
+#Bibliotecas padrão do Python
+
+#Importando biblioteca-padrão collections a função OrderedDict
+#OrderedDict = é um dicionário que mantém a ordem dos pares chave-valor
+from collections import OrderedDict
+
+#Instância
+favorite_languages = OrderedDict()
+
+#Pares chave-valor
+favorite_languages['jen']='python'
+favorite_languages['sarah']='c'
+favorite_languages['edward']='ruby'
+favorite_languages['phil']='python'
+
+#Mantem a ordem de entrada
+for name, language in favorite_languages.items():
+    print(f"{name.title()}'s favorite language is {language.title()}")
+```
+
+Começamos importando a classe `OrderedDict` do módulo `collections`. Criamos uma instância da classe `OrderedDict` e a armazenamos em `favorite_languages`. Observe que não há chaves; a chamada a `OrderedDict()` cria um dicionário ordenado vazio para nós e o armazena em `favorite_languages`. Então adicionamos cada nome e linguagem em `favorite_languages`, um de cada vez. Por fim, percorremos `favorite_languages` com um laço, sabemos que sempre teremos as respostas na ordem em que os itens foram adicionados. 
+
+É uma ótima classe para conhecer, pois combina a principal vantagem das listas (preservar a ordem original) com o principal recurso dos dicionários (associar informações). Quando começar a modelar situações do mundo real que sejam de seu interesse, é provável que você vá se deparar com uma situação em que um dicionário ordenado seja exatamente o que você precisa. A medida que conhecer melhor a biblioteca-padrão, você passará a ter familiariadade com vários módulos como esse, que ajudam a tratar situações comums.
 
 \newpage
 
