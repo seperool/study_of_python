@@ -4951,6 +4951,16 @@ Começamos importando a classe `OrderedDict` do módulo `collections`. Criamos u
 
 ## Estilizando classes
 
+Vale a pena esclarecer algumas questões ligadas a estilização de classes, em especial quando seus programas se tornarem mais complexos.
+
+Os nomes das classes devem ser escritos com *CamelCaps*. Para isso, cada palavra do nome deve ter a primeira letra maiúscula, e você não deve usar underscores. Nomes de instâncias e de módulos devem ser escritos com letras minúsculas e underscores entre as palavras.
+
+Toda classe deve ter uma docstring logo depois de sua definição. A docstring deve conter uma breve descrição do que a classe faz, e as mesmas convenções de formatação devem ser usadas para escrever docstrings em funções. Cada módulo também deve ter uma docstring que descreva para que servem as classes de um módulo.
+
+Podemos usar linhas em branco para organizar o código, mas não deve utilizá-las de modo excessivo. Em uma classe, podemos usar uma linha em branco entre os métodos; em um módulo, podemos usar duas linhas em branco para separar as classes.
+
+Se houver necessidade de importar um módulo da biblioteca-padrão e um módulo escrito por você, coloque a instrução de importação do módulo da biblioteca-padrão antes. Então acrescente uma linha em branco e a instrução de importação para o módulo que você escreveu. Em programas com várias instruções de importação, essa convenção facilita ver a origem dos diferentes módulos utilizados pelo programa.
+
 \newpage
 
 # Arquivos e exceções
