@@ -1,6 +1,6 @@
-ESCRITO EM 15/11/24
+ESCRITO EM 16/11/24
 ---
-PARA 16/11/24
+PARA 17/11/24
 ---
 Subir github:
 
@@ -10,8 +10,6 @@ Afazeres:
 	- Cap. 4 - Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-	- Cap. 9 - Classes
-		- Estilizando classes
 	- Cap. 10 - Arquivos e exceções
 	- Cap. 11 - Testando código
 	- Scripts:
