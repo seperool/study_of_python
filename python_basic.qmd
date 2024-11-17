@@ -4947,6 +4947,9 @@ Começamos importando a classe `OrderedDict` do módulo `collections`. Criamos u
 
 É uma ótima classe para conhecer, pois combina a principal vantagem das listas (preservar a ordem original) com o principal recurso dos dicionários (associar informações). Quando começar a modelar situações do mundo real que sejam de seu interesse, é provável que você vá se deparar com uma situação em que um dicionário ordenado seja exatamente o que você precisa. A medida que conhecer melhor a biblioteca-padrão, você passará a ter familiariadade com vários módulos como esse, que ajudam a tratar situações comums.
 
+Para conhecer outras bibliotecas-padrão do Python acesse:  
+<https://pymotw.com/3/>
+
 \newpage
 
 ## Estilizando classes
@@ -4964,6 +4967,25 @@ Se houver necessidade de importar um módulo da biblioteca-padrão e um módulo 
 \newpage
 
 # Arquivos e exceções
+
+## Lendo dados de um arquivo
+
+### Lendo um arquivo inteiro
+### Paths de arquivo
+### Lendo dados linha a linha
+### Criando uma lista de linhas de um arquivo
+### Trabalhando com o conteúdo de um arquivo
+### Arquivos grandes: um milhão de digitos
+### Seu aniversário esta contido em pi?
+
+\newpage
+
+## Escrevendo dados em um arquivo
+## Exceções
+## Armazenando dados
+
+\newpage
+
 # Testando o código
 
 \newpage
