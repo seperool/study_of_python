@@ -1,6 +1,6 @@
-ESCRITO EM 16/11/24
+ESCRITO EM 17/11/24
 ---
-PARA 17/11/24
+PARA 18/11/24
 ---
 Subir github:
 
@@ -11,13 +11,24 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
+		- Lendo dados de um arquivo
+			- Lendo um arquivo inteiro
+			- Paths de arquivo
+			- Lendo dados linha a linha
+			- Criando uma lista de linhas de um arquivo
+			- Trabalhando com o conteúdo de um arquivo
+			- Arquivos grandes: um milhão de digitos
+			- Seu aniversário esta contido em pi?
+		- Escrevendo dados em um arquivo
+		- Exceções
+		- Armazenando dados
 	- Cap. 11 - Testando código
 	- Scripts:
 		- Cap. 3:
 			- Exercicios Cap. 3:
 				- 9
 				- 10
-		- Cap. 9:
-			- Exercicios Cap. 9:
-				- 13
-				- 14
+		- Cap. 10:
+			-Exercicios Cap. 10:
+				- 1
+				- 2
