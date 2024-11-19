@@ -4968,6 +4968,18 @@ Se houver necessidade de importar um módulo da biblioteca-padrão e um módulo 
 
 # Arquivos e exceções
 
+Neste capítulo aprenderemos a trabalhar com arquivos para que seus programas possam analisar rapidamente muitos dados.
+
+Veremos:  
+
+- Como tratar erros a fim de que seus programas não falhem quando se depararem com situações inesperadas. Conheceremos as *exceções* - objetos Python especiais para administrar erros que surgirem enquanto um programa estiver executando.  
+
+- Também conheceremos o módulo `json`, que permite salvar dados de usuários para que não sejam perdidos quando seu programa parar de executar.  
+
+- Aprenderemos a trabalhar com arquivos e a salvar dados deixará seus programas mais fáceis de usar. Os usuários poderão escolher quais dados devem fornecer e quando. As pessoas podem executar seu programa, fazer uma alguma tarefa e então fechá-lo e retomá-lo mais tarde, do ponto em que pararam.  
+
+- Aprender a tratar exceções ajudará você a lidar com situações em que os arquivos não existam e com outros problemas que possam fazer seus programas falharem. Isso deixará seus programas mais robustos quando dados ruins forem encontrados, sejam eles provenientes de erros inocentes ou de tentativas maliciosas de fazer seus programas falharem.
+
 ## Lendo dados de um arquivo
 
 ### Lendo um arquivo inteiro
