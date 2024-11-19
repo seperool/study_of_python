@@ -4982,7 +4982,16 @@ Veremos:
 
 ## Lendo dados de um arquivo
 
+Uma quantidade incrível de dados está disponível em arquivos de texto. Ler dados de um arquivo é particularmente útil em aplicações de análise de dados, mas também se aplica a quase qualquer situação em que você queira analisar ou modificar informações armazenadas em um arquivo. Por exemplo, podemos escrever um programa que leia o conteúdo de um arquivo-texto e reescreva o arquivo com uma formatação que permita a um navegador exibi-lo.
+
+Quando quiser trabalhar com as informações de um arquivo-texto, primeiro passo será ler o arquivo em memória. Você pode ler todo o conteúdo de um arquivo ou pode trabalhar com uma linha de cada vez.
+
+\newpage
+
 ### Lendo um arquivo inteiro
+
+
+
 ### Paths de arquivo
 ### Lendo dados linha a linha
 ### Criando uma lista de linhas de um arquivo
