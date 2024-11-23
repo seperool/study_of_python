@@ -5016,9 +5016,32 @@ with open('pi_digits.txt') as file_object:
     print(contents)
 ```
 
+Muitas atividades acontecem na primeira linha desse programa. Vamos começar observando a função `open()`. Para realizar qualquer tarefa com um arquivo, mesmo que seja apenas exibir seu conteúdo, você precisará inicialmente abrir o arquivo para acessá-lo. A função `open()` precisa de um argumento: o nome do arquivo que você deseja abrir. Python procura esse arquivo no diretório em que o programa executando no momento está armazenado. Nesse exemplo, `file_reader.py` está executando, portanto o Python procura `pi_digits.txt` no diretório em que o arquivo `file_reader.py` esta armazenado. A função `open()` devolve um objeto que representa `digits.txt`. O Python armazena esse objeto em `file_object`, com o qual trabalharemos posteriormente no programa.
+
+A palavra reservada `with` fecha o arquivo depois que não for mais necessário acessá-lo. Observe como chamamos `open()` nesse programa, mas não chamamos `close()`. Você pode abrir e fechar o arquivo chamando `open()` e `close()`, mas se um bug em seu programa impedir que a instrução `close()` seja executada, o arquivo não será fechado. Isso pode parecer trivial, mas arquivos indevidamente fechados podem provocar perda de dados ou estes podem ser corrompidos. Além disso, se `close()` for chamado cedo de mais em seu programa, você se verá tentando trabalhar com um arquivo fechado (um arquivo que não pode ser acessado), o que resultará em erros. Nem sempre é fácil saber exatamente quando devemos fechar um arquivo, mas com a estrutura montrada aqui, o Python descobrirá isso para você. Tudo que você precisa fazer é abrir o arquivo e trabalhar com ele conforme desejado, com a confiança de que o Python o fechará automaticamente no momento certo.
+
+Depois que tivermos um objeto arquivo que represente `pi_digits.txt`, usaremos o método `.read()` na segunda linha do nosso programa para ler todo o conteúdo do arquivo e armazená-lo em uma *longa string* em `contents`. Quando exibimos o valor de `contents`, vemos o arquivo-texto completo.  
+Exemplo do código:
+```
+contents = file_object.read()
+```
+
+O método `.read()` salva como tipo *string*, lembrar de verificar e/ou modificar o tipo antes de trabalhar com a variável.
+
+A única diferença entre a saída e o arquivo original é a linha em branco extra no final da saída. A linha em branco aparece porque o método `.read()` devolve uma string vazia quando alcança o final do arquivo; essa string vazia aparece como uma linha em branco. Se quiser remover essa linha em branco extra, o método `.rstrip()` pode ser usada. Lembre-se de que o método `rstrip()` de Python remove qualquer caractere branco do lado direito de uma string. Agora a saída será exatamente igual ao conteúdo do arquivo original.  
+Exemplo do código:
+```
+contents = contents.rstrip()
+```
+
 \newpage
 
 ### Paths de arquivo
+
+
+
+\newpage
+
 ### Lendo dados linha a linha
 ### Criando uma lista de linhas de um arquivo
 ### Trabalhando com o conteúdo de um arquivo
