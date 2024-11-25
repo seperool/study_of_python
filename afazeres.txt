@@ -1,6 +1,6 @@
-ESCRITO EM 24/11/24
+ESCRITO EM 25/11/24
 ---
-PARA 25/11/24
+PARA 26/11/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
 		- Lendo dados de um arquivo
-			- Lendo dados linha a linha
 			- Criando uma lista de linhas de um arquivo
 			- Trabalhando com o conteúdo de um arquivo
 			- Arquivos grandes: um milhão de digitos
