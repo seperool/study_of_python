@@ -5038,11 +5038,94 @@ contents = contents.rstrip()
 
 ### Paths de arquivo
 
+Quando um nome de arquivo simples como `pi_digits.txt` é passado para a função `open()`. 
+O Python observa o diretório em que o arquivo executado no momento (isto é, 
+seu arquivo de programa `.py`) esta armazenado.
 
+As vezes, dependendo de como seu trabalho estiver organizado, o arquivo que você quer abrir 
+não estará no mesmo diretório que o seu arquivo de programa. 
+Por exemplo, você pode armazenar seus arquivos de programa em uma pasta chamada `python_work`; 
+nessa pasta pode haver outra pasta chamada `text_files` para distinguir seus arquivos de programa 
+dos arquivos-texto que eles manipulam. 
+Apesar de `text_files` estar em `python_works`, simplesmente passar o nome de um arquivo que 
+esta em `text_files` para `open()` não funcionará, pois o Python procurará o arquivo apenas em 
+`python_works`; ele não prossegirá procurando em `text_files`. 
+Para fazer o Python abrir arquivos de um diretório que não seja aquele em que seu arquivo de programa 
+está armazenado, é preciso fornecer um *path de arquivo*, que diz ao Python para procurar em um local 
+específico de seu sistema.
+
+Como `text_files` está em `python_works`, você pode usar um *path de arquivo relativo* 
+para abrir um arquivo em `text_files`. Um path de arquivo relativo 
+diz ao Python para procurar um local especificado, relativo ao diretório 
+em que o arquivo de programa em execução no momento esta armazenado.
+
+No Linux e no OS X, você escreveria da seguinte forma:
+```
+with open('text_files/nome_do_arquivo.txt') as file_object:
+```
+
+Essa linha diz ao Python para procurar o arquivo `.txt` desejado na pasta 
+`text_files` e supõem que essa pasta esta localizada em `python_works` (e está). 
+
+Em sistemas Windows, use uma barra invertida (\) no lugar da 
+barra para a frente (/) no path do arquivo:
+```
+with open('text_files\nome_do_arquivo.txt') as file_object:
+```
+
+Você também pode dizer ao Python exatamente em que local está o arquivo em seu computador, 
+não importa o lugar em que o programa em execução no momento esteja armazenado. 
+Isso é chamado de *path absoluto* do arquivo. Utilize um path absoluto se um path relativo 
+não funcionar. Por exemplo, se você colocou `text_files` em alguma pasta diferente de 
+`python_works` - por exemplo, em uma pasta chamada `other_files` - então simplesmente passar 
+o path 'text_files/nome_do_arquivo.txt' para `open()` não funcionará porque o Python procurará 
+esse local somente em `python_works`. Você precisará fornecer um path completo para deixar 
+claro em que lugar você quer que o Python procure.
+
+Paths absolutos geralmente são mais longos que paths relativos, portanto é conveniente armazená-los 
+em uma variável e então passar essa variável para `open()`.
+
+No Linux e no OS X, paths absolutos tem o seguinte aspectos:
+```
+file_path = '/home/ehmatthes/other_files/text_files/nome_do_arquivo.txt'
+with open(file_path) as file_object:
+```
+
+No Windows, eles se parecem com:
+```
+file_path = 'C:\Users\ehmatthes\other_files\text_files\nome_do_arquivo.txt'
+with open(file_path) as file_object:
+```
+
+Ao usar paths absolutos, podemos ler arquivos em qualquer lugar do sistema. Por enquanto, 
+é mais fácil armazenar arquivos no mesmo diretório em que estão seus arquivos de programas 
+ou em uma pasta como `text_files` no diretório em que estiverem seus arquivos de programa.
+
+Sistemas Windows as vezes interpretam corretamente as barras para a frente nos paths de arquivo. 
+Se você usa Windows e não esta obtendo os resultados esperados, tente usar barras invertidas.
+
+
+Tipos de path de arquivo:
+
+  1. *path de arquivo relativo*  
+  Diz ao Python para procurar o arquivo desejado na pasta 
+  especificada e supõem que essa pasta esta localizada dentro 
+  do diretório do programa em execução. Usa o diretório do programa 
+  em execução como referência.
+
+  2. *path absoluto do arquivo*  
+  Diz ao Python exatamente em que local está o arquivo em seu computador, 
+  não importa o lugar em que o programa em execução no momento esteja armazenado. 
+  Fornecer um path completo para deixar claro em que lugar você quer que o Python procure.
 
 \newpage
 
 ### Lendo dados linha a linha
+
+
+
+\newpage
+
 ### Criando uma lista de linhas de um arquivo
 ### Trabalhando com o conteúdo de um arquivo
 ### Arquivos grandes: um milhão de digitos
