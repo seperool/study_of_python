@@ -5122,11 +5122,40 @@ Tipos de path de arquivo:
 
 ### Lendo dados linha a linha
 
+Método `for` para ler linha por linha de um arquivo.
 
+Quando estiver lendo um arquivo, com frequência você vai querer analisar cada linha do arquivo. Talvez você esteja procurando determinada informação no arquivo ou queira modificar o texto do arquivo de alguma maneira. Por exemplo, que inclua a palavra ensolarado ma descrição da previsão do tempo para esse dia. Em uma notícia, talvez queira procurar todas as linhas com a tag `<headline>` e reescrever essa linha com um tipo específico de formação.
+
+Podemos usar um laço `for` no objeto arquivo para analisar cada uma de suas linhas, uma de cada vez:
+```
+#Path relativo
+file_name = 'text_files/pi_digits.txt'
+
+#Abrir arquivo pi_digits.txt
+with open(file_name) as file_object:
+    
+    #Método for para ler linhas de um arquivo
+    for line in file_object:
+        print(line.rstrip())
+```
+
+Armazenamos o nome do arquivo que estamos lendo em uma variável `filename` (caminho ate o arquivo). Essa é uma convenção comum quando trabalhamos com arquivos. Como a variável `filename` não representa o arquivo propriamente dito - é apenas uma string que diz ao Python em que lugar o arquivo se encontra - você pode facilmente trocar pelo nome de outro arquivo com o qual você queira trabalhar. Depois da chamada a `open()`, um objeto que representa o arquivo e seu conteúdo e armazenado na variável `file_object`. Novamente, usamos a sintaxe `with` para deixar o Python abrir e fechar o arquivo de modo apropriado. Para analisar o conteúdo do arquivo, trabalhamos com cada linha do arquivo percorrendo o objeto arquivo em um laço.
+
+Quando exibimos cada linha, encontramos outros linhas em branco. Essas linhas em branco aparecem porque um caractere invisível de quebra de linha esta no final de cada linha do arquivo-texto. A instrução `print` adiciona a sua propria quebra de linha sempre que a chamamos, portanto acabamos com dois caracteres de quebra de linha no final de cada linha: um do arquivo e outro da instrução `print`. Se usarmos `rstrip()` em cada linha na instrução `print`, eliminamos essas linhas em branco extras.
+```
+print(line.rstrip())
+```
+
+Agora a saída será igual ao conteúdo do arquivo novamente.
 
 \newpage
 
 ### Criando uma lista de linhas de um arquivo
+
+
+
+\newpage
+
 ### Trabalhando com o conteúdo de um arquivo
 ### Arquivos grandes: um milhão de digitos
 ### Seu aniversário esta contido em pi?
