@@ -5150,13 +5150,38 @@ Agora a saída será igual ao conteúdo do arquivo novamente.
 
 \newpage
 
-### Criando uma lista de linhas de um arquivo
+### Criando uma lista de linhas de um arquivo - `.readlines()`
+
+O método `.readlines()` armazena cada linha do arquivo em uma lista.
+
+Quando usamos `with`, o objeto arquivo devolvido por `open()` estará disponível somente no bloco `with` que o contém. Se quiser preservar o acesso ao conteúdo de um arquivo fora do bloco `with`, você pode armazenar as linhas do arquivo em uma lista dentro do bloco e então trabalhar em essa lista. Pode processar partes do arquivo imediatamente e postergar parte do processamento de modo que seja feita mais tarde no programa.
+
+O exemplo a seguir armazena as linhas de `pi_digits.txt` em uma lista no bloco `with` e, em seguida, exibe as linhas fora desse bloco:
+```
+#Path relativo
+file_name = 'text_files/pi_digits.txt'
+
+#Abrir arquivo pi_digits.txt
+with open(file_name) as file_object:
+    
+    #Método readlines, para leitura de linhas em uma lista
+    lines = file_object.readlines()
+    
+#Percorrendo a lista de linhas
+for line in lines:
+    print(line.rstrip()) #Elimando espaços em branco com o método rstrip()
+```
+
+O método `.readlines()` armazena cada linha do arquivo em uma lista. Essa lista é então armazenada em `lines`, com a qual podemos continuar trabalhando depois que o bloco `with` terminar. Usamos um laço `for` simples para exibir cada linha de `lines`. Como cada item de `lines` corresponde a uma linha do arquivo, a saída será exatamente igual ao conteúdo do arquivo.
+
+\newpage
+
+### Trabalhando com o conteúdo de um arquivo
 
 
 
 \newpage
 
-### Trabalhando com o conteúdo de um arquivo
 ### Arquivos grandes: um milhão de digitos
 ### Seu aniversário esta contido em pi?
 
