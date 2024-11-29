@@ -1,6 +1,6 @@
-ESCRITO EM 28/11/24
+ESCRITO EM 29/11/24
 ---
-PARA 29/11/24
+PARA 30/11/24
 ---
 Subir github:
 
@@ -11,10 +11,10 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
-		- Lendo dados de um arquivo
-			- Arquivos grandes: um milhão de digitos
-			- Seu aniversário esta contido em pi?
 		- Escrevendo dados em um arquivo
+			- Escrevendo dados em um arquivo vazio
+			- Escrevendo várias linhas
+			- Concatenando dados em um arquivo
 		- Exceções
 		- Armazenando dados
 	- Cap. 11 - Testando código
