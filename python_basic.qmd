@@ -5203,12 +5203,62 @@ Quando Python lê um arquivo-texto, todo o texto do arquivo é interpretado como
 
 \newpage
 
-### Arquivos grandes: um milhão de digitos
+### Arquivos grandes: um milhão de dígitos
+
+Até agora, nosso enfoque foi analisar um arquivo-texto que contenha apenas três linhas, mas o código desses exemplos também funcionará bem em arquivos muito maiores. Se começarmos com um arquivo-texto que contenha pi com um milhão de casas decimais, e não trinta, uma única string contendo todos esses dígitos poderá ser criada. Não precisamos alterar nada em nosso programa, exceto para lhe passar um arquivo diferente. Além disso, exibiremos as cinquenta primeiras casas decimais para que não seja necessário assistirmos a um milhão de dígitos rolando pelo terminal.
+```
+#path, caminho ate o arquivo
+file_name = 'text_files/pi_million_digits.txt'
+
+with open(file_name) as file_object: #Abre arquivo
+    lines = file_object.readlines() #Cria um lista de linhas
+
+pi_string = '' #Inicializa string pi como vazia
+for line in lines: #Pecorre as linhas
+    pi_string += line.strip() #Junta strings e remove espaços em branco
+
+print(pi_string[:50] + "...") #string pi sem espaço em branco
+print(len(pi_string)) #Tamanho da string
+```
+
+O Python não tem nenhum limite inerente para a quantidade de dados com que podemos trabalhar; podemos trabalhar com tantos dados quantos a memória de seu sistema for capaz de tratar.
+
+Arquivos para baixar:
+<https://ehmatthes.github.io/pcc_2e/regular_index/>
+
+\newpage
+
 ### Seu aniversário esta contido em pi?
+
+Vamos usar o programa que acabamos de escrever para descobrir se a data de nascimento de alguém aparece em algum ponto no primeiro milhão de dígitos de pi. Podemos fazer isso expressando cada data de nascimento como uma string de dígitos e verificando se essa string aparece em algum ponto de pi_string.
+```
+#path, caminho ate o arquivo
+file_name = 'text_files/pi_million_digits.txt'
+
+with open(file_name) as file_object: #Abre arquivo
+    lines = file_object.readlines() #Cria um lista de linhas
+
+pi_string = '' #Inicializa string pi como vazia
+for line in lines: #Pecorre as linhas
+    pi_string += line.strip() #Junta strings e remove espaços em branco
+
+birthday = input("Enter your birthday, in the form mmddyy: ")
+if birthday in pi_string:
+    print("Your birthday appears in the first million digits of pi!")
+else:
+    print("Your birthday does not appear in the first million digits of pi!")
+```
 
 \newpage
 
 ## Escrevendo dados em um arquivo
+
+### Escrevendo dados em um arquivo vazio
+### Escrevendo várias linhas
+### Concatenando dados em um arquivo
+
+\newpage
+
 ## Exceções
 ## Armazenando dados
 
