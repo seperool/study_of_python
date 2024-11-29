@@ -5178,7 +5178,28 @@ O método `.readlines()` armazena cada linha do arquivo em uma lista. Essa lista
 
 ### Trabalhando com o conteúdo de um arquivo
 
+Depois de ler o arquivo em memória, você pode fazer o que quiser com esses dados. Desse modo, vamos explorar rapidamente os dígitos de pi. Em primeiro lugar, tentaremos criar uma única string contendotodos os dígitos do arquivo, sem espaços em branco.  
+Exemplo:
+```
+#path, caminho ate o arquivo
+file_name = 'text_files/pi_digits.txt'
 
+with open(file_name) as file_object: #Abre arquivo
+    lines = file_object.readlines() #Cria um lista de linhas
+
+pi_string = '' #Inicializa string pi como vazia
+for line in lines: #Pecorre as linhas
+    pi_string += line.rstrip() #Junta strings e remove espaços em branco
+
+print(pi_string) #string pi sem espaço em branco
+print(len(pi_string)) #Tamanho da string
+```
+
+Começamos abrindo o arquivo e armazenando cada linha de dígitos em uma lista, como fizemos no exemplo anterior. Criamos uma variável `pi_string` para armazenar os dígitos de pi. Então criamos um laço que acrescenta cada uma das linhas de dígitos em `pi_string` removendo o caractere de quebra de linha. Exibimos essa string e mostramos também o seu tamanho.
+
+Podemos nos livrar dos espaços em branco usando `strip()` ou `rstrip()`.
+
+Quando Python lê um arquivo-texto, todo o texto do arquivo é interpretado como uma string. Se você ler um número e quiser trabalhar com esse valor em um contexto numérico, será necessário convertê-lo em um número de ponto flutuante com a função `float()`.
 
 \newpage
 
