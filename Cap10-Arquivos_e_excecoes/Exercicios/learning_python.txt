@@ -1,0 +1,8 @@
+Em Python podemos mudar os tipos das variáveis
+Em Python podemos printar strings na tela
+Em Python podemos remover espaços em branco de strings
+Em Python podemos criar listas
+Em Python podemos trabalhar com listas
+Em Python podemos criar dicionários
+Em Python podemos trabalhar com dicionários
+Em Python podemos abrir arquivos
