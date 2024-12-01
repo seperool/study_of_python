@@ -5253,7 +5253,16 @@ else:
 
 ## Escrevendo dados em um arquivo
 
+Uma das maneiras mais simples de salvar dados é escrevê-los em um arquivo. 
+Quando um texto é escrito em um arquivo, o resultado estará disponível depois 
+que você fechar o terminal que contém a saída de seu programa. Podemos analisar 
+a saída depois que um programa acabar de executar e compartilhar os arquivos de 
+saída com outras pessoas também. Além disso, podemos escrever programas que leiam 
+o texto de volta para a memória e trabalhar com esses dados novamente.
+
 ### Escrevendo dados em um arquivo vazio
+
+
 
 Modos de abrir um arquivo:
 
@@ -5261,6 +5270,8 @@ Modos de abrir um arquivo:
 - Mode de escrita ('w')
 - Modo de concatenação ('a')
 - Modo de leitura e escrita ('r+')
+
+\newpage
 
 ### Escrevendo várias linhas
 ### Concatenando dados em um arquivo
