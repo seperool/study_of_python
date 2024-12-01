@@ -5254,6 +5254,14 @@ else:
 ## Escrevendo dados em um arquivo
 
 ### Escrevendo dados em um arquivo vazio
+
+Modos de abrir um arquivo:
+
+- Modo de leitura ('r')
+- Mode de escrita ('w')
+- Modo de concatenação ('a')
+- Modo de leitura e escrita ('r+')
+
 ### Escrevendo várias linhas
 ### Concatenando dados em um arquivo
 
