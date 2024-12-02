@@ -5262,7 +5262,28 @@ o texto de volta para a memória e trabalhar com esses dados novamente.
 
 ### Escrevendo dados em um arquivo vazio
 
+Para escrever um texto em um arquivo, chame `open()` com um segundo argumento que diga ao Python que você quer escrever dados no arquivo.  
+Exemplo:
+```
+#Nome do arquivo a ser criado, se não existir
+filename = 'programming.txt'
 
+#Abre e define que é um arquivo a ser criado e escrito ('w')
+with open(filename,'w') as file_object:
+    file_object.write("I love programming.") #Escreve no arquivo
+```
+
+A chamada `open()` nesse exemplo tem dois argumentos. O primeiro argumento ainda é o nome do arquivo que queremos abrir. O segundo argumento 'w', diz ao Python que queremos abrir o arquivo no *modo de escrita*. Podemos abrir um arquivo em *modo de leitura* ('r'), em *modo de escrita* ('w'), em *modo de concatenação* ('a') ou em um modo que permita ler e escrever no arquivo ('r+').
+
+Se o argumento por omitido, por padrão o Python abrirá o arquivo em modo somente de leitura.
+
+A função `open()` cria automaticamente o arquivo no qual você vai escrever caso ele ainda não exista. No entanto, tome cuidado ao abrir um arquivo em modo de escrita ('w') porque se o arquivo já existir, o Python apagará antes de devolver o objeto arquivo (apaga o arquivo existente e cria outro).
+
+Usamos o metódo `write()` no objeto arquivo para escrever uma string nesse arquivo. Esse programa não tem saída no terminal, mas se abrir o arquivo `programming.txt`, você verá uma linha de texto.
+
+Esse arquivo se comporta como qualquer outro arquivo de seu computador. Você pode abri-lo, escrever um novo texto nele, copiar ou colar dados e assim por diante.
+
+O Python escreve apenas strings em um arquivo-texto. Se quiser armazenar dados númericos em um arquivo-texto, será necessário converter os dados em um formato de string antes usando a função `str()` (converte para string).
 
 Modos de abrir um arquivo:
 
@@ -5274,6 +5295,11 @@ Modos de abrir um arquivo:
 \newpage
 
 ### Escrevendo várias linhas
+
+
+
+\newpage
+
 ### Concatenando dados em um arquivo
 
 \newpage
