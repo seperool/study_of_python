@@ -5296,11 +5296,29 @@ Modos de abrir um arquivo:
 
 ### Escrevendo várias linhas
 
+A função `write()` não acrescenta nenhuma quebra de linha ao texto que você escrever. Portanto, se escrever mais de uma linha sem incluir caracteres de quebra de linha, seu arquivo poderá não ter a aparencia desejada. Ao abrir o arquivo `programming.txt`, você verá duas linhas emendadas.
 
+A inclusão de quebra de linha em suas instruções `write()` faz cada string aparecer em sua propria linha.  
+Exemplo:
+```
+#Nome do arquivo a ser criado
+filename = 'programming.txt'
+
+#Abre e define que é um arquivo a ser criado e escrito ('w')
+with open(filename,'w') as file_object:
+    file_object.write("I love programming.\n") #Insere quebra de linha
+    file_object.write("I love creating new games.\n")
+```
+
+A saída agora aparece em linhas separadas.
+
+Podemos também usar espaços, caracteres de tabulação e linhas em branco para formatar a saída, exatamente como viemos fazendo com as saídas no terminal.
 
 \newpage
 
 ### Concatenando dados em um arquivo
+
+
 
 \newpage
 
