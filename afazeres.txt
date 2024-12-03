@@ -1,6 +1,6 @@
-ESCRITO EM 02/12/24
+ESCRITO EM 03/12/24
 ---
-PARA 03/12/24
+PARA 04/12/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
 		- Escrevendo dados em um arquivo
-			- Escrevendo várias linhas
 			- Concatenando dados em um arquivo
 		- Exceções
 		- Armazenando dados
