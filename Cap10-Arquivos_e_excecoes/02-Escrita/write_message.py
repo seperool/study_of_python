@@ -11,4 +11,5 @@ filename = 'programming.txt'
 
 #Abre e define que é um arquivo a ser criado e escrito ('w')
 with open(filename,'w') as file_object:
-    file_object.write("I love programming.") #Escreve no arquivo
+    file_object.write("I love programming.\n") #Insere quebra de linha
+    file_object.write("I love creating new games.\n")
