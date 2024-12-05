@@ -5318,7 +5318,22 @@ Podemos também usar espaços, caracteres de tabulação e linhas em branco para
 
 ### Concatenando dados em um arquivo
 
+Se quiser acrescentar conteúdos em vez de sobrescrever o conteúdo existente, você pode abrir o arquivo em *modo de concatenação*. Ao abrir um arquivo em modo de concatenação, o Python não apagará o arquivo antes de volver o objeto arquivo. Qualquer linha que você escrever no arquivo será adicionada no final. Se o arquivo ainda não existe, o Python criará um arquivo vazio para você.
 
+Vamos modificar `write_message.py`:
+```
+#Nome do arquivo
+filename = 'programming.txt'
+
+#Abre o arquivo e concatena dados ('a'), acrescenta informação
+with open(filename,'a') as file_object:
+    file_object.write("I also finding meaning in large datasets.\n")
+    file_object.write("I love creating apps that can run in a browser.\n")
+```
+
+Usamos o argumento 'a' para abrir o arquivo para concatenação, em vez de sobrescrever o arquivo existente. Escrevemos duas linhas novas, que são acrescentadas em `programming.txt`.
+
+Ao final, temos o conteúdo original do arquivo, seguido de um novo conteúdo que acabamos de acrescentar.
 
 \newpage
 
