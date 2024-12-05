@@ -1,6 +1,6 @@
-ESCRITO EM 04/12/24
+ESCRITO EM 05/12/24
 ---
-PARA 05/12/24
+PARA 06/12/24
 ---
 Subir github:
 
@@ -12,6 +12,15 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
 		- Exceções
+			- Tratando a exceção ZeroDivisionError
+			- Usando blocos try-except
+			- Usando exceções para evitar falhas
+			- Bloco else
+			- Tratando a exceção FileNotFoundError
+			- Analisando textos
+			- Trabalhando com vários arquivos
+			- Falhando silenciosamente
+			- Decidindo quais erros devem ser informados
 		- Armazenando dados
 	- Cap. 11 - Testando código
 	- Scripts:
@@ -21,6 +30,8 @@ Afazeres:
 				- 10
 		- Cap. 10:
 			-Exercicios Cap. 10:
-				- 3
-				- 4
-				- 5
+				- 6
+				- 7
+				- 8
+				- 9
+				- 10
