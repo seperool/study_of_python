@@ -5338,6 +5338,19 @@ Ao final, temos o conteúdo original do arquivo, seguido de um novo conteúdo qu
 \newpage
 
 ## Exceções
+
+### Tratando a exceção `ZeroDivisionError`
+### Usando blocos `try-except`
+### Usando exceções para evitar falhas
+### Bloco `else`
+### Tratando a exceção `FileNotFoundError`
+### Analisando textos
+### Trabalhando com vários arquivos
+### Falhando silenciosamente
+### Decidindo quais erros devem ser informados
+
+\newpage
+
 ## Armazenando dados
 
 \newpage
