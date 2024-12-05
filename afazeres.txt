@@ -1,6 +1,6 @@
-ESCRITO EM 03/12/24
+ESCRITO EM 04/12/24
 ---
-PARA 04/12/24
+PARA 05/12/24
 ---
 Subir github:
 
@@ -11,8 +11,6 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
-		- Escrevendo dados em um arquivo
-			- Concatenando dados em um arquivo
 		- Exceções
 		- Armazenando dados
 	- Cap. 11 - Testando código
