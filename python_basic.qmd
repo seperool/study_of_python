@@ -5353,7 +5353,48 @@ Em vez de *tracebacks*, que podem ser confusos para os usuários lerem, os usuá
 de erro simpáticas escritas por você.
 
 ### Tratando a exceção `ZeroDivisionError`
+
+Vamos observar um erro simples, que faz o Python levantar uma exceção. Provavelmente, você sabe que é impossível dividir um número por zero, mas vamos pedir que o Python faça isso, de qualquer modo.  
+Exemplo:
+```
+print(5/0)
+```
+
+É claro que o Python não pode fazer essa operação, portanto veremos um traceback.
+```
+Traceback (most recent call last):
+
+  File ~/anaconda3/lib/python3.11/site-packages/spyder_kernels/customize/utils.py:209 in exec_encapsulate_locals
+    exec_fun(compile(code_ast, filename, "exec"), globals)
+
+  File ~/Programacao/python/Cap10-Arquivos_e_excecoes/03-Excecoes/division.py:9
+    print(5/0)
+
+ZeroDivisionError: division by zero
+```
+
+O erro informado no traceback, `ZeroDivisionError`, é um objeto exceção. O Python cria esse tipo de objeto em resposta a uma situação em que ele não é capaz de fazer o que lhe pedimos. Quando isso acontece, o Python interrompe o programa e informa o tipo de exceção levantada. Podemos usar essa informação para modificar nosso programa.
+
+Diremos ao Python o que ele deve fazer quando esse tipo de exceção ocorrer; desse modo, se ela ocorrer novamente, estaremos preparados.
+
+\newpage
+
 ### Usando blocos `try-except`
+
+Quando achar que um erro pode ocorrer, você poderá usar um bloco `try-except` para tratar a exceção possível de ser levantada. Dizemos ao Python para tentar executar um código e lhe dizemos o que fazer caso o código resulte em um tipo particular de exceção.  
+```{python}
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You can´t divide by zero!")
+```
+
+Colocamos `print(5/0)` - a linha que causou o erro - em um bloco `try`. Se o código em um bloco `try` funcionar, o Python ignorará o bloco `except`. Se o código no bloco `try` causar um erro, o interpretador procurará um bloco `except` cujo erro coincida com aquele levantado e executará o código desse bloco.
+
+Nesse exemplo, o código no bloco `try` gera um `ZeroDivisionError`, portanto o Python procura um bloco `except` que lhe diga como deve responder. O interpretador então executa o código desse bloco e o usuário vê uma mensagem de erro simpática no lugar de um traceback.
+
+Se houver mais código depois do bloco `try-except`, o programa continuará executando, pois dissemos ao Python como o erro deve ser tratado.
+
 ### Usando exceções para evitar falhas
 ### Bloco `else`
 ### Tratando a exceção `FileNotFoundError`
