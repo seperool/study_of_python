@@ -5395,8 +5395,47 @@ Nesse exemplo, o código no bloco `try` gera um `ZeroDivisionError`, portanto o 
 
 Se houver mais código depois do bloco `try-except`, o programa continuará executando, pois dissemos ao Python como o erro deve ser tratado.
 
+\newpage
+
 ### Usando exceções para evitar falhas
+
+Tratar erros de forma correta é importante, em especial quando o programa tiver outras atividades para fazer depois que o erro ocorrer. Isso acontece com frequência em programas que pedem dados de entrada aos usuários. Se o programa responder a entradas inválidas de modo apropriado, ele poderá pedia mais entradas válidas em vez de causar uma falha.
+
+Vamos criar uma calculadora simples que faça apenas divisões.  
+Exemplo:
+```
+print("Give me two numbers, and I'll divide them.")
+print("Enter 'q' to quit.")
+
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == 'q':
+        break
+    second_number = input("\nSecond number: ")
+    if second_number == 'q':
+        break
+    answer = int(first_number)/int(second_number)
+    print(answer)
+```
+
+Esse programa pedeque o usuário forneça o primeiro número (`first_number`) e, se o usuário não digitar 'q' para sair, pede um segundo número (`second_number`). Então dividimos esses dois números para obter a resposta (`answer`). O programa não faz nada para tratar erros, portanto pedir que uma divisão por zero seja feita causará uma falha do programa.
+
+O fato do programa falhar é ruim, mas também não é uma boa ideia deixar que os usuários vejam o *tracebacks*. Usuários que não sejam técnicos ficarão confusos com eles e, em um ambiente malicioso, invasores aprenderão mais do que você quer que eles saibam a partir de um *traceback*. Por exemplo, eles saberão o nome de seu arquivo de programa e verão uma parte do código que não está funcionando de forma apropriada. As vezes, um invasor habilidoso pode usar essas informações para determinar os tipos de ataques que podem usar contra o seu código.
+
+\newpage
+
 ### Bloco `else`
+
+Bloco `try-except-else`:  
+  - `try`  
+    Parte do código que pode fazer uma exceção ser levantada.  
+  - `except`  
+    Diz ao Python o que deve fazer, caso uma determinda exceção ocorra quando ele tentar executar o código na instrução `try`.  
+  - `else`  
+    Um código adicional que deverá ser executado somente se o bloco `try` tiver sucesso. Esse código deve estar no bloco `else`.
+
+\newpage
+
 ### Tratando a exceção `FileNotFoundError`
 ### Analisando textos
 ### Trabalhando com vários arquivos
