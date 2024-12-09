@@ -5426,17 +5426,87 @@ O fato do programa falhar é ruim, mas também não é uma boa ideia deixar que 
 
 ### Bloco `else`
 
-Bloco `try-except-else`:  
-  - `try`  
+Podemos deixar esse programa mais resistente a erros 
+colocando a linha capaz de produzir erros em um bloco 
+`try-except`. O erro ocorre na linha que calcula a 
+divisão, portanto é ai que colocaremos o bloco `try-except`. 
+Esse exemplo também inclui um bloco `else`. Qualquer código 
+que dependa do bloco `try` executar com sucesso deve ser colocado 
+no bloco `else`.  
+Exemplo:
+```
+print("Give me two numbers, and I'll divide them.")
+print("Enter 'q' to quit.")
+
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == 'q':
+        break
+    second_number = input("\nSecond number: ")
+    if second_number == 'q':
+        break
+    try: #Tentar fazer
+        answer = int(first_number)/int(second_number)
+    except ZeroDivisionError: #Error
+        print("You can't divide by 0!")
+    else: #Sucesso
+        print(answer)
+```
+
+* Caso de sucesso, bloco `else`:
+  
+  Pedidos ao Python para tentar concluir a operação de divisão 
+  em um bloco `try`, que inclui apenas o código que pode causar 
+  um erro. Qualquer código que dependa do sucesso do bloco `try` 
+  é adicionado no bloco `else`. Nesse caso, se a operação de divisão 
+  for bem-sucedida, usamos o bloco `else` para exibir o resultado.
+
+* Caso de erro, bloco `except`:
+  
+  O bloco `except` diz como o Python deve responder quando um `ZeroDivisionError` 
+  ocorrer. Se a instrução `try` não for bem-sucedida por causa de um erro 
+  de divisão por zero, mostraremos uma mensagem simpática informando 
+  o usuário de que modo esse tipo de erro pode ser evitado. O programa 
+  continua executando e o usuário jamais verá um *traceback*.
+
+* Bloco `try-except-else`:
+  
+  O bloco `try-except-else` funciona assim: o Python tenta executar o código 
+  que esta na instrução `try`. O único código que deve estar em uma instrução 
+  `try` é aquele que pode fazer uma exceção ser levantada. As vezes, você terá 
+  um código adicional que deverá ser executado somente se o bloco `try` tiver 
+  sucesso; esse código deve estar no bloco `else`. O bloco `except` diz ao Python 
+  o que ele deve fazer, caso uma determinada exceção ocorra quando ele tentar 
+  executar o código que esta na instrução `try`.
+
+* O ganho usando bloco `try-except-else`:
+  
+  Ao prever possíveis fontes de erros, podemos escrever programas robustos, 
+  que continuarão a executar mesmo quando encontrarem dados inválidos ou se 
+  depararem com recursos ausentes. Seu código será resistente a erros inocentes 
+  do usuário e a ataques maliciosos.
+
+* **Resumo** bloco `try-except-else`:
+  + `try` 
+  
     Parte do código que pode fazer uma exceção ser levantada.  
-  - `except`  
+  
+  + `except`
+  
     Diz ao Python o que deve fazer, caso uma determinda exceção ocorra quando ele tentar executar o código na instrução `try`.  
-  - `else`  
+  
+  + `else`
+  
     Um código adicional que deverá ser executado somente se o bloco `try` tiver sucesso. Esse código deve estar no bloco `else`.
 
 \newpage
 
 ### Tratando a exceção `FileNotFoundError`
+
+
+
+\newpage
+
 ### Analisando textos
 ### Trabalhando com vários arquivos
 ### Falhando silenciosamente
