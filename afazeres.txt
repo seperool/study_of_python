@@ -1,6 +1,6 @@
-ESCRITO EM 09/12/24
+ESCRITO EM 10/12/24
 ---
-PARA 10/12/24
+PARA 11/12/24
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
 		- Exceções
-			- Tratando a exceção FileNotFoundError
 			- Analisando textos
 			- Trabalhando com vários arquivos
 			- Falhando silenciosamente
