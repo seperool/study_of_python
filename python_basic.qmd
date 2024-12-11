@@ -5557,8 +5557,45 @@ resultado é uma mensagem de erro simpática no lugar de um *traceback*.
 
 \newpage
 
-### Analisando textos
+### Analisando textos - método `.split()`
+
+Os textos usados nesta seção foram extraídos do projeto Gutenberg (<https://gutenberg.org/>).
+
+Vamos obter o texto de *Alice in Wonderland* e tentar contar o número de palavras do texto. Usaremos o método string `split()`, que cria uma lista de palavras a partir de uma string. Eis o que `split()` faz com uma string que contém apenas o título "Alice in Wonderland".
+```{python}
+#Conta o número de palavras do título do livro
+title = "Alice in Wonderland"
+
+words = title.split()
+
+print(words)
+```
+
+O método `split()` separa uma string em partes sempre que encontra um espaço, e armazena todas as partes da string em uma lista. O resultado é uma lista de palavras da string, embora algumas pontuações possam também aparecer com determinadas palavras. Para contar o número de palavras em "Alice in Wonderland", usaremos `split()` no texto todo. Em seguida, contaremos os itens da lista para ter uma ideia geral da quantidade de palavras no texto.
+```
+filename = 'alice.txt'
+
+try:
+    with open(filename) as f_obj:
+        contents = f_obj.read()
+except FileNotFoundError:
+    msg = "Sorry, the file " + filename + " does not exist."
+    print(msg)
+else:
+    #Conta o número aproximado de palavras no arquivo
+    words = contents.split() # Cria uma lista com as palavras do texto
+    num_words = len(words) # Conta o número de palavras
+    print(f"The file {filename} has about {num_words} words.")
+```
+
+Movi o arquivo alice.txt para o diretório correto, portanto o bloco `try` funcionará dessa vez. Usamos a string `contents`, que agora contém todo o texto de *Alice in Wonderland* como uma string longa, e aplicamos o método `split()` para obter uma lista de todas as palavras do livro. Quando usamos `len()` nessa lista para verificar o seu tamanho, obtemos uma boa aproximação do número de palavras na string original. Exibimos uma frase que informa quantas palavras encontramos no arquivo. Esse código é colocado no bloco `else` porque funcionará somente se o código no bloco `try` for executado com sucesso. A saída nos informa quantas palavras estão em `alice.txt`.
+
 ### Trabalhando com vários arquivos
+
+
+
+\newpage
+
 ### Falhando silenciosamente
 ### Decidindo quais erros devem ser informados
 
