@@ -5503,7 +5503,57 @@ while True:
 
 ### Tratando a exceção `FileNotFoundError`
 
+Um problema comum ao trabalhar com arquivos é o tratamento de 
+arquivos ausentes. O arquivo que você está procurando pode estar 
+em outro lugar, o nome do arquivo pode estar escrito de forma 
+incorreta ou o arquivo talvez simplesmente não exista. Podemos 
+tratar todas essas situações de um modo simples com um bloco 
+`try-except`.
 
+Vamos tentar ler um arquivo que não existe. O programa a seguir 
+tenta ler o conteúdo de *Alice in wonderland*, mas não salvei o 
+arquivo `alice.txt` no mesmo diretório em que esta `alice.py`.
+```
+filename = 'alice.txt'
+
+with open(filename) as f_obj:
+    contents = f_obj.read()
+```
+
+O Python não é capaz de ler um arquivo ausente, portanto uma exceção 
+é levantada:
+```
+Traceback (most recent call last):
+
+  File ~/anaconda3/lib/python3.11/site-packages/spyder_kernels/customize/utils.py:209 in exec_encapsulate_locals
+    exec_fun(compile(code_ast, filename, "exec"), globals)
+
+  File ~/Programacao/python/Cap10-Arquivos_e_excecoes/03-Excecoes/alice.py:11
+    with open(filename) as f_obj:
+
+FileNotFoundError: [Errno 2] No such file or directory: 'alice.txt'
+```
+
+A última linha do *traceback* informa um `FileNotFoundError`: essa é a 
+exceção criada pelo Python quando não encontra o arquivo que está 
+tentando abrir. Nesse exemplo, a função `open()` gera o erro, portanto, 
+para tratá-lo, o bloco `try` tem início imediatemente antes da linha 
+que contém essa função.
+```
+filename = 'alice.txt'
+
+try:
+    with open(filename) as f_obj:
+        contents = f_obj.read()
+except FileNotFoundError:
+    msg = "Sorry, the file " + filename + " does not exist."
+    print(msg)
+```
+
+Nesse exemplo, o código no bloco `try` gera um `FileNotFoundError`, 
+portanto o Python procura um bloco `except` que trate esse erro. 
+O interpretador então executa o código que está nesse bloco e o 
+resultado é uma mensagem de erro simpática no lugar de um *traceback*.
 
 \newpage
 
