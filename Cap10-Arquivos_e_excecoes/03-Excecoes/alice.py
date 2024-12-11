@@ -14,3 +14,8 @@ try:
 except FileNotFoundError:
     msg = "Sorry, the file " + filename + " does not exist."
     print(msg)
+else:
+    #Conta o número aproximado de palavras no arquivo
+    words = contents.split() # Cria uma lista com as palavras do texto
+    num_words = len(words) # Conta o número de palavras
+    print(f"The file {filename} has about {num_words} words.")
