@@ -5613,11 +5613,22 @@ for filename in filenames:
     count_words(filename)
 ```
 
+A maior parte desse código não foi alterada. Simplesmente, indentamos o código e o movemos para o corpo de `count_words()`. Manter os comentários atualizados é um bom hábito quando modificamos um programa; assim, transformamos o comentário em uma docstring e o alteramos um pouco.
 
+Agora podemos escrever um laço simples para contar as palavras de qualquer texto que quisermos analisar. Fazemos isso armazenando os nomes dos arquivos que desejamos analisar em uma lista e, em seguida, chamando `count_words()` para cada arquivo da lista. Vamos experimentar contar as palavras das obras *Alice in Wonderland*, *Siddhartha*, *Moby Dick* e *Little Women*, todas disponiveis em dominio público. Deixei `siddhartha.txt` fora do diretório que contém `word_count.py` de propósito para que possamos ver como nosso programa trata um arquivo ausente de modo apropriado.
+
+O arquivo `siddhartha.txt` ausente não tem efeito algum no restante da execução do programa.
+
+O uso do bloco `try-except` nesse exemplo oferece duas vantagens significativas. Evitar que nossos usuários vejam um traceback e deixamos o programa continuar a análise dos textos que puder encontrar. Se não capturássemos e erro `FileNotFoundError` gerado por `siddhartha.txt`, o usuário veria um traceback completo e o programa pararia de executar após tentar analisar *Siddhartha*. *Moby Dick* e *Little Women* não seriam analisados.
 
 \newpage
 
 ### Falhando silenciosamente
+
+
+
+\newpage
+
 ### Decidindo quais erros devem ser informados
 
 \newpage
