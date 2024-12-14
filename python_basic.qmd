@@ -5623,13 +5623,37 @@ O uso do bloco `try-except` nesse exemplo oferece duas vantagens significativas.
 
 \newpage
 
-### Falhando silenciosamente
+### Falhando silenciosamente - instrução `pass`
 
+No exemplo anterior, informamos nossos usuários que um dos arquivos estava indisponível. Porém, não precisamos informar todas as exceções capturadas. As vezes, queremos que o programa falhe silenciosamente quando uma exceção ocorrer e continue como se nada tivesse acontecido. Para fazer um programa falhar em silêncio, escreva um bloco `try` como seria feito normalmente, mas diga de forma explícita ao Python para não fazer nada no bloco `except`. O Python tem uma instrução `pass` que lhe diz para não fazer nada em um bloco.
+```
+def count_words(filename):
+    """Conta o número aproximado de palavras em um arquivo."""
+    try:
+        with open(filename) as f_obj:
+            contents = f_obj.read()
+    except FileNotFoundError:
+        pass #Falhando silenciosamente
+    else:
+        #Conta o número aproximado de palavras no arquivo
+        words = contents.split() # Cria uma lista com as palavras do texto
+        num_words = len(words) # Conta o número de palavras
+        print(f"The file {filename} has about {num_words} words.")
+    
+filenames = ['alice.txt','siddhartha.txt','moby_dick.txt','little_women.txt']
+for filename in filenames:
+    count_words(filename)
+```
 
+A única diferença entre essa listagem e a listagem anterior está na instrução `pass`. Agora, quando um `FileNotFoundError` é levantado, o código no bloco `except` é executado, mas nada acontece. Nenhum traceback é gerado e não há nenhuma saída em resposta ao erro levantado. Os usuários veem os contadores de palavras para cada arquivo existente, mas não há indicação sobre um arquivo não encontrado.
+
+A instrução `pass` também atua como um marcador. É um lembrete de que você optou por não fazer nada em um ponto específico da execução de seu programa, mas talvez queira fazer algo nesse local, no futuro. Por exemplo, nesse programa, podemos decidir escrever os nomes de qualquer arquivo ausente em um arquivo chamado `missing_files.txt`. Nossos usuários não verão esse arquivo, mas poderemos lê-lo e tratar qualquer texto ausente.
 
 \newpage
 
 ### Decidindo quais erros devem ser informados
+
+
 
 \newpage
 
