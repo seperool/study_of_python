@@ -5653,11 +5653,19 @@ A instrução `pass` também atua como um marcador. É um lembrete de que você 
 
 ### Decidindo quais erros devem ser informados
 
+Como sabemos quando devemos informar um erro aos usuários e quando devemos falhar silenciosamente? Se os usuários souberem quais textos devem ser analisados, poderão apreciar uma mensagem que lhes informe por que alguns textos não foram analisado. Se os usuários esperam ver alguns resultados, mas não sabe quais livros deveriam ser analisados, talvez não precisem saber que alguns textos estavam indisponíveis. Dar informações que os usuários não estejam esperandos pode reduzir a usabilidade de seu programa. As estruturas de tratamento de erros de Python permitem tem um controle minucioso sobre o que você deve compartilhar com os usuários quando algo sair errado; cabe a você decidir a quantidade de informações a serem compartilhadas.
 
+Um código bem escrito, testado de modo apropriado, não será muito suscetível a erros internos, como erros de sintaxe ou de lógica. Contudo, sempre que seu programa depender de algo externo, por exemplo, de uma entrada de usuário, da existência de um arquivo ou da disponibilidade de uma conexão de rede, existe a possibilidade de uma exceção ser levantada. Um pouco de experiência ajudará você a saber em que pontos deverá incluir blocos de tratamento de exceções em seu programa e a quantidade de informações que deverá ser fornecida aos usuários sobre os erros que ocorrerem. 
 
 \newpage
 
 ## Armazenando dados
+
+
+
+### Usando `json.dump()` e `json.load()`
+### Salvando e lendo dados gerados pelo usuário
+### Refatoração
 
 \newpage
 
