@@ -1,6 +1,6 @@
-ESCRITO EM 17/12/24
+ESCRITO EM 18/12/24
 ---
-PARA 18/12/24
+PARA 19/12/24
 ---
 Subir github:
 
@@ -11,8 +11,6 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
-		- Exceções
-			- Decidindo quais erros devem ser informados
 		- Armazenando dados
 			- Usando json.dump() e json.load()
 			- Salvando e lendo dados gerados pelo usuário
@@ -25,4 +23,6 @@ Afazeres:
 				- 10
 		- Cap. 10:
 			-Exercicios Cap. 10:
-				- 10
+				- 11
+				- 12
+				- 13
