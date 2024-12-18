@@ -5664,6 +5664,23 @@ Um código bem escrito, testado de modo apropriado, não será muito suscetível
 
 
 ### Usando `json.dump()` e `json.load()`
+
+Resumo:
+
+  1. Módulo `json`:
+   
+    Permite carregar e descarregar dados Python simples em um arquivo `.json`.
+
+  2. `json.dump(dados,nome_arquivo.json)`:
+   
+    Armazena um conjunto de dados, formato de lista, no arquivo `.json`.
+  
+  3. `json.load(nome_arquivo.json)`:
+   
+    Carrega as informações armazenadas no arquivo `.json`.
+
+\newpage
+
 ### Salvando e lendo dados gerados pelo usuário
 ### Refatoração
 
