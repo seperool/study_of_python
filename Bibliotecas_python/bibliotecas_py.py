@@ -10,6 +10,7 @@ import math #Amplia as funções matematicas (básicas, trigonométricas, estat�
 import statistics
 import numpy as np
 import pandas as pd
+import json
 
 import tensorflow as tf
 from tensorflow import keras
