@@ -5662,7 +5662,11 @@ Um código bem escrito, testado de modo apropriado, não será muito suscetível
 
 ## Armazenando dados
 
+Quando os usuários fecham um programa, quase sempre você vai querer salvar as informações que eles forneceram. Uma maneira simples de fazer isso envolve armazenar seus dados usando o módulo `json`.
 
+O módulo `json` permite descarregar estruturas de dados Python simples em um arquivo e carregar os dados desse arquivo na próxima vez que o programa executar. Também podemos usar `json` para compartilhar dados entre diferentes programas Python. Melhor ainda, o formato de dados JSON não é especifico de Python, portanto podemos compartilhar armazenados em formato JSON com pessoas que trabalhem com várias outras linguagens de programação. É um formato útil e portável, além de ser fácil de aprender.
+
+O formato JSON (*JavaScript Object Notation*, ou Notação de Objetos JavaScript) foi originalmente desenvolvida para JavaScript. Apesar disso, tornou-se um formato comum, usado por muitas linguagens, incluindo Python.
 
 ### Usando `json.dump()` e `json.load()`
 
