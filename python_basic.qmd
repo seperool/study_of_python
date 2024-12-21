@@ -5670,6 +5670,8 @@ O formato JSON (*JavaScript Object Notation*, ou Notação de Objetos JavaScript
 
 ### Usando `json.dump()` e `json.load()`
 
+
+
 Resumo:
 
   1. Módulo `json`:
