@@ -1,6 +1,6 @@
-ESCRITO EM 05/01/25
+ESCRITO EM 06/01/25
 ---
-PARA 06/01/25
+PARA 07/01/25
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 10 - Arquivos e exceções
 		- Armazenando dados
-			- Usando json.dump() e json.load()
 			- Salvando e lendo dados gerados pelo usuário
 			- Refatoração
 	- Cap. 11 - Testando código
