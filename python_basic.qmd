@@ -5670,7 +5670,67 @@ O formato JSON (*JavaScript Object Notation*, ou Notação de Objetos JavaScript
 
 ### Usando `json.dump()` e `json.load()`
 
+Vamos escrever um pequeno programa que armazene um conjunto de números e 
+outro que leia esses números de volta na memória. 
+O primeiro programa usará `json.dump()` para armazenar o conjunto de números, e o segundo 
+programa usará `json.load()`.
 
+A função `json.dump()` aceita dois argumentos: um dado para armazenar e 
+um objeto arquivo que pode ser usado para armazenar o dado. Eis o modo como 
+podemos usar essa função para armazenar um lista de números.  
+Exemplo:
+```
+#Módulo
+import json
+
+#Lista a ser salva
+numbers = [2,3,5,7,11,13]
+
+#Caminho (Path) file
+filename = "numbers.json"
+
+#Escrever arquivo json
+with open(filename,'w') as f_obj:
+    json.dump(numbers, f_obj) #Salvar valores json
+```
+
+Inicialmente importamos o módulo `json` e criamos uma lista de números 
+com o qual trabalharemos. Escolhemos o nome de um arquivo em que 
+armazenaremos a lista de números. É comum usar a extensão de arquivo `.json` 
+para indicar que os dados do arquivo estão armazenados em formato JSON. 
+Em seguida, abrimos o arquivo em **modo de escrita** ('w'), o que permite a `json` 
+escrever os dados no arquivo. Usamos a função `json.dump()` para armazenar a 
+lista `numbers` no arquivo `numbers.json`.
+
+Esse programa não tem saída. Os dados estão armazenados em um formato 
+que se parece com Python.
+
+Agora escrevemos um programa que use `json.load()` para ler a lista de volta 
+para a memória.
+```
+#Módulo
+import json
+
+#Arquivo a ser lido
+filename = 'numbers.json'
+
+#Abrir arquivo
+with open(filename) as f_obj:
+    numbers = json.load(f_obj) #Lendo arquivo json
+    
+print(numbers)
+print(type(numbers))
+```
+
+Desta vez, quando abrimos o arquivo, fazemos isso em modo de leitura, pois o Python 
+precisará apenas ler dados do arquivo. Usamos a função `json.load()` para carregar 
+as informações armazenadas em `numbers.json` e as guardamos na variável `numbers`. 
+Por fim, exibimos a lista de números recuperada. Podemos ver que é a mesma lista 
+criada em `number_write.py`.
+
+Essa é uma maneira simples de compartilhar dados entre dois programas.
+
+\newpage
 
 Resumo:
 
@@ -5689,6 +5749,9 @@ Resumo:
 \newpage
 
 ### Salvando e lendo dados gerados pelo usuário
+
+\newpage
+
 ### Refatoração
 
 \newpage
