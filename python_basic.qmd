@@ -5750,6 +5750,8 @@ Resumo:
 
 ### Salvando e lendo dados gerados pelo usuário
 
+
+
 \newpage
 
 ### Refatoração
