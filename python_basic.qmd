@@ -5750,7 +5750,23 @@ Resumo:
 
 ### Salvando e lendo dados gerados pelo usuário
 
+Salvar dados com `json` é conveniente quando trabalhamos com dados gerados pelo usuário porque, se você não salvar as informações de seus usuários de algum modo, elas serão perdidas quando o programa parar de executar. Vamos observar um exemplo em que pedimos aos usuários que forneçam seus nomes na primeira vez em que o programa executar e, então, o programa deverá lembrar esses nomes quando for executado novamente.
 
+Vamos começar armazenando o nome do usuário:
+```
+#Bibliotecas
+import json
+
+#Entrada do usuário, nome
+username = input("What is your name? ")
+
+filename = "username.json" #Nome do arquivo
+
+#Escrevendo arquivo json, uso da função json.dump()
+with open(filename,'w') as f_obj:
+    json.dump(username, f_obj) #Descarrega dados em um arquivo json
+    print("We'll remember you when you come back, " + username + "!")
+```
 
 \newpage
 
