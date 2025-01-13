@@ -5768,6 +5768,48 @@ with open(filename,'w') as f_obj:
     print("We'll remember you when you come back, " + username + "!")
 ```
 
+Pedimos o nome do usuário para que seja armazenado. Em seguida, usamos `json.dump()`, passando-lhe um nome de usuário e um objeto arquivo em que esse nome será armazenado. Então exebimos uma mensagem informando o usuário que armazenamos suas informações.
+
+Vamos agora escrever um novo programa que faça uma saudação a um usuário cujo nome já esta armazenado.
+```
+#Biblioteca
+import json #Biblioteca json
+
+#Patch arquivo json
+filename = "username.json"
+
+with open(filename) as f_obj: #Abrindo arquivo
+    username = json.load(f_obj) #Carrega informações armazenadas
+    print("Welcome back, " + username + "!")
+```
+
+Usamos `json.load()` para ler as informações armazenadas em `username.json` na variável `username`. Agora que recuperamos o nome do usuário, podemos lhe desejar as boas-vindas de volta.
+
+Precisamos combinar esses dois programas em um só arquivo. Quando alguém executar `remember_me.py`, queremos recuperar seu nome de usuário da memória, se for possível; assim, começaremos com um bloco `try`, que tentará recuperar o nome do usuário. Se o arquivo `username.json` não existir, faremos o bloco `except` pedir um nome de usuário e armazená-lo em username.json para ser usado da próxima vez.
+```
+import json
+
+# Carrega o nome do usuário se foi armazenado anteriormente
+# Caso contrário, pede que o usuário forneça o nome e armazena essa informação
+filename = "username.json"
+
+try:
+    with open(filename) as f_obj:
+        username = json.load(f_obj)
+except FileNotFoundError:
+    username = input("What is your name? ")
+    with open(filename,'w') as f_obj:
+        json.dump(username,f_obj)
+        print("We'll remember you when you como back, "+
+              username + "!")
+else:
+    print("Wellcome back, " + username + "!")
+```
+
+Não há nenhum código novo aqui; os blocos de código dos dois últimos exemplos simplesmente foram combinados em um só arquivo. Tentamos abrir o arquivo `username.json`. Se esse arquivo existir, lemos o nome do usuário de volta para a memória. e exibimos uma mensagem desejando boas-vindas de volta ao usuário no bloco `else`. Se essa é a primeira vez que o usuário executa o programa, `username.json` não existirá e um `FileNotFoundError` ocorrerá. O Python prosseguirá para o bloco `except`, em que pedimos ao usuário que forneça o seu nome. Então usamos `json.dump()` para armazenar o nome do usuário e exibimos uma saudação.
+
+Qualquer que seja o bloco executado, o resultado será um nome de usuário e uma saudação apropriada.
+
 \newpage
 
 ### Refatoração
