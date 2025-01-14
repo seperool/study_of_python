@@ -5814,6 +5814,73 @@ Qualquer que seja o bloco executado, o resultado será um nome de usuário e uma
 
 ### Refatoração
 
+Com frequência você chegará a um ponto em que seu código funcionará, mas reconhecerá que ele poderia ser melhorado se fosse dividido em uma série de funções com tarefas específicas. Esse processo se chama *refatoração*. A refatoração deixa seu código mais limpo, mais fácil de compreender e de estender.
+
+Podemos refatorar `remember_me.py` passando a maior parte de sua lógica para uma ou mais funções. O foco de `remember_me.py` está na saudação ao usuário, portanto vamos transferir todo o código existente para uma função chamada `greet_user()`.
+```
+import json
+
+def greet_user():
+    """Saúda o usuário pelo nome."""
+    # Carrega o nome do usuário se foi armazenado anteriormente
+    # Caso contrário, pede que o usuário forneça o nome e armazena essa informação
+    filename = "username.json"
+
+    try:
+        with open(filename) as f_obj:
+            username = json.load(f_obj)
+    except FileNotFoundError:
+        username = input("What is your name? ")
+        with open(filename,'w') as f_obj:
+            json.dump(username,f_obj)
+            print("We'll remember you when you como back, "+ 
+                  username + "!")
+    else:
+        print("Wellcome back, " + username + "!")
+
+greet_user()
+```
+
+Como estamos usando uma função agora, atualizamos os comentários com um docstring que reflete como o programa funciona no momento. Esse arquivo é um pouco mais limpo, porém a função `greet_user()` faz mais do que simplesmente saudar o usuário - ela também recupera um nome de usuário armazenado, caso haja um, e pede que o usuário forneça um novo nome, caso não exista.
+
+\newpage
+
+Vamos refatorar `greet_user()` para que não faça tantas tarefas diferentes. começaremos transferindo o código para recuperar um nome de usuário já armazenado para uma função diferente.
+```
+import json
+
+def get_stored_username():
+    """Obtém o nome do usuário já armazenado se estiver disponível."""
+    # Carrega o nome do usuário se foi armazenado anteriormente
+    # Caso contrário, pede que o usuário forneça o nome e armazena essa informação
+    filename = "username.json"
+
+    try:
+        with open(filename) as f_obj:
+            username = json.load(f_obj)
+    except FileNotFoundError:
+        return None
+    else:
+        return username
+
+def greet_user():
+    """Saúda o usuário pelo nome."""
+    username = get_stored_username()
+    if username:
+        print("Welcome back, " + username + "!")
+    else:
+        username = input("What is your name? ")
+        filename = "username.json"
+        with open(filename,'w') as f_obj:
+            json.dump(username, f_obj)
+            print("We'll remember you when you come back, " + 
+                  username + "!")
+
+greet_user()
+```
+
+
+
 \newpage
 
 # Testando o código
