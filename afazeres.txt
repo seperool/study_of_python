@@ -1,6 +1,6 @@
-ESCRITO EM 14/01/25
+ESCRITO EM 15/01/25
 ---
-PARA 15/01/25
+PARA 16/01/25
 ---
 Subir github:
 
@@ -11,6 +11,17 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 11 - Testando código
+		- Testando uma função
+			- Testes de unidade e casos de teste
+			- Um teste que passa
+			- Um teste que falha
+			- Respondendo a um teste que falhou
+			- Adicionando novos testes
+		- Testando uma classe
+			- Uma variedade de métodos de asserção
+			- Uma classe para testar
+			- Testando a classe `AnonymousSurvey`
+			- Método `setUp()`
 	- Scripts:
 		- Cap. 3:
 			- Exercicios Cap. 3:
@@ -18,6 +29,4 @@ Afazeres:
 				- 10
 		- Cap. 10:
 			-Exercicios Cap. 10:
-				- 11
-				- 12
 				- 13
