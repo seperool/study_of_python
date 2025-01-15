@@ -5928,7 +5928,18 @@ Cada função nessa última versão de `remember_me.py` tem um propósito único
 
 # Testando o código
 
+## Testando uma função
+### Testes de unidade e casos de teste
+### Um teste que passa
+### Um teste que falha
+### Respondendo a um teste que falhou
+### Adicionando novos testes
 
+## Testando uma classe
+### Uma variedade de métodos de asserção
+### Uma classe para testar
+### Testando a classe `AnonymousSurvey`
+### Método `setUp()`
 
 \newpage
 
