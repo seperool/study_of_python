@@ -1,6 +1,6 @@
-ESCRITO EM 13/01/25
+ESCRITO EM 14/01/25
 ---
-PARA 14/01/25
+PARA 15/01/25
 ---
 Subir github:
 
@@ -10,9 +10,6 @@ Afazeres:
 	- Cap. 4 - Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-	- Cap. 10 - Arquivos e exceções
-		- Armazenando dados
-			- Refatoração
 	- Cap. 11 - Testando código
 	- Scripts:
 		- Cap. 3:
