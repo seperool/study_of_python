@@ -5928,6 +5928,14 @@ Cada função nessa última versão de `remember_me.py` tem um propósito único
 
 # Testando o código
 
+Quando escrevemos uma função ou uma classe, podemos também escrever testes para esse código. Os testes provam que seu código funciona e deveria em resposta a todos os tipos de entrada para os quais ele foi projetado para receber. Ao escrever testes, você poderá estar confiante de que seu código funciona corretamente quando mais pessoas começarem a usar seus programas.
+
+Você também poderá testar novos códigos a medida que adicioná-los para garantir que suas alterações não afetem o comportamento já existente em seu programa. Todo programador comete erros, portanto todo programador deve testar seus códigos com frequência, identificando os problemas antes que os usuários os encontrem.
+
+Aprenderemos a testar o código usando ferramentas do módulo `unittest` de python. Veremos como criar um caso de teste e verificar se um conjunto de entradas resulta na saída desejada. Conheceremos a aparência de um teste que passa e de um teste que não passa, e veremos como um teste que falha pode nos ajudar a melhorar o código.
+
+Aprenderemos a testar funções e classes, e você começará a entender quantos testes devem ser escritos para um projeto.
+
 ## Testando uma função
 ### Testes de unidade e casos de teste
 ### Um teste que passa
