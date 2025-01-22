@@ -11,6 +11,7 @@ import statistics
 import numpy as np
 import pandas as pd
 import json
+import unittest #Biblioteca para testes códigos
 
 import tensorflow as tf
 from tensorflow import keras
