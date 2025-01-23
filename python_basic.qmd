@@ -5937,7 +5937,27 @@ Aprenderemos a testar o código usando ferramentas do módulo `unittest` de pyth
 Aprenderemos a testar funções e classes, e você começará a entender quantos testes devem ser escritos para um projeto.
 
 ## Testando uma função
+
+
+
 ### Testes de unidade e casos de teste
+
+Resumo:
+
+* *Teste de unidade*:
+  
+  Verifica se um aspecto específico do comportamento de uma função esta correto.
+
+* *Caso de teste*:
+  
+  É uma coleção de testes de unidade que, em conjunto, prova que uma função se comporta como deveria em todas as situações que você espera que ela trate.
+
+* Caso de teste com *Cobertura completa*:
+  
+  É composto de uma variedade de de testes de unidade que inclui todas as possiveis maneiras de usar uma função.
+
+\newpage
+
 ### Um teste que passa
 ### Um teste que falha
 ### Respondendo a um teste que falhou
