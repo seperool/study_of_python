@@ -5938,7 +5938,43 @@ Aprenderemos a testar funções e classes, e você começará a entender quantos
 
 ## Testando uma função
 
+Para aprender a testar, precisamos de um código para testes. Eis uma função simples que aceita um primeiro nome e um sobrenome e devolve um nome completo formatado de modo elegante.
 
+```
+def get_formatted_name(first,last):
+    """Gera um nome completo formatado de modo elegante."""
+    full_name = first + " " + last
+    return full_name.title()
+```
+
+A função `get_formatted_name()` combina o primeiro nome e o sobrenome com um espaço entre eles para compor um nome completo e então converte as primeiras letras do nome para maiúsculas e devolve o nome completo.
+
+Para verificar se `get_formatted_name()` funciona, vemos criar um programa que use essa função. O programa `names.py` permite que os usuários forneçam um primeiro nome e um sobrenome e vejam um nome completo formatado de modo elegante.
+
+\newpage
+
+```
+from name_function import get_formatted_name  # Importa função
+
+print("Enter 'q' at any time to quit.")  # Mensagem para sair
+while True:  # Loop principal
+    first = input("\nPlase give me a first name: ")  # Pede primeiro nome
+    if first == 'q':  # Sai se digitar 'q'
+        break
+    last = input("\nPlase give me a last name: ")  # Pede último nome
+    if last == 'q':  # Sai se digitar 'q'
+        break
+    
+    formatted_name = get_formatted_name(first, last)  # Formata o nome
+    print("\tNeatly formatted name : " + formatted_name + ".")  
+    # Imprime nome formatado
+```
+
+Esse programa importa `get_formatted_name()` de `name_function.py`. O usuário pode fornecer uma série de primeiros nomes e de sobrenomes e ver os nomes completos formatados.
+
+Podemos observar que os nomes gerados nesse caso estão corretos. Porém, vamos supor que queremos modificar `get_formatted_name()` para que ele seja capaz de lidar com nomes do meio também. Quando fizermos isso, queremos ter certeza de que não causamos erros no modo como a função trata os nomes que tenham apenas primeiro nome e sobrenome. Poderiamos testar nosso código executando `names.py` e fornecendo um nome como `Janis Joplin` sempre que modificarmos `get_formatted_name()`, mas isso seria tedioso. Felizmente o Python oferece um modo eficiente de automatizar os testes da saída de uma função. Se os testes de `get_formatted_name()` forem automatizados, poderemos sempre ter a confiança de que a função estará correta quando fornecemos os tipos de nomes para os quais os testes forem escritos.
+
+\newpage
 
 ### Testes de unidade e casos de teste
 
