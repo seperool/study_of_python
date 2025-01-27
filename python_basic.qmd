@@ -5978,6 +5978,16 @@ Podemos observar que os nomes gerados nesse caso estão corretos. Porém, vamos 
 
 ### Testes de unidade e casos de teste
 
+O módulo `unittest` da biblioteca-padrão de Python oferece as ferramentas para testar seu código.
+
+Conceitos básicos de teste:
+
+  * Um **teste de unidade**  verifica se um aspecto específico do comportamento de uma função está correto.
+
+  * Um **caso de teste** é uma coleção de testes de unidade que, em conjunto, prova que uma função se comporta como deveria em todas as situações que você espera que ela trate. Um bom caso de teste considera todos os tipos possíveis de entradas que uma função poderia receber e inclui testes para representar cada uma dessas situações.
+  
+  * Um caso de teste com **cobertura completa** é composto de uma variedade de testes de unidade que inclui todas as possíveis maneiras de usar uma função. Atingir a cobertura completa em um projeto de grande porte pode ser desanimador. Em geral, é suficiente escrever testes para os comportamentos críticos de seu código e então visar uma cobertura completa somente se o projeto começar a ter uso disseminado. 
+
 Resumo:
 
 * *Teste de unidade*:
@@ -5995,9 +6005,16 @@ Resumo:
 \newpage
 
 ### Um teste que passa
+
+
+
+\newpage
+
 ### Um teste que falha
 ### Respondendo a um teste que falhou
 ### Adicionando novos testes
+
+\newpage
 
 ## Testando uma classe
 ### Uma variedade de métodos de asserção
