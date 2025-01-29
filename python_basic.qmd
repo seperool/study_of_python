@@ -6006,7 +6006,28 @@ Resumo:
 
 ### Um teste que passa
 
+A sintaxe para criar um caso de teste exige um pouco de prática, mas depois que você o configura, será mais fácil adicionar outros casos de teste para suas funções. Para escrever um caso de teste para uma função, importe o módulo `unittest` e a função que você que testar. Em seguida crie uma classe que herde de `unittest.TestCase` e escreva uma série de métodos para testar diferentes aspectos do comportamento de sua função.
 
+Eis um caso de teste com um método que verifica se a função `get_formatted_name()` esta correta quando recebe um primeiro nome e um sobrenome:
+
+```
+import unittest  # Importa biblioteca de testes
+from name_function import get_formatted_name  # Importa função
+
+class NameTestCase(unittest.TestCase):  # Cria classe de teste
+  """Testes para 'name_function.py'"""  # Docstring da classe de teste
+
+  def test_first_last_name(self):  # Define um método de teste
+    """Nomes como 'janis joplin' funcionam?"""  # Docstring do método de teste
+    formatted_name = get_formatted_name('janis', 'joplin')  # Chama função para formatar nome
+    self.assertEqual(formatted_name, 'Janis Joplin')  # Verifica se o nome formatado está correto
+
+unittest.main()  # Executa os testes
+```
+
+* Inicialmente importamos `unittest` e a função `get_formatted_name()` que queremos testar.
+
+* Criamos uma classe chamada `NamesTestCase`, que conterá uma série de testes de unidade para `get_formatted_name()`. Você pode dar o nome que quiser para a classe, mas é melhor nomea-lá com palavras relacionadas a função que você está prestes a testar e usar a palavra *Test* no nome da classe. Essa classe deve herdar da classe `unittest.TestCase` para que o Python saiba executar os testes que você escrever.
 
 \newpage
 
