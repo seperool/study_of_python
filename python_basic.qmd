@@ -6031,6 +6031,8 @@ unittest.main()  # Executa os testes
 
   `NamesTestCase` contém um único método que testa um aspecto de `get_formatted_name()`. Chamamos esse método de `test_first_last_name()` porque estamos verificando se os nomes que têm apenas o primeiro nome e o sobrenome são formados corretamente. Qualquer método que comece com `test_` serpa executado de modo automático quando `test_name_function.py` for executado. Nesse método de teste, chamamos a função que queremos testar e armazenamos um valor de retorno que estamos interessados em testar. Nesse exemplo `get_formatted_name()` com os argumentos 'janis' e 'joplin' e armazenamos o resultado em `formatted_name`.
 
+\newpage
+
 * Método de *asserção*:
   
   Usamos um dos recursos mais úteis de `unittest`: um método de *asserção*.
@@ -6043,8 +6045,26 @@ unittest.main()  # Executa os testes
   ```
   self.assertEqual(formatted_name, 'Janis Joplin')
   ```
-  diz o seguinte:
+  diz o seguinte:  
+  "Compare o valor em `formatted_name` com a string 'Janis Joplin'. Se forem iguais conforme esperado, tudo bem. Contudo, se não forem iguais, me avise!"
 
+* A linha `unittest.main()` diz para o Python executar os testes desse arquivo.
+
+  Quando executamos `test_name_function.py`, vemos a saida a seguir:
+
+  ```
+  .
+  ----------------------------------------------------------------------
+  Ran 1 test in 0.001s
+  
+  OK
+  ```
+
+  * O ponto na primeira linha de saída nos informa que um único teste passou.
+  * A próxima linha diz que o Python executou 1 teste e durou menos de $0,001$ segundos para faze-lo.
+  * O 'OK' no final informa que todos os testes de unidade do caso de teste passaram.
+
+  Essa saída mostra que a função `get_formatted_name()` sempre funcionará para nomes que tenham o primeiro nome e o sobrenome, a menos que a função seja modificada. Se modificarmos `get_formatted_name()`, poderemos executar esse teste novamente. Se o caso de teste passar, saberemos que a função continua funcionando para nomes como 'Janis Joplin'.
 
 \newpage
 
