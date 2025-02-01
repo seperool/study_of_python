@@ -6072,9 +6072,70 @@ unittest.main()  # Executa os testes
 
 Como é a aparência de um teste que falha? Vamos modificar `get_formatted_name()` para que possa tratar nomes do meio, mas faremos isso de modo que a função gere um erro para nomes que tenham apenas um primeiro nome e um sobrenome, como 'Janis Joplin'.
 
+A seguir, apresentamos uma nova versão de `get_formatted_name()` que exige um argumento para um nome do meio:
+```
+def get_formatted_name(first, middle, last):
+    """Gera um nome completo formatado de modo elegante.
+
+    Args:
+        first (str): O primeiro nome.
+        middle (str): O nome do meio.
+        last (str): O sobrenome.
+
+    Returns:
+        str: O nome completo formatado.
+    """
+
+    # Concatena as partes do nome com espaços
+    full_name = first + " " + middle + " " + last
+
+    # Formata o nome para capitalizar a primeira letra de cada palavra
+    return full_name.title()
+```
+
+Essa versão deve funcionar para pessoas com nomes do meio, mas quando a testamos, vemos que ela deixou de funcionar para pessoas que tenham apenas um primeiro nome e um sobrenome. 
+
+\newpage
+
+Dessa vez, a execução do arquivo `test_name_function.py` fornece o resultado a seguir:
+```
+E
+======================================================================
+ERROR: test_first_last_name (__main__.NameTestCase.test_first_last_name)
+Nomes como 'janis joplin' funcionam?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sergio/Programacao/python/Cap11-Testando_codigo/01-Testando_funcao/test_name_function.py", line 17, in test_first_last_name
+    formatted_name = get_formatted_name('janis', 'joplin')  # Chama função para formatar nome
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_formatted_name() missing 1 required positional argument: 'last'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (errors=1)
+```
+
+Há muitas informações aqui, pois há muitos dados que você precisa saber quando um teste falha:
+
+  * O primeiro item da saída é um único `E`, que nos informa que um teste de unidade do caso de teste resultou em erro.
+
+  * A seguir, vemos que `test_first_last_name()` em `NamesTestCase` causou um erro. Saber qual teste falhou será crucial quando o seu caso de teste tiver muitos testes de unidade.
+
+  * Um tracenack padrão, que informa que a chamada de função `get_formatted_name('janis','joplin')` não funciona mais, pois um argumento posicional obrigatório está ausente.
+
+  * Também podemos ver que um único teste de unidade foi executado.
+
+  * Por fim, vemos uma mensagem adicional informando que o caso de teste como um todo falhou e que houve um erro em sua execução. Essa informação aparece no final da saída para que possa ser vista de imediato; você não vai querer fazer uma rolagem para cima em uma listagem longa de saída para descobrir quantos testes falharem.
+
 \newpage
 
 ### Respondendo a um teste que falhou
+
+
+
+\newpage
+
 ### Adicionando novos testes
 
 \newpage
