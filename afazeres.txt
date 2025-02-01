@@ -1,6 +1,6 @@
-ESCRITO EM 31/01/25
+ESCRITO EM 01/02/25
 ---
-PARA 01/02/25
+PARA 02/02/25
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 11 - Testando código
 		- Testando uma função
-			- Um teste que falha
 			- Respondendo a um teste que falhou
 			- Adicionando novos testes
 		- Testando uma classe
