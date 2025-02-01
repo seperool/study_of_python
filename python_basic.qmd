@@ -6069,6 +6069,11 @@ unittest.main()  # Executa os testes
 \newpage
 
 ### Um teste que falha
+
+Como é a aparência de um teste que falha? Vamos modificar `get_formatted_name()` para que possa tratar nomes do meio, mas faremos isso de modo que a função gere um erro para nomes que tenham apenas um primeiro nome e um sobrenome, como 'Janis Joplin'.
+
+\newpage
+
 ### Respondendo a um teste que falhou
 ### Adicionando novos testes
 
