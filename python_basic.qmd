@@ -6132,7 +6132,13 @@ Há muitas informações aqui, pois há muitos dados que você precisa saber qua
 
 ### Respondendo a um teste que falhou
 
+O que devemos fazer quando um teste falha? Supondo que você esteja verificando as condições corretas,um teste que passa significa que a função esta se comportando de forma apropriada e um teste que falha quer dizer que há um erro no novo código que você escreveu. Assim, **se um teste falhar, não mude o teste. Em vez disso, corrija o código que fez o teste falhar**. Analise as alterações que você acabou de fazer na função e descubra como elas afetaram o comportamento desejado.
 
+Exemplo:
+
+Nesse caso, `get_formatted_name()` costumava exigir apenas dois parâmetros: um primeiro nome e um sobrenome. Agora ele exige um primeiro nome, um nome do meio e um sobrenome. A adição do parâmetro obrigatório para o nome do meio fez o comportamento desejado de `get_formatted_name()` apresentar problemas. A melhor opção nesse caso é deixar o nome do meio opcional. Feito isso, nosso teste 'Janis Joplin' deverá passar novamente e poderemos aceitar nomes do meio também. Vamos modificar `get_formatted_name()` de modo que os nomes do meio sejam opcionais e então executar o caso de teste novamente. Se o teste passar, prosseguiremos para garantir que a função trate os nomes do meio de forma apropriada.
+
+Para deixar os nomes do meio opcionais, passamos o parâmetro `middle` para o final da lista de parâmetros na definição da função e lhe oferecemos um valor default vazio. Além disso, acrescentamos um teste `if` que compõe o nome completo de forma apropriada, comforme um nome do meio tenha sido fornecido ou não.
 
 ```
 def get_formatted_name(first, last, middle=''):
@@ -6157,9 +6163,42 @@ def get_formatted_name(first, last, middle=''):
     return full_name.title()
 ```
 
+Nessa nova versão de `get_formatted_name()`, o nome do meio é opcional. Se um nome do meio for passado para a função (`if middle:`), o nome completo conterá um primeiro nome, um nome do meio e um sobrenome. Caso contrário, o nome completo será constituído apenas de um primeiro nome e de um sobrenome. Agora a função deve estar adequada para trabalhar com os dois tipos de nomes. Para descobrir se a função continua apropriada para nomes como 'Janis Joplin', vamos executar `test_name_function.py` novamente.
+
+```
+.
+----------------------------------------------------------------------
+Ran 1 tests in 0.000s
+
+OK
+```
+
+O caso de teste agora passou. É a situação ideal: quer dizer que a função está correta para nomes como 'Janis Joplin' de novo, sem que tenhamos que testar a função manualmente. Corrigir nossa função foi fácil porque o teste que falhou nos ajudou a identificar o novo código que interferiu no comportamento existente.
+
 \newpage
 
 ### Adicionando novos testes
+
+```
+import unittest  # Importa a biblioteca unittest para testes
+
+from name_function import get_formatted_name  # Importa a função que será testada
+
+class NameTestCase(unittest.TestCase):  # Define uma classe para os casos de teste, herdando de unittest.TestCase
+    """Testes para 'name_function.py'"""  # Docstring da classe, descrevendo o propósito dos testes
+
+    def test_first_last_name(self):  # Define um método de teste para nomes com primeiro e último nome
+        """Nomes como 'janis joplin' funcionam?"""  # Docstring do método, explicando o caso de teste específico
+        formatted_name = get_formatted_name('janis', 'joplin')  # Chama a função com um nome de exemplo
+        self.assertEqual(formatted_name, 'Janis Joplin')  # Verifica se o resultado formatado é o esperado
+
+    def test_first_last_middle_name(self):  # Define um método de teste para nomes com primeiro, do meio e último nome
+        """Nomes como 'Wolfgang Amadeus Mozart' funcionam?"""  # Docstring do método, explicando o caso de teste
+        formatted_name = get_formatted_name('wolfgang', 'mozart', 'amadeus')  # Chama a função com um nome de exemplo
+        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')  # Verifica se o resultado formatado é o esperado
+
+unittest.main()  # Executa os testes definidos na classe
+```
 
 \newpage
 
