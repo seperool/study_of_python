@@ -1,6 +1,6 @@
-ESCRITO EM 04/02/25
+ESCRITO EM 05/02/25
 ---
-PARA 05/02/25
+PARA 06/02/25
 ---
 Subir github:
 
@@ -11,8 +11,6 @@ Afazeres:
 		- Listas númericas
 			- Estatísticas simples com lista de números
 	- Cap. 11 - Testando código
-		- Testando uma função
-			- Adicionando novos testes
 		- Testando uma classe
 			- Uma variedade de métodos de asserção
 			- Uma classe para testar
@@ -25,5 +23,4 @@ Afazeres:
 				- 10
 		- Cap. 10:
 			-Exercicios Cap. 11:
-			 - 1
-			 - 2
+			 - 3
