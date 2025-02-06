@@ -1,6 +1,6 @@
-ESCRITO EM 05/02/25
+ESCRITO EM 06/02/25
 ---
-PARA 06/02/25
+PARA 07/02/25
 ---
 Subir github:
 
@@ -21,6 +21,6 @@ Afazeres:
 			- Exercicios Cap. 3:
 				- 9
 				- 10
-		- Cap. 10:
+		- Cap. 11:
 			-Exercicios Cap. 11:
 			 - 3
