@@ -65,16 +65,66 @@ import json
 ```
 
 \newpage
+\pagenumbering{arabic}
 
-# Diagrama de estudo
+# Diagramas de estudo de Python
 
 ```{mermaid}
+%%| fig-cap: "Plano de estudo de Python"
 flowchart LR
   A[Python básico] --> B(Projeto)
   B --> C{Estatística}
   C --> E[Analise de dados]
   C --> F[Mineração de dados]
 ```
+
+\newpage
+
+```{mermaid}
+%%| fig-width: 6.5
+%%| fig-height: 7.5
+%%| fig-cap: "Python Básico"
+
+flowchart LR
+  A[Python básico] --> B{Básico}
+  B --> C[Operadores]
+  B --> D[Tipos de dados]
+  B --> E[Váriaveis]
+  B --> F[Listas]
+  B --> G[Tuplas]
+  B --> H[Dicionários]
+  B --> I[Conjuntos]
+  B --> J{Loops}
+  J --> JA[for]
+  J --> JB[while]
+  B --> K{Condições}
+  K --> KA[if]
+  K --> KB[elif]
+  K --> KC[else]
+  B --> L{Entradas e saídas}
+  L --> LA[print]
+  L --> LB[input]
+```
+
+\newpage
+
+```{mermaid}
+%%| fig-cap: "Python médio"
+%%| fig-width: 6.5
+flowchart LR
+  A[Python médio] --> B{Médio}
+  B --> C[Funções]
+  B --> D[Classes]
+  B --> E[Manipulação de arquivos]
+  B --> F[Módulos e pacotes]
+  B --> G[Erros e exceções]
+  B --> H[Ambientes virtuais]
+  B --> I{Testes}
+  I --> IA[Funções]
+  I --> IB[Classes]
+```
+
+\newpage
 
 # Variáveis e tipos de dados simples
 
@@ -100,7 +150,6 @@ message = "Hello world!"
 print(message)
 ```
 
-\pagenumbering{arabic}
 \newpage
 
 ### `.format()`
@@ -6221,10 +6270,54 @@ OK
 \newpage
 
 ## Testando uma classe
+
+
+
 ### Uma variedade de métodos de asserção
 ### Uma classe para testar
 ### Testando a classe `AnonymousSurvey`
 ### Método `setUp()`
+
+\newpage
+
+# Principais bibliotecas
+
+* Análise de dados:
+
+  * numpy
+  * Pandas
+  * Matplotlib
+  * Seaborn
+  * json
+  * Scikitlearn
+
+* Inteligencia artificial (Bibliotecas ou frameworks):
+
+  * TensorFlow
+  * Keras
+  * PyTorch
+  * Theano
+  * MxNet
+  * Caffe
+  * CNTK
+
+* Manipulação de imagens:
+
+  * Pillow
+  * OpenCV
+
+* Big Data e computação distribuida:
+  
+  * ApacheSpark
+  * Hadoop
+
+* Automação de tarefas:
+
+  * OS
+  * RPA
+  * APScheduler
+  * Watchdog
+  * Paramiko
 
 \newpage
 
