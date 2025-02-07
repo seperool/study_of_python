@@ -6271,9 +6271,14 @@ OK
 
 ## Testando uma classe
 
-
+Na primeira parte desse capítulo escrevemos testes para uma única função. Agora vamos escrever testes para uma classe. Você usará classes em muitos de seus proprios programas, portanto é conveniente ser capaz de provar que suas classes funcionam corretamente. Se os testes para uma classe com a qual você estiver trabalhando passarem, você poderá estar confiante de que as melhorias que fizer nessa classe não causarão falhas por acidente no comportamento atual.
 
 ### Uma variedade de métodos de asserção
+
+
+
+\newpage
+
 ### Uma classe para testar
 ### Testando a classe `AnonymousSurvey`
 ### Método `setUp()`
