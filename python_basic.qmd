@@ -6275,7 +6275,31 @@ Na primeira parte desse capítulo escrevemos testes para uma única função. Ag
 
 ### Uma variedade de métodos de asserção
 
+O Python disponibiliza vários métodos de asserção na classe `unittest.TestCase`. Os métodos de asserção testam se uma condição que você acredita ser verdadeira em um ponto específico do seu código é realmente verdadeira.
 
+Se a condição for verdadeira conforme esperado, sua pressuposição sobre o comportamento dessa parte do programa será confirmada; você pode estar confiante de que não há erros.
+
+Se a condição que você supõe ser verdadeira não for, o Python levantará uma exceção.
+
+A @tbl-metodosassercao descreve seis métodos de asserção comumente usados. Com esses métodos, podemos verificar se os valores devolvidos são ou não são iguais aos valores esperados, se os valores são `True` ou `False` e se os valores estão (`in`) ou não estão (`not in`) em uma lista. Você pode usar esses métodos somente em uma classe que herde de `unittest.TestCase`, portanto vamos observar como um desses métodos pode ser usado no contexto dos testes de uma classe propriamente dita.
+
+```{python}
+#| label: tbl-metodosassercao
+#| tbl-cap: Métodos de asserção disponíveis no módulo `unittest`
+#| echo: False
+
+from IPython.display import Markdown
+from tabulate import tabulate
+
+table = [["`assertEqual(a,b)`","Verifica se $a == b$."],
+        ["`assertNotEqual(a,b)`","Verifica se $a != b$."],
+        ["`assertTrue(x)`","Verifica se $x$ é `True`."],
+        ["`assertFalse(x)`","Verifica se $x$ é `False`."],
+        ["`assertIn(item,lista)`","Verifica se item esta em lista."],
+        ["`assertNotIn(item,lista)`","Verifica se item esta em lista."]]
+Markdown(tabulate(table, headers=["Método", "Uso"]))
+
+```
 
 \newpage
 
