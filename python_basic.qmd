@@ -6304,6 +6304,11 @@ Markdown(tabulate(table, headers=["Método", "Uso"]))
 \newpage
 
 ### Uma classe para testar
+
+
+
+\newpage
+
 ### Testando a classe `AnonymousSurvey`
 ### Método `setUp()`
 
