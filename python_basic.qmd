@@ -6335,6 +6335,63 @@ class AnonymousSurvey():
             print("- " + response) # Imprime cada resposta formatada
 ```
 
+Sobre a classe:
+
+  * Essa classe começa com uma pergunta fornecida por você para uma pesquisa e 
+  inclui uma lista vazia para armazenar as respostas.
+
+  * A classe tem métodos para exibir a pergunta da pesquisa, adicionar uma nova 
+  resposta a lista de respostas e exibir todas as respostas armazenadas na lista.
+
+  * Para criar uma instância dessa classe, tudo que precisamos fazer pe fornecer uma pergunta.
+
+  * Depois de ter criado uma instância que representa uma pesquisa em particular, você 
+  mostrará a pergunta da pesquisa com `show_question()`, armazenará uma resposta 
+  com `store_response()` e exibirá o resultado com `show_results()`.
+
+\newpage
+
+Para mostrar que a classe `AnonymousSurvey` funciona, vamos escrever um programa que 
+utilize essa classe:
+```
+# Importa a biblioteca e classe.
+from survey import AnonymousSurvey # Importa a classe AnonymousSurvey do arquivo survey.py
+
+# Define uma pergunta e cria uma pesquisa.
+question = "What language did you first learn to speak?" # Define a pergunta da pesquisa
+my_survey = AnonymousSurvey(question) # Cria uma instância da classe AnonymousSurvey com a pergunta definida
+
+# Mostra a pergunta e armazena as repostas da pergunta.
+my_survey.show_question() # Exibe a pergunta da pesquisa
+print("Enter 'q' at any time to quit.\n") # Instrui o usuário a digitar 'q' para sair
+while True: # Loop infinito para coletar respostas
+    response = input("Language: ") # Solicita a resposta do usuário
+    if response == 'q': # Verifica se o usuário digitou 'q'
+        break # Sai do loop se o usuário digitou 'q'
+    my_survey.store_response(response) # Armazena a resposta na pesquisa
+
+# Exibe os resultados da pesquisa.
+print("\nThank you to everyone who participated in the survay!") # Mensagem de agradecimento
+my_survey.show_results() # Exibe os resultados da pesquisa
+```
+
+Sobre o programa:
+
+  * Esse programa define uma pergunta ("What language did you 
+  first learn to speak?", ou seja, "Qual foi a primeira linguagem 
+  que você aprendeu a falar?") e cria um objeto `AnonymousSurvey` 
+  com essa pergunta.
+
+  * O programa chama `show_question()` para exibir a pergunta 
+  e então esperar as respostas. Cada resposta é armazenada à 
+  medida que é recebida. Quando todas as respostas tiverem sido 
+  fornecidas (o usuário digitou para sair), `show_results()` 
+  exibirá o resultado da pesquisa.
+
+\newpage
+
+
+
 \newpage
 
 ### Testando a classe `AnonymousSurvey`
