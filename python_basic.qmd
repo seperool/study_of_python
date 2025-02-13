@@ -6390,11 +6390,26 @@ Sobre o programa:
 
 \newpage
 
+Essa classe funciona para uma pesquisa anônima simples. No entanto, vamos supor que queremos aperfeiçoar `AnonymousSurvey` e o módulo em que ele se encontra, que é `survey.py`.
 
+**Propostas de aperfeiçoamentos da classe**:
+
+  * Poderíamos permitir que cada usuário forneça mais de uma resposta.
+
+  * Poderíamos escrever um método para listar apenas as respostas únicas e informar quantas vezes cada resposta foi dada.
+
+  * Também poderíamos escrever outra classe para administrar pesquisas não anônimas. 
+
+O comportamento atual da classe `AnonymousSurvey` correria o risco de ser afetado com a implementação de mudanças como essas. Por exemplo, é possível que, na tentativa de permitir que cada usuário forneça várias respostas, poderíamos acidentalmente mudar o modo como as respostas únicas são tratadas. Para garantir que não causaremos problemas no comportamento existente a medida que desenvolvemos esse módulo, poderiamos escrever testes para a classe.
 
 \newpage
 
 ### Testando a classe `AnonymousSurvey`
+
+
+
+\newpage
+
 ### Método `setUp()`
 
 \newpage
