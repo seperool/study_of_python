@@ -1,6 +1,6 @@
-ESCRITO EM 12/02/25
+ESCRITO EM 13/02/25
 ---
-PARA 13/02/25
+PARA 14/02/25
 ---
 Subir github:
 
@@ -12,7 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 11 - Testando código
 		- Testando uma classe
-			- Uma classe para testar
 			- Testando a classe `AnonymousSurvey`
 			- Método `setUp()`
 	- Scripts:
