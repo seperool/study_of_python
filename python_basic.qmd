@@ -6355,11 +6355,14 @@ Para mostrar que a classe `AnonymousSurvey` funciona, vamos escrever um programa
 utilize essa classe:
 ```
 # Importa a biblioteca e classe.
-from survey import AnonymousSurvey # Importa a classe AnonymousSurvey do arquivo survey.py
+# Importa a classe AnonymousSurvey do arquivo survey.py
+from survey import AnonymousSurvey
 
 # Define uma pergunta e cria uma pesquisa.
-question = "What language did you first learn to speak?" # Define a pergunta da pesquisa
-my_survey = AnonymousSurvey(question) # Cria uma instância da classe AnonymousSurvey com a pergunta definida
+# Define a pergunta da pesquisa
+question = "What language did you first learn to speak?"
+# Cria uma instância da classe AnonymousSurvey com a pergunta definida 
+my_survey = AnonymousSurvey(question) 
 
 # Mostra a pergunta e armazena as repostas da pergunta.
 my_survey.show_question() # Exibe a pergunta da pesquisa
@@ -6371,7 +6374,8 @@ while True: # Loop infinito para coletar respostas
     my_survey.store_response(response) # Armazena a resposta na pesquisa
 
 # Exibe os resultados da pesquisa.
-print("\nThank you to everyone who participated in the survay!") # Mensagem de agradecimento
+# Mensagem de agradecimento
+print("\nThank you to everyone who participated in the survay!")
 my_survey.show_results() # Exibe os resultados da pesquisa
 ```
 
@@ -6405,6 +6409,69 @@ O comportamento atual da classe `AnonymousSurvey` correria o risco de ser afetad
 \newpage
 
 ### Testando a classe `AnonymousSurvey`
+
+Vamos escrever um teste que verifique um aspecto 
+do comportamento de `AnonymousSurvey`. Escrevemos um teste 
+para verificar se uma resposta única à pergunta 
+da pesquisa é armazenada de forma apropriada. Usaremos 
+o método `assertIn()` para conferir se a resposta esta na 
+lista de respostas depois que ela for armazenada.
+```
+import unittest
+from survey import AnonymousSurvey
+
+class testAnonmyousSurvey(unittest.TestCase):
+    """Testes para a classe AnonmyousSurvey."""
+    
+    def test_store_single_response(self):
+        """Testa se uma única resposta é armazenada de forma apropriada."""
+        
+        # Define a pergunta da pesquisa
+        question = "What language did you first learn to speak?" 
+        # Cria uma instância da classe AnonymousSurvey
+        my_survey = AnonymousSurvey(question) 
+        # Armazena uma resposta
+        my_survey.store_response('English') 
+
+        # Verifica se a resposta foi armazenada
+        self.assertIn('English', my_survey.responses) 
+
+unittest.main() # Executa os testes
+```
+
+Sobre o teste:
+
+  * Começamos importando o módulo `unittest` e a classe que queremos 
+  testar, isto é, `AnonymousSurvey`.
+
+  * Chamamos nosso caso de teste de `TestAnonymousSurvey` 
+  que, novamente, herda de `unittest.TestCase`.
+
+  * O primeiro método de teste verificará se quando armazenamos 
+  uma resposta a pergunta da pesquisa, ela será inserida na lista 
+  de respostas da pesquisa. Um bom nome descritivo para esse método 
+  é `test_store_single_response()`. Se esse teste falhar, pelo nome do método mostrado 
+  na saída do teste que falhou saberemos que houve um problema na 
+  armazenagem de uma única resposta da pesquisa.
+
+  * **Para testar o comportamento de uma classe, precisamos criar uma instância dessa classe**. 
+  Criamos uma instância chamada `my_survey` com a pergunta "What language did you 
+  first learn to speak?".
+
+  * Armazenamos uma únicar resposta, *English*, usando o método 
+  `store_response()`.
+
+  * Então conferimos se a resposta foi armazenada corretamente confirmando 
+  se *English* está na lista `my_survey.responses()`.
+
+Quando executamos `test_survey.py`, vemos que o teste passa:
+```
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+```
 
 
 
