@@ -19,5 +19,16 @@ class testAnonmyousSurvey(unittest.TestCase):
         my_survey.store_response('English') # Armazena uma resposta
 
         self.assertIn('English', my_survey.responses) # Verifica se a resposta foi armazenada
+    
+    def test_store_three_response(self):
+        """Testa se três respostas são armazenadas de forma apropriada."""
+        question = "What language did you first learn to speak?" # Define a pergunta da pesquisa
+        my_survey = AnonymousSurvey(question) # Cria uma instância da classe AnonymousSurvey
+        responses = ['English','Spanish','Mandarin'] # Define uma lista de respostas
+        for response in responses: # Itera sobre a lista de respostas
+            my_survey.store_response(response) # Armazena cada resposta
+        
+        for response in responses: # Itera sobre a lista de respostas
+            self.assertIn(response, my_survey.responses) # Verifica se cada resposta foi armazenada
 
 unittest.main() # Executa os testes
