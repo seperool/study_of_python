@@ -6233,20 +6233,30 @@ Agora que sabemos que `get_formatted_name()` funciona para nomes simples novamen
 ```
 import unittest  # Importa a biblioteca unittest para testes
 
-from name_function import get_formatted_name  # Importa a função que será testada
+# Importa a função que será testada
+from name_function import get_formatted_name
 
-class NameTestCase(unittest.TestCase):  # Define uma classe para os casos de teste, herdando de unittest.TestCase
-    """Testes para 'name_function.py'"""  # Docstring da classe, descrevendo o propósito dos testes
+# Define uma classe para os casos de teste, herdando de unittest.TestCase
+class NameTestCase(unittest.TestCase):
+    """Testes para 'name_function.py'"""
 
-    def test_first_last_name(self):  # Define um método de teste para nomes com primeiro e último nome
-        """Nomes como 'janis joplin' funcionam?"""  # Docstring do método, explicando o caso de teste específico
-        formatted_name = get_formatted_name('janis', 'joplin')  # Chama a função com um nome de exemplo
-        self.assertEqual(formatted_name, 'Janis Joplin')  # Verifica se o resultado formatado é o esperado
+    # Define um método de teste para nomes com primeiro e último nome
+    def test_first_last_name(self):
+        """Nomes como 'janis joplin' funcionam?"""
 
-    def test_first_last_middle_name(self):  # Define um método de teste para nomes com primeiro, do meio e último nome
-        """Nomes como 'Wolfgang Amadeus Mozart' funcionam?"""  # Docstring do método, explicando o caso de teste
-        formatted_name = get_formatted_name('wolfgang', 'mozart', 'amadeus')  # Chama a função com um nome de exemplo
-        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')  # Verifica se o resultado formatado é o esperado
+        # Chama a função com um nome de exemplo
+        formatted_name = get_formatted_name('janis', 'joplin')
+        # Verifica se o resultado formatado é o esperado
+        self.assertEqual(formatted_name, 'Janis Joplin')
+
+    # Define um método de teste para nomes com primeiro, do meio e último nome
+    def test_first_last_middle_name(self):
+        """Nomes como 'Wolfgang Amadeus Mozart' funcionam?"""
+
+        # Chama a função com um nome de exemplo
+        formatted_name = get_formatted_name('wolfgang', 'mozart', 'amadeus')
+        # Verifica se o resultado formatado é o esperado
+        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')
 
 unittest.main()  # Executa os testes definidos na classe
 ```
@@ -6254,8 +6264,6 @@ unittest.main()  # Executa os testes definidos na classe
 Chamamos esse novo método de `test_first_last_middle_name()`. O nome do método deve começar com `test_` para que seja executado automáticamente quando `test_name_function.py` for executado. Nomeamos o método de modo a deixar claro qual é o comportamento de `get_formatted_name()` que estamos testando. Como resultado, se o teste falhar, saberemos de imediato quais tipos de nome serão afetados.
 
 Nomes longos para os métodos em nossas classe `TestCase` não são um problema. Eles devem ser descritivos para que você possa compreender a saída quando seus testes falharem, e pelo fato do Python os chamar automaticamente, você não precisará escrever código para chamar esses métodos.
-
-\newpage
 
 Para testar a função, chamamos `get_formatted_name()` com um primeiro nome, um sobrenome e um nome do meio e, em seguida, usamos `assertEqual()` para conferir se o nome completo devolvido coincide com o nome completo (primeiro nome, nome do meio e sobrenome) esperado. Se executarmos `test_name_function.py` novamente, veremos que os dois testes passam:
 
@@ -6317,23 +6325,35 @@ class AnonymousSurvey():
     
     def __init__(self,question):
         """Armazena uma pergunta e se prepara para armazenar uma resposta."""
-        self.question = question # Atribui a pergunta à instância da classe
-        self.responses = [] # Inicializa uma lista vazia para armazenar as respostas
+        
+        # Atribui a pergunta à instância da classe
+        self.question = question
+        # Inicializa uma lista vazia para armazenar as respostas
+        self.responses = []
     
     def show_question(self):
         """Mostra a pergunta da pesquisa."""
-        print(self.question) # Imprime a pergunta da pesquisa
+        
+        # Imprime a pergunta da pesquisa
+        print(self.question)
     
     def store_response(self, new_response):
         """Armazena uma única resposta da pesquisa."""
-        self.responses.append(new_response) # Adiciona a nova resposta à lista de respostas
+
+        # Adiciona a nova resposta à lista de respostas
+        self.responses.append(new_response)
     
     def show_results(self):
         """Mostra todas as respostas dadas."""
-        print("Survey results:") # Imprime um cabeçalho para os resultados da pesquisa
-        for response in self.responses: # Itera sobre a lista de respostas
+
+        # Imprime um cabeçalho para os resultados da pesquisa
+        print("Survey results:")
+        # Itera sobre a lista de respostas
+        for response in self.responses:
             print("- " + response) # Imprime cada resposta formatada
 ```
+
+\newpage
 
 Sobre a classe:
 
@@ -6516,6 +6536,8 @@ class testAnonmyousSurvey(unittest.TestCase):
 
 unittest.main() # Executa os testes
 ```
+
+
 
 \newpage
 
