@@ -6537,11 +6537,34 @@ class testAnonmyousSurvey(unittest.TestCase):
 unittest.main() # Executa os testes
 ```
 
+\newpage
 
+Sobre a modificação:
+
+  * Chamamos o novo método de `test_store_three_responses()`.
+
+  * **Criamos um objeto para a pesquisa, exatamente como fizemos em `test_store_single_responses()`**. 
+
+  * Definimos uma lista contendo três respostas diferentes e, então, chamamos `store_response()` para cada uma dessas respostas. 
+
+  * Depois que as respostas foram armazenadas, escrevemos outro laço e conferimos se cada resposta está em `my_survey_responses`.
+
+Quando executamos `test_survey.py` novamente, vemos que os dois teste (para uma única resposta e para três respostas) passaram:
+```
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+```
+
+Isso funciona perfeitamente. Porém, esses testes são um pouco repetitivos, então usaremos outro recurso de `unittest` para deixá-los mais eficientes.
 
 \newpage
 
 ### Método `setUp()`
+
+
 
 \newpage
 
