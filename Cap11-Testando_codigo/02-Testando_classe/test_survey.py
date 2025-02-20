@@ -11,24 +11,26 @@ from survey import AnonymousSurvey
 
 class testAnonmyousSurvey(unittest.TestCase):
     """Testes para a classe AnonmyousSurvey."""
-    
+    def setUp(self):
+        """
+        Cria uma pesquisa e um conjunto de respostas que poderão ser usados em 
+        todos os métodos de teste.
+        """
+        question = "What language did you first learn to speak?" # Define a pergunta da pesquisa
+        self.my_survey = AnonymousSurvey(question)
+        self.responses = ['English','Spanish','Mandarin']
+        
     def test_store_single_response(self):
         """Testa se uma única resposta é armazenada de forma apropriada."""
-        question = "What language did you first learn to speak?" # Define a pergunta da pesquisa
-        my_survey = AnonymousSurvey(question) # Cria uma instância da classe AnonymousSurvey
-        my_survey.store_response('English') # Armazena uma resposta
-
-        self.assertIn('English', my_survey.responses) # Verifica se a resposta foi armazenada
+        self.my_survey.store_response(self.responses[0]) # Armazena uma resposta
+        self.assertIn(self.responses[0], self.my_survey.responses) # Verifica se a resposta foi armazenada
     
     def test_store_three_response(self):
         """Testa se três respostas são armazenadas de forma apropriada."""
-        question = "What language did you first learn to speak?" # Define a pergunta da pesquisa
-        my_survey = AnonymousSurvey(question) # Cria uma instância da classe AnonymousSurvey
-        responses = ['English','Spanish','Mandarin'] # Define uma lista de respostas
-        for response in responses: # Itera sobre a lista de respostas
-            my_survey.store_response(response) # Armazena cada resposta
+        for response in self.responses: # Itera sobre a lista de respostas
+            self.my_survey.store_response(response) # Armazena cada resposta
         
-        for response in responses: # Itera sobre a lista de respostas
-            self.assertIn(response, my_survey.responses) # Verifica se cada resposta foi armazenada
+        for response in self.responses: # Itera sobre a lista de respostas
+            self.assertIn(response, self.my_survey.responses) # Verifica se cada resposta foi armazenada
 
 unittest.main() # Executa os testes
