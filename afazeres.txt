@@ -1,6 +1,6 @@
-ESCRITO EM 20/02/25
+ESCRITO EM 21/02/25
 ---
-PARA 21/02/25
+PARA 22/02/25
 ---
 Subir github:
 
@@ -12,8 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Cap. 11 - Testando código
 		- Revisar comentários dos códigos desse capitulo
-		- Testando uma classe
-			- Método `setUp()`
 	- Scripts:
 		- Cap. 3:
 			- Exercicios Cap. 3:
