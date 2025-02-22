@@ -6067,9 +6067,12 @@ class NameTestCase(unittest.TestCase):  # Cria classe de teste
   """Testes para 'name_function.py'"""  # Docstring da classe de teste
 
   def test_first_last_name(self):  # Define um método de teste
-    """Nomes como 'janis joplin' funcionam?"""  # Docstring do método de teste
-    formatted_name = get_formatted_name('janis', 'joplin')  # Chama função para formatar nome
-    self.assertEqual(formatted_name, 'Janis Joplin')  # Verifica se o nome formatado está correto
+    """Nomes como 'janis joplin' funcionam?"""
+    
+    # Chama função para formatar nome
+    formatted_name = get_formatted_name('janis', 'joplin')
+    # Verifica se o nome formatado está correto
+    self.assertEqual(formatted_name, 'Janis Joplin')
 
 unittest.main()  # Executa os testes
 ```
@@ -6324,7 +6327,9 @@ class AnonymousSurvey():
     """Coleta respostas anônimas para uma pergunta de uma pesquisa."""
     
     def __init__(self,question):
-        """Armazena uma pergunta e se prepara para armazenar uma resposta."""
+        """
+        Armazena uma pergunta e se prepara para armazenar uma resposta.
+        """
         
         # Atribui a pergunta à instância da classe
         self.question = question
@@ -6386,7 +6391,8 @@ my_survey = AnonymousSurvey(question)
 
 # Mostra a pergunta e armazena as repostas da pergunta.
 my_survey.show_question() # Exibe a pergunta da pesquisa
-print("Enter 'q' at any time to quit.\n") # Instrui o usuário a digitar 'q' para sair
+# Instrui o usuário a digitar 'q' para sair
+print("Enter 'q' at any time to quit.\n")
 while True: # Loop infinito para coletar respostas
     response = input("Language: ") # Solicita a resposta do usuário
     if response == 'q': # Verifica se o usuário digitou 'q'
@@ -6572,7 +6578,8 @@ import unittest
 # Importa a classe AnonymousSurvey do módulo survey
 from survey import AnonymousSurvey
 
-# Define uma classe de teste chamada testAnonmyousSurvey que herda de unittest.TestCase
+# Define uma classe de teste chamada testAnonmyousSurvey que herda
+#de unittest.TestCase
 class testAnonmyousSurvey(unittest.TestCase):
     """Testes para a classe AnonmyousSurvey."""
     # Define um método setUp que é executado antes de cada método de teste
