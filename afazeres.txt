@@ -10,8 +10,6 @@ Afazeres:
 	- Cap. 4 - Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-	- Cap. 11 - Testando código
-		- Revisar comentários dos códigos desse capitulo
 	- Scripts:
 		- Cap. 3:
 			- Exercicios Cap. 3:
