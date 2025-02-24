@@ -6687,4 +6687,30 @@ Durante a execução de um caso de teste, o Python exibe um caractere para cada 
 
 \newpage
 
+# Projeto visualização de dados
+
+* O projeto de Visualização de Dados você aprenderá a **gerar dados** e a criar uma série de visualizações funcionais e bonitas desses dados usando `matplotlib` e `Pygal`.
+
+* Depois você acessará dados de fontes online e a fornecê-los a um pacote de visualização para criar apresentações de dados meteorológicos e um mapa da população mundial.
+
+* Por fim, mostrará como escrever um programa para fazer download automático de dados e visualizá-los. Aprender a visualização permite explorar o campo do *data maning* (mineração de dados), que é uma habilidade bastante procurada no mundo de hoje.
+
+\newpage
+
+## Gerando dados
+
+
+
+### Instalando `matplotlib`
+### Gerando um grafico linear simples
+### Passeios aleatórios
+### Lançando dados com o `Pygal`
+
+\newpage
+
+## Fazendo download de dados
+## Trabalhando com APIs
+
+\newpage
+
 # Bibliografia
