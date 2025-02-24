@@ -6687,7 +6687,7 @@ Durante a execução de um caso de teste, o Python exibe um caractere para cada 
 
 \newpage
 
-# Projeto visualização de dados
+# Projeto Visualização de Dados
 
 * O projeto de Visualização de Dados você aprenderá a **gerar dados** e a criar uma série de visualizações funcionais e bonitas desses dados usando `matplotlib` e `Pygal`.
 
