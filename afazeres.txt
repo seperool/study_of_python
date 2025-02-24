@@ -1,6 +1,6 @@
-ESCRITO EM 23/02/25
+ESCRITO EM 24/02/25
 ---
-PARA 24/02/25
+PARA 25/02/25
 ---
 Subir github:
 
@@ -10,7 +10,7 @@ Afazeres:
 	- Cap. 4 - Trabalhando com listas
 		- Listas númericas
 			- Estatísticas simples com lista de números
-	- Projeto visulização de dados
+	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Instalando matplotlib
 			- Gerando um grafico linear simples
