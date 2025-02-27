@@ -6699,9 +6699,73 @@ Durante a execução de um caso de teste, o Python exibe um caractere para cada 
 
 ## Gerando dados
 
+A visualização de dados envolve a exploração  de dados 
+meio de representações visuais. Ela está intimamente relacionada 
+ao *data mining* (mineração de dados), que usa código para explorar 
+padrões e conexões em um conjunto de dados. Um conjunto de dados 
+pode ser apenas uma pequena lista de números que caiba em um linha 
+código ou podem ser gigabytes de dados.
 
+Criar belas representações de dados vai muito além de gerar imagens 
+bonitas.Quando você tem uma representação simples e visualmente atraente 
+de um conjunto de dados, seu significado se torna evidente a quem os vê. 
+As pessoas perceberão padrões e significados em seus conjuntos de dados, 
+que elas nem sequer sabiam que existiam.
+
+Felizmente não é preciso ter um supercomputador para visualizar dados 
+complexos. Com a eficiência de Python, você poderá rapidamente explorar 
+conjuntos de dados compostos de milhões de pontos individuais usando um 
+notebook. Os pontos de dados não precisam ser números. Com o básico que 
+você já aprendeu na primeira parte deste livro, também será possível analisar 
+dados não numéricos.
+
+As pessoas usam Python para tarefas que trabalham intensamente com dados, 
+como genética, pesquisas sobre o clima, análises políticas e econômicas e 
+muito mais. Os cientistas de dados escreveram um conjunto impressionante 
+ferramentas para visualização e análise em Python, muitas das quais estão 
+disponíveis a você também. Uma das ferramentas mais populares é o `matplotlib`, 
+que é uma biblioteca matemática para construção de gráficos. **Usaremos o `matplotlib`** 
+**para a criação de gráficos simples, como gráficos lineares e de dispersão**. 
+Depois disso, criaremos um conjunto de dados mais interessante baseado no conceito 
+de passeio aleatório (*random walk*) - uma visualização gerada a partir de uma 
+série de decisões aleatórias.
+
+Também usaremos um pacote chamado `Pygal`, **cujo enfoque está na criação de visualizações** 
+**que funcionem bem em dispositivos digitais**. Você pode usar o `Pygal` para enfatizar 
+e redimensionar elementos a medida que o usuário interagir com a sua visualização, 
+e poderá redimensionar facilmente toda a representação para que ela caiba em um 
+minúsculo *smartwatch* ou em um monitor gigante. Usaremos o `Pygal` para explorar 
+o que acontece se você lançar dados de várias maneiras.
+
+\newpage
+
+Resumo:
+
+  * `matplotlib`
+  
+    * É uma biblioteca abrangente para criar visualizações estáticas, animadas e interativas em Python.
+    * Cria uma ampla variedade de gráficos, incluindo gráficos de linhas, barras, dispersão, histogramas e muito mais.
+    * Oferece controle granular sobre todos os aspectos de um gráfico, desde cores e estilos de linha até rótulos e anotações.
+    * Pode ser usado para criar visualizações estáticas para relatórios e publicações, bem como visualizações interativas para exploração de dados.
+  
+  * `Pygal`
+
+    * É uma biblioteca Python para criar gráficos SVG (Scalable Vector Graphics).
+    * É projetado para produzir gráficos interativos e responsivos que podem ser facilmente incorporados em páginas da Web.
+    * Cria gráficos vetoriais que podem ser dimensionados sem perda de qualidade.
+    * Oferece suporte a uma variedade de tipos de gráficos, incluindo gráficos de linhas, barras, pizza e mapas.
+    * Permite criar gráficos interativos com dicas de ferramentas e animações.
+
+\newpage
 
 ### Instalando `matplotlib`
+
+#### No Linux
+#### No OS X
+#### No Windows
+
+\newpage
+
 ### Gerando um grafico linear simples
 ### Passeios aleatórios
 ### Lançando dados com o `Pygal`
