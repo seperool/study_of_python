@@ -18,6 +18,8 @@ from tensorflow import keras         # API de alto nível para redes neurais
 from tensorflow.keras import layers  # Camadas para redes neurais
 
 import sklearn                       # Aprendizado de máquina (scikit-learn)
+
+# Bibliotecas gráficas
 import matplotlib.pyplot as plt      # Criação de gráficos
 import Pygal                         # Criação de gráficos vetoriais escaláveis
 import seaborn as sns                # Visualização de dados (baseado no Matplotlib)
