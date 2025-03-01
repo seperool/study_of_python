@@ -6760,9 +6760,59 @@ Resumo:
 
 ### Instalando `matplotlib`
 
+Em primeiro lugar, você precisará instalar o `matplotlib` que usaremos 
+para o nosso conjunto inicial de visualizações.
+
 #### No Linux
+
+* Para Python 3:
+
+  `sudo apt-get install python3-matplotlib`
+
+* Para Python 2.7:
+
+  `sudo apt-get install python-matplotlib`
+
+* Bibliotecas auxiliares:
+
+  `sudo apt-get install python3.5-dev python3.5-tk tk-dev`
+
+  `sudo apt-get install libfreetype6-dev g++`
+
+* Usando o gerenciador de pacotes pip:
+
+  `pip install --user matplotlib`
+
 #### No OS X
+
+`pip install --user matplotlib`
+
+ou
+
+`pip3 install matplotlib`
+
 #### No Windows
+
+\newpage
+
+#### Testando `matplotlib`
+
+Depois de ter instalado os pacotes necessários, teste sua instalação 
+iniciando uma sessão de terminal com o comando `python` ou `python3` 
+e importando o `matplotlib`.
+
+`python`
+
+`import matplotlib`
+
+Se não houver nenhuma mensagem de erro, é sinal de que o `matplotlib` 
+foi instalado em seu sistema e você poderá prosseguir para a próxima seção.
+
+#### A galeria do `matplotlib`
+Para ver os tipos de visualizações que podem ser criadas com 
+`matplotlib`, acesse a galeria de amostras em <http://matplotlib.org/>. 
+Ao clicar em uma visualização de galeria, você poderá ver o código usado 
+para gerar o gráfico.
 
 \newpage
 
