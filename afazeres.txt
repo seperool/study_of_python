@@ -1,6 +1,6 @@
-ESCRITO EM 27/02/25
+ESCRITO EM 28/02/25
 ---
-PARA 28/02/25
+PARA 01/03/25
 ---
 Subir github:
 
@@ -13,6 +13,7 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Instalando matplotlib
+				- No windows
 			- Gerando um grafico linear simples
 			- Passeios aleatórios
 			- Lançando dados com o Pygal
