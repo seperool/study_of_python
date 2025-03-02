@@ -6817,6 +6817,21 @@ para gerar o gráfico.
 \newpage
 
 ### Gerando um grafico linear simples
+
+```
+# Importa a biblioteca matplotlib para criação de gráficos
+import matplotlib.pyplot as plt 
+
+# Cria uma lista de números quadrados
+squares = [1,4,9,16,25]
+# Plota a lista de números quadrados em um gráfico de linha
+plt.plot(squares)
+# Exibe o gráfico criado
+plt.show()                      
+```
+
+\newpage
+
 ### Passeios aleatórios
 ### Lançando dados com o `Pygal`
 
