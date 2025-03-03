@@ -1,6 +1,6 @@
-ESCRITO EM 01/03/25
+ESCRITO EM 03/03/25
 ---
-PARA 02/03/25
+PARA 04/03/25
 ---
 Subir github:
 
@@ -12,9 +12,16 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
-			- Instalando matplotlib
-				- No windows
 			- Gerando um grafico linear simples
+				- Alterando o tipo de rótulo e a espessura do gráfico
+				- Corrigindo o gráfico
+				- Plotando e estilizando pontos individuais com `scatter()`
+				- Plotando uma série de pontos com `scatter()`
+				- Calculando dados automátamente
+				- Removendo os contornos dos pontos de dados
+				- Definindo cores personalizadas
+				- Usando um `colormap`
+				- Salvando seus gráficos automaticamente
 			- Passeios aleatórios
 			- Lançando dados com o Pygal
 		- Cap. 16 - Fazendo download de dados
@@ -24,3 +31,6 @@ Afazeres:
 			- Exercicios Cap. 3:
 				- 9
 				- 10
+		- Cap. 15:
+			- Exercicios Cap. 15:
+				- 2
