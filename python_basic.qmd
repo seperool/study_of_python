@@ -6809,6 +6809,7 @@ Se não houver nenhuma mensagem de erro, é sinal de que o `matplotlib`
 foi instalado em seu sistema e você poderá prosseguir para a próxima seção.
 
 #### A galeria do `matplotlib`
+
 Para ver os tipos de visualizações que podem ser criadas com 
 `matplotlib`, acesse a galeria de amostras em <http://matplotlib.org/>. 
 Ao clicar em uma visualização de galeria, você poderá ver o código usado 
@@ -6817,6 +6818,8 @@ para gerar o gráfico.
 \newpage
 
 ### Gerando um grafico linear simples
+
+Vamos gerar um gráfico linear simples usando o `matplotlib` e então personalizá-lo a fim de criar uma visualização mais informativa de nossos dados. 
 
 ```
 # Importa a biblioteca matplotlib para criação de gráficos
@@ -6829,6 +6832,30 @@ plt.plot(squares)
 # Exibe o gráfico criado
 plt.show()                      
 ```
+
+Sobre o programa:
+
+  * Inicialmente importamos `pyplot` usando o alias `plt` para que não seja necessário digitar `pyplot` repetidamente. O módulo `pyplot` contém várias funções que ajudam a gerar gráficos e plotagens.
+
+  * Criamos uma lista para armazenar os quadrados e então a passamos para a função `plot()`, que tentará plotar os números de forma significantiva.
+  
+  * `plt.show` abre o visualizador do `matplotlib` e exibe o gráfico.
+
+  * O visualizador permite fazer zoom e navegar pelo gráfico, se você clicar no ícone do disco, poderá salvar a imagem de qualquer gráfico que quiser.
+
+![Gráfico usando `matplotlib.pyplot`](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_linha/mpl_squares.png){width=300}
+
+\newpage
+
+#### Alterando o tipo de rótulo e a espessura do gráfico
+#### Corrigindo o gráfico
+#### Plotando e estilizando pontos individuais com `scatter()`
+#### Plotando uma série de pontos com `scatter()`
+#### Calculando dados automátamente
+#### Removendo os contornos dos pontos de dados
+#### Definindo cores personalizadas
+#### Usando um `colormap`
+#### Salvando seus gráficos automaticamente
 
 \newpage
 
