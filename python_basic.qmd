@@ -6848,6 +6848,34 @@ Sobre o programa:
 \newpage
 
 #### Alterando o tipo de rótulo e a espessura do gráfico
+
+Embora o gráfico exibido mostre que os números estão aumentando, o tipo de letra do rótulo é pequena demais e a linha é muito fina. Felizmente o `matplotlib` permite ajustar todos os recursos de uma visualização.
+
+Usaremos algumas das personalizações disponíveis para melhorar a legibilidade desse gráfico, como veremos.
+```
+# Importa a biblioteca matplotlib para criação de gráficos
+import matplotlib.pyplot as plt 
+
+# Cria uma lista de números quadrados
+squares = [1,4,9,16,25]
+plt.plot(squares, linewidth=5) #Espessura da linha
+
+# Define o titulo do gráfico e nomeia os eixos
+plt.title("Square Numbers", fontsize=24)
+plt.xlabel("Value", fontsize=24)
+plt.ylabel("Square of Value", fontsize=24)
+
+# Exibe o tamanho dos rótulos das marcações
+plt.tick_params(axis='both',labelsize=14)
+
+# Exibe o gráfico criado
+plt.show()
+```
+
+
+
+\newpage
+
 #### Corrigindo o gráfico
 #### Plotando e estilizando pontos individuais com `scatter()`
 #### Plotando uma série de pontos com `scatter()`
