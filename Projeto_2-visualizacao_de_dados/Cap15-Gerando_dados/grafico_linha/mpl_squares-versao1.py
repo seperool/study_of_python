@@ -11,7 +11,15 @@ import matplotlib.pyplot as plt
 
 # Cria uma lista de números quadrados
 squares = [1,4,9,16,25]
-# Plota a lista de números quadrados em um gráfico de linha
-plt.plot(squares)
+plt.plot(squares, linewidth=5) #Espessura da linha
+
+# Define o titulo do gráfico e nomeia os eixos
+plt.title("Square Numbers", fontsize=24)
+plt.xlabel("Value", fontsize=24)
+plt.ylabel("Square of Value", fontsize=24)
+
+# Exibe o tamanho dos rótulos das marcações
+plt.tick_params(axis='both',labelsize=14)
+
 # Exibe o gráfico criado
 plt.show()
