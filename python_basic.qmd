@@ -6872,11 +6872,28 @@ plt.tick_params(axis='both',labelsize=14)
 plt.show()
 ```
 
+Sobre as configurações do gráfico:
 
+  * O parâmetro `linewidth` controla a espessura da linha gerada pelo `plot()`.
+  
+  * A função `title()` define um título para o gráfico.
+  
+  * Os parâmetros `fontsize`, que aparece repentinamente pelo código, controla o tamanho do texto do gráfico.
+  
+  * As funções `xlabel` e `ylabel` permitem definir um título para cada um dos eixos.
+  
+  * A função `tick_params()` estiliza a marcação nos eixos.
+  
+  * Os argumentos mostrados aqui afetam as marcações tanto no eixo x quanto no eixo y (`axis='both'`) e definem o tamanho da fonte dos rótulos das marcações com 14 (`labelsize=14`).
 
 \newpage
 
 #### Corrigindo o gráfico
+
+
+
+\newpage
+
 #### Plotando e estilizando pontos individuais com `scatter()`
 #### Plotando uma série de pontos com `scatter()`
 #### Calculando dados automátamente
