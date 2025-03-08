@@ -6895,7 +6895,54 @@ Sobre as configurações do gráfico:
 \newpage
 
 #### Plotando e estilizando pontos individuais com `scatter()`
+
+```
+# Importa a biblioteca matplotlib para criar gráficos
+import matplotlib.pyplot as plt
+
+# Cria um gráfico de dispersão com um ponto na coordenada (2, 4)
+plt.scatter(2,4)
+# Adiciona uma grade ao gráfico
+plt.grid()
+
+# Define o título do gráfico e nomeia os eixos
+plt.title("Square Numbers", fontsize=24)
+plt.xlabel("Value", fontsize=14)
+plt.ylabel("Square of Value", fontsize=14)
+
+plt.tick_params(axis='both', which='major', labelsize=14)
+
+# Exibe o gráfico
+plt.show()
+```
+
 #### Plotando uma série de pontos com `scatter()`
+
+```
+# Importa a biblioteca matplotlib para criar gráficos
+import matplotlib.pyplot as plt
+
+x_values=[1,2,3,4,5]
+y_values=[1,4,9,16,25]
+
+# Cria um gráfico de dispersão
+plt.scatter(x_values,y_values,s=100)
+# Adiciona uma grade ao gráfico
+plt.grid()
+
+# Define o título do gráfico e nomeia os eixos
+plt.title("Square Numbers", fontsize=24)
+plt.xlabel("Value", fontsize=14)
+plt.ylabel("Square of Value", fontsize=14)
+
+plt.tick_params(axis='both', which='major', labelsize=14)
+
+# Exibe o gráfico
+plt.show()
+```
+
+\newpage
+
 #### Calculando dados automátamente
 #### Removendo os contornos dos pontos de dados
 #### Definindo cores personalizadas
