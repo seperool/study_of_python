@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar  6 20:50:52 2025
+Created on Sat Mar  8 20:36:02 2025
 
 @author: sergio
 """
@@ -9,8 +9,11 @@ Created on Thu Mar  6 20:50:52 2025
 # Importa a biblioteca matplotlib para criar gráficos
 import matplotlib.pyplot as plt
 
-# Cria um gráfico de dispersão com um ponto na coordenada (2, 4)
-plt.scatter(2,4)
+x_values=[1,2,3,4,5]
+y_values=[1,4,9,16,25]
+
+# Cria um gráfico de dispersão
+plt.scatter(x_values,y_values,s=100)
 # Adiciona uma grade ao gráfico
 plt.grid()
 
@@ -21,7 +24,7 @@ plt.ylabel("Square of Value", fontsize=14)
 
 plt.tick_params(axis='both', which='major', labelsize=14)
 
-plt.savefig("grafico_de_ponto.png", bbox_inches='tight')
+plt.savefig("grafico_de_pontos.png", bbox_inches='tight')
 
 # Exibe o gráfico
 plt.show()
