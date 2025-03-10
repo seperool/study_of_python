@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Gerando um grafico linear simples
-				- Corrigindo o gráfico
 				- Plotando e estilizando pontos individuais com `scatter()`
 				- Plotando uma série de pontos com `scatter()`
 				- Calculando dados automátamente
