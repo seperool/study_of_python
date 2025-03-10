@@ -6890,7 +6890,37 @@ Sobre as configurações do gráfico:
 
 #### Corrigindo o gráfico
 
+Quando fornecemos uma sequência de números a `plot()`, ele supõe que o primeiro ponto de dado corresponte a um valor de coordenada x igual a 0, mas nosso primeiro ponto corresponde a um valor de x igual a 1. Podemos sobreescrever o comportamento-padrão fornecendo a `plot()` os valores tanto de entrada (x) quanto de saída (y) para calcular os quadrados.
 
+```
+# Importa a biblioteca matplotlib para criação de gráficos
+import matplotlib.pyplot as plt
+
+# Lista de valores do eixo x
+input_values = [1,2,3,4,5]
+# Cria uma lista de números quadrados
+# Lista de valores do eixo y
+squares = [1,4,9,16,25]
+# Cria um gráfico de linha com a lista de números quadrados
+plt.plot(input_values,squares,linewidth=5)
+
+# Define o título do gráfico
+plt.title("Square Numbers", fontsize=24)
+# Define o rótulo do eixo x
+plt.xlabel("Value", fontsize=14)
+# Define o rótulo do eixo y
+plt.ylabel("Square of Value", fontsize=14)
+
+# Define o tamanho dos rótulos dos eixos
+plt.tick_params(axis='both', labelsize=14)
+
+# Exibe o gráfico criado
+plt.show()
+```
+
+Agora `plot()` colocará os dados no gráfico, pois fornecemos tanto os valores de entrada (valores do eixo x, `input_values`) quanto os valores de saída (valores do eixo y, `squares`), de modo que ele não precisou pressupor de que modo os números de saída foram gerados. 
+
+![Gráfico de linha, corrigindo eixos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_linha/plot_linear.png){}
 
 \newpage
 
