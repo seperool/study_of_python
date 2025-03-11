@@ -10,7 +10,8 @@ Created on Thu Mar  6 20:50:52 2025
 import matplotlib.pyplot as plt
 
 # Cria um gráfico de dispersão com um ponto na coordenada (2, 4)
-plt.scatter(2,4)
+#s = tamanho do ponto
+plt.scatter(2,4, s=200)
 # Adiciona uma grade ao gráfico
 plt.grid()
 
