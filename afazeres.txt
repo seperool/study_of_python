@@ -1,6 +1,6 @@
-ESCRITO EM 09/03/25
+ESCRITO EM 10/03/25
 ---
-PARA 10/03/25
+PARA 11/03/25
 ---
 Subir github:
 
@@ -13,12 +13,11 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Gerando um grafico linear simples
-				- Plotando e estilizando pontos individuais com `scatter()`
-				- Plotando uma série de pontos com `scatter()`
+				- Plotando uma série de pontos com scatter()
 				- Calculando dados automátamente
 				- Removendo os contornos dos pontos de dados
 				- Definindo cores personalizadas
-				- Usando um `colormap`
+				- Usando um colormap
 				- Salvando seus gráficos automaticamente
 			- Passeios aleatórios
 			- Lançando dados com o Pygal
