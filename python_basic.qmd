@@ -6926,6 +6926,10 @@ Agora `plot()` colocará os dados no gráfico, pois fornecemos tanto os valores 
 
 #### Plotando e estilizando pontos individuais com `scatter()`
 
+As vezes é conveniente ser capaz de plotar e estilizar pontos individuais de acordo com determinadas características. Por exemplo, você pode plotar valores menores com uma cor e valores maiores com outra cor. Você também poderia plotar um conjunto grande de dados com um grupo de opções de estilização e então enfatizar pontos individuais refazendo a plotagem desses pontos com opções diferentes.
+
+Para plotar um único ponto, utilize a função `scatter()`. Passe o único `par(x,y)` do ponto em que você estiver interessado para `scatter()`, e esse valor deverá ser plotado.
+
 ```
 # Importa a biblioteca matplotlib para criar gráficos
 import matplotlib.pyplot as plt
@@ -6945,6 +6949,10 @@ plt.tick_params(axis='both', which='major', labelsize=14)
 # Exibe o gráfico
 plt.show()
 ```
+
+Chamamos `scatter()` e usamos o argumento `s` para definir o tamanho dos pontos usados para desenhar o gráfico. Ao executar `scatter_squares.py` agora, você deverá ver um único ponto no meio do gráfico.
+
+![Gráfico de ponto estilizado, um único ponto.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_ponto.png){width=200}
 
 #### Plotando uma série de pontos com `scatter()`
 
@@ -6983,6 +6991,21 @@ plt.show()
 
 ### Passeios aleatórios
 ### Lançando dados com o `Pygal`
+
+\newpage
+
+### Resumo
+
+```{mermaid}
+
+%%| fig-cap: "Gráficos matplotlib"
+%%| fig-width: 6.5
+%%| fig-height: 7.5
+flowchart LR
+  A[Gráficos Python] --> B{Matplotlib.pyplot}
+  B --> C[Gráfico de linha plot]
+  B --> D[Gráfico de pontos scatter]
+```
 
 \newpage
 
