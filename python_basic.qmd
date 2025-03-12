@@ -6952,9 +6952,11 @@ plt.show()
 
 Chamamos `scatter()` e usamos o argumento `s` para definir o tamanho dos pontos usados para desenhar o gráfico. Ao executar `scatter_squares.py` agora, você deverá ver um único ponto no meio do gráfico.
 
-![Gráfico de ponto estilizado, um único ponto.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_ponto.png){width=200}
+![Gráfico de dispersão estilizado, um único ponto.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_ponto.png){width=200}
 
 #### Plotando uma série de pontos com `scatter()`
+
+Para plotar uma série de pontos, podemos passar listas separadas de valores para x e y para `scatter()`, assim:
 
 ```
 # Importa a biblioteca matplotlib para criar gráficos
@@ -6978,6 +6980,10 @@ plt.tick_params(axis='both', which='major', labelsize=14)
 # Exibe o gráfico
 plt.show()
 ```
+
+A lista `x_values` contém os números que serão elevados ao quadrado e `y_values` contém o quadrado de cada número. Quando essas listas são separadas para `scatter()`, o matplotlib lê um valor de cada lista à medida que plotar cada ponto. Os pontos a serem plotados são (1,1), (2,4), (3,9), (4,16) e (5,25).
+
+![Gráfico de dispersão estilizado, vários pontos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos.png){width=250}
 
 \newpage
 
