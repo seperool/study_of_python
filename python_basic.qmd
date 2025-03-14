@@ -6987,8 +6987,11 @@ A lista `x_values` contém os números que serão elevados ao quadrado e `y_valu
 
 \newpage
 
-#### Calculando dados automátamente
+#### Calculando dados automaticamente
 
+Escrever nossas listas manualmente pode ser ineficiente, em especial quando temos muitos pontos. Em vez de passar nossos pontos por meio de uma lista, vamos usar um laço em Python para que os cálculos sejam feitos para nós.
+
+Código para 1000 pontos:
 ```
 import matplotlib.pyplot as plt
 
@@ -7018,6 +7021,19 @@ plt.axis([0,1100,0,1100000])
 # Exibe o gráfico.
 plt.show()
 ```
+
+Sobre o códido:
+
+  * Começamos com uma lista de valores de x contendo os números de 1 a 1000.
+
+  * Uma *list comprehension* gera os valores de y percorrendo os valores de x em um laço (`for x in x_values`), elevando cada número ao quadrado (`x**2`) e armazena os resultados em `y_values`.
+
+  * Então passamos as listas de entrada e de saída para `scatter()`.
+
+  * Como esse é um conjunto bem grande de dados, usamos um tamanho menor de ponto e utilizamos a função `axis()` para especificar **o intervalo de cada eixo**.
+
+  * A função `axis()` exige quatro valores: os valores mínimos e máximos para o eixo x e para o eixo y. Nesse caso o eixo x varia de 0 a 1100, e o eixo y, de 0 a 1100000.  
+  `plt.axis([0,1100,0,1100000])`
 
 ![Gráfico de dispersão com dados gerados automaticamente.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos.png){width=250}
 
