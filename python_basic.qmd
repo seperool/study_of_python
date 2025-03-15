@@ -7035,7 +7035,7 @@ Sobre o códido:
   * A função `axis()` exige quatro valores: os valores mínimos e máximos para o eixo x e para o eixo y. Nesse caso o eixo x varia de 0 a 1100, e o eixo y, de 0 a 1100000.  
   `plt.axis([0,1100,0,1100000])`
 
-![Gráfico de dispersão com dados gerados automaticamente.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-versao2.png){width=250}
+![Gráfico de dispersão com dados gerados automaticamente.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos.png){width=250}
 
 \newpage
 
@@ -7043,6 +7043,8 @@ Sobre o códido:
 
 O `matplotlib` permite colorir os pontos individualmente em um gráfico de dispersão. O padrão - pontos azuis com um contorno preto - funciona bem para gráficos com poucos pontos. Porém, ao plotar vários pontos, os contornos pretos podem se misturar. Para remover os contornos dos pontos, passe o argumento `edgecolor='none'` quando chamar `scatter()`:  
 `plt.scatter(x_values, y_values, edgecolors='none' ,s=40)`
+
+![Gráfico de dispersão com dados gerados automaticamente, sem contornos nos pontos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-version_4.png){width=250}
 
 #### Definindo cores personalizadas
 
