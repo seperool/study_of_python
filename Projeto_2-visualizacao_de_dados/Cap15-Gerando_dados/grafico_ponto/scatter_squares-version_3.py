@@ -14,7 +14,7 @@ x_values = list(range(1,1001))
 y_values = [x**2 for x in x_values]
 
 # Cria um gráfico de dispersão com os valores x e y, tamanho dos pontos 40.
-plt.scatter(x_values, y_values, s=40)
+plt.scatter(x_values, y_values, edgecolors='none' ,s=40)
 
 # Adiciona uma grade ao gráfico.
 plt.grid()
