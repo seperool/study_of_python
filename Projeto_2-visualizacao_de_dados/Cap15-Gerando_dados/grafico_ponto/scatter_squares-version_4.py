@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 14 21:59:28 2025
+Created on Wed Mar 12 19:48:43 2025
 
 @author: sergio
 """
@@ -14,7 +14,7 @@ x_values = list(range(1,1001))
 y_values = [x**2 for x in x_values]
 
 # Cria um gráfico de dispersão com os valores x e y, tamanho dos pontos 40.
-plt.scatter(x_values, y_values, s=40)
+plt.scatter(x_values, y_values, edgecolors='none' ,s=40)
 
 # Adiciona uma grade ao gráfico.
 plt.grid()
@@ -35,4 +35,4 @@ plt.axis([0,1100,0,1100000])
 plt.show()
 
 # Salva o gráfico em um arquivo PNG.
-plt.savefig("grafico_de_pontos_automaticos.png", bbox_inches='tight')
+plt.savefig("grafico_de_pontos_automaticos-version_4.png", bbox_inches='tight')
