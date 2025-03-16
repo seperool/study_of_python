@@ -7046,7 +7046,11 @@ O `matplotlib` permite colorir os pontos individualmente em um gráfico de dispe
 
 ![Gráfico de dispersão com dados gerados automaticamente, sem contornos nos pontos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-version_4.png){width=250}
 
+\newpage
+
 #### Definindo cores personalizadas
+
+Para mudar a cor dos pontos, passe `c` como argumento para `scatter()` com o nome de uma cor (em inglês) a ser usada entre aspas. 
 
 ```
 import matplotlib.pyplot as plt
@@ -7078,11 +7082,24 @@ plt.axis([0,1100,0,1100000])
 plt.show()
 ```
 
+Parte essencial do código:  
+`plt.scatter(x_values, y_values, c='red', edgecolors='none' ,s=40)`
+
+Você também pode definir cores personalizadas usando o modelo de cores **RGB**. Para definir uma cor, passe uma tupla para o argumento `c`, com três valores decimais (um valor para cada cor, isto é, para vermelho, verde e azul), utilizando valores entre 0 e 1.
+
+Por exemplo a linha a seguir cria um gráfico com pontos azuis claros:  
+`plt.scatter(x_values, y_values, c=(0,0,0.8), edgecolors='none' ,s=40)`
+
+Valores mais próximos de 0 geram cores escuras enquanto valores mais próximos de 1, geram cores mais claras.
+
 ![Gráfico de dispersão com pontos de cor vermelha.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-cor.png){width=250}
 
 \newpage
 
 #### Usando um `colormap`
+
+\newpage
+
 #### Salvando seus gráficos automaticamente
 
 \newpage
