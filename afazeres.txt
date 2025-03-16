@@ -1,6 +1,6 @@
-ESCRITO EM 15/03/25
+ESCRITO EM 16/03/25
 ---
-PARA 16/03/25
+PARA 17/03/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Gerando um grafico linear simples
-				- Definindo cores personalizadas
 				- Usando um colormap
 				- Salvando seus gráficos automaticamente
 			- Passeios aleatórios
