@@ -1,6 +1,6 @@
-ESCRITO EM 17/03/25
+ESCRITO EM 18/03/25
 ---
-PARA 18/03/25
+PARA 19/03/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Gerando um grafico linear simples
-				- Usando um colormap
 				- Salvando seus gráficos automaticamente
 			- Passeios aleatórios
 			- Lançando dados com o Pygal
