@@ -7098,6 +7098,10 @@ Valores mais próximos de 0 geram cores escuras enquanto valores mais próximos 
 
 #### Usando um `colormap`
 
+Um `colormap` é uma série de cores em um gradiente que varia de uma cor inicial até uma cor final. Os `colormaps` são usados em visualizações para enfatizar um padrão nos dados. Por exemplo, você pode deixar os valores menores com uma cor clara e os valores maiores com uma cor mais escura.
+
+O módulo `pyplot` inclui um conjunto de `colormaps` embutidos. Para usar um desses `colormaps`, especifique de que modo o `pyplot` deve atribuir uma cor para cada ponto do conjunto de dados.
+
 ```
 import matplotlib.pyplot as plt
 
@@ -7129,7 +7133,17 @@ plt.axis([0,1100,0,1100000])
 plt.show()
 ```
 
+\newpage
+
+Sobre o programa:
+
+  * Atribui uma cor a cada ponto de acordo com seu valor de y.
+  * Passamos uma lista de valores de y para `c` e, em seguida, informamos ao `pyplot` qual é o `colormap` a ser usado por meio do argumento `cmap`.
+  * Esse código pinta os pontos com valores menores de y com azul e os pontos com valores maiores de y com azul escuro.
+
 ![Gráfico de dispersão usando `colormap`.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-colormap.png){width=250}
+
+Você pode ver todos os `colormaps` disponíveis em `pyplot` em <http://matplotlib.org/>; acesse **Exemples** (Exemplos), faça rolagens para baixo até 'Color Exemples' (Exemplos de cores) e clique em **clormaps_reference**.
 
 \newpage
 
