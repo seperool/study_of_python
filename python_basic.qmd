@@ -7149,6 +7149,17 @@ Você pode ver todos os `colormaps` disponíveis em `pyplot` em <http://matplotl
 
 #### Salvando seus gráficos automaticamente
 
+Se quiser que seu programa salve automaticamente o gráfico em um arquivo, você poderá substituir a chamada a `plt.show()` por uma chamada a `plt.savefig()`:
+```
+plt.savefig("plot_cubo.png", bbox_inches='tight')
+```
+
+sobre os argumentos da função `plt.savefig()`:
+
+  * O primeiro argumento é o nome do arquivo para a imagem do gráfico, que será salvo no mesmo diretório que o programa.
+
+  * O segundo argumento **remove espaços em branco extras do gráfico**. Se quiser ter espaços em branco extras ao redor do gráfico, você poderá omitir esse argumento.
+
 \newpage
 
 ### Passeios aleatórios
