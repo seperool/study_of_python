@@ -1,6 +1,6 @@
-ESCRITO EM 18/03/25
+ESCRITO EM 19/03/25
 ---
-PARA 19/03/25
+PARA 20/03/25
 ---
 Subir github:
 
@@ -12,8 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
-			- Gerando um grafico linear simples
-				- Salvando seus gráficos automaticamente
 			- Passeios aleatórios
 			- Lançando dados com o Pygal
 		- Cap. 16 - Fazendo download de dados
