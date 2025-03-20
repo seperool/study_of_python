@@ -1,6 +1,6 @@
-ESCRITO EM 19/03/25
+ESCRITO EM 20/03/25
 ---
-PARA 20/03/25
+PARA 21/03/25
 ---
 Subir github:
 
@@ -13,6 +13,16 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Passeios aleatórios
+				- Criando uma classe RandomWalk()
+				- Escolhendo as direções
+				- Plotando o passeio aleatório
+				- Gerando vários passeios aleatórios
+				- Estilizando o passeio
+				- Colorindo os pontos
+				- Plotando os pontos de inicio e de fim
+				- Limpando os eixos
+				- Adicionando pontos para a plotagem
+				- Alterando o tamanho para preencher a tela
 			- Lançando dados com o Pygal
 		- Cap. 16 - Fazendo download de dados
 		- Cap. 17 - Trabalhando com APIs
@@ -24,3 +34,6 @@ Afazeres:
 		- Cap. 15:
 			- Exercicios Cap. 15:
 				- 2
+				- 3
+				- 4
+				- 5
