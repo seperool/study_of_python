@@ -7163,6 +7163,20 @@ sobre os argumentos da função `plt.savefig()`:
 \newpage
 
 ### Passeios aleatórios
+
+#### Criando uma classe `RandomWalk()`
+#### Escolhendo as direções
+#### Plotando o passeio aleatório
+#### Gerando vários passeios aleatórios
+#### Estilizando o passeio
+#### Colorindo os pontos
+#### Plotando os pontos de inicio e de fim
+#### Limpando os eixos
+#### Adicionando pontos para a plotagem
+#### Alterando o tamanho para preencher a tela
+
+\newpage
+
 ### Lançando dados com o `Pygal`
 
 \newpage
