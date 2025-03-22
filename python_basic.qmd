@@ -6843,7 +6843,7 @@ Sobre o programa:
 
   * O visualizador permite fazer zoom e navegar pelo gráfico, se você clicar no ícone do disco, poderá salvar a imagem de qualquer gráfico que quiser.
 
-![Gráfico usando `matplotlib.pyplot`](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_linha/mpl_squares.png){width=300}
+![Gráfico usando `matplotlib.pyplot`](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_linha/mpl_squares.png){width=300}
 
 \newpage
 
@@ -6920,7 +6920,7 @@ plt.show()
 
 Agora `plot()` colocará os dados no gráfico, pois fornecemos tanto os valores de entrada (valores do eixo x, `input_values`) quanto os valores de saída (valores do eixo y, `squares`), de modo que ele não precisou pressupor de que modo os números de saída foram gerados. 
 
-![Gráfico de linha, corrigindo eixos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_linha/plot_linear.png){}
+![Gráfico de linha, corrigindo eixos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_linha/plot_linear.png){}
 
 \newpage
 
@@ -6952,7 +6952,7 @@ plt.show()
 
 Chamamos `scatter()` e usamos o argumento `s` para definir o tamanho dos pontos usados para desenhar o gráfico. Ao executar `scatter_squares.py` agora, você deverá ver um único ponto no meio do gráfico.
 
-![Gráfico de dispersão estilizado, um único ponto.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_ponto.png){width=200}
+![Gráfico de dispersão estilizado, um único ponto.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_ponto/grafico_de_ponto.png){width=200}
 
 #### Plotando uma série de pontos com `scatter()`
 
@@ -6983,7 +6983,7 @@ plt.show()
 
 A lista `x_values` contém os números que serão elevados ao quadrado e `y_values` contém o quadrado de cada número. Quando essas listas são separadas para `scatter()`, o matplotlib lê um valor de cada lista à medida que plotar cada ponto. Os pontos a serem plotados são (1,1), (2,4), (3,9), (4,16) e (5,25).
 
-![Gráfico de dispersão estilizado, vários pontos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos.png){width=250}
+![Gráfico de dispersão estilizado, vários pontos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_ponto/grafico_de_pontos.png){width=250}
 
 \newpage
 
@@ -7035,7 +7035,7 @@ Sobre o códido:
   * A função `axis()` exige quatro valores: os valores mínimos e máximos para o eixo x e para o eixo y. Nesse caso o eixo x varia de 0 a 1100, e o eixo y, de 0 a 1100000.  
   `plt.axis([0,1100,0,1100000])`
 
-![Gráfico de dispersão com dados gerados automaticamente.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos.png){width=250}
+![Gráfico de dispersão com dados gerados automaticamente.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_ponto/grafico_de_pontos_automaticos.png){width=250}
 
 \newpage
 
@@ -7044,7 +7044,7 @@ Sobre o códido:
 O `matplotlib` permite colorir os pontos individualmente em um gráfico de dispersão. O padrão - pontos azuis com um contorno preto - funciona bem para gráficos com poucos pontos. Porém, ao plotar vários pontos, os contornos pretos podem se misturar. Para remover os contornos dos pontos, passe o argumento `edgecolor='none'` quando chamar `scatter()`:  
 `plt.scatter(x_values, y_values, edgecolors='none' ,s=40)`
 
-![Gráfico de dispersão com dados gerados automaticamente, sem contornos nos pontos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-version_4.png){width=250}
+![Gráfico de dispersão com dados gerados automaticamente, sem contornos nos pontos.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_ponto/grafico_de_pontos_automaticos-version_4.png){width=250}
 
 \newpage
 
@@ -7092,7 +7092,7 @@ Por exemplo a linha a seguir cria um gráfico com pontos azuis claros:
 
 Valores mais próximos de 0 geram cores escuras enquanto valores mais próximos de 1, geram cores mais claras.
 
-![Gráfico de dispersão com pontos de cor vermelha.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-cor.png){width=250}
+![Gráfico de dispersão com pontos de cor vermelha.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_ponto/grafico_de_pontos_automaticos-cor.png){width=250}
 
 \newpage
 
@@ -7141,7 +7141,7 @@ Sobre o programa:
   * Passamos uma lista de valores de y para `c` e, em seguida, informamos ao `pyplot` qual é o `colormap` a ser usado por meio do argumento `cmap`.
   * Esse código pinta os pontos com valores menores de y com azul e os pontos com valores maiores de y com azul escuro.
 
-![Gráfico de dispersão usando `colormap`.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/grafico_ponto/grafico_de_pontos_automaticos-colormap.png){width=250}
+![Gráfico de dispersão usando `colormap`.](./Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/01-Graficos_lineares_simples/grafico_ponto/grafico_de_pontos_automaticos-colormap.png){width=250}
 
 Você pode ver todos os `colormaps` disponíveis em `pyplot` em <http://matplotlib.org/>; acesse **Exemples** (Exemplos), faça rolagens para baixo até 'Color Exemples' (Exemplos de cores) e clique em **clormaps_reference**.
 
