@@ -7168,10 +7168,52 @@ Nesta seção usaremos o Python para gerar dados a partir de um passeio aleatór
 
 Um passeio aleatório (*random walk*) é um caminho que não tem uma direção clara. Ele é determinado por uma série de decisões aleatórias, em que cada uma é deixada totalmente ao acaso. Você pode imaginar um passeio aleatório como o caminho que uma formiga faria se tivesse enlouquecido e desse cada passo em uma direção aleatória.
 
-Passeios aleatórios têm aplicações práticas na natureza, em fisica, biologia, quimica e economia. Por exemplo, um grão de pólen flutuando sobre uma gota d'água se move pela superficie porque é constantemente empurrada pelas moléculas de água. O movimento molecular em uma gota d'água é aleatório, portanto o caminho traçado por um grão de pólen na superficie é um passeio aleatório. 
+Passeios aleatórios têm aplicações práticas na natureza, em fisica, biologia, quimica e economia. Por exemplo, um grão de pólen flutuando sobre uma gota d'água se move pela superficie porque é constantemente empurrada pelas moléculas de água. O movimento molecular em uma gota d'água é aleatório, portanto o caminho traçado por um grão de pólen na superficie é um passeio aleatório.
+
+\newpage
 
 #### Criando uma classe `RandomWalk()`
+
+Para implementar um passeio aleatório, criaremos uma classe `RandomWalk`, que tomará decisões aleatórias sobre a direção que o passeio deve seguir. A classe precisa de três atributos: 
+  
+  * Um variável para armazenar o número de pontos do passeio. 
+  
+  * Duas listas para armazenar os valores das coordenadas x e y de cada ponto do passeio.
+
+Usaremos apenas dois métodos na classe `RandomWalk`: o método `__init__()` e `fill_walk()`, que calculará os pontos do passeio.
+
+Começando por `__init__()`:
+```
+from random import choice
+
+class RandomWalk():
+    """Uma classe para gerar caminhadas aleatórias."""
+
+    def __init__(self, num_points=5000):
+        """Inicializa os atributos de uma caminhada."""
+        self.num_points = num_points
+        
+        # Inicializa a caminhada na origem (0, 0).
+        self.x_values = [0]
+        self.y_values = [0]
+```
+
+Sobre essa parte do código:
+
+  * Para tomar decisões aleatórioas, armazenaremos possíveis opções em uma lista e usaremos `choice()` para decidir qual opção utilizaremos sempre que uma decisão for tomada.
+  
+  * Então definimos o número default de pontos de um passeio para 5000 - um valor alto o suficiente para gerar alguns padrões interessantes, mas convenientemente baixo para gerar passeios de modo rápido.
+
+  * Em seguida, criamos duas listas para armazenar os valores de x e de y e começamos cada passeio no ponto (0,0).
+
+\newpage
+
 #### Escolhendo as direções
+
+
+
+\newpage
+
 #### Plotando o passeio aleatório
 #### Gerando vários passeios aleatórios
 #### Estilizando o passeio
