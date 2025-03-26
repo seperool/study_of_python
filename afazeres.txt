@@ -1,6 +1,6 @@
-ESCRITO EM 25/03/25
+ESCRITO EM 26/03/25
 ---
-PARA 26/03/25
+PARA 27/03/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Passeios aleatórios
-				- Criando uma classe RandomWalk()
 				- Escolhendo as direções
 				- Plotando o passeio aleatório
 				- Gerando vários passeios aleatórios
