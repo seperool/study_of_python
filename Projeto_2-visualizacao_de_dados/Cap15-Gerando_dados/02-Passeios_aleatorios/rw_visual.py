@@ -19,7 +19,7 @@ rw.fill_walk()
 
 #Plotando gráfico de distribuição
 plt.scatter(rw.x_values, rw.y_values, s=15)
-plt.show()
+plt.show() # Mostra gráfico
 
 # Salvando gráfico
 plt.savefig('rw_scatter.png', bbox_inches='tight')
