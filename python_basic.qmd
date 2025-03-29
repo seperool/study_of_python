@@ -7240,11 +7240,29 @@ def fill_walk(self):
     self.y_values.append(next_y)
 ```
 
+Sobre o programa:
 
+  * Criamos um laço que executa até o passeio ter preenchido com o número correto de pontos.
+  * A parte principal desse método diz ao Python como simular quatro decisões aleatórias:
+    * O passeio seguirá para a direita ou para a esquerda?
+    * Qual a distância a ser percorrida nessa direção?
+    * O passeio seguirá para cima ou para baixo?
+    * Qual a distância a ser percorrida nessa direção?
+  * Usamos `choice([1,-1])` para escolher um valor para `x_direction`, que devolve 1 para um movimento a direita ou -1 para a esquerda.
+  * Em seguida, `choice([0,1,2,3,4])` diz ao Python qual é a distância a ser percorrida nessa direção (`x_distance`) ao selecionar aleatóriamente um inteiro entre 0 e 4. (A inclusão de 0 nos permite dar passos ao longo do eixo y, além dos passos com movimentos ao longo dos dois eixos).
+  * Determinamos o tamanho de cada passo nas direções x e y multiplicando a direção do movimento pela distância escolhida. Um resultado positivo para `x_step` nos move para a direita, um resoltado negativo nos move para a esquerda e 0 nos move verticalmente. Um resultado positivo para `y_step` nos move para a cima, um resoltado negativo nos move para baixo e 0 nos move na horizontal.
+  * Se o valor tanto de `x_step` quanto de `y_step` forem 0, o passeio é interrompido, mas continuamos o laço para evitar isso.
+  * Para obter o próximo valor de x de nosso passeio, somamos o valor em `x_step` ao último valor armazenado em `x_values` e fazemos o mesmo para os valores de y.
+  * Depois que tivermos esses valores, eles são concatenados em `x_values` e `y_values`.
 
 \newpage
 
 #### Plotando o passeio aleatório
+
+
+
+\newpage
+
 #### Gerando vários passeios aleatórios
 #### Estilizando o passeio
 #### Colorindo os pontos
