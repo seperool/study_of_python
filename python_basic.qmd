@@ -7259,7 +7259,27 @@ Sobre o programa:
 
 #### Plotando o passeio aleatório
 
+```
+# Importando biblioteca
+import matplotlib.pyplot as plt
 
+# Importando classe
+from random_walk import RandomWalk
+
+# Criando instância
+rw = RandomWalk()
+# Definindo passeio aleatório
+rw.fill_walk()
+
+#Plotando gráfico de distribuição
+plt.scatter(rw.x_values, rw.y_values, s=15)
+plt.show() # Mostra gráfico
+
+# Salvando gráfico
+plt.savefig('rw_scatter.png', bbox_inches='tight')
+```
+
+![Passeio aleatório para 5000 pontos.](/Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/02-Passeios_aleatorios/rw_scatter.png){width=250}
 
 \newpage
 
