@@ -1,6 +1,6 @@
-ESCRITO EM 30/03/25
+ESCRITO EM 31/03/25
 ---
-PARA 31/03/25
+PARA 01/04/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Passeios aleatórios
-				- Plotando o passeio aleatório
 				- Gerando vários passeios aleatórios
 				- Estilizando o passeio
 				- Colorindo os pontos
