@@ -7259,6 +7259,8 @@ Sobre o programa:
 
 #### Plotando o passeio aleatório
 
+O código para plotar todos os pontos do passeio.
+
 ```
 # Importando biblioteca
 import matplotlib.pyplot as plt
@@ -7279,11 +7281,22 @@ plt.show() # Mostra gráfico
 plt.savefig('rw_scatter.png', bbox_inches='tight')
 ```
 
+Sobre o código:
+
+  * Começamos importando `pyplot` e `RandomWalk`.
+  * Então criamos um passeio aleatório, armazenamos esse passeio em `rw` e garantimos que `fill_walk()` seja chamado.
+  * Passamos os valores de x e y do passeio para `scatter()` e escolhemos um tamanho apropriado para o ponto.
+
 ![Passeio aleatório para 5000 pontos.](/Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/02-Passeios_aleatorios/rw_scatter.png){width=250}
 
 \newpage
 
 #### Gerando vários passeios aleatórios
+
+
+
+\newpage
+
 #### Estilizando o passeio
 #### Colorindo os pontos
 #### Plotando os pontos de inicio e de fim
