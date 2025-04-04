@@ -7293,7 +7293,7 @@ Sobre o código:
 
 #### Gerando vários passeios aleatórios
 
-
+Todo passeio aleatório é diferente, e é divertido explorar os vários padrões que podem ser gerados. Uma maneira de usar o código anterior para gerar vários passeios sem a necessidade de executar o programa diversas vezes é colocá-lo em um laço `while`.
 
 ```
 # Importando biblioteca
@@ -7319,10 +7319,21 @@ while True:
     if keep_running == 'n':
         break
 ```
+sobre o código:
+
+  * Esse código gera um passeio aleatório, exibe esse passeio no visualizador do `matplotlib` e faz uma pausa com o visualizador aberto. 
+
+  * Quando você o fechar, uma pergunta será feita para saber se você quer gerar outro passeio. 
+    * Responda y e você poderá gerar passeios que permaneçam próximos ao ponto de partida, que se afastam em uma direção principalmente, que têm seções mais finas conectadas a grupos maiores de pontos, e assim por diante. 
+
+    * Quando você quiser encerrar o programa, digite n.
 
 \newpage
 
 #### Estilizando o passeio
+
+
+
 #### Colorindo os pontos
 #### Plotando os pontos de inicio e de fim
 #### Limpando os eixos
