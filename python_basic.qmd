@@ -7328,6 +7328,8 @@ sobre o código:
 
     * Quando você quiser encerrar o programa, digite n.
 
+Se você usar Python 2.7, lembre-se de utilizar `raw_input()` no lugar de `input()`.
+
 \newpage
 
 #### Estilizando o passeio
