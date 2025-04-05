@@ -7334,9 +7334,18 @@ Se você usar Python 2.7, lembre-se de utilizar `raw_input()` no lugar de `input
 
 #### Estilizando o passeio
 
+Nesta seção personalizaremos nossos gráficos para enfatizar as características importantes de cada passeio e remover a ênfase dos elementos que causam distração.
 
+  * Identificamos as caracteristicas que queremos enfatizar, por exemplo, o ponto de partida do passeio, seu ponto final e o percurso feito.
+
+  * Identificamos as características que não serão enfatizadas, como as marcações e os rótulos.
+
+O resultado deve ser uma representação visual simples que comunique claramente o caminho tomado em cada passeio aleatório.
 
 #### Colorindo os pontos
+
+
+
 #### Plotando os pontos de inicio e de fim
 #### Limpando os eixos
 #### Adicionando pontos para a plotagem
