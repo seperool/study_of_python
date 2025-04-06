@@ -7344,9 +7344,53 @@ O resultado deve ser uma representação visual simples que comunique claramente
 
 #### Colorindo os pontos
 
+Usaremos um `colormap` para mostrar aordem dos pontos no passeio e então removeremos o contorno preto de cada ponto para que a cor deles seja mais evidente.
 
+Para colorir os pontos de acordo com suas posições no passeio, passamos uma lista contendo a posição de cada ponto no argumento `c`. Como os pontos são plotados na sequência, a lista simplesmente contém os números de 1 a 5000.
+
+```
+# Importando biblioteca
+import matplotlib.pyplot as plt
+
+# Importando classe
+from random_walk import RandomWalk
+
+# Continua criando novos passeios enquanto o programa estiver ativo
+while True:
+    # Cria um passeio aleatório e plota os pontos
+    
+    # Criando instância
+    rw = RandomWalk()
+    # Definindo passeio aleatório
+    rw.fill_walk()
+
+    point_numbers = list(range(rw.num_points))
+    #Plotando gráfico de distribuição
+    plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, 
+            edgecolors='none', s=15)
+    plt.show() # Mostra gráfico
+    
+    keep_running = input("Make another walk? (y/n):")
+    if keep_running == 'n':
+        break
+```
+
+Sobre o código:
+
+  * Usamos `range()` para gerar uma lista de números igual ao número de pontos do passeio. Então armazenamos esses números na lista `point_numbers`, que usaremos para definir a cor de cada ponto do passeio.
+  * Passamos `point_numbers` para o argumento `c`, usaremos o **colormap** `Blues` e passamos `edgecolor='none'` para eliminar o contorno preto de cada ponto.
+  * O resultado é um gráfico do passeio que varia do azul claro para o azul escuro ao longo de um gradiente.
+
+![Passeios aleatórios usando colormap.](/Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/02-Passeios_aleatorios/rw_visual-colormap.png){width=400}
+
+\newpage
 
 #### Plotando os pontos de inicio e de fim
+
+
+
+\newpage
+
 #### Limpando os eixos
 #### Adicionando pontos para a plotagem
 #### Alterando o tamanho para preencher a tela
@@ -7364,10 +7408,10 @@ O resultado deve ser uma representação visual simples que comunique claramente
 %%| fig-width: 6.5
 %%| fig-height: 7.5
 flowchart LR
-  A[Gráficos Python] -- Biblioteca --> B[Matplotlib]
-  B -- Função --> C{pyplot}
-  C --> D[Gráfico de linha - plot]
-  C --> E[Gráfico de dispersão/pontos - scatter]
+  A[Gráficos Python] --Biblioteca--> B[Matplotlib]
+  B --Função--> C{pyplot}
+  C --> D[plot Gráfico_de_linha]
+  C --> E[scatter Gráfico_de_dispersão]
 ```
 
 \newpage
