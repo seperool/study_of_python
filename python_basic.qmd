@@ -7387,6 +7387,8 @@ Sobre o código:
 
 #### Plotando os pontos de inicio e de fim
 
+Além de colorir os pontos para mostrar as suas posições no decorrer do passeio, seria interessante ver em que lugar cada passeio começa e termina. Para isso, podemos plotar o primeiro e o último ponto individualmente depois que a série principal for plotada. Deixaremos os pontos de início e de fim maiores e usaremos cores diferentes para destacá-los.
+
 ```
 # Importando biblioteca
 import matplotlib.pyplot as plt
@@ -7419,11 +7421,28 @@ while True:
         break
 ```
 
+\newpage
+
+Sobre o código:
+
+  * Para mostrar o ponto inicial, plotamos o ponto (0,0) em verde com um tamanho maior (`s=100`) que o restante dos pontos.
+  
+  * Para marcar o ponto final, plotamos o último valor de x e y do passeio em vermelho, com um tamanho igual a 100.
+  
+  * Lembre-se de inserir esse código logo antes da chamada a `plt.show()` para que os pontos de início e de fim sejam desenhados sobre todos os demais pontos.
+  
+  * Ao executar esse código, você deverá ser capaz de identificar exatamente em que ponto cada passeio começa e termina. (Se esses pontos de início e de fim não tiverem claramente em destaque, ajuste suas cores e tamanhos até isso acontecer).
+
 ![Enfatizando os pontos de início e de fim no gráfico.](/Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/02-Passeios_aleatorios/rw_visual-colormap-i_and_f.png){width=400}
 
 \newpage
 
 #### Limpando os eixos
+
+
+
+\newpage
+
 #### Adicionando pontos para a plotagem
 #### Alterando o tamanho para preencher a tela
 
