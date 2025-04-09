@@ -1,6 +1,6 @@
-ESCRITO EM 08/04/25
+ESCRITO EM 09/04/25
 ---
-PARA 09/04/25
+PARA 10/04/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Passeios aleatórios
-				- Limpando os eixos
 				- Adicionando pontos para a plotagem
 				- Alterando o tamanho para preencher a tela
 			- Lançando dados com o Pygal
