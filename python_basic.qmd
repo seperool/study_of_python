@@ -7496,6 +7496,11 @@ Sobre o código:
 \newpage
 
 #### Adicionando pontos para a plotagem
+
+Vamos aumentar o número de pontos para termos mais dados com os quais possamos trabalhar. Para isso, aumentamos o valor de `num_points` na criação de uma instância de `RandomWalk` e ajustamos o tamanho de cada ponto quando desenhamos o gráfico.
+
+\newpage
+
 #### Alterando o tamanho para preencher a tela
 
 \newpage
