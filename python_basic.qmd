@@ -7539,6 +7539,12 @@ while True:
 
 \newpage
 
+Sobre o programa:
+
+  * Esse exemplo cria um passeio aleatório com 50.000 pontos (para espalhar dados do mundo real) e plota cada ponto com um tamanho `s=1`. 
+  
+  * O passeio resultante tem um aspecto etéreo e lembra uma nuvem.
+
 ![Um passeio aleatório com 50.000 pontos.](Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/02-Passeios_aleatorios/rw_visual-50000.png){width=400}
 
 \newpage
