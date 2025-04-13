@@ -1,6 +1,6 @@
-ESCRITO EM 12/04/25
+ESCRITO EM 13/04/25
 ---
-PARA 13/04/25
+PARA 14/04/25
 ---
 Subir github:
 
@@ -12,8 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
-			- Passeios aleatórios
-				- Alterando o tamanho para preencher a tela
 			- Lançando dados com o Pygal
 		- Cap. 16 - Fazendo download de dados
 		- Cap. 17 - Trabalhando com APIs
