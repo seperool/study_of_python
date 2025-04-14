@@ -7603,10 +7603,18 @@ Sobre o programa:
   * O Python pressupõem que a resolução de sua tela seja de 80 pixels por polegada; se esse código não oferecer um tamanho exato para o seu gráfico, ajuste os números conforme for necessário. Por outro lado, se você souber qual é a resolução do seu sistema, passe-a para `figure()` usando o parâmetro `dpi` para definir um tamanho de gráfico que faça um uso eficiente do espaço disponível em sua tela.  
   `plt.figure(dpi=128, figsize=(10,6))`
 
-
 \newpage
 
 ### Lançando dados com o `Pygal`
+
+#### Instalando `Pygal`
+#### Galeria `Pygal`
+#### Criando a classe Die
+#### Lançando o dado
+#### Analisando os resultados
+#### Criando um histograma
+#### Lançando dois dados
+#### Lançando dados de tamanhos diferentes
 
 \newpage
 
