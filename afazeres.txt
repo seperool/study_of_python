@@ -1,6 +1,6 @@
-ESCRITO EM 14/04/25
+ESCRITO EM 15/04/25
 ---
-PARA 15/04/25
+PARA 16/04/25
 ---
 Subir github:
 
@@ -30,6 +30,4 @@ Afazeres:
 				- 10
 		- Cap. 15:
 			- Exercicios Cap. 15:
-				- 3
-				- 4
 				- 5
