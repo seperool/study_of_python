@@ -21,7 +21,7 @@ import sklearn                       # Aprendizado de máquina (scikit-learn)
 
 # Bibliotecas gráficas
 import matplotlib.pyplot as plt      # Criação de gráficos
-import Pygal                         # Criação de gráficos vetoriais escaláveis
+import Pygal                         # Criação de gráficos vetoriais escaláveis (gráficos online)
 import seaborn as sns                # Visualização de dados (baseado no Matplotlib)
 
 import kivy                          # Desenvolvimento de aplicativos multi-touch
