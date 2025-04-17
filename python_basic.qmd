@@ -7607,7 +7607,28 @@ Sobre o programa:
 
 ### Lançando dados com o `Pygal`
 
+Nesta seção usaremos o **pacote de visualização** `Pygal` de Python para reproduzir arquivos com **gráficos vetoriais escalaveis**. Eles são úteis em visualizações apresentadas em telas de tamanhos diferentes, pois são automaticamente escaladas para se adequar a tela de quem as tiver vendo.
+
+Se você planeja usar suas **visualizações online**, considere usar o `Pygal` para que seu trabalho tenha uma boa aparência em qualquer dispositivo usado pelas pessoas para as visualizações.
+
+Neste projeto analisamos os resultados do lançamento de dados. Se você lançar um dado comum de seis lados, terá a mesma chance de obter qualquer um dos números de 1 a 6. No entanto, ao usar dois dados, é mais provável que você tire determinados números e não outros. Tentaremos determinar quais números são mais prováveis de ocorrer gerando um conjunto de dados que represente o lançamento dos dados. Então plotaremos o resultado de um número maior de lançamentos para determinar quais resultados são mais prováveis que outros.
+
+O estudo do lançamentos muitas vezes é usado em matemática para explicar vários tipos de análise de dados. No entanto, esses estudos também têm aplicações no mundo real, em cassinos e em outros cenários de apostas, assim como na forma como se comportam jogos como o Monopólio e jogos de RPG (*Role-Playing Game*).
+
 #### Instalando `Pygal`
+
+Instale o `Pygal` usando pip.
+
+No Linux e no OS X:
+
+`pip install --usar pygal`
+
+No Windows:
+
+`python -m pip install --user pygal`
+
+\newpage
+
 #### Galeria `Pygal`
 #### Criando a classe Die
 #### Lançando o dado
