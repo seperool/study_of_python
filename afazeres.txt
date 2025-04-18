@@ -1,6 +1,6 @@
-ESCRITO EM 17/04/25
+ESCRITO EM 18/04/25
 ---
-PARA 18/04/25
+PARA 19/04/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Lançando dados com o Pygal
-				- Galeria Pygal
 				- Criando a classe Die
 				- Lançando o dado
 				- Analisando os resultados
