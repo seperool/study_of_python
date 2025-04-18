@@ -7630,6 +7630,15 @@ No Windows:
 \newpage
 
 #### Galeria `Pygal`
+
+Para ver os tipos de visualizações possíveis com o `Pygal`, visite a galeria de tipos de gráficos:
+
+<https://www.pygal.org/>
+
+Clique em **Documentation** (Documentação) e depois em **Chart types** (Tipos de gráficos).
+
+Todo exemplo inclui o código-fonte, portanto você poderá ver como as visualizações são geradas.
+
 #### Criando a classe Die
 #### Lançando o dado
 #### Analisando os resultados
