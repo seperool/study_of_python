@@ -7667,6 +7667,9 @@ Sobre o programa:
 \newpage
 
 #### Lançando o dado
+
+
+
 #### Analisando os resultados
 #### Criando um histograma
 #### Lançando dois dados
