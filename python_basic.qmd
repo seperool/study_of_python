@@ -7722,6 +7722,11 @@ Sobre o resultado:
 \newpage
 
 #### Analisando os resultados
+
+
+
+\newpage
+
 #### Criando um histograma
 #### Lançando dois dados
 #### Lançando dados de tamanhos diferentes
