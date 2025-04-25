@@ -6,31 +6,32 @@ Created on Tue Apr 22 12:16:03 2025
 @author: sergio
 """
 
+# Importa a classe Die do módulo die
 from die import Die
 
-# Cria uma instância da classe Die, que por padrão representa um dado de 6 lados (D6)
+# Cria um dado de 6 lados
 D6 = Die()
 
-# Cria uma lista vazia para armazenar os resultados dos lançamentos
+# Inicializa uma lista para armazenar os resultados
 results = []
-# Loop que roda 1000 vezes para simular 1000 lançamentos do dado
+# Simula 1000 lançamentos
 for roll_num in range(1000):
-    # Lança o dado e obtém um valor aleatório entre 1 e o número de lados do dado
+    # Lança o dado
     result = D6.roll()
-    # Adiciona o resultado do lançamento à lista de resultados
+    # Adiciona o resultado à lista
     results.append(result)
 
-# Imprime a lista com todos os resultados dos 1000 lançamentos
+# Imprime os resultados
 print(results)
 
-# Cria uma lista vazia para armazenar a frequência de cada valor que saiu no dado
+# Inicializa uma lista para armazenar as frequências
 frequencies = []
-# Loop que itera por cada possível valor que o dado pode ter (de 1 até o número de lados)
+# Calcula a frequência de cada valor
 for value in range(1, D6.num_sides + 1):
-    # Conta quantas vezes cada valor específico apareceu na lista de resultados
+    # Conta as ocorrências do valor
     frequency = results.count(value)
-    # Adiciona a frequência desse valor à lista de frequências
+    # Adiciona a frequência à lista
     frequencies.append(frequency)
 
-# Imprime a lista com a frequência de cada valor. O primeiro número corresponde à frequência do valor 1, o segundo do valor 2, e assim por diante.
+# Imprime as frequências
 print(frequencies)
