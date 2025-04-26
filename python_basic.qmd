@@ -7723,7 +7723,7 @@ Sobre o resultado:
 
 #### Analisando os resultados
 
-
+Analisamos os resultados do lançamento de um **D6** contando quantas vezes tiramos cada número (frequencia):
 
 ```
 # Importa a classe Die do módulo die
@@ -7757,9 +7757,22 @@ for value in range(1, D6.num_sides + 1):
 print(frequencies)
 ```
 
+\newpage
+
+Sobre programa:
+
+  * Como estamos usando o `Pygal` para analisar e não para exibir os resultados, podemos aumentar o número de lançamentos simultaneos para 1000.
+  * Para analisar o lançamento, criamos a lista vazia `frequencies` para armazenar o número de vezes que cada valor foi tirado.
+  * Percorremos os valores possiveis com um laço (de 1 a 6, nesse caso), contamos quantas vezes cada número aparece em `results` e concatenamos esse valor na lista `frequencies`.
+  * Então exibimos essa lista antes de criar uma visualização:
+
 ```
 [177, 171, 163, 164, 162, 163]
 ```
+
+  * Esse resultado parece ser razoável: vemos seis frequências, uma para cada número possível quando lançamos **D6**, e vemos que nenhuma frequência é significantivamente maior que as demais.
+
+No próximo tópico vamos visualizar esses resultados.
 
 \newpage
 
