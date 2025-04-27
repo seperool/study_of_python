@@ -6,10 +6,13 @@ Created on Tue Apr 22 12:16:03 2025
 @author: sergio
 """
 
+# Importando bibliotecas
 # Importa a classe Die do módulo die
 from die import Die
+# Importa a biblioteca pygal para gráficos.
+import pygal
 
-# Cria um dado de 6 lados
+# Cria um dado de 6 lados, instância
 D6 = Die()
 
 # Inicializa uma lista para armazenar os resultados
@@ -35,3 +38,22 @@ for value in range(1, D6.num_sides + 1):
 
 # Imprime as frequências
 print(frequencies)
+
+# Visualiza os resultados
+# Cria um gráfico de barras.
+hist = pygal.Bar()
+# Define o título.
+hist.title = "Results of rolling one D6 1000 times."
+# Define os rótulos do eixo x.
+hist.x_labels = ["1","2","3","4","5","6"]
+# Define o título do eixo x.
+hist.x_title = "Result"
+# Define o título do eixo y.
+hist.y_title = "Frequency of Result"
+# Adiciona os dados ao gráfico.
+hist.add('D6', frequencies)
+
+# Salva o gráfico em SVG.
+hist.render_to_file("die_visual.svg")
+# Informa que o gráfico foi salvo.
+print("Gráfico salvo como die_visual.svg")
