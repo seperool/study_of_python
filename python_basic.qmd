@@ -7778,6 +7778,12 @@ No próximo tópico vamos visualizar esses resultados.
 
 #### Criando um histograma
 
+Com uma lista de frequências, podemos criar um histograma dos resultados.
+
+Um **histograma** é um gráfico de barras que mostra a frequência de ocorrência de determinados resultados.
+
+Eis o código para criar o histograma:
+
 ```
 # Importando bibliotecas
 # Importa a classe Die do módulo die
@@ -7831,6 +7837,8 @@ hist.render_to_file("die_visual.svg")
 # Informa que o gráfico foi salvo.
 print("Gráfico salvo como die_visual.svg")
 ```
+
+
 
 \newpage
 
