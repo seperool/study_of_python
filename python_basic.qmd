@@ -126,6 +126,25 @@ flowchart LR
 
 \newpage
 
+```{mermaid}
+%%| fig-cap: "Gráficos e bibliotecas"
+%%| fig-width: 6.5
+%%| fig-height: 7.5
+flowchart LR
+  A[Gráficos Python] --> B{Biblioteca}
+  B --> C[Matplotlib]
+  C --Função--> D{pyplot}
+  D --> E[plot] 
+  E --> E1[Gráfico_de_linha]
+  D --> F[scatter] 
+  F --> F1[Gráfico_de_dispersão]
+  B --> G{pygal}
+  G --> H[Bar] 
+  H --> H1[Histograma]
+```
+
+\newpage
+
 # Variáveis e tipos de dados simples
 
 ## print
@@ -7838,27 +7857,38 @@ hist.render_to_file("die_visual.svg")
 print("Gráfico salvo como die_visual.svg")
 ```
 
+Sobre programa:
 
+  * Gerando um gráfico de barras criando uma instância de `pygal.Bar()`, que armazenamos em `hist`.
+  * Definimos o atributo `title` de `hist` (apenas uma string que usamos para dar nome ao histograma), usamos os resultados possíveis do lançamento de um **D6** como rótulo no eixo x (`hist.x_labels`) e adicionamos um título para cada um dos eixos (`hist.x_title` e `hist.y_title`).
+  * Usamos `add()` para acrescentar uma série de valores ao gráfico (passando-lhe um rótulo para o conjunto de valores a ser adicionado e uma lista de valores que aparecerão no gráfico).  
+  `hist.add('D6', frequencies)`
+  * Por fim, renderizamos o gráfico em um arquivo `SVG`, que espera um nome de arquivo com extesão `.svg`.  
+  `hist.render_to_file("die_visual.svg")`
+
+\newpage
+
+Como visualizar `.svg`:
+  
+  * Navegadores Web:  
+  Basta arrastar e soltar o arquivo SVG na janela do navegador, ou clicar com o botão direito no arquivo, selecionar "Abrir com" e escolher o seu navegador preferido.
+  
+  * Linha de Comando (Ferramentas Gráficas):  
+  `xdg-open seu_arquivo.svg`
+
+  * Observe que o `pygal` fez o gráfico ser interativo: passe o cursor sobre qualquer barra do gráfico e você verá o dado associado a ela. Esse recurso é particularmente útil quando plotamos vários conjuntos de dados no mesmo gráfico.
+
+![Um gráfico de barras simples criado com o `pygal`.](Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/03-Lancando_dados_Pygal/die_visual.png){width=400}
 
 \newpage
 
 #### Lançando dois dados
-#### Lançando dados de tamanhos diferentes
+
+
 
 \newpage
 
-### Resumo
-
-```{mermaid}
-%%| fig-cap: "Gráficos Biblioteca matplotlib"
-%%| fig-width: 6.5
-%%| fig-height: 7.5
-flowchart LR
-  A[Gráficos Python] --Biblioteca--> B[Matplotlib]
-  B --Função--> C{pyplot}
-  C --> D[plot Gráfico_de_linha]
-  C --> E[scatter Gráfico_de_dispersão]
-```
+#### Lançando dados de tamanhos diferentes
 
 \newpage
 
