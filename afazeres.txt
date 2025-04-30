@@ -1,6 +1,6 @@
-ESCRITO EM 29/04/25
+ESCRITO EM 30/04/25
 ---
-PARA 30/04/25
+PARA 01/05/25
 ---
 Subir github:
 
@@ -14,6 +14,7 @@ Afazeres:
 		- Cap. 15 - Gerando dados
 			- Lançando dados com o Pygal
 				- Lançando dois dados
+					- Escrever
 				- Lançando dados de tamanhos diferentes
 		- Cap. 16 - Fazendo download de dados
 		- Cap. 17 - Trabalhando com APIs
