@@ -1,6 +1,6 @@
-ESCRITO EM 01/05/25
+ESCRITO EM 02/05/25
 ---
-PARA 02/05/25
+PARA 03/05/25
 ---
 Subir github:
 
@@ -13,8 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 15 - Gerando dados
 			- Lançando dados com o Pygal
-				- Lançando dois dados
-					- Escrever
 				- Lançando dados de tamanhos diferentes
 		- Cap. 16 - Fazendo download de dados
 		- Cap. 17 - Trabalhando com APIs
