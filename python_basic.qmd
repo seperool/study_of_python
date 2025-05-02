@@ -7884,7 +7884,9 @@ Como visualizar `.svg`:
 
 #### Lançando dois dados
 
+Lançar dois dados resulta em números maiores e uma distribuição diferente dos resultados.
 
+Vamos modificar o nosso código para criar dois dados **D6** a fim de simular o modo como lançamos um par de dados. Sempre que lançarmos o par, somaremos os dois números (um de cada dado) e armazenaremos o resultado em `results`.
 
 ```
 # Importando bibliotecas
@@ -7942,13 +7944,34 @@ hist.render_to_file("dice_visual.svg")
 print("Gráfico salvo como dice_visual.svg")
 ```
 
+\newpage
 
+Sobre o programa:
+
+  * Depois de criar duas instâncias de `Die`, lançamos os dados e os dados e calculamos a soma de dois dados em cada lançamento.
+
+  * O maior resultado possível (12) é a soma do maior número nos dois dados, e nós o armazenamos em `max_result`.
+
+  * O menor resultado possível (2) é a soma do menor número nos dois dados.
+
+  * Quando analisamos os resultados, contamos o número de resultados para cada valor entre 2 e `max_result`.
+
+  * Poderiamos ter usado `range(2,13)`, mas isso funcionaria somente para dois dados de **D6**. Ao modelar situações do mundo real, é melhor escrever um código que possa modelar facilmente várias situações. Esse código nos permite simular o lançamento de um par de dados com qualquer quantidade de lados.
+
+  * Quando criamos o gráfico, atualizamos o título e os rótulos do eixo x e da série de dados.
+
+  * Se a lista `x_labels` for muito longa, faria sentido escrever um laço para gerar essa lista automaticamente.
+
+  * Esse gráfico mostra os resultados aproximados que você provavelmente obterá quando lançar um par de dados **D6**. Como podemos ver, é menos provável que você obtenha um 2 ou um 12, e mais provável que tire um 7, pois há seis maneiras de obter esse valor:  
+  `[1 e 6, 2 e 5, 3 e 4, 4 e 3, 5 e 2 ou 6 e 1]`
 
 ![Resultados simulados para o lançamento de dois dados de seis lados, 1.000 vezes.](Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/03-Lancando_dados_Pygal/dice_visual.png){width=400}
 
 \newpage
 
 #### Lançando dados de tamanhos diferentes
+
+
 
 \newpage
 
