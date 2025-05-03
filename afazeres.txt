@@ -23,6 +23,7 @@ Afazeres:
 				- 10
 		- Cap. 15:
 			- Exercicios Cap. 15:
+				- 6
 				- 7
 				- 8
 				- 9
