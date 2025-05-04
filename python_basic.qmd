@@ -7971,6 +7971,8 @@ Sobre o programa:
 
 #### Lançando dados de tamanhos diferentes
 
+Vamos criar um dado de seis lados e um dado de dez lados e ver o que acontece quando lançamos 50.000 vezes.
+
 ```
 # Importa bibliotecas
 # Importa pygal para gráficos
@@ -8029,6 +8031,12 @@ print("Gráfico salvo como different_dice_visual.svg")
 ```
 
 \newpage
+
+Sobre o programa:
+
+  * Para criar um **D10**, passamos o argumento 10 na criação da segunda instância de `Die` e mudamos o primeiro laço para simular 50.000 lançamentos em vez de 1.000.
+  * O menor resultado possível ainda é 2, mas o maior resultado agora é 16; desse modo, ajustamos o título, os rótulos do eixo x e os rótulos das séries de dados para refletir esse fato.
+  * Em vez de haver um único resultado mais provável, temos cinco. Isso acontece porque continua havendo apenas uma maneira de obter o menor valor (1 e 1) e o maior valor (6 e 10), porém o dado menor limita o número de maneiras pelas quais podemos gerar os números intermediários: há seis maneiras de obter os resultados 7, 8, 9, 10 e 11. Portanto esses são os resultados mais comuns e é igualmente provável que você obtenha qualquer um desses números.
 
 ![Os resultados do lançamento de um dado de seis lados e outro de dez lados, 50.000 vezes.](Projeto_2-visualizacao_de_dados/Cap15-Gerando_dados/03-Lancando_dados_Pygal/different_dice_visual.png){width=400}
 
