@@ -1,6 +1,6 @@
-ESCRITO EM 04/05/25
+ESCRITO EM 05/05/25
 ---
-PARA 05/05/25
+PARA 06/05/25
 ---
 Subir github:
 
@@ -12,16 +12,30 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Projeto Visulização de Dados
 		- Cap. 16 - Fazendo download de dados
+			- Formato de arquivo CSV
+				- Fazendo parse dos cabeçalhos de arquivos CSV
+				- Exibindo os cabeçalhos e suas posições
+				- Extraindo e lendo dados
+				- Plotando dados em um gráfico de temperatura
+				- Módulo datetime
+				- Plotando datas
+				- Plotando um perído de tempo maior
+				- Plotando uma segunda série de dados
+				- Sombreando uma área do gráfico
+				- Verificação de erros
+			- Mapeando conjuntos de dados globais: formato `JSON`
 		- Cap. 17 - Trabalhando com APIs
+			- Usando uma API web
+			- Visualizando os repositórios usando `Pygal`
+			- A API de Hacker News
 	- Scripts:
 		- Cap. 3:
 			- Exercicios Cap. 3:
 				- 9
 				- 10
-		- Cap. 15:
-			- Exercicios Cap. 15:
-				- 6
-				- 7
-				- 8
-				- 9
-				- 10
+		- Cap. 16:
+			- Exercicios Cap. 16:
+				- 1
+				- 2
+				- 3
+				- 4
