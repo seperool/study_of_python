@@ -8044,7 +8044,27 @@ Sobre o programa:
 
 ## Fazendo download de dados
 
+Neste capítulo você fará download de conjuntos de dados a partir de fontes online e criará visualizações funcionais desses dados.
+
+Uma grande variedade de dados pode ser encontrada online, e muitos ainda não foram analizados de forma completa. A capacidade de analisar esses dados permite descobrir padrões e conexões que mais ninguém percebeu.
+
+Vamos acessar e visualizar dados armazenados em dois formatos comuns: **CSV** e **JSON**. Usaremos o módulo `csv` de Python para processar dados meterológicos armazenados no formato **CSV** (*Comma-Separated Values*, ou Valores Separados por Vírgula) e analisar as temperaturas máxima e mínima ao longo do tempo em duas localidades diferentes.
+
+Então usaremos o `matplotlib` para gerar um gráfico com base nos dados baixados e exibiremos as variações de temperatura em dois ambientes bem distintos: Sitka no Alasca e Vale da Morte (Death Valley) na Califórnia.
+
+Mais adiante, neste capítulo, usaremos o módulo `json` para acessar dados de população armazenados no formato **JSON** e usaremos o `Pygal` para desenhar um mapa da população de cada país.
+
+No final deste capítulo você estará preparado para trabalhar com diferentes tipos e formatos de conjuntos de dados e compreenderá melhor o processo de criação de visualizações complexas.
+
+A capacidade de acessar e de visualizar dados online de tipos e formatos diferentes é essencial para trabalhar com uma grande variedade de conjuntos de dados do mundo real.
+
+\newpage
+
 ### Formato de arquivo `CSV`
+
+
+
+\newpage
 
 #### Fazendo parse dos cabeçalhos de arquivos `CSV`
 #### Exibindo os cabeçalhos e suas posições
