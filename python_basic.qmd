@@ -8062,7 +8062,19 @@ A capacidade de acessar e de visualizar dados online de tipos e formatos diferen
 
 ### Formato de arquivo `CSV`
 
+Uma maneira simples de armazenar dados emum arquivo-texto é escrevê-los como uma série de valores *separados por vírgula* (*comma-separated values*). Os arquivos resultantes são chamados de arquivos **CSV**.
 
+Por exemplo, eis uma linha de dados meteorológicos no formato **CSV**:
+
+`2014-1-5,61,44,26,18,7,-1,56,30,9,30.34,30.27,30.15,,,,10,4,,0.00,0,,195`
+
+São dados meteorológicos de 5 de janeiro de 2014 para Sitka no Alasca. Incluem as temperaturas máxima e mínima assim como várias outras medições desse dia.
+
+Os arquivos **CSV** podem ser complicados para os seres humanos lerem, mas são fáceis para os programas processarem e extraírem valores, o que agiliza a operação de análise de dados.
+
+Começaremos com um pequeno conjunto de dados mateológicos formatados em **CSV**, registrados em Sitka e disponíveis nos recursos do livro em <https://nostarch.com/python-crash-course-3rd-edition>. Copie o arquivo sitka_weather_07-2014.csv para a pasta em que você está escrevendo os programas desse capítulo. (Depois que fizer o download dos recursos do livro, você terá todos os arquivos necessários a este projeto.)
+
+Os dados meteorológicos deste projeto foram originalmente baixados de <http://www.wunderground.com/history/>.
 
 \newpage
 
