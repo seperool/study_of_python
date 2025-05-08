@@ -8079,6 +8079,36 @@ Os dados meteorológicos deste projeto foram originalmente baixados de <http://w
 \newpage
 
 #### Fazendo parse dos cabeçalhos de arquivos `CSV`
+
+
+
+```
+# Importa o módulo para trabalhar com arquivos CSV.
+import csv
+
+# Define o nome do arquivo.
+filename = 'sitka_weather_07-2014.csv'
+# Abre o arquivo CSV.
+with open(filename) as f:
+    # Cria um objeto para ler o CSV.
+    reader = csv.reader(f)
+    # Lê a linha de cabeçalho.
+    header_row = next(reader)
+    # Imprime o cabeçalho.
+    print(header_row)
+```
+
+```
+['AKDT', 'Max TemperatureF', 'Mean TemperatureF', 'Min TemperatureF', 'Max Dew PointF',
+ 'MeanDew PointF', 'Min DewpointF', 'Max Humidity', ' Mean Humidity', ' Min Humidity', 
+ ' Max Sea Level PressureIn', ' Mean Sea Level PressureIn', ' Min Sea Level PressureIn', 
+ ' Max VisibilityMiles', ' Mean VisibilityMiles', ' Min VisibilityMiles', 
+ ' Max Wind SpeedMPH', ' Mean Wind SpeedMPH', ' Max Gust SpeedMPH', 'PrecipitationIn', 
+ ' CloudCover', ' Events', ' WindDirDegrees']
+```
+
+\newpage
+
 #### Exibindo os cabeçalhos e suas posições
 #### Extraindo e lendo dados
 #### Plotando dados em um gráfico de temperatura
