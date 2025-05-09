@@ -8080,7 +8080,9 @@ Os dados meteorológicos deste projeto foram originalmente baixados de <http://w
 
 #### Fazendo parse dos cabeçalhos de arquivos `CSV`
 
+O módulo `csv` da biblioteca-padrão de Python faz parse das linhas de um arquivo **CSV** e permite extrair rapidamente os valores emque estivermos interessados.
 
+Vamos começar analisando a primeira linha do arquivo, que contém uma série de cabeçalho para os dados:
 
 ```
 # Importa o módulo para trabalhar com arquivos CSV.
@@ -8098,6 +8100,20 @@ with open(filename) as f:
     print(header_row)
 ```
 
+Sobre o programa:
+
+  * Depois de importar o módulo `csv`, armazenamos o nome do arquivo com que estamos trabalhando em `filename`.
+
+  * Então abrimos o arquivo e armazenamos o objeto arquivo resultante em `f`.
+
+  * Chamamos `csv.reader()` e lhe passamos o objeto arquivo como argumento a fim de criar um objeto reader associado a esse arquivo. Armazenamos o objeto em `reader`.
+
+  * O módulo `csv` contém uma função `next()`, que devolve a próxima linha do arquivo quando recebe o objeto reader. Na listagem anterior, chamamos `next()` apenas uma vez para obter a primeira linha do arquivo, que contém os cabeçalhos.
+
+  * Armazenamos os dados devolvidos em `header_row`. Como podemos ver, `header_row` contém cabeçalho significativos relacionados a dados meteorológicos, que nos informam quais dados estão armazenados em cada linha.
+
+\newpage
+
 ```
 ['AKDT', 'Max TemperatureF', 'Mean TemperatureF', 'Min TemperatureF', 'Max Dew PointF',
  'MeanDew PointF', 'Min DewpointF', 'Max Humidity', ' Mean Humidity', ' Min Humidity', 
@@ -8107,9 +8123,26 @@ with open(filename) as f:
  ' CloudCover', ' Events', ' WindDirDegrees']
 ```
 
+Analisando o cabeçalho do arquivo `csv`:
+
+  * `reader` processa a primeira linha de valores separados por vírgula do arquivo e armazena cada um deles como um item em uma lista.
+  
+  * O cabeçalho `AKDT` representa *Alaska Daylight Time* (Fuso horário do Alasca). A posição desse cabeçalho nos informa que o primeiro valor de cada linha será a data ou a hora.
+  
+  * O cabeçalho `Max TemperatureF` nos informa que o segundo valor de cada linha é a temperatura máxima dessa data em graus Fahrenheit.
+  
+  * Você pode ler o restante dos cabeçalhos para determinar quais tipos de informação estão incluídos no arquivo.
+  
+  * Os cabeçalhos nem sempre estão formatados de modo consistente: espaços e unidades estão em lugares inusitados. Isso é comum em arquivos com dados brutos, mas não causarão problemas.
+
 \newpage
 
 #### Exibindo os cabeçalhos e suas posições
+
+
+
+\newpage
+
 #### Extraindo e lendo dados
 #### Plotando dados em um gráfico de temperatura
 #### Módulo `datetime`
