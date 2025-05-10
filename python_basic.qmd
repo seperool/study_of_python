@@ -8139,7 +8139,52 @@ Analisando o cabeçalho do arquivo `csv`:
 
 #### Exibindo os cabeçalhos e suas posições
 
+```
+# Importa o módulo para trabalhar com arquivos CSV.
+import csv
 
+# Define o nome do arquivo.
+filename = 'sitka_weather_07-2014.csv'
+# Abre o arquivo CSV.
+with open(filename) as f:
+    # Cria um objeto para ler o CSV.
+    reader = csv.reader(f)
+    # Lê a linha de cabeçalho.
+    header_row = next(reader)
+    
+    # Itera sobre os índices e os cabeçalhos das colunas.
+    for index, column_header in enumerate(header_row):
+        # Imprime o índice e o cabeçalho de cada coluna.
+        print(index, column_header)
+```
+
+\newpage
+
+```
+0 AKDT
+1 Max TemperatureF
+2 Mean TemperatureF
+3 Min TemperatureF
+4 Max Dew PointF
+5 MeanDew PointF
+6 Min DewpointF
+7 Max Humidity
+8  Mean Humidity
+9  Min Humidity
+10  Max Sea Level PressureIn
+11  Mean Sea Level PressureIn
+12  Min Sea Level PressureIn
+13  Max VisibilityMiles
+14  Mean VisibilityMiles
+15  Min VisibilityMiles
+16  Max Wind SpeedMPH
+17  Mean Wind SpeedMPH
+18  Max Gust SpeedMPH
+19 PrecipitationIn
+20  CloudCover
+21  Events
+22  WindDirDegrees
+```
 
 \newpage
 
