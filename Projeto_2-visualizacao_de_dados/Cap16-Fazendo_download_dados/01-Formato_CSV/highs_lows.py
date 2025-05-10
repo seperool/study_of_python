@@ -17,5 +17,8 @@ with open(filename) as f:
     reader = csv.reader(f)
     # Lê a linha de cabeçalho.
     header_row = next(reader)
-    # Imprime o cabeçalho.
-    print(header_row)
+    
+    # Itera sobre os índices e os cabeçalhos das colunas.
+    for index, column_header in enumerate(header_row):
+        # Imprime o índice e o cabeçalho de cada coluna.
+        print(index, column_header)
