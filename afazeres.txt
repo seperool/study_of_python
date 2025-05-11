@@ -1,6 +1,6 @@
-ESCRITO EM 10/05/25
+ESCRITO EM 11/05/25
 ---
-PARA 11/05/25
+PARA 12/05/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 16 - Fazendo download de dados
 			- Formato de arquivo CSV
-				- Exibindo os cabeçalhos e suas posições
 				- Extraindo e lendo dados
 				- Plotando dados em um gráfico de temperatura
 				- Módulo datetime
