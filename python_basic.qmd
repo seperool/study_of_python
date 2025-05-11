@@ -8139,6 +8139,8 @@ Analisando o cabeçalho do arquivo `csv`:
 
 #### Exibindo os cabeçalhos e suas posições
 
+Para facilitar a compreensão dos dados de cabeçalho do arquivo, exiba cada cabeçalho e a sua posição na lista:
+
 ```
 # Importa o módulo para trabalhar com arquivos CSV.
 import csv
@@ -8158,7 +8160,15 @@ with open(filename) as f:
         print(index, column_header)
 ```
 
+Sobre o programa:
+
+  * Usamos `enumerate()` na lista para obter o índice de cada item, assim como o valor.
+  
+  * Observe que removemos a linha `print(header_now)` em troca dessa versão mais detalhada.
+
 \newpage
+
+Eis a saída mostrando o índice de cada cabeçalho:
 
 ```
 0 AKDT
@@ -8185,6 +8195,12 @@ with open(filename) as f:
 21  Events
 22  WindDirDegrees
 ```
+
+Análise do cabeçalho:
+
+  * Nessa saída vemos que as datas e suas temperaturas máximas estão armazenadas nas colunas 0 e 1.
+  
+  * Para explorar esses dados, processaremos cada linha de `sitka_weather_07-2014.csv` e extrairemos os valores nos índices 0 e 1.
 
 \newpage
 
