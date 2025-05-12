@@ -8205,6 +8205,44 @@ Análise do cabeçalho:
 \newpage
 
 #### Extraindo e lendo dados
+
+```
+# Importa o módulo csv para trabalhar com arquivos CSV.
+import csv
+
+# Define o nome do arquivo CSV a ser lido.
+filename = 'sitka_weather_07-2014.csv'
+# Abre o arquivo CSV.
+with open(filename) as f:
+    # Cria um objeto para ler o arquivo CSV.
+    reader = csv.reader(f)
+    # Lê a primeira linha, contendo os cabeçalhos.
+    header_row = next(reader)
+
+    # Lista para armazenar as temperaturas máximas.
+    highs = []
+    # Loop pelas linhas restantes do arquivo.
+    for row in reader:
+        # Converte o valor da segunda coluna para inteiro (temperatura máxima).
+        high = int(row[1])
+        # Adiciona a temperatura máxima à lista.
+        highs.append(high)
+
+    # Imprime a lista de temperaturas máximas.
+    print(highs)
+```
+
+\newpage
+
+```
+[64, 71, 64, 59, 69, 62, 61, 55, 57, 61,
+ 57, 59, 57, 61, 64, 61, 59, 63, 60, 57,
+ 69, 63, 62, 59, 57, 57, 61, 59, 61, 61,
+ 66]
+```
+
+\newpage
+
 #### Plotando dados em um gráfico de temperatura
 #### Módulo `datetime`
 #### Plotando datas
