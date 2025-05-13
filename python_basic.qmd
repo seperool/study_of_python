@@ -8206,6 +8206,10 @@ Análise do cabeçalho:
 
 #### Extraindo e lendo dados
 
+Agora que sabemos quais são as colunas de dados de que precisamos, vamos ler alguns desses dados.
+
+Em primeiro lugar, vamos ler a temperatura máxima de cada dia:
+
 ```
 # Importa o módulo csv para trabalhar com arquivos CSV.
 import csv
@@ -8232,7 +8236,19 @@ with open(filename) as f:
     print(highs)
 ```
 
-\newpage
+Sobre o programa:
+
+  * Criamos uma lista vazia chamada `highs`.
+  * Percorremos as linhas testantes do arquivo com um laço.
+  * O objeto `reader` continua a partir de onde parou o arquivo CSV e devolve automaticamente cada linha após a sua posição atual.
+  * Como já lemos a linha com o cabeçalho, o laço começará na segunda linha, em que os dados propriamente ditos têm início.
+  * A cada passagem pelo laço concatenamos os dados do índice 1 - a segunda coluna - em `highs`.
+  * Extraímos a temperatura máxima de cada dia e as armazenamos de modo organizado em uma lista na forma de string.
+  * Em seguida, converte essas strings em números usando `int()` para que eles possam ser lidos pelo matplotlib.
+  * Convertemos as strings em inteiros antes de concatenar as temperaturas na lista.
+  * O resultado é uma lista das máximas diárias em formato númerico.
+
+A listagem a seguir mostra os dados que estão agora armazenados em `highs`:
 
 ```
 [64, 71, 64, 59, 69, 62, 61, 55, 57, 61,
@@ -8244,6 +8260,9 @@ with open(filename) as f:
 \newpage
 
 #### Plotando dados em um gráfico de temperatura
+
+\newpage
+
 #### Módulo `datetime`
 #### Plotando datas
 #### Plotando um perído de tempo maior
