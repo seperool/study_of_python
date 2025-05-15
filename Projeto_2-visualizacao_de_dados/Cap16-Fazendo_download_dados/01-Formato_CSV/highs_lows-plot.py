@@ -8,6 +8,7 @@ Created on Wed May 14 18:08:29 2025
 
 # Importa o módulo csv para trabalhar com arquivos CSV.
 import csv
+# Importa funções do matplotlib para plotagem.
 from matplotlib import pyplot as plt
 
 # Define o nome do arquivo CSV a ser lido.
@@ -31,14 +32,19 @@ with open(filename) as f:
     # Imprime a lista de temperaturas máximas.
     print(highs)
 
-# Faz a plotagem dos gráficos
+# Cria a figura para o gráfico.
 fig = plt.figure(dpi=128,figsize=(10,6))
+# Plota as temperaturas máximas em vermelho.
 plt.plot(highs, c='red')
 
-#Formata o gráfico
+# Define o título do gráfico e os rótulos dos eixos.
 plt.title("Daily high temperatures, July 2014", fontsize=24)
+# Define o rótulo do eixo x.
 plt.xlabel("",fontsize=16)
+# Define o rótulo do eixo y.
 plt.ylabel("Temperature (F)",fontsize=16)
+# Define o tamanho dos rótulos dos eixos.
 plt.tick_params(axis='both',which='major',labelsize=16)
 
+# Exibe o gráfico.
 plt.show()
