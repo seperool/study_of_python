@@ -8261,6 +8261,8 @@ A listagem a seguir mostra os dados que estão agora armazenados em `highs`:
 
 #### Plotando dados em um gráfico de temperatura
 
+Para visualizar os dados de temperatura que temos, em primeiro lugar, vamos criar um gráfico simples das temperaturas máximas diárias usando `matplotlib` como vemos a seguir:
+
 ```
 # Importa o módulo csv para trabalhar com arquivos CSV.
 import csv
@@ -8306,12 +8308,25 @@ plt.tick_params(axis='both',which='major',labelsize=16)
 plt.show()
 ```
 
+Sobre o programa:
+
+  * Passamos a lista de temperaturas máximas para `plot()` e `c='red'` para plotar os pontos em vermelho. (Plotamos as temperaturas máximas em vermelho e as mínimas em azul.)
+  
+  * Especificamos outros detalhes de formatação, por exemplo, o tamanho da fonte dos rótulos.
+  
+  * Como ainda precisamos adicionar as datas, não daremos um nome ao eixo x, mas `plt.xlabel()` modifica o tamanho da fonte para deixar os rótulos-padrão mais legíveis.
+
 ![Um gráfico linear que mostra as temperaturas máximas diárias em julho de 2014 para Sitka, no Alasca.](Projeto_2-visualizacao_de_dados/Cap16-Fazendo_download_dados/01-Formato_CSV/highs_lows.png){width=400}
 
 
 \newpage
 
 #### Módulo `datetime`
+
+
+
+\newpage
+
 #### Plotando datas
 #### Plotando um perído de tempo maior
 #### Plotando uma segunda série de dados
