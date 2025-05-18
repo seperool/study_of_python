@@ -8323,7 +8323,32 @@ Sobre o programa:
 
 #### Módulo `datetime`
 
+```{python}
+#| echo: false
+#| error: false
+#| warning: false
+#| label: tbl-formatacao_data_hora
+#| tbl-cap: "Argumentos para formatação de data e hora do módulo `datetime`."
 
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["%A","Nome do dia da semana, por exemplo, Monday"],
+          ["%B","Nome do mês, por exemplo, January"],
+          ["%m","Mês, como um número (de 01 a 12)"],
+          ["%d","Dia do mês, como um número (de 01 a 31)"],
+          ["%Y","Ano com quarto dígitos, por exemplo, 2015"],
+          ["%y","Ano com dois dígitos, por exemplo, 15"],
+          ["%H","Hora no formato 24 horas (de 00 a 23)"],
+          ["%I","Hora no formato 12 horas (de 01 a 12)"],
+          ["%p","`AM` ou `PM`"],
+          ["%M","Minutos (de 00 a 59)"],
+          ["%S","Segundos (de 00 a 61)"]]
+Markdown(tabulate(
+  table, 
+  headers=["Argumento","Significado"],
+  colalign=("center","left")
+))
+```
 
 \newpage
 
