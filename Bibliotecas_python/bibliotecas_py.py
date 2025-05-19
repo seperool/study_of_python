@@ -13,6 +13,7 @@ import pandas as pd                            # Análise e manipulação de dad
 import json                                    # Manipulação de dados JSON
 import csv                                     # Leitura e escrita de arquivos CSV
 import unittest                                # Testes unitários
+import datetime                                # Trabalha com datas e horas, manipula intervalos de tempo
 
 import tensorflow as tf                        # Aprendizado de máquina (Google)
 from tensorflow import keras                   # API de alto nível para redes neurais
