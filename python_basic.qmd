@@ -8323,6 +8323,14 @@ Sobre o programa:
 
 #### Módulo `datetime`
 
+Vamos adicionar as datas em nosso gráfico para deixá-lo mais útil.
+
+A primeira data do arquivo de dados mateorológicos está na segunda linha do arquivo.
+
+Os dados serão lidos na forma de string, portanto precisamos de um modo de converter a string '2014-7-1' em um objeto que represente essa data. Podemos construir um objeto que represente o dia 1 de julho de 2014 usando o método `strptime()` do módulo `datetime`.
+
+Vamos ver como `strptime()` funciona em uma sessão de terminal:
+
 ```{python}
 # Importa a classe datetime do módulo datetime
 from datetime import datetime
@@ -8333,6 +8341,20 @@ first_date = datetime.strptime('2014-7-1', '%Y-%m-%d')
 # Imprime o objeto datetime
 print(first_date)
 ```
+
+Sobre o programa:
+
+  * Inicialmente importamos a classe `datetime`.  
+  `from datetime import datetime`
+  * Chamamos o método `strptime()` com a string que contém a data com a qual queremos trabalhar, passando-a como o primeiro argumento.  
+  `first_date = datetime.strptime('2014-7-1', '%Y-%m-%d')`
+  * O segundo argumento informa o Python como a data está formatada. Nesse exemplo:
+    * '%Y-' diz ao Python para interpretar a parte da string antes do primeiro traço como um ano contendo quatro digitos;
+    * '%m-' diz ao Python para interpretar a parte da string antes do segundo traço como um número que representa o mês;
+    * '%d' diz ao Python para interpretar a última parte da string como o dia do mês, de 1 a 31.
+  * O método `strptime()` aceita uma variedade de argumentos para determinar como a data deve ser interpretada. A @tbl-formatacao_data_hora mostra alguns desses argumentos:
+
+\newpage
 
 ```{python}
 #| echo: false
@@ -8364,6 +8386,11 @@ Markdown(tabulate(
 \newpage
 
 #### Plotando datas
+
+
+
+\newpage
+
 #### Plotando um perído de tempo maior
 #### Plotando uma segunda série de dados
 #### Sombreando uma área do gráfico
