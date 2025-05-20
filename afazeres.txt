@@ -1,6 +1,6 @@
-ESCRITO EM 19/05/25
+ESCRITO EM 20/05/25
 ---
-PARA 20/05/25
+PARA 21/05/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 16 - Fazendo download de dados
 			- Formato de arquivo CSV
-				- Módulo datetime
 				- Plotando datas
 				- Plotando um perído de tempo maior
 				- Plotando uma segunda série de dados
