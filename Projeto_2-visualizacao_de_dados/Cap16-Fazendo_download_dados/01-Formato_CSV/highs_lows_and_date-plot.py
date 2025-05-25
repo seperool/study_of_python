@@ -16,7 +16,7 @@ from matplotlib import pyplot as plt
 #Obtém as datas e as temperaturas máximas do arquivo
 
 # Define o nome do arquivo CSV a ser lido.
-filename = 'sitka_weather_07-2014.csv'
+filename = 'sitka_weather_2014.csv'
 # Abre o arquivo CSV.
 with open(filename) as f:
     # Cria um objeto para ler o arquivo CSV.
@@ -44,7 +44,7 @@ fig = plt.figure(dpi=128,figsize=(10,6))
 plt.plot(dates, highs, c='red')
 
 # Define o título do gráfico e os rótulos dos eixos.
-plt.title("Daily high temperatures, July 2014", fontsize=24)
+plt.title("Daily high temperatures - 2014", fontsize=24)
 # Define o rótulo do eixo x.
 plt.xlabel("",fontsize=16)
 # Formata as datas no eixo x para melhor visualização.
