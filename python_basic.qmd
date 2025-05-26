@@ -8455,6 +8455,12 @@ Sobre o programa:
 
 #### Plotando um perído de tempo maior
 
+Com o nosso gráfico configurado, vamos acrescentar mais dados para obter uma imagem mais completa do clima em Sitka.
+
+Copie o arquivo `sitka_weather_2014.csv`, que contém dados do Weather Underground para Sitka durante um ano, para a pasta em que você está armazenando os programas deste capítulo.
+
+Agora podemos gerar um gráfico para o clima do ano todo.
+
 ```
 # Importa o módulo csv para trabalhar com arquivos CSV.
 import csv
@@ -8508,12 +8514,25 @@ plt.tick_params(axis='both',which='major',labelsize=16)
 plt.show()
 ```
 
+Sobre o programa:
+
+  * Modificamos o nome do arquivo para usar o novo arquivo de dados `sitka_weather_2014.csv`.  
+  `filename = 'sitka_weather_2014.csv'`  
+  
+  * Atualizamos o título de nosso gráfico para que reflita a mudança em seu conteúdo.  
+  `plt.title("Daily high temperatures - 2014", fontsize=24)`
+
 ![Dados de um ano.](Projeto_2-visualizacao_de_dados/Cap16-Fazendo_download_dados/01-Formato_CSV/dates_and_max_temp-2014.png){width=400}
 
 
 \newpage
 
 #### Plotando uma segunda série de dados
+
+
+
+\newpage
+
 #### Sombreando uma área do gráfico
 #### Verificação de erros
 
