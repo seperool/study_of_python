@@ -8529,7 +8529,9 @@ Sobre o programa:
 
 #### Plotando uma segunda série de dados
 
+O gráfico revisado mostra uma quantidade substancial de dados significativos, mas podemos deixá-lo mais útil ainda se incluirmos as temperaturas mínimas.
 
+Precisamos extrair as temperaturas mínimas do arquivo de dados e então adicioná-las ao nosso gráfico.
 
 ```
 # Importa o módulo csv para trabalhar com arquivos CSV.
@@ -8591,13 +8593,28 @@ plt.tick_params(axis='both',which='major',labelsize=16)
 plt.show()
 ```
 
+\newpage
 
+Sobre o programa:
+
+  * Adicionamos a lista vazia `lows` para armazenar as temperaturas mínimas.
+  
+  * Então extraímos e armazenamos essas temperaturas para cada data, a partir da quarta posição de cada linha (`row[3]`).
+  
+  * Acrescentamos uma chamada a `plot()` para as temperaturas mínimas e colorimos esses valores de azul.
+  
+  * Por fim, atualizamos o título.
 
 ![Dados de um ano.](Projeto_2-visualizacao_de_dados/Cap16-Fazendo_download_dados/01-Formato_CSV/04-dates_max_and_min_temp-2014.png){width=400}
 
 \newpage
 
 #### Sombreando uma área do gráfico
+
+
+
+\newpage
+
 #### Verificação de erros
 
 \newpage
