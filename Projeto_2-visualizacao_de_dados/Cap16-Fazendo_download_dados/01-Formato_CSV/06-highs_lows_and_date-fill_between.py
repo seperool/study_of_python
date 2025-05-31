@@ -46,9 +46,9 @@ with open(filename) as f:
 # Cria a figura para o gráfico.
 fig = plt.figure(dpi=128,figsize=(10,6))
 # Plota as temperaturas máximas em vermelho.
-plt.plot(dates, highs, c='red')
+plt.plot(dates, highs, c='red', alpha=0.5)
 # Plota as temperaturas mínimas em azul.
-plt.plot(dates, lows, c='blue')
+plt.plot(dates, lows, c='blue', alpha=0.5)
 # Sombreando a área entre os gráficos
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
