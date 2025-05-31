@@ -1,6 +1,6 @@
-ESCRITO EM 30/05/25
+ESCRITO EM 31/05/25
 ---
-PARA 31/05/25
+PARA 01/06/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 16 - Fazendo download de dados
 			- Formato de arquivo CSV
-				- Sombreando uma área do gráfico
 				- Verificação de erros
 			- Mapeando conjuntos de dados globais: formato `JSON`
 		- Cap. 17 - Trabalhando com APIs
