@@ -8611,7 +8611,9 @@ Sobre o programa:
 
 #### Sombreando uma área do gráfico
 
+Depois de ter adicionado duas séries de dados, podemos agora analisar a variação de temperatura para cada dia. Vamos acrescentar um toque final ao gráfico usando **sombreamento** para mostrar a variação entre as temperaturas mínima e máxima a cada dia.
 
+Para esse sombreamento usaremos o método `fill_between()`, que aceita uma série de valores de x e duas séries de valores de y, e preenche o espaço entre as duas séries de valores de y.
 
 ```
 # Importa o módulo csv para trabalhar com arquivos CSV.
@@ -8654,9 +8656,9 @@ with open(filename) as f:
 # Cria a figura para o gráfico.
 fig = plt.figure(dpi=128,figsize=(10,6))
 # Plota as temperaturas máximas em vermelho.
-plt.plot(dates, highs, c='red')
+plt.plot(dates, highs, c='red', alpha=0.5)
 # Plota as temperaturas mínimas em azul.
-plt.plot(dates, lows, c='blue')
+plt.plot(dates, lows, c='blue', alpha=0.5)
 # Sombreando a área entre os gráficos
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
@@ -8675,13 +8677,25 @@ plt.tick_params(axis='both',which='major',labelsize=16)
 plt.show()
 ```
 
+\newpage
 
+Sobre o programa:
+
+  * O argumento `alpha` controla a transparência de uma cor. Um valor de `alpha` igual a 0 é totalmente transparênte e 1 (o default) pe totalmente opaco. Ao definir `alpha` com 0,5, fazemos as linhas vermelha e azul do gráfico serem claras.
+
+  * Passamos para `fill_between()` a lista `dates` para os valores de `x` e então as duas séries com valores de `y`, `highs` e `lows`. 
+
+  * O argumento `facecolor` determina a cor da região sombreada, e lhe fornecemos um valor baixo de `alpha`, igual a 0,1, para que a região preenchida conecte as duas séries de dados sem provocar distrações na informação que elas representam.
+  
+  * O gráfico com a região sombreada entre as temperaturas máxima e mínima ajuda a deixar o intervalo entre os dois conjuntos de dados imediatamente aparente.
 
 ![A região entre os dois conjuntos de dados está sombreada.](Projeto_2-visualizacao_de_dados/Cap16-Fazendo_download_dados/01-Formato_CSV/05-dates_max_and_min_temp-2014-fill_between.png){width=400}
 
 \newpage
 
 #### Verificação de erros
+
+
 
 \newpage
 
