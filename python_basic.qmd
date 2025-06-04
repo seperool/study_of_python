@@ -8695,7 +8695,23 @@ Sobre o programa:
 
 #### Verificação de erros
 
+Devemos ser capazes de executar o código de `highs_lows.py` usando dados de qualquer localidade. Porém, algumas estações meteorológicas ocasionalmente funcionam mal e falham em coletar alguns dos dados que deveriam obter - ou todos eles. A ausência de dados pode resultar em exceções capazes de causar falhas e, nossos programas se não as tratarmos de forma apropriada.
 
+Por exemplo, vamos ver o que acontece quando tentamos gerar um gráfico de temperaturas para o Vale da Morte na Califórnia. 
+
+Copie o arquivo `death_valley_2014.csv` para a pasta em que você esta armazenando os programas deste capítulo e altere `highs_lows.py` para que gere um gráfico para o Vale da Morte.
+
+Quando executamos o programa, veremos um erro. O traceback nos informa que o Python não foi capaz de processar a temperatura máxima para uma das datas porque não é possível transformar uma string vazia ('') em um inteiro. Uma observação em `death_valley_2014.csv` mostra qual é o problema:
+
+  `2014-2-16,,,,,,,,,,,,,,,,,,,0.00,,,-1`
+
+  * Parece que em 16 de fevereiro de 2014, nenhum dado foi registrado.
+  
+  * A string para temperatura máxima está vazia.
+
+Para cuidar desse problema, executaremos um código de verificação de erros quando os valores forem lidos do arquivo **CSV** para tratar exceções que possam surgir no parse de nossos conjuntos de dados.
+
+\newpage
 
 ```
 # Importa o módulo csv para trabalhar com arquivos CSV.
@@ -8763,9 +8779,11 @@ plt.tick_params(axis='both',which='major',labelsize=16)
 plt.show()
 ```
 
+Sobre o programa:
+
+
+
 \newpage
-
-
 
 ![Temperaturas máximas e mínimas diárias para o Vale da Morte.](Projeto_2-visualizacao_de_dados/Cap16-Fazendo_download_dados/01-Formato_CSV/06-dates_max_and_min_temp-death_valley_2014.png){width=400}
 
