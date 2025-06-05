@@ -8781,15 +8781,39 @@ plt.show()
 
 Sobre o programa:
 
-
+  * Sempre que analisamos uma linha, tentamos extrair a datae as temperaturas máximas e mínimas.
+  * Se houver algum dado faltando, o Python levantará um `ValueError` e o trataremos exibindo uma mensagem de erro que inclua a data do dado ausente.
+  * Depois de exibir o erro, o laço continuará processando a próxima linha. Se todos os dados para uma data forem recuperados sem erro, o bloco `else` será executado e os dados serão concatenados nas listas apropriadas.
+  * Como estamos plotando informações para uma nova localidade, atualizamos o título para que o nome do lugar seja incluído no gráfico.
+  * Quando executar `highs_lows.py`, você verá que estão faltando dados apenas para uma data.  
+  `2014-02-16 00:00:00 missing data`
 
 \newpage
 
 ![Temperaturas máximas e mínimas diárias para o Vale da Morte.](Projeto_2-visualizacao_de_dados/Cap16-Fazendo_download_dados/01-Formato_CSV/06-dates_max_and_min_temp-death_valley_2014.png){width=400}
 
+Sobre o gráfico:
+
+  * Se compararmos esse gráfico com o gráfico Sitka, podemos ver que o Vale da Morte é, de modo geral, mais quente que o sudeste do Alasca, como esperado.
+  * A variação da temperatura a cada dia, na verdade, é maior no deserto. A altura da região sombreada deixa isso claro.
+
+\newpage
+
+#### Considerações finais:
+  
+Muitos conjuntos de dados com os quais você trabalhar terão dados faltando, dados formatados de maneira inapropriada ou dados incorretos. Utilize as ferramentas que você conheceu na primeira metade deste livro para lidar com essas situações.
+
+Nesse caso usamos um bloco `try-except-else` para tratar os dados ausentes.
+
+As vezes você usará `continue` para ignorar alguns dados ou utilizará `remove()` ou `del` para eliminá-los depois que forem extraídos.
+
+Qualquer abordagem que funcione pode ser usada, desde que o resultado seja uma visualização precisa e significantiva.
+
 \newpage
 
 ### Mapeando conjuntos de dados globais: formato `JSON`
+
+
 
 \newpage
 
