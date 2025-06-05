@@ -1,6 +1,6 @@
-ESCRITO EM 04/06/25
+ESCRITO EM 05/06/25
 ---
-PARA 05/06/25
+PARA 06/06/25
 ---
 Subir github:
 
@@ -12,8 +12,6 @@ Afazeres:
 			- Estatísticas simples com lista de números
 	- Projeto Visulização de Dados
 		- Cap. 16 - Fazendo download de dados
-			- Formato de arquivo CSV
-				- Verificação de erros
 			- Mapeando conjuntos de dados globais: formato `JSON`
 		- Cap. 17 - Trabalhando com APIs
 			- Usando uma API web
