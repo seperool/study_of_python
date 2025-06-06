@@ -8813,7 +8813,20 @@ Qualquer abordagem que funcione pode ser usada, desde que o resultado seja uma v
 
 ### Mapeando conjuntos de dados globais: formato `JSON`
 
+#### Fazendo download dos dados da população mundial
+#### Extraindo dados relevantes
+#### Convertendo strings em valores numéricos
+#### Obtendo os códigos de duas letras dos países
+#### Construindo um mapa-múndi
+#### Plotando dados numéricos em um mapa-múndi
+#### Criando um mapa completo de populações
+#### Agrupando os países de acordo com a sua população
+#### Estilizando mapas-múndi com o `Pygal`
+#### Clareando a cor do tema
 
+\newpage
+
+### Resumo
 
 \newpage
 
