@@ -1,6 +1,6 @@
-ESCRITO EM 05/06/25
+ESCRITO EM 06/06/25
 ---
-PARA 06/06/25
+PARA 07/06/25
 ---
 Subir github:
 
@@ -13,6 +13,17 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 16 - Fazendo download de dados
 			- Mapeando conjuntos de dados globais: formato `JSON`
+				- Fazendo download dos dados da população mundial
+				- Extraindo dados relevantes
+				- Convertendo strings em valores numéricos
+				- Obtendo os códigos de duas letras dos países
+				- Construindo um mapa-múndi
+				- Plotando dados numéricos em um mapa-múndi
+				- Criando um mapa completo de populações
+				- Agrupando os países de acordo com a sua população
+				- Estilizando mapas-múndi com o `Pygal`
+				- Clareando a cor do tema
+			- Resumo
 		- Cap. 17 - Trabalhando com APIs
 			- Usando uma API web
 			- Visualizando os repositórios usando `Pygal`
