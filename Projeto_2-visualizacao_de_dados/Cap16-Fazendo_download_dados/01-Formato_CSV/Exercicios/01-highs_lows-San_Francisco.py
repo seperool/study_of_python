@@ -16,7 +16,7 @@ from matplotlib import pyplot as plt
 #Obtém as datas e as temperaturas máximas do arquivo
 
 # Define o nome do arquivo CSV a ser lido.
-filename = 'San_Francisco_2014.csv'
+filename = 'Dados_csv/san_francisco_2014.csv'
 # Abre o arquivo CSV.
 with open(filename) as f:
     # Cria um objeto para ler o arquivo CSV.
