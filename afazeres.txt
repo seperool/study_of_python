@@ -1,6 +1,6 @@
-ESCRITO EM 10/06/25
+ESCRITO EM 11/06/25
 ---
-PARA 11/06/25
+PARA 12/06/25
 ---
 Subir github:
 
@@ -35,5 +35,7 @@ Afazeres:
 				- 10
 		- Cap. 16:
 			- Exercicios Cap. 16:
-				- 3
-				- 4
+				- 5
+				- 6
+				- 7
+				- 8
