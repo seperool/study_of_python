@@ -8813,6 +8813,8 @@ Qualquer abordagem que funcione pode ser usada, desde que o resultado seja uma v
 
 ### Mapeando conjuntos de dados globais: formato `JSON`
 
+
+
 #### Fazendo download dos dados da população mundial
 #### Extraindo dados relevantes
 #### Convertendo strings em valores numéricos
