@@ -8813,9 +8813,14 @@ Qualquer abordagem que funcione pode ser usada, desde que o resultado seja uma v
 
 ### Mapeando conjuntos de dados globais: formato `JSON`
 
+Nesta seção você fará o download de dados de diferentes países em formato **JSON** e trabalhará com esses dados usando o módulo `json`.
 
+Utilizando a ferramenta de mapeamento amigável a iniciantes do `Pygal` para dados baseados em países, você criará visualizações desses dados a fim de explorar padrões globais que dizem respeito a distribuição da população mundial por diferentes países.
 
 #### Fazendo download dos dados da população mundial
+
+
+
 #### Extraindo dados relevantes
 #### Convertendo strings em valores numéricos
 #### Obtendo os códigos de duas letras dos países
