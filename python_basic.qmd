@@ -8819,9 +8819,18 @@ Utilizando a ferramenta de mapeamento amigável a iniciantes do `Pygal` para dad
 
 #### Fazendo download dos dados da população mundial
 
+Copie o arquivo `population_data.json`, que contém dados sobre as populações da maior parte dos países do mundo, de 1960 a 2010, para a pasta em que você está armazenando os programas deste capítulo. 
 
+Esses dados são provenientes de um dos muitos conjuntos de dados que a Open Knowledge Foundation (<https://okfn.org/en/>) disponibiliza gratuitamente.
+
+\newpage
 
 #### Extraindo dados relevantes
+
+
+
+\newpage
+
 #### Convertendo strings em valores numéricos
 #### Obtendo os códigos de duas letras dos países
 #### Construindo um mapa-múndi
