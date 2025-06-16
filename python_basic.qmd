@@ -8886,9 +8886,23 @@ for pop_dict in pop_data:
 
 Sobre o programa:
 
+  * Inicionalmente importamos o módulo `json` para que seja possível carregar os dados do arquivo de forma apropriada.
+  * Em seguida, armazenamos esses dados em `pop_data`.
+  * A função `json.load()` converte os dados em um formato com que o Python possa trabalhar: nesse caso, uma lista.
+  * Percorremos cada item de `pop_data` com um laço. Cada item é um dicionário com quatro pares chave-valor, e o armazenamos em `pop_dict`.
+  * Procuramos 2010 na chave `'Year'` de cada dicionário. (Como os valores de `population_data.json` estão todos entre aspas, fazemos uma comparação entre strings.)
+  * Se o ano for 2010, armazenamos o valor associado a `'Country Name'` em `country_name` e o valor associado a `'Value'` em `population`.
+  * Então exibimos o nome de cada país e a sua população.
+  * A saída é composta de uma série de nomes de países e a população.
+
+Nem todos os dados capturados incluem os nomes exatos dos países, mas esse é um bom ponto de partida. Agora precisamos converter os dados em um formato com que o Pygal possa trabalhar.
+
 \newpage
 
 #### Convertendo strings em valores numéricos
+
+\newpage
+
 #### Obtendo os códigos de duas letras dos países
 #### Construindo um mapa-múndi
 #### Plotando dados numéricos em um mapa-múndi
