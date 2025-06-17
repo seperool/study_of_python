@@ -21,7 +21,12 @@ for pop_dict in pop_data:
     if pop_dict['Year'] == '2010':
         # Obtém o nome do país.
         country_name = pop_dict['Country Name']
+        
         # Obtém o valor da população.
-        population = pop_dict['Value']
+        population = int(float(pop_dict['Value']))
+        #O Python não consegue converter de string com float para int.
+        #É necessário converter primeiro de string para float,
+        #e por fim, converter float para int. 
+        
         # Imprime o nome do país e sua população.
-        print(country_name + ': ' + population)
+        print(country_name + ': ' + str(population))
