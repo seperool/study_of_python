@@ -1,6 +1,6 @@
-ESCRITO EM 16/06/25
+ESCRITO EM 18/06/25
 ---
-PARA 17/06/25
+PARA 19/06/25
 ---
 Subir github:
 
@@ -13,7 +13,6 @@ Afazeres:
 	- Projeto Visulização de Dados
 		- Cap. 16 - Fazendo download de dados
 			- Mapeando conjuntos de dados globais: formato `JSON`
-				- Convertendo strings em valores numéricos
 				- Obtendo os códigos de duas letras dos países
 				- Construindo um mapa-múndi
 				- Plotando dados numéricos em um mapa-múndi
