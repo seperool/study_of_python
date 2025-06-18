@@ -8901,6 +8901,52 @@ Nem todos os dados capturados incluem os nomes exatos dos países, mas esse é u
 
 #### Convertendo strings em valores numéricos
 
+Todas as chaves e valores em `population_data.json` estão armazenados como strings. Para trabalhar com os dados referentes as populações, devemos converter as strings com as populações em valores numéricos. Fazemos isso usando a função `int()`.
+
+```
+# Importa o módulo json para trabalhar com dados JSON.
+import json
+
+# Define o nome do arquivo JSON a ser lido.
+filename = 'population_data.json'
+# Abre o arquivo em modo de leitura ('as f') e carrega seu conteúdo JSON.
+with open(filename) as f:
+    pop_data = json.load(f)
+    
+# Itera sobre cada dicionário de dados de população na lista.
+for pop_dict in pop_data:
+    # Verifica se o ano no dicionário é '2010'.
+    if pop_dict['Year'] == '2010':
+        # Obtém o nome do país.
+        country_name = pop_dict['Country Name']
+        
+        # Obtém o valor da população.
+        population = int(float(pop_dict['Value']))
+        #O Python não consegue converter de string com float para int.
+        #É necessário converter primeiro de string para float,
+        #e por fim, converter float para int. 
+        
+        # Imprime o nome do país e sua população.
+        print(country_name + ': ' + str(population))
+```
+
+Sobre o programa:
+
+  * Quando exibimos o valor da população, devemos convertê-lo para uma string para exibi-lo dentro do `print()`.
+
+  * No entanto, essa mudança resulta num erro para alguns valores. Com frequência, dados brutos não estão formados de forma consistencia, portanto podemos nos deparar com vários erros. Nesse caso ocorreu porque o Python não é capaz de transformar uma string contendo um decimal, diretamente para um inteiro. (Esse valor decimal provavelmente é o resultadoda interpolação para os anos em que a contagem de uma população específica não foi feita.)
+
+  * Tratamos esse erro convertando a string em um número de ponto flutuante e então convertendo esse número em um inteiro.  
+  `population = int(float(pop_dict['Value']))`
+
+  * A função `float()` transforma a string em um decimal, e a função `int()` remove a parte decimal do número e devolve um inteiro.
+  
+  * Agora podemos exibir um conjunto completo de valores de população para o ano 2010, sem erro.
+
+Cada string foi convertida com sucesso em um número de ponto flutuante e depois para um inteiro.
+
+Agora que os valores dessas populações estão armazenandos em um formato numérico, podemos usá-los para criar um mapa da população mundial.
+
 \newpage
 
 #### Obtendo os códigos de duas letras dos países
